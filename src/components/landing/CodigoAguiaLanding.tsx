@@ -337,11 +337,11 @@ export function CodigoAguiaLanding() {
                 </ul>
 
                 <div className="flex items-baseline gap-3 mb-2">
-                  <span className="text-muted-foreground line-through">De R$ 37,00 por</span>
+                  <span className="text-muted-foreground line-through">De R$ 97,00 por</span>
                 </div>
                 <div className="flex items-baseline gap-2 mb-6">
                   <span className="text-gold text-2xl">R$</span>
-                  <span className="font-display text-6xl text-gold-gradient">27</span>
+                  <span className="font-display text-6xl text-gold-gradient">37</span>
                   <span className="text-muted-foreground">,00 à vista</span>
                 </div>
 
