@@ -101,7 +101,7 @@ export function CodigoAguiaLanding() {
               na era digital.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="#oferta">
+              <a href="https://pay.kiwify.com.br/cYxU5fc" target="_blank" rel="noopener noreferrer">
                 <GoldButton size="lg">Quero Desbloquear o Código Águia</GoldButton>
               </a>
             </div>
@@ -337,7 +337,7 @@ export function CodigoAguiaLanding() {
                 </ul>
 
                 <div className="flex items-baseline gap-3 mb-2">
-                  <span className="text-muted-foreground line-through">De R$ 97,00 por</span>
+                  <span className="text-muted-foreground line-through">De R$ 37,00 por</span>
                 </div>
                 <div className="flex items-baseline gap-2 mb-6">
                   <span className="text-gold text-2xl">R$</span>
@@ -345,9 +345,11 @@ export function CodigoAguiaLanding() {
                   <span className="text-muted-foreground">,00 à vista</span>
                 </div>
 
-                <GoldButton size="lg" className="w-full">
-                  Quero Acessar o Código Águia Agora
-                </GoldButton>
+                <a href="https://pay.kiwify.com.br/cYxU5fc" target="_blank" rel="noopener noreferrer" className="block">
+                  <GoldButton size="lg" className="w-full">
+                    Quero Acessar o Código Águia Agora
+                  </GoldButton>
+                </a>
                 <div className="mt-4 flex items-center justify-center gap-4 text-xs text-muted-foreground">
                   <span className="flex items-center gap-1"><Lock className="w-3 h-3" /> Compra 100% segura</span>
                   <span className="flex items-center gap-1"><Shield className="w-3 h-3" /> Garantia de 7 dias</span>
@@ -409,7 +411,7 @@ export function CodigoAguiaLanding() {
           <p className="text-xl text-muted-foreground mb-12">
             O próximo nível da sua vida começa com uma decisão.
           </p>
-          <a href="#oferta">
+          <a href="https://pay.kiwify.com.br/cYxU5fc" target="_blank" rel="noopener noreferrer">
             <GoldButton size="lg" className="text-base px-12 py-6">
               Quero Voar Mais Alto
             </GoldButton>
