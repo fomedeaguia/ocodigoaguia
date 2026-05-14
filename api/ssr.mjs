@@ -1,7 +1,5 @@
 import handler from "../dist/server/server.js";
 
-export const config = { runtime: "nodejs" };
-
 export default async function ssr(req, res) {
   const proto = req.headers["x-forwarded-proto"] || "https";
   const host = req.headers["x-forwarded-host"] || req.headers.host;
