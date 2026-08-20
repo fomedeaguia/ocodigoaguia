@@ -41,17 +41,12 @@ jobs:
           echo "slug=$SLUG" >> $GITHUB_OUTPUT
           echo "title=$TITLE" >> $GITHUB_OUTPUT
 
-      - name: Atualizar manifest
-        run: python .github/scripts/generate_manifest.py
-
-      - name: Gerar sitemap
-        run: python .github/scripts/generate_sitemap.py
-
       - name: Commit e push
         run: |
           git config user.name "Codigo Aguia Bot"
           git config user.email "blog-bot@ocodigoaguia.com.br"
-          git add public/blog-posts/ public/sitemap.xml
+          # Commita src/data/blog.ts — fonte de verdade do app
+          git add src/data/blog.ts
           git diff --cached --quiet || git commit -m "blog: novo post automático $(date +'%Y-%m-%d %H:%M UTC')"
           git push
 

@@ -5,8 +5,10 @@ now = datetime.now(timezone.utc)
 today = now.strftime("%Y-%m-%d")
 hour = now.hour
 api_key = os.environ["OPENROUTER_API_KEY"]
-unsplash_key = os.environ["UNSPLASH_ACCESS_KEY"]  # obrigatório agora
+unsplash_key = os.environ["UNSPLASH_ACCESS_KEY"]
 timestamp = now.strftime("%Y-%m-%d-%H")
+
+BLOG_TS_PATH = "src/data/blog.ts"
 
 
 def slugify(text):
@@ -39,7 +41,6 @@ Tudo que você leu aqui é apenas o começo. O **Código Águia** aprofunda cada
 
 ---"""
 
-# Queries Unsplash por tema — orientação landscape, alta qualidade
 UNSPLASH_QUERIES = {
     "aguia_liberdade": ["eagle flying sky", "eagle soaring clouds", "bird freedom sky"],
     "prosperidade":    ["success mountain peak", "abundance sunrise", "wealthy mindset"],
@@ -56,9 +57,7 @@ DEFAULT_UNSPLASH_QUERIES = ["eagle sky freedom", "eagle soaring", "mountain eagl
 
 
 def buscar_imagem_unsplash(image_key):
-    """Busca imagem no Unsplash. Tenta múltiplas queries até conseguir. Obrigatório."""
     queries = UNSPLASH_QUERIES.get(image_key, []) + DEFAULT_UNSPLASH_QUERIES
-
     for query in queries:
         try:
             url = (
@@ -76,9 +75,7 @@ def buscar_imagem_unsplash(image_key):
             )
             with urllib.request.urlopen(req, timeout=15) as resp:
                 data = json.loads(resp.read())
-                # Pega URL regular com largura 1200 para boa qualidade
                 img_url = data["urls"]["regular"]
-                # Garante parâmetros de qualidade
                 if "?" in img_url:
                     img_url = img_url.split("?")[0] + "?w=1200&q=85&fit=crop&auto=format"
                 else:
@@ -86,17 +83,12 @@ def buscar_imagem_unsplash(image_key):
                 photographer = data.get("user", {}).get("name", "Unsplash")
                 photo_id = data.get("id", "")
                 print(f"Unsplash OK [{query}]: {photographer} — {photo_id}")
-                print(f"URL: {img_url[:100]}")
                 return img_url
         except Exception as e:
             print(f"Unsplash falhou [{query}]: {e}")
             continue
-
-    # Último recurso: imagem estática do Unsplash Source (sem API key)
-    fallback_queries = ["eagle", "mountain", "sunrise"]
-    q = random.choice(fallback_queries)
     seed = abs(hash(timestamp)) % 9999
-    fallback = f"https://source.unsplash.com/1200x630/?{q}&sig={seed}"
+    fallback = f"https://source.unsplash.com/1200x630/?eagle&sig={seed}"
     print(f"Unsplash source fallback: {fallback}")
     return fallback
 
@@ -158,16 +150,12 @@ tags_map = {
 }
 tags = tags_map.get(image_key, ["código águia", "transformação", "prosperidade"])
 
-# Aleatório: 50% dos posts têm CTA no final
 use_cta = random.random() < 0.5
-
 cta_instruction = ""
 if use_cta:
-    cta_instruction = """
-- No final do artigo (após a última seção), insira exatamente esta linha e nada mais: <!--CTA_FINAL-->"""
+    cta_instruction = "\n- No final do artigo (após a última seção), insira exatamente esta linha e nada mais: <!--CTA_FINAL-->"
 else:
-    cta_instruction = """
-- Não insira nenhum CTA, banner ou menção ao O Código Águia. Escreva apenas o artigo."""
+    cta_instruction = "\n- Não insira nenhum CTA, banner ou menção ao O Código Águia. Escreva apenas o artigo."
 
 prompt = f"""Você é um redator especializado em conteúdo de desenvolvimento pessoal escrevendo EXCLUSIVAMENTE em português do Brasil.
 
@@ -270,28 +258,74 @@ if not slug:
 
 reading_time = max(1, round(len(content_md.split()) / 200))
 
-post = {
-    "id": slug,
-    "title": title,
-    "slug": slug,
-    "excerpt": excerpt,
-    "content": content_md,
-    "category": category,
-    "author": "O Código Águia",
-    "date": today,
-    "readingTime": reading_time,
-    "featured": False,
-    "coverImage": cover_image,
-    "tags": tags
-}
+# ──────────────────────────────────────────────────────────────────────────────
+# INJETAR O POST DIRETAMENTE EM src/data/blog.ts (fonte de verdade do app)
+# ──────────────────────────────────────────────────────────────────────────────
+def escape_backtick(s):
+    """Escapa backticks e ${} para uso seguro dentro de template literals TS."""
+    s = s.replace("\\", "\\\\")  # barras invertidas primeiro
+    s = s.replace("`", "\\`")    # backtick
+    s = s.replace("${", "\\${") # template expressions
+    return s
 
-os.makedirs("public/blog-posts", exist_ok=True)
-filepath = f"public/blog-posts/{slug}.json"
-with open(filepath, "w", encoding="utf-8") as f:
-    json.dump(post, f, ensure_ascii=False, indent=2)
+def ts_string(s):
+    """Serializa string como template literal TypeScript multi-linha."""
+    return "`" + escape_backtick(s) + "`"
 
-print(f"Post salvo: {filepath}")
-print(f"Título: {post['title']}")
+def ts_string_simple(s):
+    """Serializa string curta com aspas duplas (sem quebras de linha)."""
+    s = s.replace("\\", "\\\\").replace('"', '\\"')
+    return '"' + s + '"'
+
+def ts_array(lst):
+    items = ", ".join(ts_string_simple(x) for x in lst)
+    return f"[{items}]"
+
+# Monta o bloco TypeScript do novo post
+new_post_block = f"""  {{
+    id: {ts_string_simple(slug)},
+    slug: {ts_string_simple(slug)},
+    title: {ts_string_simple(title)},
+    excerpt: {ts_string_simple(excerpt[:300])},
+    date: {ts_string_simple(today)},
+    readingTime: {reading_time},
+    category: {ts_string_simple(category)},
+    coverImage: {ts_string_simple(cover_image)},
+    tags: {ts_array(tags)},
+    featured: false,
+    content: {ts_string(content_md)},
+  }},"""
+
+# Lê o arquivo blog.ts atual
+with open(BLOG_TS_PATH, "r", encoding="utf-8") as f:
+    blog_ts = f.read()
+
+# Verifica se o slug já existe (evita duplicatas)
+if f'slug: "{slug}"' in blog_ts or f"slug: '{slug}'" in blog_ts:
+    print(f"Slug '{slug}' já existe em blog.ts. Abortando para evitar duplicata.")
+    # Ainda imprime para o workflow capturar
+    print(f"Título: {title}")
+    print(f"Slug: {slug}")
+    sys.exit(0)
+
+# Insere o novo post ANTES do fechamento do array (antes de `];`)
+INSERT_MARKER = "];\n\nexport const blogPosts"
+if INSERT_MARKER not in blog_ts:
+    # Fallback: antes de `export const blogPosts`
+    INSERT_MARKER = "export const blogPosts"
+
+insert_pos = blog_ts.find(INSERT_MARKER)
+if insert_pos == -1:
+    print("ERRO: Não encontrou marcador de inserção em blog.ts")
+    sys.exit(1)
+
+updated_ts = blog_ts[:insert_pos] + new_post_block + "\n" + blog_ts[insert_pos:]
+
+with open(BLOG_TS_PATH, "w", encoding="utf-8") as f:
+    f.write(updated_ts)
+
+print(f"Post injetado em {BLOG_TS_PATH}")
+print(f"Título: {title}")
 print(f"Slug: {slug}")
 print(f"Leitura: {reading_time} min | {len(content_md.split())} palavras")
 print(f"Imagem: {cover_image[:100]}")
