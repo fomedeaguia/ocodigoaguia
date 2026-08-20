@@ -4,6 +4,8 @@ import { Footer } from "@/components/landing/Footer";
 import { getPostBySlug, formatDate } from "@/data/blog";
 import ReactMarkdown from "react-markdown";
 
+const BASE_URL = "https://ocodigoaguia.com.br";
+
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
     const post = getPostBySlug(params.slug);
@@ -13,13 +15,21 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [{ title: "Artigo não encontrado — O Código Águia" }] };
     const { post } = loaderData;
+    const canonicalUrl = `${BASE_URL}/blog/${post.slug}`;
     return {
       meta: [
         { title: `${post.title} — Blog O Código Águia` },
         { name: "description", content: post.excerpt },
         { property: "og:title", content: post.title },
+        { property: "og:description", content: post.excerpt },
         { property: "og:image", content: post.coverImage ?? "" },
         { property: "og:type", content: "article" },
+        { property: "og:url", content: canonicalUrl },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: post.title },
+        { name: "twitter:description", content: post.excerpt },
+        { name: "twitter:image", content: post.coverImage ?? "" },
+        { tagName: "link", rel: "canonical", href: canonicalUrl },
       ],
     };
   },
@@ -28,11 +38,36 @@ export const Route = createFileRoute("/blog/$slug")({
 
 function BlogPostPage() {
   const { post } = Route.useLoaderData();
+  const canonicalUrl = `${BASE_URL}/blog/${post.slug}`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.coverImage ?? "",
+    datePublished: post.date,
+    url: canonicalUrl,
+    author: {
+      "@type": "Organization",
+      name: "O Código Águia",
+      url: BASE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "O Código Águia",
+      url: BASE_URL,
+    },
+  };
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Nav />
       <main className="flex-1 max-w-3xl mx-auto px-6 pt-32 pb-24">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Link to="/blog" className="text-xs uppercase tracking-[0.25em] text-gold hover:opacity-80">
           ← Voltar ao blog
         </Link>

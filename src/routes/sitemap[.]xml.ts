@@ -1,7 +1,7 @@
 import { createAPIFileRoute } from "@tanstack/react-start/api";
 import { blogPosts } from "@/data/blog";
 
-const BASE_URL = "https://ocodigoaguia.pages.dev";
+const BASE_URL = "https://ocodigoaguia.com.br";
 
 function escapeXml(str: string) {
   return str
@@ -38,7 +38,12 @@ export const APIRoute = createAPIFileRoute("/sitemap.xml")({
       .join("\n");
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9\n  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">\n${urlEntries}\n</urlset>`;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+${urlEntries}
+</urlset>`;
 
     return new Response(xml, {
       headers: {
