@@ -5,7 +5,7 @@ now = datetime.now(timezone.utc)
 today = now.strftime("%Y-%m-%d")
 hour = now.hour
 api_key = os.environ["OPENROUTER_API_KEY"]
-unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
+unsplash_key = os.environ["UNSPLASH_ACCESS_KEY"]  # obrigatório agora
 timestamp = now.strftime("%Y-%m-%d-%H")
 
 
@@ -39,54 +39,66 @@ Tudo que você leu aqui é apenas o começo. O **Código Águia** aprofunda cada
 
 ---"""
 
+# Queries Unsplash por tema — orientação landscape, alta qualidade
 UNSPLASH_QUERIES = {
-    "aguia_liberdade": "eagle flying freedom sky",
-    "prosperidade": "success abundance mountain",
-    "mentalidade": "focus determination sunrise",
-    "renovacao": "transformation renewal nature",
-    "lideranca": "mountain summit leadership",
-    "foco": "precision focus arrow",
-    "coragem": "storm sky courage",
-    "visao": "aerial view horizon",
-    "abundancia": "abundance nature light",
-    "transformacao": "light growth nature",
+    "aguia_liberdade": ["eagle flying sky", "eagle soaring clouds", "bird freedom sky"],
+    "prosperidade":    ["success mountain peak", "abundance sunrise", "wealthy mindset"],
+    "mentalidade":     ["focus determination sunrise", "mind power meditation", "discipline training"],
+    "renovacao":       ["transformation butterfly nature", "renewal dawn light", "rebirth nature"],
+    "lideranca":       ["mountain summit leader", "leadership vision horizon", "strong leader"],
+    "foco":            ["focus target arrow", "laser focus discipline", "concentration work"],
+    "coragem":         ["storm courage sky", "brave challenge mountain", "overcome fear"],
+    "visao":           ["aerial view horizon", "wide view landscape", "strategic vision sky"],
+    "abundancia":      ["abundance nature light", "golden harvest prosperity", "rich nature golden"],
+    "transformacao":   ["light growth forest", "personal growth sunrise", "change transformation"],
 }
-DEFAULT_UNSPLASH_QUERY = "eagle sky freedom"
-
-POLLINATIONS_PROMPTS = {
-    "aguia_liberdade": "majestic eagle soaring above clouds golden hour dramatic lighting no text",
-    "prosperidade": "eagle silhouette golden light wealth abundance no text",
-    "mentalidade": "eagle eye close-up sharp focus dark dramatic tones no text",
-    "renovacao": "eagle rising transformation dark gold palette no text",
-    "lideranca": "eagle mountain peak sunrise leadership no text",
-    "foco": "eagle diving precision dark blue tones no text",
-    "coragem": "eagle storm clouds courage dramatic sky no text",
-    "visao": "eagle soaring wide panoramic view vision strategy no text",
-    "abundancia": "eagle wings golden light rays abundance no text",
-    "transformacao": "eagle emerging shadows into light personal growth no text",
-}
-DEFAULT_POLLINATIONS = "powerful eagle soaring clouds transformation success golden tones no text"
+DEFAULT_UNSPLASH_QUERIES = ["eagle sky freedom", "eagle soaring", "mountain eagle sunrise"]
 
 
-def buscar_imagem(image_key, unsplash_key):
-    if unsplash_key:
-        query = UNSPLASH_QUERIES.get(image_key, DEFAULT_UNSPLASH_QUERY)
-        for q in [query, DEFAULT_UNSPLASH_QUERY]:
-            try:
-                url = f"https://api.unsplash.com/photos/random?query={urllib.parse.quote(q)}&orientation=landscape&content_filter=high"
-                req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {unsplash_key}", "Accept-Version": "v1"})
-                with urllib.request.urlopen(req, timeout=10) as resp:
-                    data = json.loads(resp.read())
-                    img = data["urls"]["regular"]
-                    print(f"Unsplash OK: {img[:80]}")
-                    return img
-            except Exception as e:
-                print(f"Unsplash falhou ({q}): {e}")
-    prompt = POLLINATIONS_PROMPTS.get(image_key, DEFAULT_POLLINATIONS)
-    seed = abs(hash(timestamp)) % 99999
-    img = f"https://image.pollinations.ai/prompt/{urllib.parse.quote(prompt)}?width=1200&height=630&nologo=true&seed={seed}"
-    print(f"Pollinations fallback: {img[:80]}")
-    return img
+def buscar_imagem_unsplash(image_key):
+    """Busca imagem no Unsplash. Tenta múltiplas queries até conseguir. Obrigatório."""
+    queries = UNSPLASH_QUERIES.get(image_key, []) + DEFAULT_UNSPLASH_QUERIES
+
+    for query in queries:
+        try:
+            url = (
+                f"https://api.unsplash.com/photos/random"
+                f"?query={urllib.parse.quote(query)}"
+                f"&orientation=landscape"
+                f"&content_filter=high"
+            )
+            req = urllib.request.Request(
+                url,
+                headers={
+                    "Authorization": f"Client-ID {unsplash_key}",
+                    "Accept-Version": "v1",
+                },
+            )
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = json.loads(resp.read())
+                # Pega URL regular com largura 1200 para boa qualidade
+                img_url = data["urls"]["regular"]
+                # Garante parâmetros de qualidade
+                if "?" in img_url:
+                    img_url = img_url.split("?")[0] + "?w=1200&q=85&fit=crop&auto=format"
+                else:
+                    img_url = img_url + "?w=1200&q=85&fit=crop&auto=format"
+                photographer = data.get("user", {}).get("name", "Unsplash")
+                photo_id = data.get("id", "")
+                print(f"Unsplash OK [{query}]: {photographer} — {photo_id}")
+                print(f"URL: {img_url[:100]}")
+                return img_url
+        except Exception as e:
+            print(f"Unsplash falhou [{query}]: {e}")
+            continue
+
+    # Último recurso: imagem estática do Unsplash Source (sem API key)
+    fallback_queries = ["eagle", "mountain", "sunrise"]
+    q = random.choice(fallback_queries)
+    seed = abs(hash(timestamp)) % 9999
+    fallback = f"https://source.unsplash.com/1200x630/?{q}&sig={seed}"
+    print(f"Unsplash source fallback: {fallback}")
+    return fallback
 
 
 TOPICOS_MANHA = [
@@ -134,19 +146,19 @@ category = random.choice(category_map[period])
 
 tags_map = {
     "aguia_liberdade": ["arquétipo da águia", "liberdade", "simbolismo"],
-    "prosperidade": ["prosperidade", "abundância", "mentalidade financeira"],
-    "mentalidade": ["mentalidade", "alto desempenho", "crescimento pessoal"],
-    "renovacao": ["renovação", "transformação", "recomeço"],
-    "lideranca": ["liderança", "águia", "visão estratégica"],
-    "foco": ["foco", "disciplina", "resultados"],
-    "coragem": ["coragem", "resiliência", "superação"],
-    "visao": ["visão", "estratégia", "consciência"],
-    "abundancia": ["abundância", "riqueza", "consciência financeira"],
-    "transformacao": ["transformação", "mudança de nível", "desenvolvimento pessoal"],
+    "prosperidade":    ["prosperidade", "abundância", "mentalidade financeira"],
+    "mentalidade":     ["mentalidade", "alto desempenho", "crescimento pessoal"],
+    "renovacao":       ["renovação", "transformação", "recomeço"],
+    "lideranca":       ["liderança", "águia", "visão estratégica"],
+    "foco":            ["foco", "disciplina", "resultados"],
+    "coragem":         ["coragem", "resiliência", "superação"],
+    "visao":           ["visão", "estratégia", "consciência"],
+    "abundancia":      ["abundância", "riqueza", "consciência financeira"],
+    "transformacao":   ["transformação", "mudança de nível", "desenvolvimento pessoal"],
 }
 tags = tags_map.get(image_key, ["código águia", "transformação", "prosperidade"])
 
-# Aleatório: 50% dos posts têm CTA no final, 50% são só conteúdo puro
+# Aleatório: 50% dos posts têm CTA no final
 use_cta = random.random() < 0.5
 
 cta_instruction = ""
@@ -179,8 +191,8 @@ Linha 2: RESUMO: resumo com até 160 caracteres
 Linha 3 em diante: o artigo completo
 """
 
-print(f"Buscando imagem para: {image_key} | CTA: {use_cta}")
-cover_image = buscar_imagem(image_key, unsplash_key)
+print(f"Buscando imagem Unsplash para: {image_key}")
+cover_image = buscar_imagem_unsplash(image_key)
 
 payload = json.dumps({
     "model": "google/gemini-2.0-flash-001",
@@ -247,10 +259,8 @@ if not excerpt:
             excerpt = re.sub(r"\*\*|\[.*?\]\(.*?\)", "", clean)[:200].strip()
             break
 
-# Substitui marcador CTA (só presente quando use_cta=True)
 if use_cta:
     content_md = content_md.replace("<!--CTA_FINAL-->", EBOOK_CTA_FINAL)
-    # Fallback: se modelo não inseriu o marcador, adiciona no final
     if EBOOK_CTA_FINAL.strip() not in content_md:
         content_md = content_md.rstrip() + "\n" + EBOOK_CTA_FINAL
 
@@ -284,3 +294,4 @@ print(f"Post salvo: {filepath}")
 print(f"Título: {post['title']}")
 print(f"Slug: {slug}")
 print(f"Leitura: {reading_time} min | {len(content_md.split())} palavras")
+print(f"Imagem: {cover_image[:100]}")
