@@ -10,6 +10,7 @@ export default defineConfig({
   plugins: [
     tsConfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
+    cloudflare({ viteEnvironment: { name: "ssr" } }),
     tanstackStart({
       srcDirectory: "./src",
       router: {
@@ -19,7 +20,6 @@ export default defineConfig({
         entry: "./src/server.ts",
       },
     }),
-    cloudflare({ viteEnvironment: { name: "ssr" } }),
     viteReact(),
   ],
   resolve: {
