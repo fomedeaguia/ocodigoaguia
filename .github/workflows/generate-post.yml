@@ -30,10 +30,16 @@ jobs:
           python-version: '3.12'
 
       - name: Gerar post com IA
+        id: gerar
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
-        run: python .github/scripts/generate_post.py
+        run: |
+          python .github/scripts/generate_post.py | tee /tmp/post_output.txt
+          SLUG=$(grep "^Slug:" /tmp/post_output.txt | head -1 | sed 's/^Slug: //')
+          TITLE=$(grep "^Título:" /tmp/post_output.txt | head -1 | sed 's/^Título: //')
+          echo "slug=$SLUG" >> $GITHUB_OUTPUT
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
 
       - name: Atualizar manifest
         run: python .github/scripts/generate_manifest.py
@@ -48,3 +54,21 @@ jobs:
           git add public/blog-posts/ public/sitemap.xml
           git diff --cached --quiet || git commit -m "blog: novo post automático $(date +'%Y-%m-%d %H:%M UTC')"
           git push
+
+      - name: Enviar email com link do post
+        if: steps.gerar.outputs.slug != ''
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          POST_SLUG: ${{ steps.gerar.outputs.slug }}
+          POST_TITLE: ${{ steps.gerar.outputs.title }}
+        run: |
+          POST_URL="https://ocodigoaguia.com.br/blog/${POST_SLUG}"
+          curl -s -X POST "https://api.resend.com/emails" \
+            -H "Authorization: Bearer ${RESEND_API_KEY}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"from\": \"Blog Bot <blog@ocodigoaguia.com.br>\",
+              \"to\": [\"fomedeaguia@gmail.com\"],
+              \"subject\": \"📝 Novo post: ${POST_TITLE}\",
+              \"html\": \"<h2>Novo artigo publicado no blog</h2><p><strong>${POST_TITLE}</strong></p><p><a href='${POST_URL}'>${POST_URL}</a></p><hr><p style='color:#999;font-size:12px'>Gerado automaticamente pelo Código Águia Bot</p>\"
+            }"
