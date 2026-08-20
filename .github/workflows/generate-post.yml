@@ -1,0 +1,49 @@
+name: Gerar Post O Código Águia
+
+on:
+  schedule:
+    - cron: '0 11 * * *'  # 08:00 BRT — manhã
+    - cron: '0 17 * * *'  # 14:00 BRT — tarde
+    - cron: '0 23 * * *'  # 20:00 BRT — noite
+  workflow_dispatch:
+    inputs:
+      motivo:
+        description: 'Motivo da geração manual'
+        required: false
+        default: 'Teste manual'
+
+jobs:
+  gerar-post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Gerar post com IA
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python .github/scripts/generate_post.py
+
+      - name: Atualizar manifest
+        run: python .github/scripts/generate_manifest.py
+
+      - name: Gerar sitemap
+        run: python .github/scripts/generate_sitemap.py
+
+      - name: Commit e push
+        run: |
+          git config user.name "Codigo Aguia Bot"
+          git config user.email "blog-bot@ocodigoaguia.com.br"
+          git add public/blog-posts/ public/sitemap.xml
+          git diff --cached --quiet || git commit -m "blog: novo post automático $(date +'%Y-%m-%d %H:%M UTC')"
+          git push
