@@ -1,7 +1,4 @@
 name = "ocodigoaguia"
-main = ".cloudflare/worker.js"
 compatibility_date = "2025-01-01"
 compatibility_flags = ["nodejs_compat"]
-
-[site]
-bucket = ".cloudflare/assets"
+pages_build_output_dir = ".cloudflare/assets"
