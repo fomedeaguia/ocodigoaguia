@@ -190,7 +190,7 @@ export function CodigoAguiaLanding() {
       </section>
 
       {/* O QUE VOCÊ VAI APRENDER */}
-      <section className="relative py-24 lg:py-32">
+      <section id="pilares" className="relative py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-xs tracking-[0.4em] text-gold uppercase mb-4">O que você vai dominar</p>
@@ -382,7 +382,7 @@ export function CodigoAguiaLanding() {
       </section>
 
       {/* FAQ */}
-      <section className="relative py-24 lg:py-32">
+      <section id="faq" className="relative py-24 lg:py-32">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-xs tracking-[0.4em] text-gold uppercase mb-4">Perguntas frequentes</p>
