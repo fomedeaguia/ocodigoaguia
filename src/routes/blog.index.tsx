@@ -50,9 +50,16 @@ function BlogIndex() {
               params={{ slug: post.slug }}
               className="group rounded-xl border border-border/60 bg-card/40 p-6 transition hover:border-gold/60"
             >
+              {post.coverImage && (
+                <img
+                  src={post.coverImage}
+                  alt={post.title}
+                  className="w-full rounded-lg object-cover max-h-40 mb-4"
+                />
+              )}
               <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.25em] text-gold">
                 <span>{post.category}</span>
-                <span className="text-muted-foreground">{post.readTime}</span>
+                <span className="text-muted-foreground">{post.readingTime} min</span>
               </div>
               <h2 className="mt-4 font-display text-2xl text-foreground group-hover:text-gold transition-colors">
                 {post.title}

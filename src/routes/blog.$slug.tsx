@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Nav } from "@/components/landing/Nav";
 import { getPostBySlug, formatDate } from "@/data/blog";
+import ReactMarkdown from "react-markdown";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -21,18 +22,20 @@ export const Route = createFileRoute("/blog/$slug")({
         { name: "description", content: post.excerpt },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },
+        { property: "og:image", content: post.coverImage ?? "" },
         { property: "og:type", content: "article" },
-        { name: "twitter:card", content: "summary" },
+        { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: post.title },
         { name: "twitter:description", content: post.excerpt },
       ],
     };
   },
-  component: BlogPost,
+  component: BlogPostPage,
 });
 
-function BlogPost() {
+function BlogPostPage() {
   const { post } = Route.useLoaderData();
+  const readTime = `${post.readingTime} min`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -41,20 +44,52 @@ function BlogPost() {
         <Link to="/blog" className="text-xs uppercase tracking-[0.25em] text-gold hover:opacity-80">
           ← Voltar ao blog
         </Link>
+
+        {post.coverImage && (
+          <img
+            src={post.coverImage}
+            alt={post.title}
+            className="mt-8 w-full rounded-xl object-cover max-h-72"
+          />
+        )}
+
         <div className="mt-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.25em] text-gold">
           <span>{post.category}</span>
-          <span className="text-muted-foreground">{post.readTime}</span>
+          <span className="text-muted-foreground">{readTime}</span>
           <span className="text-muted-foreground">{formatDate(post.date)}</span>
         </div>
+
         <h1 className="mt-4 font-display text-3xl md:text-4xl leading-tight text-foreground">
           {post.title}
         </h1>
-        <article className="mt-8 space-y-5">
-          {post.content.map((paragraph, i) => (
-            <p key={i} className="text-base leading-relaxed text-muted-foreground">
-              {paragraph}
-            </p>
-          ))}
+
+        <article className="mt-8 prose prose-invert prose-gold max-w-none">
+          <ReactMarkdown
+            components={{
+              h2: ({ children }) => (
+                <h2 className="font-display text-2xl text-foreground mt-10 mb-4">{children}</h2>
+              ),
+              p: ({ children }) => (
+                <p className="text-base leading-relaxed text-muted-foreground mb-5">{children}</p>
+              ),
+              strong: ({ children }) => (
+                <strong className="text-foreground font-semibold">{children}</strong>
+              ),
+              a: ({ href, children }) => (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold underline underline-offset-2 hover:opacity-80"
+                >
+                  {children}
+                </a>
+              ),
+              hr: () => <hr className="border-border/40 my-8" />,
+            }}
+          >
+            {post.content}
+          </ReactMarkdown>
         </article>
 
         <div className="mt-14 rounded-xl border border-gold/40 bg-card/40 p-8 text-center">
