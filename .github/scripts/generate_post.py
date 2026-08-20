@@ -9,6 +9,8 @@ unsplash_key = os.environ["UNSPLASH_ACCESS_KEY"]
 timestamp = now.strftime("%Y-%m-%d-%H")
 
 BLOG_TS_PATH = "src/data/blog.ts"
+SITEMAP_PATH = "public/sitemap.xml"
+BASE_URL = "https://ocodigoaguia.com.br"
 
 
 def slugify(text):
@@ -635,7 +637,7 @@ if f'slug: "{slug}"' in blog_ts or f"slug: '{slug}'" in blog_ts:
     print(f"Slug: {slug}")
     sys.exit(0)
 
-# ── INSERÇÃO NO TOPO DO ARRAY ──────────────────────────────────────────────
+# ── INSERÇÃO NO TOPO DO ARRAY ────────────────────────────────────────────────
 # Busca a abertura do array staticPosts e insere o novo post logo depois,
 # garantindo que o post mais recente apareça PRIMEIRO na listagem do site.
 ARRAY_OPEN_MARKER = "const staticPosts: BlogPost[] = ["
@@ -658,3 +660,59 @@ print(f"Título: {title}")
 print(f"Slug: {slug}")
 print(f"Leitura: {reading_time} min | {len(content_md.split())} palavras")
 print(f"Imagem: {cover_image[:100]}")
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ATUALIZAR public/sitemap.xml com a nova URL do post
+# ──────────────────────────────────────────────────────────────────────────────
+post_url = f"{BASE_URL}/blog/{slug}"
+
+new_url_entry = f"""  <url>
+    <loc>{post_url}</loc>
+    <lastmod>{today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>"""
+
+try:
+    with open(SITEMAP_PATH, "r", encoding="utf-8") as f:
+        sitemap_content = f.read()
+
+    # Verifica se a URL do post já existe no sitemap (evita duplicatas)
+    if post_url in sitemap_content:
+        print(f"URL '{post_url}' já existe no sitemap. Nenhuma alteração feita.")
+    else:
+        # Insere o novo <url> logo após a entrada do /blog
+        blog_entry_marker = f"<loc>{BASE_URL}/blog</loc>"
+        blog_entry_pos = sitemap_content.find(blog_entry_marker)
+
+        if blog_entry_pos != -1:
+            # Acha o fechamento </url> correspondente à entrada /blog e insere depois
+            close_tag_pos = sitemap_content.find("</url>", blog_entry_pos)
+            if close_tag_pos != -1:
+                insert_after = close_tag_pos + len("</url>")
+                updated_sitemap = (
+                    sitemap_content[:insert_after]
+                    + "\n"
+                    + new_url_entry
+                    + sitemap_content[insert_after:]
+                )
+            else:
+                # Fallback: insere antes do fechamento </urlset>
+                updated_sitemap = sitemap_content.replace(
+                    "</urlset>", new_url_entry + "\n</urlset>"
+                )
+        else:
+            # Fallback: insere antes do fechamento </urlset>
+            updated_sitemap = sitemap_content.replace(
+                "</urlset>", new_url_entry + "\n</urlset>"
+            )
+
+        with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
+            f.write(updated_sitemap)
+
+        print(f"Sitemap atualizado: {post_url} adicionado em {SITEMAP_PATH}")
+
+except FileNotFoundError:
+    print(f"AVISO: {SITEMAP_PATH} não encontrado. Sitemap não atualizado.")
+except Exception as e:
+    print(f"AVISO: Erro ao atualizar sitemap: {e}. Post foi gerado normalmente.")
