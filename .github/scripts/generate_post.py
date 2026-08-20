@@ -1,4 +1,4 @@
-import os, json, urllib.request, urllib.error, urllib.parse, sys, random, re
+import os, json, urllib.request, urllib.error, urllib.parse, sys, random, re, unicodedata
 from datetime import datetime, timezone
 
 now = datetime.now(timezone.utc)
@@ -7,6 +7,16 @@ hour = now.hour
 api_key = os.environ["OPENROUTER_API_KEY"]
 unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 timestamp = now.strftime("%Y-%m-%d-%H")
+
+
+def slugify(text):
+    text = unicodedata.normalize("NFD", text)
+    text = "".join(c for c in text if unicodedata.category(c) != "Mn")
+    text = text.lower()
+    text = re.sub(r"[^a-z0-9\s-]", "", text)
+    text = re.sub(r"[\s-]+", "-", text).strip("-")
+    return text[:80]
+
 
 CODIGO_AGUIA_FACTS = """
 - O Código Águia é um ebook sobre transformação de mentalidade e ascensão financeira.
@@ -126,7 +136,6 @@ else:
     period = "noite"
 
 image_key, topic_desc = random.choice(pool)
-slug = f"post-{timestamp}"
 
 category_map = {
     "manha": ["Arquétipo da Águia", "Prosperidade"],
@@ -149,136 +158,120 @@ tags_map = {
 }
 tags = tags_map.get(image_key, ["código águia", "transformação", "prosperidade"])
 
-# --- ETAPA 1: modelo gera apenas o artigo em Markdown puro ---
-system_msg = (
-    "Você é o redator do blog O Código Águia, portal de transformação pessoal e prosperidade. "
-    "Escreve artigos profundos, inspiradores, com tom humano. "
-    "REGRAS: sem bullet points, sem listas, tudo em parágrafos corridos. "
-    "Use ## para títulos de seção (mínimo 6 seções). Jamais ### ou ####. "
-    "Negrito com **palavra**. Links: [texto](url). "
-    "NUNCA invente dados. Escreva 100% em português do Brasil. "
-    "Retorne APENAS o texto do artigo em Markdown. Nada mais."
-)
+# Prompt direto — sem pedir JSON, sem pedir raciocínio
+# O modelo deve retornar apenas o artigo em Markdown
+prompt = f"""Escreva um artigo de blog em português do Brasil sobre: {topic_desc}.
 
-user_msg = (
-    f"Hoje é {today}. Escreva um artigo sobre: {topic_desc}.\n\n"
-    f"Fatos obrigatórios:{CODIGO_AGUIA_FACTS}\n"
-    "Mínimo 1200 palavras. Ao mencionar O Código Águia, linke: [ocodigoaguia.com.br](https://ocodigoaguia.com.br).\n"
-    "Após a 3ª seção insira exatamente: <!--CTA_MEIO-->\n"
-    "No final do artigo insira exatamente: <!--CTA_FINAL-->\n"
-    "A primeira linha deve ser o título no formato: # Título do Artigo\n"
-    "A segunda linha deve ser o resumo no formato: RESUMO: texto do resumo com até 160 caracteres"
-)
+Fatos sobre O Código Águia (use quando relevante):{CODIGO_AGUIA_FACTS}
 
-# Modelos atualizados (sem os que estão com 404)
-MODELS = [
-    "google/gemma-3-27b-it:free",
-    "nvidia/nemotron-3-nano-30b-a3b:free",
-    "meta-llama/llama-3.1-8b-instruct:free",
-    "qwen/qwen-2.5-7b-instruct:free",
-]
+Regras obrigatórias:
+- Mínimo 1200 palavras, tudo em parágrafos corridos (NUNCA use listas ou bullet points)
+- Use ## para títulos de seção (mínimo 6 seções). NUNCA use ### ou ####
+- Use **negrito** para ênfase em palavras-chave
+- Ao mencionar O Código Águia, inclua o link: [O Código Águia](https://ocodigoaguia.com.br)
+- Tom inspirador e humano, sem clichês de IA
+- NUNCA invente dados ou estatísticas
+- Após a 3ª seção, insira exatamente esta linha: <!--CTA_MEIO-->
+- No final do artigo, insira exatamente esta linha: <!--CTA_FINAL-->
 
+Formato de saída (siga exatamente):
+Linha 1: # Título do Artigo
+Linha 2: RESUMO: resumo com até 160 caracteres
+Linha 3 em diante: o artigo completo
 
-def chamar_modelo(model, system_msg, user_msg, max_tokens=6000):
-    payload = json.dumps({
-        "model": model,
-        "messages": [
-            {"role": "system", "content": system_msg},
-            {"role": "user", "content": user_msg}
-        ],
-        "temperature": 0.75,
-        "max_tokens": max_tokens
-    }).encode()
-    req = urllib.request.Request(
-        "https://openrouter.ai/api/v1/chat/completions",
-        data=payload,
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-            "HTTP-Referer": "https://ocodigoaguia.com.br",
-            "X-Title": "O Codigo Aguia Blog"
-        }
-    )
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        data = json.loads(resp.read())
-        return data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
+Escreva agora o artigo completo, nada mais."""
 
-
-# Busca imagem
 print(f"Buscando imagem para: {image_key}")
 cover_image = buscar_imagem(image_key, unsplash_key)
 
-# Gera artigo em texto puro
-article_text = ""
-for model in MODELS:
-    print(f"Tentando modelo: {model}")
-    try:
-        result = chamar_modelo(model, system_msg, user_msg)
-        if result and len(result) > 500:
-            article_text = result
-            print(f"Sucesso com {model} ({len(result)} chars)")
-            break
-        else:
-            print(f"{model} retornou muito curto ({len(result)} chars), próximo...")
-    except urllib.error.HTTPError as e:
-        print(f"{model} falhou: {e.code}")
-    except Exception as e:
-        print(f"{model} erro: {e}")
+# Chama OpenRouter sem especificar modelo — usa o padrão (auto)
+payload = json.dumps({
+    "model": "openrouter/auto",
+    "messages": [{"role": "user", "content": prompt}],
+    "temperature": 0.75,
+    "max_tokens": 6000
+}).encode()
 
-if not article_text:
-    print("Todos os modelos falharam.")
+req = urllib.request.Request(
+    "https://openrouter.ai/api/v1/chat/completions",
+    data=payload,
+    headers={
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "HTTP-Referer": "https://ocodigoaguia.com.br",
+        "X-Title": "O Codigo Aguia Blog"
+    }
+)
+
+article_text = ""
+try:
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        data = json.loads(resp.read())
+        article_text = data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
+        model_used = data.get("model", "desconhecido")
+        print(f"Modelo usado: {model_used} ({len(article_text)} chars)")
+except Exception as e:
+    print(f"Erro na API: {e}")
     sys.exit(1)
 
-# --- ETAPA 2: Python extrai título, resumo e monta o JSON ---
-lines = article_text.strip().splitlines()
+if not article_text or len(article_text) < 500:
+    print(f"Resposta muito curta ou vazia ({len(article_text)} chars)")
+    sys.exit(1)
 
-# Extrai título (primeira linha com # )
+# Extrai título (primeira linha # )
+lines = article_text.strip().splitlines()
 title = ""
+excerpt = ""
+content_lines = []
+
 for i, line in enumerate(lines):
-    if line.startswith("# "):
-        title = line[2:].strip()
-        lines.pop(i)
-        break
+    stripped = line.strip()
+    if not title and stripped.startswith("# "):
+        title = stripped[2:].strip()
+        continue
+    if not excerpt and stripped.startswith("RESUMO:"):
+        excerpt = stripped[7:].strip()
+        continue
+    content_lines.append(line)
+
+content_md = "\n".join(content_lines).strip()
+
+# Fallbacks
 if not title:
-    # Fallback: usa a primeira seção ## como título
-    for line in lines:
-        if line.startswith("## "):
-            title = line[3:].strip()
+    for line in content_lines:
+        if line.strip().startswith("## "):
+            title = line.strip()[3:].strip()
             break
 if not title:
-    title = f"A Águia e o Caminho da Transformação - {today}"
+    title = f"A Águia e o Caminho da Transformação — {today}"
 
-# Extrai resumo (linha RESUMO:)
-excerpt = ""
-for i, line in enumerate(lines):
-    if line.startswith("RESUMO:"):
-        excerpt = line[7:].strip()
-        lines.pop(i)
-        break
 if not excerpt:
-    # Fallback: primeiro parágrafo com mais de 80 chars
-    for line in lines:
+    for line in content_lines:
         clean = line.strip()
         if len(clean) > 80 and not clean.startswith("#"):
-            excerpt = clean[:200]
+            excerpt = re.sub(r"\*\*|\[.*?\]\(.*?\)", "", clean)[:200].strip()
             break
-
-# Monta o conteúdo final
-content_md = "\n".join(lines).strip()
 
 # Injeta CTAs
 content_md = content_md.replace("<!--CTA_MEIO-->", EBOOK_CTA_MEIO)
 content_md = content_md.replace("<!--CTA_FINAL-->", EBOOK_CTA_FINAL)
 
-# Se os marcadores não foram inseridos pelo modelo, injeta manualmente
-if EBOOK_CTA_MEIO not in content_md:
-    sections = re.split(r"(?=\n## )", content_md)
-    if len(sections) >= 4:
-        sections.insert(3, EBOOK_CTA_MEIO)
-    content_md = "".join(sections)
+# Fallback CTAs se modelo não inseriu os marcadores
+if EBOOK_CTA_MEIO.strip() not in content_md:
+    parts = re.split(r"(?m)^(## .+)$", content_md)
+    # parts alternates: [before_h1, h1, content1, h2, content2, ...]
+    if len(parts) >= 9:  # ao menos 4 seções
+        insert_at = 9  # após 3ª seção
+        parts.insert(insert_at, EBOOK_CTA_MEIO)
+        content_md = "".join(parts)
 
-if EBOOK_CTA_FINAL not in content_md:
-    content_md += EBOOK_CTA_FINAL
+if EBOOK_CTA_FINAL.strip() not in content_md:
+    content_md = content_md.rstrip() + "\n" + EBOOK_CTA_FINAL
+
+# Gera slug a partir do título
+slug = slugify(title)
+if not slug:
+    slug = f"post-{timestamp}"
 
 reading_time = max(1, round(len(content_md.split()) / 200))
 
@@ -304,4 +297,5 @@ with open(filepath, "w", encoding="utf-8") as f:
 
 print(f"Post salvo: {filepath}")
 print(f"Título: {post['title']}")
+print(f"Slug: {slug}")
 print(f"Leitura: {reading_time} min | {len(content_md.split())} palavras")
