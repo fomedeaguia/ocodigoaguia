@@ -22,23 +22,11 @@ CODIGO_AGUIA_FACTS = """
 - O Código Águia é um ebook sobre transformação de mentalidade e ascensão financeira.
 - O símbolo da águia representa visão ampla, coragem, renovação e prosperidade.
 - A águia é o único animal que enfrenta a tempestade voando acima das nuvens.
-- O ebook ensina os princípios arquetípicos que elevam pessoas de um nível de vida para outro.
+- O ebook ensina os princípios arquetipicos que elevam pessoas de um nível de vida para outro.
 - Conteúdo: mentalidade de alto desempenho, foco, resiliência, prosperidade financeira e liberdade.
 - Preço: acessível, entrega imediata em PDF.
 - Site oficial: ocodigoaguia.com.br
 NÃO DIZER: resultados garantidos, resolver todos os problemas, riqueza rápida.
-"""
-
-EBOOK_CTA_MEIO = """
-
----
-
-## O Mapa Que Faltava Para Você Subir de Nível
-
-Se você chegou até aqui, já percebeu que a mudança começa dentro — na forma como você enxerga, decide e age. O **Código Águia** reúne em um ebook direto e transformador os princípios que separam quem observa a tempestade de quem voa acima dela. São páginas escritas para quem está pronto para parar de reagir e começar a voar. [Clique aqui e garanta o seu exemplar agora](https://ocodigoaguia.com.br).
-
----
-
 """
 
 EBOOK_CTA_FINAL = """
@@ -110,10 +98,10 @@ TOPICOS_MANHA = [
 ]
 
 TOPICOS_TARDE = [
-    ("renovacao", "o ritual de renovação da águia como metáfora de transformação pessoal: sair da zona de conforto e recomeçar mais forte"),
+    ("renovacao", "o ritual de renovação da águia como metáfora de transformação pessoal: sair da zona de conforto e recomecar mais forte"),
     ("coragem", "como a águia enfrenta tempestades voando acima delas, como lição de resiliência para quem enfrenta crises e fracassos"),
     ("lideranca", "a águia como símbolo de liderança natural por altitude, visão e exemplo, e como aplicar isso na vida pessoal e profissional"),
-    ("transformacao", "os 7 atributos arquetípicos da águia que transformam vidas: visão, coragem, renovação, altitude, precisão, liberdade e prosperidade"),
+    ("transformacao", "os 7 atributos arquetipicos da águia que transformam vidas: visão, coragem, renovação, altitude, precisão, liberdade e prosperidade"),
     ("foco", "o foco da águia que concentra toda energia no alvo, e como esse foco intencional é o diferencial entre sonhar e realizar"),
 ]
 
@@ -158,21 +146,27 @@ tags_map = {
 }
 tags = tags_map.get(image_key, ["código águia", "transformação", "prosperidade"])
 
-# Prompt direto — sem pedir JSON, sem pedir raciocínio
-# O modelo deve retornar apenas o artigo em Markdown
+# Aleatório: 50% dos posts têm CTA no final, 50% são só conteúdo puro
+use_cta = random.random() < 0.5
+
+cta_instruction = ""
+if use_cta:
+    cta_instruction = """
+- No final do artigo (após a última seção), insira exatamente esta linha e nada mais: <!--CTA_FINAL-->"""
+else:
+    cta_instruction = """
+- Não insira nenhum CTA, banner ou menção ao O Código Águia. Escreva apenas o artigo."""
+
 prompt = f"""Escreva um artigo de blog em português do Brasil sobre: {topic_desc}.
 
-Fatos sobre O Código Águia (use quando relevante):{CODIGO_AGUIA_FACTS}
+Fatos sobre O Código Águia (use SOMENTE se as instruções abaixo permitirem):{CODIGO_AGUIA_FACTS}
 
 Regras obrigatórias:
 - Mínimo 1200 palavras, tudo em parágrafos corridos (NUNCA use listas ou bullet points)
 - Use ## para títulos de seção (mínimo 6 seções). NUNCA use ### ou ####
 - Use **negrito** para ênfase em palavras-chave
-- Ao mencionar O Código Águia, inclua o link: [O Código Águia](https://ocodigoaguia.com.br)
 - Tom inspirador e humano, sem clichês de IA
-- NUNCA invente dados ou estatísticas
-- Após a 3ª seção, insira exatamente esta linha: <!--CTA_MEIO-->
-- No final do artigo, insira exatamente esta linha: <!--CTA_FINAL-->
+- NUNCA invente dados ou estatísticas{cta_instruction}
 
 Formato de saída (siga exatamente):
 Linha 1: # Título do Artigo
@@ -181,10 +175,9 @@ Linha 3 em diante: o artigo completo
 
 Escreva agora o artigo completo, nada mais."""
 
-print(f"Buscando imagem para: {image_key}")
+print(f"Buscando imagem para: {image_key} | CTA: {use_cta}")
 cover_image = buscar_imagem(image_key, unsplash_key)
 
-# Chama OpenRouter sem especificar modelo — usa o padrão (auto)
 payload = json.dumps({
     "model": "openrouter/auto",
     "messages": [{"role": "user", "content": prompt}],
@@ -218,7 +211,6 @@ if not article_text or len(article_text) < 500:
     print(f"Resposta muito curta ou vazia ({len(article_text)} chars)")
     sys.exit(1)
 
-# Extrai título (primeira linha # )
 lines = article_text.strip().splitlines()
 title = ""
 excerpt = ""
@@ -236,7 +228,6 @@ for i, line in enumerate(lines):
 
 content_md = "\n".join(content_lines).strip()
 
-# Fallbacks
 if not title:
     for line in content_lines:
         if line.strip().startswith("## "):
@@ -252,23 +243,13 @@ if not excerpt:
             excerpt = re.sub(r"\*\*|\[.*?\]\(.*?\)", "", clean)[:200].strip()
             break
 
-# Injeta CTAs
-content_md = content_md.replace("<!--CTA_MEIO-->", EBOOK_CTA_MEIO)
-content_md = content_md.replace("<!--CTA_FINAL-->", EBOOK_CTA_FINAL)
+# Substitui marcador CTA (só presente quando use_cta=True)
+if use_cta:
+    content_md = content_md.replace("<!--CTA_FINAL-->", EBOOK_CTA_FINAL)
+    # Fallback: se modelo não inseriu o marcador, adiciona no final
+    if EBOOK_CTA_FINAL.strip() not in content_md:
+        content_md = content_md.rstrip() + "\n" + EBOOK_CTA_FINAL
 
-# Fallback CTAs se modelo não inseriu os marcadores
-if EBOOK_CTA_MEIO.strip() not in content_md:
-    parts = re.split(r"(?m)^(## .+)$", content_md)
-    # parts alternates: [before_h1, h1, content1, h2, content2, ...]
-    if len(parts) >= 9:  # ao menos 4 seções
-        insert_at = 9  # após 3ª seção
-        parts.insert(insert_at, EBOOK_CTA_MEIO)
-        content_md = "".join(parts)
-
-if EBOOK_CTA_FINAL.strip() not in content_md:
-    content_md = content_md.rstrip() + "\n" + EBOOK_CTA_FINAL
-
-# Gera slug a partir do título
 slug = slugify(title)
 if not slug:
     slug = f"post-{timestamp}"
