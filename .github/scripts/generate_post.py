@@ -16,15 +16,30 @@ CODIGO_AGUIA_FACTS = """
 - Conteúdo: mentalidade de alto desempenho, foco, resiliência, prosperidade financeira e liberdade.
 - Preço: acessível, entrega imediata em PDF.
 - Site oficial: ocodigoaguia.com.br
-NÃO DIZER:
-- Resultados financeiros garantidos ou específicos
-- Que o ebook resolve todos os problemas do leitor
-- Promessas de riqueza rápida ou fácil
+NÃO DIZER: resultados garantidos, resolver todos os problemas, riqueza rápida.
 """
 
-EBOOK_CTA_MEIO = """\n\n---\n\n## O Mapa Que Faltava Para Você Subir de Nível\n\nSe você chegou até aqui, já percebeu que a mudança começa dentro — na forma como você enxerga, decide e age. O **Código Águia** reúne em um ebook direto e transformador os princípios que separam quem observa a tempestade de quem voa acima dela. São páginas escritas para quem está pronto para parar de reagir e começar a voar. [Clique aqui e garanta o seu exemplar agora](https://ocodigoaguia.com.br).\n\n---\n\n"""
+EBOOK_CTA_MEIO = """
 
-EBOOK_CTA_FINAL = """\n\n---\n\n## Pronto Para Ativar o Arquétipo da Águia em Você?\n\nTudo que você leu aqui é apenas o começo. O **Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).\n\n---"""
+---
+
+## O Mapa Que Faltava Para Você Subir de Nível
+
+Se você chegou até aqui, já percebeu que a mudança começa dentro — na forma como você enxerga, decide e age. O **Código Águia** reúne em um ebook direto e transformador os princípios que separam quem observa a tempestade de quem voa acima dela. São páginas escritas para quem está pronto para parar de reagir e começar a voar. [Clique aqui e garanta o seu exemplar agora](https://ocodigoaguia.com.br).
+
+---
+
+"""
+
+EBOOK_CTA_FINAL = """
+
+---
+
+## Pronto Para Ativar o Arquétipo da Águia em Você?
+
+Tudo que você leu aqui é apenas o começo. O **Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---"""
 
 UNSPLASH_QUERIES = {
     "aguia_liberdade": "eagle flying freedom sky",
@@ -41,22 +56,21 @@ UNSPLASH_QUERIES = {
 DEFAULT_UNSPLASH_QUERY = "eagle sky freedom"
 
 POLLINATIONS_PROMPTS = {
-    "aguia_liberdade": "majestic eagle soaring above clouds golden hour dramatic lighting no text premium motivational",
-    "prosperidade": "eagle silhouette golden light wealth abundance concept no text professional",
-    "mentalidade": "eagle eye close-up sharp focus mindset dark dramatic tones no text",
+    "aguia_liberdade": "majestic eagle soaring above clouds golden hour dramatic lighting no text",
+    "prosperidade": "eagle silhouette golden light wealth abundance no text",
+    "mentalidade": "eagle eye close-up sharp focus dark dramatic tones no text",
     "renovacao": "eagle rising transformation dark gold palette no text",
-    "lideranca": "eagle mountain peak sunrise leadership elevation no text",
+    "lideranca": "eagle mountain peak sunrise leadership no text",
     "foco": "eagle diving precision dark blue tones no text",
-    "coragem": "eagle storm clouds courage resilience dramatic sky no text",
-    "visao": "eagle soaring wide panoramic view below vision strategy no text",
-    "abundancia": "eagle wings golden light rays abundance success no text",
+    "coragem": "eagle storm clouds courage dramatic sky no text",
+    "visao": "eagle soaring wide panoramic view vision strategy no text",
+    "abundancia": "eagle wings golden light rays abundance no text",
     "transformacao": "eagle emerging shadows into light personal growth no text",
 }
-DEFAULT_POLLINATIONS = "powerful eagle soaring clouds transformation success dramatic golden tones no text"
+DEFAULT_POLLINATIONS = "powerful eagle soaring clouds transformation success golden tones no text"
 
 
 def buscar_imagem(image_key, unsplash_key):
-    # Tenta Unsplash primeiro se tiver chave
     if unsplash_key:
         query = UNSPLASH_QUERIES.get(image_key, DEFAULT_UNSPLASH_QUERY)
         for q in [query, DEFAULT_UNSPLASH_QUERY]:
@@ -66,40 +80,39 @@ def buscar_imagem(image_key, unsplash_key):
                 with urllib.request.urlopen(req, timeout=10) as resp:
                     data = json.loads(resp.read())
                     img = data["urls"]["regular"]
-                    print(f"Unsplash OK: {img[:60]}...")
+                    print(f"Unsplash OK: {img[:80]}")
                     return img
             except Exception as e:
                 print(f"Unsplash falhou ({q}): {e}")
-    # Fallback: Pollinations (sem chave, ilimitado)
     prompt = POLLINATIONS_PROMPTS.get(image_key, DEFAULT_POLLINATIONS)
-    slug_seed = abs(hash(timestamp)) % 99999
-    img = f"https://image.pollinations.ai/prompt/{urllib.parse.quote(prompt)}?width=1200&height=630&nologo=true&seed={slug_seed}"
-    print(f"Usando Pollinations: {img[:80]}...")
+    seed = abs(hash(timestamp)) % 99999
+    img = f"https://image.pollinations.ai/prompt/{urllib.parse.quote(prompt)}?width=1200&height=630&nologo=true&seed={seed}"
+    print(f"Pollinations fallback: {img[:80]}")
     return img
 
 
 TOPICOS_MANHA = [
-    ("aguia_liberdade", "Escreva um artigo profundo explicando por que a águia é universalmente reconhecida como símbolo de liberdade, prosperidade e ascensão. Explore a origem desse arquétipo em culturas como a romana, asteca, americana e brasileira, e como esse símbolo impacta a psicologia de pessoas que buscam mudar de nível de vida."),
-    ("prosperidade", "Escreva um artigo sobre a relação entre o arquétipo da águia e a prosperidade financeira: por que empresas, países e líderes usam a águia como símbolo de poder econômico, e como incorporar essa mentalidade transforma a forma como a pessoa lida com dinheiro e oportunidades."),
-    ("mentalidade", "Escreva um artigo sobre a mentalidade de alto desempenho representada pela águia: visão estratégica, paciência para esperar o momento certo e coragem para agir com precisão. Como esses traços separam pessoas que crescem das que ficam estagnadas."),
-    ("visao", "Escreva um artigo sobre a visão da águia como metáfora de vida: a capacidade de enxergar além do óbvio, antecipar tendências e tomar decisões de cima para baixo. Como desenvolver essa perspectiva estratégica no dia a dia e nos negócios."),
-    ("abundancia", "Escreva um artigo sobre como o símbolo da águia está associado à abundância em diversas tradições espirituais e filosóficas, e como a consciência de abundância — diferente da mentalidade de escassez — é o primeiro passo para mudanças financeiras reais."),
+    ("aguia_liberdade", "por que a águia é universalmente reconhecida como símbolo de liberdade, prosperidade e ascensão, explorando sua origem em culturas romana, asteca, americana e brasileira"),
+    ("prosperidade", "a relação entre o arquétipo da águia e a prosperidade financeira, por que empresas e líderes usam a águia como símbolo de poder econômico"),
+    ("mentalidade", "a mentalidade de alto desempenho representada pela águia: visão estratégica, paciência e coragem para agir com precisão"),
+    ("visao", "a visão da águia como metáfora de vida: enxergar além do óbvio, antecipar tendências e tomar decisões estratégicas"),
+    ("abundancia", "como o símbolo da águia se associa à abundância em tradições espirituais, e como a consciência de abundância difere da mentalidade de escassez"),
 ]
 
 TOPICOS_TARDE = [
-    ("renovacao", "Escreva um artigo sobre o ritual de renovação da águia: o processo em que ela quebra o bico, arranca as garras e as penas para renascer mais forte. Use esse processo como metáfora poderosa para a transformação pessoal, saindo de zonas de conforto e recomeçando com mais força."),
-    ("coragem", "Escreva um artigo sobre como a águia enfrenta tempestades voando acima delas em vez de se esconder. Use essa característica como lição de resiliência: como as pessoas de alto nível encaram crises, perdas e fracassos como trampolins, não como fins."),
-    ("lideranca", "Escreva um artigo sobre a águia como símbolo de liderança natural: ela não lidera por dominação, mas por altitude, visão e exemplo. Como esse modelo de liderança se aplica à vida pessoal, profissional e financeira de quem quer mudar de nível."),
-    ("transformacao", "Escreva um artigo sobre os 7 atributos arquetípicos da águia que podem transformar a vida de qualquer pessoa: visão, coragem, renovação, altitude, precisão, liberdade e prosperidade. Explique como cada um se aplica na prática."),
-    ("foco", "Escreva um artigo sobre o foco da águia: ela tem a capacidade de concentrar 100% da sua energia no alvo antes de mergulhar. Como esse nível de foco intencional é o diferencial entre sonhar e realizar, e como treiná-lo no cotidiano."),
+    ("renovacao", "o ritual de renovação da águia como metáfora de transformação pessoal: sair da zona de conforto e recomeçar mais forte"),
+    ("coragem", "como a águia enfrenta tempestades voando acima delas, como lição de resiliência para quem enfrenta crises e fracassos"),
+    ("lideranca", "a águia como símbolo de liderança natural por altitude, visão e exemplo, e como aplicar isso na vida pessoal e profissional"),
+    ("transformacao", "os 7 atributos arquetípicos da águia que transformam vidas: visão, coragem, renovação, altitude, precisão, liberdade e prosperidade"),
+    ("foco", "o foco da águia que concentra toda energia no alvo, e como esse foco intencional é o diferencial entre sonhar e realizar"),
 ]
 
 TOPICOS_NOITE = [
-    ("aguia_liberdade", "Escreva um artigo sobre por que pessoas bem-sucedidas se identificam com a águia e não com outras aves. Explore a psicologia dos arquétipos de Carl Jung, o poder dos símbolos na formação de identidade e como escolher conscientemente seu arquétipo de vida acelera transformações."),
-    ("prosperidade", "Escreva um artigo sobre os princípios de prosperidade que a águia representa e que estão presentes em livros como Pai Rico Pai Pobre, Mindset e Os Segredos da Mente Milionária. Como o arquétipo da águia sintetiza o que esses livros ensinam."),
-    ("mentalidade", "Escreva um artigo sobre a diferença entre a mentalidade de galinha e a mentalidade de águia: como a galinha reage ao ambiente e a águia cria o seu. Exemplos práticos de como essa diferença se manifesta em decisões financeiras, relacionamentos e carreira."),
-    ("visao", "Escreva um artigo sobre como a simbologia da águia aparece em moedas, brasões de armas, logos de empresas Fortune 500 e bandeiras de nações poderosas. O que essa presença universal diz sobre o que a humanidade associa ao poder, à prosperidade e à ascensão."),
-    ("abundancia", "Escreva um artigo reflexivo sobre o que significa voar como uma águia na prática da vida real: saindo de empregos que aprisionam, relacionamentos que drenam energia, hábitos que sabotam o crescimento. Um convite à transformação profunda e duradoura."),
+    ("aguia_liberdade", "por que pessoas bem-sucedidas se identificam com a águia, explorando a psicologia dos arquétipos de Jung e o poder dos símbolos na formação de identidade"),
+    ("prosperidade", "os princípios de prosperidade da águia presentes em livros como Pai Rico Pai Pobre, Mindset e Os Segredos da Mente Milionária"),
+    ("mentalidade", "a diferença entre mentalidade de galinha e mentalidade de águia, com exemplos práticos em decisões financeiras, relacionamentos e carreira"),
+    ("visao", "como a simbologia da águia aparece em moedas, brasões, logos de empresas Fortune 500 e bandeiras de nações poderosas"),
+    ("abundancia", "o que significa voar como uma águia na vida real: sair de empregos que aprisionam, relacionamentos que drenam, hábitos que sabotam"),
 ]
 
 if hour < 12:
@@ -112,7 +125,7 @@ else:
     pool = TOPICOS_NOITE
     period = "noite"
 
-image_key, topic = random.choice(pool)
+image_key, topic_desc = random.choice(pool)
 slug = f"post-{timestamp}"
 
 category_map = {
@@ -136,116 +149,45 @@ tags_map = {
 }
 tags = tags_map.get(image_key, ["código águia", "transformação", "prosperidade"])
 
+# --- ETAPA 1: modelo gera apenas o artigo em Markdown puro ---
 system_msg = (
-    "Você é o redator do blog O Código Águia, portal de transformação pessoal, mentalidade e prosperidade. "
-    "Escreve artigos profundos, inspiradores e com tom humano — sem soar como IA. "
-    "REGRAS OBRIGATÓRIAS: "
-    "1. NUNCA use bullet points, traços ou listas. Tudo em parágrafos corridos. "
-    "2. Use ## apenas para títulos de seção. Jamais ### ou ####. "
-    "3. Links sempre no formato [texto](url). "
-    "4. Tom inspirador, direto. Sem clichês de IA. "
-    "5. NUNCA invente dados ou estatísticas. "
-    "6. Escreva 100% em português do Brasil. "
-    "CRITICO: Retorne APENAS JSON puro. Sem texto antes ou depois. Sem blocos de codigo. "
-    "Comece com { e termine com }."
+    "Você é o redator do blog O Código Águia, portal de transformação pessoal e prosperidade. "
+    "Escreve artigos profundos, inspiradores, com tom humano. "
+    "REGRAS: sem bullet points, sem listas, tudo em parágrafos corridos. "
+    "Use ## para títulos de seção (mínimo 6 seções). Jamais ### ou ####. "
+    "Negrito com **palavra**. Links: [texto](url). "
+    "NUNCA invente dados. Escreva 100% em português do Brasil. "
+    "Retorne APENAS o texto do artigo em Markdown. Nada mais."
 )
 
 user_msg = (
-    f"Hoje e {today}. {topic}\n\n"
-    f"FATOS: {CODIGO_AGUIA_FACTS}\n\n"
-    "Escreva artigo com MINIMO 1200 palavras em portugues do Brasil. "
-    "Use ## para secoes (minimo 6 secoes) e **negrito** para enfase. "
-    "Paragrafos corridos, sem listas. "
-    "Ao citar O Codigo Aguia, linke: [ocodigoaguia.com.br](https://ocodigoaguia.com.br). "
-    "Insira o marcador <!--CTA_MEIO--> apos a 3a secao e <!--CTA_FINAL--> no final. "
-    "Retorne APENAS este JSON sem nenhum texto adicional:\n"
-    "{\n"
-    f'  "id": "{slug}",\n'
-    '  "title": "TITULO_AQUI",\n'
-    f'  "slug": "{slug}",\n'
-    '  "excerpt": "RESUMO_AQUI",\n'
-    '  "content": "CONTEUDO_AQUI",\n'
-    f'  "category": "{category}",\n'
-    '  "author": "O Codigo Aguia",\n'
-    f'  "date": "{today}",\n'
-    '  "readingTime": 6,\n'
-    '  "featured": false,\n'
-    '  "coverImage": "",\n'
-    f'  "tags": {json.dumps(tags, ensure_ascii=False)}\n'
-    "}"
+    f"Hoje é {today}. Escreva um artigo sobre: {topic_desc}.\n\n"
+    f"Fatos obrigatórios:{CODIGO_AGUIA_FACTS}\n"
+    "Mínimo 1200 palavras. Ao mencionar O Código Águia, linke: [ocodigoaguia.com.br](https://ocodigoaguia.com.br).\n"
+    "Após a 3ª seção insira exatamente: <!--CTA_MEIO-->\n"
+    "No final do artigo insira exatamente: <!--CTA_FINAL-->\n"
+    "A primeira linha deve ser o título no formato: # Título do Artigo\n"
+    "A segunda linha deve ser o resumo no formato: RESUMO: texto do resumo com até 160 caracteres"
 )
 
-# Modelos ordenados: mais confiáveis primeiro
+# Modelos atualizados (sem os que estão com 404)
 MODELS = [
-    "mistralai/mistral-small-3.2-24b-instruct:free",
-    "google/gemma-4-31b-it:free",
-    "mistralai/mistral-7b-instruct:free",
+    "google/gemma-3-27b-it:free",
     "nvidia/nemotron-3-nano-30b-a3b:free",
+    "meta-llama/llama-3.1-8b-instruct:free",
+    "qwen/qwen-2.5-7b-instruct:free",
 ]
 
 
-def extrair_json(text):
-    text = text.strip()
-    try:
-        return json.loads(text)
-    except Exception:
-        pass
-    cleaned = re.sub(r"^```(?:json)?\s*", "", text, flags=re.IGNORECASE)
-    cleaned = re.sub(r"\s*```$", "", cleaned).strip()
-    try:
-        return json.loads(cleaned)
-    except Exception:
-        pass
-    start = text.find("{")
-    if start == -1:
-        raise ValueError("Nenhum { encontrado.")
-    depth, in_string, escape_next, end = 0, False, False, -1
-    for i, ch in enumerate(text[start:], start):
-        if escape_next:
-            escape_next = False
-            continue
-        if ch == "\\" and in_string:
-            escape_next = True
-            continue
-        if ch == '"':
-            in_string = not in_string
-            continue
-        if in_string:
-            continue
-        if ch == "{":
-            depth += 1
-        elif ch == "}":
-            depth -= 1
-            if depth == 0:
-                end = i + 1
-                break
-    if end == -1:
-        raise ValueError("JSON incompleto.")
-    candidate = text[start:end]
-    try:
-        return json.loads(candidate)
-    except json.JSONDecodeError as e:
-        raise ValueError(f"JSON inválido: {e}\n{candidate[:400]}")
-
-
-# Busca imagem
-print(f"Buscando imagem para: {image_key}")
-cover_image = buscar_imagem(image_key, unsplash_key)
-
-# Gera post com IA
-response_data = None
-content = ""
-
-for model in MODELS:
-    print(f"Tentando modelo: {model}")
+def chamar_modelo(model, system_msg, user_msg, max_tokens=6000):
     payload = json.dumps({
         "model": model,
         "messages": [
             {"role": "system", "content": system_msg},
             {"role": "user", "content": user_msg}
         ],
-        "temperature": 0.7,
-        "max_tokens": 8000
+        "temperature": 0.75,
+        "max_tokens": max_tokens
     }).encode()
     req = urllib.request.Request(
         "https://openrouter.ai/api/v1/chat/completions",
@@ -257,45 +199,103 @@ for model in MODELS:
             "X-Title": "O Codigo Aguia Blog"
         }
     )
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        data = json.loads(resp.read())
+        return data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
+
+
+# Busca imagem
+print(f"Buscando imagem para: {image_key}")
+cover_image = buscar_imagem(image_key, unsplash_key)
+
+# Gera artigo em texto puro
+article_text = ""
+for model in MODELS:
+    print(f"Tentando modelo: {model}")
     try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            data = json.loads(resp.read())
-            msg = data.get("choices", [{}])[0].get("message", {})
-            content = msg.get("content") or ""
-            if not content.strip():
-                print(f"{model} retornou vazio, próximo...")
-                continue
-            content = content.strip()
-            response_data = data
-            print(f"Sucesso com {model} ({len(content)} chars)")
+        result = chamar_modelo(model, system_msg, user_msg)
+        if result and len(result) > 500:
+            article_text = result
+            print(f"Sucesso com {model} ({len(result)} chars)")
             break
+        else:
+            print(f"{model} retornou muito curto ({len(result)} chars), próximo...")
     except urllib.error.HTTPError as e:
         print(f"{model} falhou: {e.code}")
-        continue
     except Exception as e:
         print(f"{model} erro: {e}")
-        continue
 
-if not response_data or not content:
+if not article_text:
     print("Todos os modelos falharam.")
     sys.exit(1)
 
-try:
-    post = extrair_json(content)
-except ValueError as e:
-    print(f"Erro JSON: {e}")
-    print(f"Bruto:\n{content[:800]}")
-    sys.exit(1)
+# --- ETAPA 2: Python extrai título, resumo e monta o JSON ---
+lines = article_text.strip().splitlines()
 
-# Injeta CTAs e finaliza
-post_content = post.get("content", "")
-post_content = post_content.replace("<!--CTA_MEIO-->", EBOOK_CTA_MEIO)
-post_content = post_content.replace("<!--CTA_FINAL-->", EBOOK_CTA_FINAL)
-post["content"] = post_content
-post["readingTime"] = max(1, round(len(post_content.split()) / 200))
-post["author"] = "O Código Águia"
-post["category"] = category
-post["coverImage"] = cover_image
+# Extrai título (primeira linha com # )
+title = ""
+for i, line in enumerate(lines):
+    if line.startswith("# "):
+        title = line[2:].strip()
+        lines.pop(i)
+        break
+if not title:
+    # Fallback: usa a primeira seção ## como título
+    for line in lines:
+        if line.startswith("## "):
+            title = line[3:].strip()
+            break
+if not title:
+    title = f"A Águia e o Caminho da Transformação - {today}"
+
+# Extrai resumo (linha RESUMO:)
+excerpt = ""
+for i, line in enumerate(lines):
+    if line.startswith("RESUMO:"):
+        excerpt = line[7:].strip()
+        lines.pop(i)
+        break
+if not excerpt:
+    # Fallback: primeiro parágrafo com mais de 80 chars
+    for line in lines:
+        clean = line.strip()
+        if len(clean) > 80 and not clean.startswith("#"):
+            excerpt = clean[:200]
+            break
+
+# Monta o conteúdo final
+content_md = "\n".join(lines).strip()
+
+# Injeta CTAs
+content_md = content_md.replace("<!--CTA_MEIO-->", EBOOK_CTA_MEIO)
+content_md = content_md.replace("<!--CTA_FINAL-->", EBOOK_CTA_FINAL)
+
+# Se os marcadores não foram inseridos pelo modelo, injeta manualmente
+if EBOOK_CTA_MEIO not in content_md:
+    sections = re.split(r"(?=\n## )", content_md)
+    if len(sections) >= 4:
+        sections.insert(3, EBOOK_CTA_MEIO)
+    content_md = "".join(sections)
+
+if EBOOK_CTA_FINAL not in content_md:
+    content_md += EBOOK_CTA_FINAL
+
+reading_time = max(1, round(len(content_md.split()) / 200))
+
+post = {
+    "id": slug,
+    "title": title,
+    "slug": slug,
+    "excerpt": excerpt,
+    "content": content_md,
+    "category": category,
+    "author": "O Código Águia",
+    "date": today,
+    "readingTime": reading_time,
+    "featured": False,
+    "coverImage": cover_image,
+    "tags": tags
+}
 
 os.makedirs("public/blog-posts", exist_ok=True)
 filepath = f"public/blog-posts/{slug}.json"
@@ -303,4 +303,5 @@ with open(filepath, "w", encoding="utf-8") as f:
     json.dump(post, f, ensure_ascii=False, indent=2)
 
 print(f"Post salvo: {filepath}")
-print(f"Título: {post.get('title', 'sem título')}")
+print(f"Título: {post['title']}")
+print(f"Leitura: {reading_time} min | {len(content_md.split())} palavras")
