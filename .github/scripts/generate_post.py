@@ -183,7 +183,7 @@ print(f"Buscando imagem Unsplash para: {image_key}")
 cover_image = buscar_imagem_unsplash(image_key)
 
 payload = json.dumps({
-    "model": "google/gemini-2.0-flash-001",
+    "model": "google/gemini-2.5-flash",
     "messages": [{"role": "user", "content": prompt}],
     "temperature": 0.75,
     "max_tokens": 6000
