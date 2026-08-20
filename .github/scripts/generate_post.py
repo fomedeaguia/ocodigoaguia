@@ -157,29 +157,33 @@ else:
     cta_instruction = """
 - Não insira nenhum CTA, banner ou menção ao O Código Águia. Escreva apenas o artigo."""
 
-prompt = f"""Escreva um artigo de blog em português do Brasil sobre: {topic_desc}.
+prompt = f"""Você é um redator especializado em conteúdo de desenvolvimento pessoal escrevendo EXCLUSIVAMENTE em português do Brasil.
+
+Escreva um artigo de blog completo em português do Brasil sobre: {topic_desc}.
+
+ATENÇÃO: Responda APENAS com o artigo finalizado. Não inclua rascunhos, reflexões, análise do prompt, planejamento, notas internas ou qualquer texto que não seja o artigo em si.
 
 Fatos sobre O Código Águia (use SOMENTE se as instruções abaixo permitirem):{CODIGO_AGUIA_FACTS}
 
 Regras obrigatórias:
+- Escreva TODO o texto em português do Brasil
 - Mínimo 1200 palavras, tudo em parágrafos corridos (NUNCA use listas ou bullet points)
 - Use ## para títulos de seção (mínimo 6 seções). NUNCA use ### ou ####
 - Use **negrito** para ênfase em palavras-chave
 - Tom inspirador e humano, sem clichês de IA
 - NUNCA invente dados ou estatísticas{cta_instruction}
 
-Formato de saída (siga exatamente):
+Formato de saída (siga exatamente, sem nenhum texto adicional antes ou depois):
 Linha 1: # Título do Artigo
 Linha 2: RESUMO: resumo com até 160 caracteres
 Linha 3 em diante: o artigo completo
-
-Escreva agora o artigo completo, nada mais."""
+"""
 
 print(f"Buscando imagem para: {image_key} | CTA: {use_cta}")
 cover_image = buscar_imagem(image_key, unsplash_key)
 
 payload = json.dumps({
-    "model": "openrouter/auto",
+    "model": "google/gemini-2.0-flash-001",
     "messages": [{"role": "user", "content": prompt}],
     "temperature": 0.75,
     "max_tokens": 6000
