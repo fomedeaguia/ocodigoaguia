@@ -1,11 +1,25 @@
-"""Gera public/blog-posts/manifest.json com todos os slugs disponíveis."""
-import os, json, glob
+import os, json
 
 posts_dir = "public/blog-posts"
-json_files = glob.glob(f"{posts_dir}/post-*.json")
-slugs = [os.path.splitext(os.path.basename(f))[0] for f in sorted(json_files, reverse=True)]
+src_dir = "src/blog-posts"
+os.makedirs(src_dir, exist_ok=True)
 
-with open(f"{posts_dir}/manifest.json", "w", encoding="utf-8") as f:
+slugs = []
+for fname in sorted(os.listdir(posts_dir)):
+    if fname.endswith(".json") and fname != "manifest.json":
+        slug = fname[:-5]
+        src_path = os.path.join(src_dir, fname)
+        pub_path = os.path.join(posts_dir, fname)
+        # Copia o JSON para src/blog-posts/ para import.meta.glob funcionar
+        with open(pub_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        with open(src_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        slugs.append(slug)
+
+manifest_path = os.path.join(posts_dir, "manifest.json")
+with open(manifest_path, "w", encoding="utf-8") as f:
     json.dump(slugs, f, ensure_ascii=False, indent=2)
 
-print(f"{len(slugs)} posts no manifest.")
+print(f"Manifest atualizado: {len(slugs)} posts")
+print(f"Posts copiados para src/blog-posts/: {slugs}")
