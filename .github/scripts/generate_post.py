@@ -5,6 +5,7 @@ now = datetime.now(timezone.utc)
 today = now.strftime("%Y-%m-%d")
 hour = now.hour
 api_key = os.environ["OPENROUTER_API_KEY"]
+unsplash_key = os.environ["UNSPLASH_ACCESS_KEY"]
 timestamp = now.strftime("%Y-%m-%d-%H")
 
 CODIGO_AGUIA_FACTS = """
@@ -25,20 +26,50 @@ EBOOK_CTA_MEIO = """\n\n---\n\n## O Mapa Que Faltava Para Você Subir de Nível\
 
 EBOOK_CTA_FINAL = """\n\n---\n\n## Pronto Para Ativar o Arquétipo da Águia em Você?\n\nTudo que você leu aqui é apenas o começo. O **Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).\n\n---"""
 
-IMAGE_PROMPTS = {
-    "aguia_liberdade": "minimalist dark blog banner, majestic eagle soaring above clouds at golden hour, dramatic lighting, no text, premium motivational aesthetic",
-    "prosperidade": "minimalist dark blog banner, eagle silhouette over golden coins and upward arrow, wealth and abundance concept, no text, professional",
-    "mentalidade": "minimalist dark blog banner, eagle eye close-up with sharp focus, mindset and vision concept, dark dramatic tones, no text",
-    "renovacao": "minimalist dark blog banner, phoenix and eagle rising from ashes, transformation concept, dark gold palette, no text",
-    "lideranca": "minimalist dark blog banner, eagle perched on mountain peak at sunrise, leadership and elevation concept, no text",
-    "foco": "minimalist dark blog banner, eagle diving with precision, sharp focus and target concept, dark blue tones, no text",
-    "coragem": "minimalist dark blog banner, eagle facing storm clouds, courage and resilience concept, dramatic dark sky, no text",
-    "visao": "minimalist dark blog banner, eagle soaring high with wide panoramic view below, vision and strategy concept, no text",
-    "abundancia": "minimalist dark blog banner, eagle wings spread wide with golden light rays, abundance and success concept, no text",
-    "transformacao": "minimalist dark blog banner, eagle mid-transformation emerging from shadows into light, personal growth concept, no text",
+UNSPLASH_QUERIES = {
+    "aguia_liberdade": "eagle flying freedom sky",
+    "prosperidade": "success wealth abundance gold",
+    "mentalidade": "mindset focus determination",
+    "renovacao": "transformation renewal rebirth",
+    "lideranca": "leadership mountain summit",
+    "foco": "focus precision target",
+    "coragem": "storm courage strength",
+    "visao": "vision horizon aerial view",
+    "abundancia": "abundance prosperity nature",
+    "transformacao": "personal growth change light",
 }
 
-DEFAULT_IMAGE_PROMPT = "minimalist dark blog banner, powerful eagle soaring above clouds, transformation and success concept, dramatic golden tones, no text"
+DEFAULT_UNSPLASH_QUERY = "eagle soaring sky freedom"
+
+
+def buscar_imagem_unsplash(query, access_key):
+    """Busca uma imagem no Unsplash e retorna a URL da foto."""
+    encoded_query = urllib.parse.quote(query)
+    url = f"https://api.unsplash.com/photos/random?query={encoded_query}&orientation=landscape&content_filter=high"
+    req = urllib.request.Request(
+        url,
+        headers={
+            "Authorization": f"Client-ID {access_key}",
+            "Accept-Version": "v1",
+        }
+    )
+    try:
+        with urllib.request.urlopen(req) as resp:
+            data = json.loads(resp.read())
+            # Usa tamanho regular (1080px) para blog
+            return data["urls"]["regular"]
+    except Exception as e:
+        print(f"Unsplash falhou para query '{query}': {e}")
+        # Fallback: imagem genérica de águia
+        try:
+            fallback_url = f"https://api.unsplash.com/photos/random?query={urllib.parse.quote(DEFAULT_UNSPLASH_QUERY)}&orientation=landscape"
+            req2 = urllib.request.Request(fallback_url, headers={"Authorization": f"Client-ID {access_key}", "Accept-Version": "v1"})
+            with urllib.request.urlopen(req2) as resp2:
+                data2 = json.loads(resp2.read())
+                return data2["urls"]["regular"]
+        except Exception:
+            return "https://images.unsplash.com/photo-1611348524140-53c9a25263d6?w=1200&q=80"
+
 
 TOPICOS_MANHA = [
     ("aguia_liberdade", "Escreva um artigo profundo explicando por que a águia é universalmente reconhecida como símbolo de liberdade, prosperidade e ascensão. Explore a origem desse arquétipo em culturas como a romana, asteca, americana e brasileira, e como esse símbolo impacta a psicologia de pessoas que buscam mudar de nível de vida."),
@@ -76,7 +107,7 @@ else:
 
 image_key, topic = random.choice(pool)
 slug = f"post-{timestamp}"
-image_prompt = IMAGE_PROMPTS.get(image_key, DEFAULT_IMAGE_PROMPT)
+unsplash_query = UNSPLASH_QUERIES.get(image_key, DEFAULT_UNSPLASH_QUERY)
 
 category_map = {
     "manha": ["Arquétipo da Águia", "Prosperidade"],
@@ -163,10 +194,7 @@ def extrair_json(text):
     start = text.find("{")
     if start == -1:
         raise ValueError("Nenhum { encontrado na resposta do modelo.")
-    depth = 0
-    in_string = False
-    escape_next = False
-    end = -1
+    depth, in_string, escape_next, end = 0, False, False, -1
     for i, ch in enumerate(text[start:], start):
         if escape_next:
             escape_next = False
@@ -187,13 +215,19 @@ def extrair_json(text):
                 end = i + 1
                 break
     if end == -1:
-        raise ValueError("JSON incompleto: } de fechamento não encontrado.")
+        raise ValueError("JSON incompleto.")
     candidate = text[start:end]
     try:
         return json.loads(candidate)
     except json.JSONDecodeError as e:
-        raise ValueError(f"JSON extraído mas inválido: {e}\nTrecho:\n{candidate[:400]}")
+        raise ValueError(f"JSON inválido: {e}\n{candidate[:400]}")
 
+# Busca imagem no Unsplash
+print(f"Buscando imagem Unsplash para: {unsplash_query}")
+cover_image = buscar_imagem_unsplash(unsplash_query, unsplash_key)
+print(f"Imagem obtida: {cover_image[:80]}...")
+
+# Gera o post com IA
 response_data = None
 content = ""
 
@@ -242,21 +276,18 @@ try:
     post = extrair_json(content)
 except ValueError as e:
     print(f"Erro ao extrair JSON: {e}")
-    print(f"Conteúdo bruto (primeiros 800 chars):\n{content[:800]}")
+    print(f"Conteúdo bruto:\n{content[:800]}")
     sys.exit(1)
 
-# Injeta CTAs no content
+# Injeta CTAs e imagem
 post_content = post.get("content", "")
 post_content = post_content.replace("<!--CTA_MEIO-->", EBOOK_CTA_MEIO)
 post_content = post_content.replace("<!--CTA_FINAL-->", EBOOK_CTA_FINAL)
 post["content"] = post_content
-
 post["readingTime"] = max(1, round(len(post_content.split()) / 200))
 post["author"] = "O Código Águia"
 post["category"] = category
-
-encoded_prompt = urllib.parse.quote(image_prompt)
-post["coverImage"] = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=1200&height=630&nologo=true&seed={abs(hash(slug)) % 99999}"
+post["coverImage"] = cover_image
 
 os.makedirs("public/blog-posts", exist_ok=True)
 filepath = f"public/blog-posts/{slug}.json"
