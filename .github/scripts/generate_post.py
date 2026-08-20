@@ -5,7 +5,7 @@ now = datetime.now(timezone.utc)
 today = now.strftime("%Y-%m-%d")
 hour = now.hour
 api_key = os.environ["OPENROUTER_API_KEY"]
-unsplash_key = os.environ["UNSPLASH_ACCESS_KEY"]
+unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 timestamp = now.strftime("%Y-%m-%d-%H")
 
 CODIGO_AGUIA_FACTS = """
@@ -28,47 +28,54 @@ EBOOK_CTA_FINAL = """\n\n---\n\n## Pronto Para Ativar o Arquétipo da Águia em 
 
 UNSPLASH_QUERIES = {
     "aguia_liberdade": "eagle flying freedom sky",
-    "prosperidade": "success wealth abundance gold",
-    "mentalidade": "mindset focus determination",
-    "renovacao": "transformation renewal rebirth",
-    "lideranca": "leadership mountain summit",
-    "foco": "focus precision target",
-    "coragem": "storm courage strength",
-    "visao": "vision horizon aerial view",
-    "abundancia": "abundance prosperity nature",
-    "transformacao": "personal growth change light",
+    "prosperidade": "success abundance mountain",
+    "mentalidade": "focus determination sunrise",
+    "renovacao": "transformation renewal nature",
+    "lideranca": "mountain summit leadership",
+    "foco": "precision focus arrow",
+    "coragem": "storm sky courage",
+    "visao": "aerial view horizon",
+    "abundancia": "abundance nature light",
+    "transformacao": "light growth nature",
 }
+DEFAULT_UNSPLASH_QUERY = "eagle sky freedom"
 
-DEFAULT_UNSPLASH_QUERY = "eagle soaring sky freedom"
+POLLINATIONS_PROMPTS = {
+    "aguia_liberdade": "majestic eagle soaring above clouds golden hour dramatic lighting no text premium motivational",
+    "prosperidade": "eagle silhouette golden light wealth abundance concept no text professional",
+    "mentalidade": "eagle eye close-up sharp focus mindset dark dramatic tones no text",
+    "renovacao": "eagle rising transformation dark gold palette no text",
+    "lideranca": "eagle mountain peak sunrise leadership elevation no text",
+    "foco": "eagle diving precision dark blue tones no text",
+    "coragem": "eagle storm clouds courage resilience dramatic sky no text",
+    "visao": "eagle soaring wide panoramic view below vision strategy no text",
+    "abundancia": "eagle wings golden light rays abundance success no text",
+    "transformacao": "eagle emerging shadows into light personal growth no text",
+}
+DEFAULT_POLLINATIONS = "powerful eagle soaring clouds transformation success dramatic golden tones no text"
 
 
-def buscar_imagem_unsplash(query, access_key):
-    """Busca uma imagem no Unsplash e retorna a URL da foto."""
-    encoded_query = urllib.parse.quote(query)
-    url = f"https://api.unsplash.com/photos/random?query={encoded_query}&orientation=landscape&content_filter=high"
-    req = urllib.request.Request(
-        url,
-        headers={
-            "Authorization": f"Client-ID {access_key}",
-            "Accept-Version": "v1",
-        }
-    )
-    try:
-        with urllib.request.urlopen(req) as resp:
-            data = json.loads(resp.read())
-            # Usa tamanho regular (1080px) para blog
-            return data["urls"]["regular"]
-    except Exception as e:
-        print(f"Unsplash falhou para query '{query}': {e}")
-        # Fallback: imagem genérica de águia
-        try:
-            fallback_url = f"https://api.unsplash.com/photos/random?query={urllib.parse.quote(DEFAULT_UNSPLASH_QUERY)}&orientation=landscape"
-            req2 = urllib.request.Request(fallback_url, headers={"Authorization": f"Client-ID {access_key}", "Accept-Version": "v1"})
-            with urllib.request.urlopen(req2) as resp2:
-                data2 = json.loads(resp2.read())
-                return data2["urls"]["regular"]
-        except Exception:
-            return "https://images.unsplash.com/photo-1611348524140-53c9a25263d6?w=1200&q=80"
+def buscar_imagem(image_key, unsplash_key):
+    # Tenta Unsplash primeiro se tiver chave
+    if unsplash_key:
+        query = UNSPLASH_QUERIES.get(image_key, DEFAULT_UNSPLASH_QUERY)
+        for q in [query, DEFAULT_UNSPLASH_QUERY]:
+            try:
+                url = f"https://api.unsplash.com/photos/random?query={urllib.parse.quote(q)}&orientation=landscape&content_filter=high"
+                req = urllib.request.Request(url, headers={"Authorization": f"Client-ID {unsplash_key}", "Accept-Version": "v1"})
+                with urllib.request.urlopen(req, timeout=10) as resp:
+                    data = json.loads(resp.read())
+                    img = data["urls"]["regular"]
+                    print(f"Unsplash OK: {img[:60]}...")
+                    return img
+            except Exception as e:
+                print(f"Unsplash falhou ({q}): {e}")
+    # Fallback: Pollinations (sem chave, ilimitado)
+    prompt = POLLINATIONS_PROMPTS.get(image_key, DEFAULT_POLLINATIONS)
+    slug_seed = abs(hash(timestamp)) % 99999
+    img = f"https://image.pollinations.ai/prompt/{urllib.parse.quote(prompt)}?width=1200&height=630&nologo=true&seed={slug_seed}"
+    print(f"Usando Pollinations: {img[:80]}...")
+    return img
 
 
 TOPICOS_MANHA = [
@@ -89,10 +96,10 @@ TOPICOS_TARDE = [
 
 TOPICOS_NOITE = [
     ("aguia_liberdade", "Escreva um artigo sobre por que pessoas bem-sucedidas se identificam com a águia e não com outras aves. Explore a psicologia dos arquétipos de Carl Jung, o poder dos símbolos na formação de identidade e como escolher conscientemente seu arquétipo de vida acelera transformações."),
-    ("prosperidade", "Escreva um artigo sobre os princípios de prosperidade que a águia representa e que estão presentes em livros como 'Pai Rico Pai Pobre', 'O Segredo', 'Mindset' e 'Os Segredos da Mente Milionária'. Como o arquétipo da águia sintetiza o que esses livros ensinam."),
+    ("prosperidade", "Escreva um artigo sobre os princípios de prosperidade que a águia representa e que estão presentes em livros como Pai Rico Pai Pobre, Mindset e Os Segredos da Mente Milionária. Como o arquétipo da águia sintetiza o que esses livros ensinam."),
     ("mentalidade", "Escreva um artigo sobre a diferença entre a mentalidade de galinha e a mentalidade de águia: como a galinha reage ao ambiente e a águia cria o seu. Exemplos práticos de como essa diferença se manifesta em decisões financeiras, relacionamentos e carreira."),
     ("visao", "Escreva um artigo sobre como a simbologia da águia aparece em moedas, brasões de armas, logos de empresas Fortune 500 e bandeiras de nações poderosas. O que essa presença universal diz sobre o que a humanidade associa ao poder, à prosperidade e à ascensão."),
-    ("abundancia", "Escreva um artigo reflexivo sobre o que significa 'voar como uma águia' na prática da vida real: saindo de empregos que aprisionam, relacionamentos que drenam energia, hábitos que sabotam o crescimento. Um convite à transformação profunda e duradoura."),
+    ("abundancia", "Escreva um artigo reflexivo sobre o que significa voar como uma águia na prática da vida real: saindo de empregos que aprisionam, relacionamentos que drenam energia, hábitos que sabotam o crescimento. Um convite à transformação profunda e duradoura."),
 ]
 
 if hour < 12:
@@ -107,7 +114,6 @@ else:
 
 image_key, topic = random.choice(pool)
 slug = f"post-{timestamp}"
-unsplash_query = UNSPLASH_QUERIES.get(image_key, DEFAULT_UNSPLASH_QUERY)
 
 category_map = {
     "manha": ["Arquétipo da Águia", "Prosperidade"],
@@ -133,37 +139,34 @@ tags = tags_map.get(image_key, ["código águia", "transformação", "prosperida
 system_msg = (
     "Você é o redator do blog O Código Águia, portal de transformação pessoal, mentalidade e prosperidade. "
     "Escreve artigos profundos, inspiradores e com tom humano — sem soar como IA. "
-    "REGRAS OBRIGATÓRIAS:\n"
-    "1. NUNCA use bullet points, traços ou listas. Tudo em parágrafos corridos.\n"
-    "2. Use ## apenas para títulos de seção. Jamais ### ou ####.\n"
-    "3. Links sempre no formato [texto visível](url). Nunca URL crua.\n"
-    "4. Tom inspirador, direto, transformador. Sem 'Além disso', 'Outrossim', 'Em conclusão'.\n"
-    "5. NUNCA invente estatísticas ou fatos não fornecidos.\n"
-    "6. Escreva 100% em português do Brasil.\n"
-    "7. O artigo deve ter EXATAMENTE dois blocos especiais inseridos pelo sistema — NÃO os escreva, eles serão inseridos automaticamente.\n"
-    "CRÍTICO: Retorne APENAS o objeto JSON puro, sem nenhum texto antes ou depois, "
-    "sem blocos de código Markdown, sem ``` de nenhum tipo. "
-    "A resposta deve começar EXATAMENTE com { e terminar EXATAMENTE com }. Nada mais."
+    "REGRAS OBRIGATÓRIAS: "
+    "1. NUNCA use bullet points, traços ou listas. Tudo em parágrafos corridos. "
+    "2. Use ## apenas para títulos de seção. Jamais ### ou ####. "
+    "3. Links sempre no formato [texto](url). "
+    "4. Tom inspirador, direto. Sem clichês de IA. "
+    "5. NUNCA invente dados ou estatísticas. "
+    "6. Escreva 100% em português do Brasil. "
+    "CRITICO: Retorne APENAS JSON puro. Sem texto antes ou depois. Sem blocos de codigo. "
+    "Comece com { e termine com }."
 )
 
 user_msg = (
-    f"Hoje é {today}. {topic}\n\n"
-    f"FATOS OBRIGATÓRIOS — use SOMENTE esses dados, nunca invente:\n{CODIGO_AGUIA_FACTS}\n\n"
-    "Escreva um artigo com NO MÍNIMO 1200 palavras em português do Brasil. "
-    "Use ## para títulos de seção e **negrito** para ênfase. "
-    "Sem bullet points, sem traços, sem ###. Apenas parágrafos corridos. "
-    "Links no formato [texto](url). Ao citar O Código Águia, linke para [ocodigoaguia.com.br](https://ocodigoaguia.com.br).\n\n"
-    "O artigo deve ter pelo menos 6 seções com ##. "
-    "Deixe um marcador EXATO '<!--CTA_MEIO-->' após a 3ª seção e '<!--CTA_FINAL-->' no final do content.\n\n"
-    "Retorne APENAS este JSON (comece com { e termine com }, sem nenhum texto adicional):\n"
+    f"Hoje e {today}. {topic}\n\n"
+    f"FATOS: {CODIGO_AGUIA_FACTS}\n\n"
+    "Escreva artigo com MINIMO 1200 palavras em portugues do Brasil. "
+    "Use ## para secoes (minimo 6 secoes) e **negrito** para enfase. "
+    "Paragrafos corridos, sem listas. "
+    "Ao citar O Codigo Aguia, linke: [ocodigoaguia.com.br](https://ocodigoaguia.com.br). "
+    "Insira o marcador <!--CTA_MEIO--> apos a 3a secao e <!--CTA_FINAL--> no final. "
+    "Retorne APENAS este JSON sem nenhum texto adicional:\n"
     "{\n"
     f'  "id": "{slug}",\n'
-    '  "title": "",\n'
+    '  "title": "TITULO_AQUI",\n'
     f'  "slug": "{slug}",\n'
-    '  "excerpt": "",\n'
-    '  "content": "",\n'
+    '  "excerpt": "RESUMO_AQUI",\n'
+    '  "content": "CONTEUDO_AQUI",\n'
     f'  "category": "{category}",\n'
-    '  "author": "O Código Águia",\n'
+    '  "author": "O Codigo Aguia",\n'
     f'  "date": "{today}",\n'
     '  "readingTime": 6,\n'
     '  "featured": false,\n'
@@ -172,12 +175,14 @@ user_msg = (
     "}"
 )
 
+# Modelos ordenados: mais confiáveis primeiro
 MODELS = [
-    "nvidia/nemotron-3-super-120b-a12b:free",
-    "google/gemma-4-31b-it:free",
-    "nvidia/nemotron-3-nano-30b-a3b:free",
     "mistralai/mistral-small-3.2-24b-instruct:free",
+    "google/gemma-4-31b-it:free",
+    "mistralai/mistral-7b-instruct:free",
+    "nvidia/nemotron-3-nano-30b-a3b:free",
 ]
+
 
 def extrair_json(text):
     text = text.strip()
@@ -193,7 +198,7 @@ def extrair_json(text):
         pass
     start = text.find("{")
     if start == -1:
-        raise ValueError("Nenhum { encontrado na resposta do modelo.")
+        raise ValueError("Nenhum { encontrado.")
     depth, in_string, escape_next, end = 0, False, False, -1
     for i, ch in enumerate(text[start:], start):
         if escape_next:
@@ -222,12 +227,12 @@ def extrair_json(text):
     except json.JSONDecodeError as e:
         raise ValueError(f"JSON inválido: {e}\n{candidate[:400]}")
 
-# Busca imagem no Unsplash
-print(f"Buscando imagem Unsplash para: {unsplash_query}")
-cover_image = buscar_imagem_unsplash(unsplash_query, unsplash_key)
-print(f"Imagem obtida: {cover_image[:80]}...")
 
-# Gera o post com IA
+# Busca imagem
+print(f"Buscando imagem para: {image_key}")
+cover_image = buscar_imagem(image_key, unsplash_key)
+
+# Gera post com IA
 response_data = None
 content = ""
 
@@ -239,8 +244,8 @@ for model in MODELS:
             {"role": "system", "content": system_msg},
             {"role": "user", "content": user_msg}
         ],
-        "temperature": 0.75,
-        "max_tokens": 5000
+        "temperature": 0.7,
+        "max_tokens": 8000
     }).encode()
     req = urllib.request.Request(
         "https://openrouter.ai/api/v1/chat/completions",
@@ -253,19 +258,22 @@ for model in MODELS:
         }
     )
     try:
-        with urllib.request.urlopen(req) as resp:
+        with urllib.request.urlopen(req, timeout=120) as resp:
             data = json.loads(resp.read())
             msg = data.get("choices", [{}])[0].get("message", {})
-            content = msg.get("content") or msg.get("reasoning") or ""
+            content = msg.get("content") or ""
             if not content.strip():
-                print(f"Modelo {model} retornou vazio, próximo...")
+                print(f"{model} retornou vazio, próximo...")
                 continue
             content = content.strip()
             response_data = data
             print(f"Sucesso com {model} ({len(content)} chars)")
             break
     except urllib.error.HTTPError as e:
-        print(f"Modelo {model} falhou: {e.code} - {e.read().decode()[:200]}")
+        print(f"{model} falhou: {e.code}")
+        continue
+    except Exception as e:
+        print(f"{model} erro: {e}")
         continue
 
 if not response_data or not content:
@@ -275,11 +283,11 @@ if not response_data or not content:
 try:
     post = extrair_json(content)
 except ValueError as e:
-    print(f"Erro ao extrair JSON: {e}")
-    print(f"Conteúdo bruto:\n{content[:800]}")
+    print(f"Erro JSON: {e}")
+    print(f"Bruto:\n{content[:800]}")
     sys.exit(1)
 
-# Injeta CTAs e imagem
+# Injeta CTAs e finaliza
 post_content = post.get("content", "")
 post_content = post_content.replace("<!--CTA_MEIO-->", EBOOK_CTA_MEIO)
 post_content = post_content.replace("<!--CTA_FINAL-->", EBOOK_CTA_FINAL)
