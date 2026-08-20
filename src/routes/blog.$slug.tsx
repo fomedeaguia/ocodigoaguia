@@ -1,6 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import { Nav } from "@/components/landing/Nav";
 import { Footer } from "@/components/landing/Footer";
 import { getPostBySlug, formatDate } from "@/data/blog";
@@ -66,7 +65,7 @@ function BlogPost() {
         )}
 
         <article className="mt-10 prose prose-invert prose-gold max-w-none">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+          <ReactMarkdown>{post.content}</ReactMarkdown>
         </article>
 
         {post.tags && post.tags.length > 0 && (
