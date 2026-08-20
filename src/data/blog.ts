@@ -15,6 +15,22 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-vida-que-voce-nunca-questionou-o-preco-da-aprovacao",
+    slug: "a-vida-que-voce-nunca-questionou-o-preco-da-aprovacao",
+    title: "A Vida que Você Nunca Questionou: O Preço da Aprovação",
+    excerpt: "Como a busca por aprovação social silencia suas escolhas e compromete o futuro que você poderia construir.",
+    date: "2026-08-20",
+    readingTime: 1,
+    category: "Liberdade e Identidade",
+    coverImage: "https://images.unsplash.com/photo-1773701529766-89fdd3dd1902?w=1200&q=85&fit=crop&auto=format",
+    tags: ["aprovação social", "autenticidade", "liberdade"],
+    featured: false,
+    content: `Antes de tomar qualquer decisão importante, você já imaginou o que os outros vão pensar? Não apenas as pessoas próximas, mas todas: colegas, familiares, amigos, até desconhecidos nas redes sociais. Essa pergunta silenciosa atravessa sua mente de manhã à noite, e você nem percebe que ela está lá, guiando suas escolhas como uma mão invisível. Você escolhe uma profissão, um relacionamento, uma opinião, um estilo de vida, e antes de perguntar "isso é bom para mim?", você pergunta "o que vão dizer sobre isso?".
+
+O problema é que essa pergunta nunca aparece sozinha. Ela vem acompanhada de outras: "será que vão me achar exagerado?", "será que vão me achar fraco?", "será que vão me achar estranho?". E, uma a uma, essas perguntas vão moldando sua vida. Não a vida que você queria, mas a vida que passou a acreditar que deveria querer. A diferença entre esses dois caminhos é sutil no começo e gigantesca com`,
+  },
+
+  {
     id: "ninguem-decide-sozinho-o-ambiente-esta-escolhendo-por-voce",
     slug: "ninguem-decide-sozinho-o-ambiente-esta-escolhendo-por-voce",
     title: "Ninguém Decide Sozinho: O Ambiente Está Escolhendo Por Você",
