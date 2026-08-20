@@ -635,22 +635,25 @@ if f'slug: "{slug}"' in blog_ts or f"slug: '{slug}'" in blog_ts:
     print(f"Slug: {slug}")
     sys.exit(0)
 
-# Insere o novo post ANTES do fechamento do array (antes de `];`)
-INSERT_MARKER = "];\n\nexport const blogPosts"
-if INSERT_MARKER not in blog_ts:
-    INSERT_MARKER = "export const blogPosts"
+# ── INSERÇÃO NO TOPO DO ARRAY ──────────────────────────────────────────────
+# Busca a abertura do array staticPosts e insere o novo post logo depois,
+# garantindo que o post mais recente apareça PRIMEIRO na listagem do site.
+ARRAY_OPEN_MARKER = "const staticPosts: BlogPost[] = ["
+insert_pos = blog_ts.find(ARRAY_OPEN_MARKER)
 
-insert_pos = blog_ts.find(INSERT_MARKER)
 if insert_pos == -1:
-    print("ERRO: Não encontrou marcador de inserção em blog.ts")
+    print("ERRO: Não encontrou 'const staticPosts: BlogPost[] = [' em blog.ts")
     sys.exit(1)
 
-updated_ts = blog_ts[:insert_pos] + new_post_block + "\n" + blog_ts[insert_pos:]
+# Posição logo após o "[" de abertura do array
+after_bracket = insert_pos + len(ARRAY_OPEN_MARKER)
+
+updated_ts = blog_ts[:after_bracket] + "\n" + new_post_block + "\n" + blog_ts[after_bracket:]
 
 with open(BLOG_TS_PATH, "w", encoding="utf-8") as f:
     f.write(updated_ts)
 
-print(f"Post injetado em {BLOG_TS_PATH}")
+print(f"Post injetado NO TOPO de {BLOG_TS_PATH}")
 print(f"Título: {title}")
 print(f"Slug: {slug}")
 print(f"Leitura: {reading_time} min | {len(content_md.split())} palavras")
