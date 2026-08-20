@@ -15,6 +15,39 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "aguia-e-o-dinheiro",
+    slug: "aguia-e-o-dinheiro",
+    title: "A aguia e o dinheiro: como o arquetipo da aguia transforma sua mentalidade financeira",
+    excerpt:
+      "Descubra como aplicar a visao estrategica da aguia para tomar decisoes financeiras mais inteligentes, construir patrimonio com consistencia e parar de reagir ao mercado de forma emocional.",
+    date: "2026-08-20",
+    readingTime: 9,
+    category: "Financas",
+    coverImage:
+      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80",
+    tags: ["financas", "mentalidade financeira", "investimentos", "patrimonio"],
+    featured: true,
+    content: `A relacao que a maioria das pessoas tem com o dinheiro e fundamentalmente reativa. Elas trabalham porque precisam pagar as contas do mes. Gastam porque viram algo que desejaram. Poupam apenas quando sobra, e quase nunca sobra. Investem quando a Bolsa esta subindo e vendem quando ela cai. Tomam decisoes financeiras inteiramente guiadas pelo estado emocional do momento, pelo que os amigos estao fazendo, pelo que a midia financeira esta gritando na ultima manchete de urgencia maxima. E esse ciclo de reatividade emocional e o que mantém a maior parte da populacao presa numa relacao de ansiedade cronica com o dinheiro, independente de quanto ela ganha.
+
+A mentalidade de aguia aplicada as financas comeca com uma mudanca radical de perspectiva: parar de olhar para o dinheiro como uma necessidade imediata e comecar a enxerga-lo como um instrumento de construcao de longo prazo. A aguia nao caca porque esta com fome agora. Ela planeja, observa, posiciona e ataca no momento certo com precisao maxima. O resultado e amplamente mais eficiente do que o esforco desesperado do animal que corre atras da presa sem estrategia.
+
+O primeiro principio da mentalidade financeira de aguia e a separacao clara entre renda ativa e patrimonio. Renda ativa e o dinheiro que voce ganha trocando tempo por dinheiro, seja num emprego, num freela ou num servico prestado. Ela e indispensavel para comecar, mas e fundamentalmente limitada pelo numero de horas que voce tem disponivel. Patrimonio e o conjunto de ativos que geram retorno independente do seu tempo, sejam investimentos financeiros, imoveis, negocios, direitos autorais ou qualquer outro ativo produtivo. A aguia financeira constroi patrimonio consistentemente com parte da renda ativa, mes apos mes, independente do valor absoluto disponivel para investir.
+
+O segundo principio e a imunidade emocional ao barulho do mercado. O investidor reativo, que e a galinha financeira, compra quando os ativos ja subiram muito porque todo mundo esta falando sobre eles, e vende quando caem porque o medo coletivo e ensurdecedor. Esse comportamento de manada e matematicamente garantido para gerar perdas no longo prazo. A aguia financeira faz exatamente o oposto: ela acumula ativos de qualidade quando todo mundo esta vendendo com medo, e mantem a posicao com disciplina quando o mercado sobe e a euforia tenta convencer a vender antes da hora certa.
+
+O terceiro principio e a diversificacao estrategica com proposito claro. Diversificar nao significa distribuir o dinheiro em dezenas de ativos diferentes sem criterio. Significa construir uma carteira onde cada posicao tem uma funcao especifica: protecao contra inflacao, crescimento de longo prazo, geracao de renda passiva, reserva de liquidez para oportunidades. Cada elemento da carteira existe por uma razao e contribui para um objetivo financeiro especifico e mensuravel. A aguia sabe exatamente o que cada parte do seu territorio representa e por que ela esta la.
+
+O quarto principio, e talvez o mais contraintuitivo, e a valorizacao do tedio financeiro. As melhores decisoes de investimento de longo prazo sao profundamente entediantes: comprar ativos de qualidade regularmente, reinvestir os rendimentos, nao mexer na carteira a cada variacao de mercado, manter o curso mesmo quando o cenario parece assustador. Nao ha emocao, nao ha adrenalina, nao ha historias empolgantes para contar nos jantares. Ha apenas o composto trabalhando silenciosamente durante anos e decadas, transformando aportes modestos em patrimonio expressivo.
+
+A construcao de patrimonio real na era digital tem caracteristicas especificas que a aguia financeira moderna precisa entender. A velocidade de acesso a informacao criou um paradoxo: nunca houve tanto dado disponivel sobre o mercado financeiro, e ao mesmo tempo nunca foi tao facil tomar decisoes horriveis baseadas em ruido disfarcado de analise. O filtro que separa o sinal do barulho e a sua vantagem competitiva mais valiosa no ambiente financeiro atual.
+
+Desenvolver esse filtro exige construir criterios proprios de avaliacao baseados em fundamentos solidos, e nao em narrativas de momento. Um ativo vale o que ele gera de valor economico real ao longo do tempo, nao o que o mercado acha que vale hoje por conta da historia que todo mundo esta contando sobre ele. A aguia financeira aprende a separar o preco do valor, a entender que oscilacoes de mercado sao oportunidades para quem tem perspectiva de longo prazo, nao ameacas para quem esta construindo com serenidade.
+
+A educacao financeira continua sendo o investimento de maior retorno que qualquer pessoa pode fazer, independente da sua situacao atual. Nao porque voce vai aprender a escolher as acoes certas ou cronometrar o mercado, essas habilidades sao uma ilusao que a industria financeira vende muito bem. Mas porque voce vai entender os mecanismos basicos de como o dinheiro se multiplica, quais sao as armadilhas mais comuns que destroem patrimonio, e como construir um sistema financeiro pessoal que funciona automaticamente mesmo nos periodos em que a sua disciplina nao esta no pico.
+
+A aguia financeira que voce pode se tornar nao e aquela que acerta todos os investimentos. E aquela que comete menos erros caros do que a media, que mantem a consistencia nos aportes independente do cenario, que aprende com cada decisao errada sem catastrofizar, e que protege o patrimonio construido com tanto criterio quanto usa para construi-lo. Voar alto nas financas nao e ter o melhor retorno do ano. E ter o melhor retorno acumulado ao longo de uma decada, enquanto a maioria das pessoas ainda esta debatendo qual ativo comprar amanha.`,
+  },
+  {
     id: "mentalidade-de-aguia",
     slug: "mentalidade-de-aguia",
     title: "Mentalidade de aguia: como parar de viver no cercado",
@@ -26,7 +59,6 @@ const staticPosts: BlogPost[] = [
     coverImage:
       "https://images.unsplash.com/photo-1611348524140-53c9a25263d6?w=1200&q=80",
     tags: ["mentalidade", "foco", "crescimento", "visao estrategica"],
-    featured: true,
     content: `A galinha vive olhando para o chao. A aguia vive olhando para o horizonte. Ambas tem asas, mas somente uma decide usa-las de verdade. Essa metafora simples resume um dos maiores desafios da vida moderna: a maioria das pessoas passa o dia inteiro reagindo ao que aparece na tela, no grupo de WhatsApp, na notificacao do celular ou na urgencia fabricada do e-mail corporativo, em vez de agir com intencao clara sobre o que realmente importa para o seu futuro.
 
 Existe uma diferenca fundamental entre quem age de forma proativa e quem apenas reage ao ambiente. A pessoa que vive no modo reativo acorda cedo, fica ocupada o dia inteiro, deita tarde e, ao revisar o que fez, percebe que nao avancou quase nada no que realmente importava. Ja quem treinou a mentalidade de aguia aprende a separar o urgente do importante, o barulho do sinal, o movimento da direcao.
@@ -154,38 +186,6 @@ A importancia do ritual matinal nao e uma fantasia de guru motivacional. Ela tem
 Quem acorda e escolhe intencionalmente os primeiros estimulos: hidratacao, movimento do corpo, alguns minutos de silencio ou meditacao, e so entao o trabalho mais importante antes de abrir qualquer aplicativo de comunicacao, condiciona o cerebro ao modo proativo. Esse modo e orientado a criar, a construir e a tomar iniciativa, e e esse modo que gera os resultados que diferenciam quem constroi liberdade de quem apenas sobrevive ao dia.
 
 A manha decide o resultado das outras dezesseis horas nao porque existe magia mistica nos primeiros raios de sol. E porque a sequencia de comportamentos que voce estabelece ao acordar cria o estado mental, emocional e energetico que vai filtrar como voce interpreta e responde a tudo o que acontecer depois. Construa a sua manha com intencao. Proteja o seu sono com disciplina. Divida o seu dia em blocos de energia respeitando os ciclos naturais do seu organismo.`,
-  },
-  {
-    id: "aguia-e-o-dinheiro",
-    slug: "aguia-e-o-dinheiro",
-    title: "A aguia e o dinheiro: como o arquetipo da aguia transforma sua mentalidade financeira",
-    excerpt:
-      "Descubra como aplicar a visao estrategica da aguia para tomar decisoes financeiras mais inteligentes, construir patrimonio com consistencia e parar de reagir ao mercado de forma emocional.",
-    date: "2026-08-20",
-    readingTime: 9,
-    category: "Financas",
-    coverImage:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80",
-    tags: ["financas", "mentalidade financeira", "investimentos", "patrimonio"],
-    content: `A relacao que a maioria das pessoas tem com o dinheiro e fundamentalmente reativa. Elas trabalham porque precisam pagar as contas do mes. Gastam porque viram algo que desejaram. Poupam apenas quando sobra, e quase nunca sobra. Investem quando a Bolsa esta subindo e vendem quando ela cai. Tomam decisoes financeiras inteiramente guiadas pelo estado emocional do momento, pelo que os amigos estao fazendo, pelo que a midia financeira esta gritando na ultima manchete de urgencia maxima. E esse ciclo de reatividade emocional e o que mantém a maior parte da populacao presa numa relacao de ansiedade cronica com o dinheiro, independente de quanto ela ganha.
-
-A mentalidade de aguia aplicada as financas comeca com uma mudanca radical de perspectiva: parar de olhar para o dinheiro como uma necessidade imediata e comecar a enxerga-lo como um instrumento de construcao de longo prazo. A aguia nao caca porque esta com fome agora. Ela planeja, observa, posiciona e ataca no momento certo com precisao maxima. O resultado e amplamente mais eficiente do que o esforco desesperado do animal que corre atras da presa sem estrategia.
-
-O primeiro principio da mentalidade financeira de aguia e a separacao clara entre renda ativa e patrimonio. Renda ativa e o dinheiro que voce ganha trocando tempo por dinheiro, seja num emprego, num freela ou num servico prestado. Ela e indispensavel para comecar, mas e fundamentalmente limitada pelo numero de horas que voce tem disponivel. Patrimonio e o conjunto de ativos que geram retorno independente do seu tempo, sejam investimentos financeiros, imoveis, negocios, direitos autorais ou qualquer outro ativo produtivo. A aguia financeira constroi patrimonio consistentemente com parte da renda ativa, mes apos mes, independente do valor absoluto disponivel para investir.
-
-O segundo principio e a imunidade emocional ao barulho do mercado. O investidor reativo, que e a galinha financeira, compra quando os ativos ja subiram muito porque todo mundo esta falando sobre eles, e vende quando caem porque o medo coletivo e ensurdecedor. Esse comportamento de manada e matematicamente garantido para gerar perdas no longo prazo. A aguia financeira faz exatamente o oposto: ela acumula ativos de qualidade quando todo mundo esta vendendo com medo, e mantem a posicao com disciplina quando o mercado sobe e a euforia tenta convencer a vender antes da hora certa.
-
-O terceiro principio e a diversificacao estrategica com proposito claro. Diversificar nao significa distribuir o dinheiro em dezenas de ativos diferentes sem criterio. Significa construir uma carteira onde cada posicao tem uma funcao especifica: protecao contra inflacao, crescimento de longo prazo, geracao de renda passiva, reserva de liquidez para oportunidades. Cada elemento da carteira existe por uma razao e contribui para um objetivo financeiro especifico e mensuravel. A aguia sabe exatamente o que cada parte do seu territorio representa e por que ela esta la.
-
-O quarto principio, e talvez o mais contraintuitivo, e a valorizacao do tedio financeiro. As melhores decisoes de investimento de longo prazo sao profundamente entediantes: comprar ativos de qualidade regularmente, reinvestir os rendimentos, nao mexer na carteira a cada variacao de mercado, manter o curso mesmo quando o cenario parece assustador. Nao ha emocao, nao ha adrenalina, nao ha historias empolgantes para contar nos jantares. Ha apenas o composto trabalhando silenciosamente durante anos e decadas, transformando aportes modestos em patrimonio expressivo.
-
-A construcao de patrimonio real na era digital tem caracteristicas especificas que a aguia financeira moderna precisa entender. A velocidade de acesso a informacao criou um paradoxo: nunca houve tanto dado disponivel sobre o mercado financeiro, e ao mesmo tempo nunca foi tao facil tomar decisoes horriveis baseadas em ruido disfarcado de analise. O filtro que separa o sinal do barulho e a sua vantagem competitiva mais valiosa no ambiente financeiro atual.
-
-Desenvolver esse filtro exige construir criterios proprios de avaliacao baseados em fundamentos solidos, e nao em narrativas de momento. Um ativo vale o que ele gera de valor economico real ao longo do tempo, nao o que o mercado acha que vale hoje por conta da historia que todo mundo esta contando sobre ele. A aguia financeira aprende a separar o preco do valor, a entender que oscilacoes de mercado sao oportunidades para quem tem perspectiva de longo prazo, nao ameacas para quem esta construindo com serenidade.
-
-A educacao financeira continua sendo o investimento de maior retorno que qualquer pessoa pode fazer, independente da sua situacao atual. Nao porque voce vai aprender a escolher as acoes certas ou cronometrar o mercado, essas habilidades sao uma ilusao que a industria financeira vende muito bem. Mas porque voce vai entender os mecanismos basicos de como o dinheiro se multiplica, quais sao as armadilhas mais comuns que destroem patrimonio, e como construir um sistema financeiro pessoal que funciona automaticamente mesmo nos periodos em que a sua disciplina nao esta no pico.
-
-A aguia financeira que voce pode se tornar nao e aquela que acerta todos os investimentos. E aquela que comete menos erros caros do que a media, que mantem a consistencia nos aportes independente do cenario, que aprende com cada decisao errada sem catastrofizar, e que protege o patrimonio construido com tanto criterio quanto usa para construi-lo. Voar alto nas financas nao e ter o melhor retorno do ano. E ter o melhor retorno acumulado ao longo de uma decada, enquanto a maioria das pessoas ainda esta debatendo qual ativo comprar amanha.`,
   },
 ];
 
