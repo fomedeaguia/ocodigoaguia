@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/landing/Nav";
+import { Footer } from "@/components/landing/Footer";
 import { blogPosts, formatDate } from "@/data/blog";
 
 export const Route = createFileRoute("/blog/")({
@@ -30,9 +31,9 @@ export const Route = createFileRoute("/blog/")({
 
 function BlogIndex() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Nav />
-      <main className="max-w-5xl mx-auto px-6 pt-32 pb-24">
+      <main className="flex-1 max-w-5xl mx-auto px-6 pt-32 pb-24">
         <p className="text-xs uppercase tracking-[0.35em] text-gold">Blog</p>
         <h1 className="mt-4 font-display text-4xl md:text-5xl text-foreground">
           Conteúdo para quem decidiu voar alto
@@ -70,6 +71,7 @@ function BlogIndex() {
           ))}
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
