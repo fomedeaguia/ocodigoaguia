@@ -15,6 +15,53 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-atencao-define-o-que-voce-vai-construir",
+    slug: "a-atencao-define-o-que-voce-vai-construir",
+    title: "A Atenção Define o Que Você Vai Construir",
+    excerpt: "Desejos vagos se transformam em objetivos concretos quando você aprende a proteger a atenção e a escolher onde olhar. Descubra como.",
+    date: "2026-08-21",
+    readingTime: 5,
+    category: "Mentalidade de Águia",
+    coverImage: "https://images.unsplash.com/photo-1772263239147-03564cf2613b?w=1200&q=85&fit=crop&auto=format",
+    tags: ["mentalidade de águia", "transformação", "desenvolvimento pessoal"],
+    featured: false,
+    content: `Uma vida inteira pode mudar por causa de uma escolha de atenção. Não por acaso, não por sorte, mas porque aquilo que você decide olhar — e aquilo que você decide ignorar — constrói silenciosamente a pessoa que você é. Você já se pegou desejando uma vida diferente, mas incapaz de dizer exatamente qual? Talvez tenha pensado: "quero mais liberdade", "quero ser mais disciplinado", "quero conquistar algo grande". Essas frases não são objetivos. São sentimentos ainda sem forma, pássaros que ainda não sabem para onde voar. E você não pode perseguir aquilo que não consegue enxergar com clareza. É aqui que a atenção entra como a ferramenta mais poderosa e mais desperdiçada da sua vida.
+
+## A águia não decide o voo depois de decolar
+
+Antes de abrir as asas, a águia observa. Ela sobe, não como quem foge, mas como quem precisa ganhar altitude para enxergar o que realmente importa. Enquanto outras aves se agitam em volta de qualquer movimento, a águia permanece atenta, selecionando o alvo com precisão. Não é força bruta que a sustenta no alto. É a capacidade de ignorar tudo o que não interessa. Essa é a primeira grande lição da mentalidade de águia: atenção não é apenas olhar para muitas coisas ao mesmo tempo. Atenção é saber onde fixar o olhar, mesmo quando o mundo inteiro tenta puxar você para outras direções.
+
+Quem nunca definiu um objetivo concreto, na verdade, continua em estado de espera. Espera a motivação chegar, espera o momento certo, espera uma prova de que é capaz. Mas é justamente por não ter um alvo que a pessoa não sabe o que escolher, o que descartar, o que suportar. A águia não age de qualquer jeito. Ela calcula, observa, espera. Depois, mergulha com uma precisão que parece sobrenatural. Essa precisão é treinada. Ela nasce de um olhar que sabe o que procura. O mesmo acontece com você: no dia em que souber exatamente o que quer, descobrirá também o que precisa deixar para trás.
+
+## O ruído que rouba a sua direção
+
+O problema é que a maioria das pessoas vive com a atenção fragmentada. O celular vibra e você interrompe o pensamento. Uma notificação aparece e você abandona o problema que estava resolvendo. Alguém publica uma opinião e você sente que precisa responder. Tudo isso parece inofensivo, mas cada interrupção cobra um preço invisível. Você não percebe, porque nunca testou a versão de si mesmo que consegue sustentar uma linha de pensamento por mais de quarenta minutos. A águia, por outro lado, entende que a presa é conquistada antes do mergulho. O mergulho é apenas a consequência de uma observação paciente. Sem constância no olhar, não existe ataque certeiro. Sem direção, todo movimento é fuga.
+
+O mundo está cheio de distrações desenhadas para capturar seu tempo e sua energia. Mas o inimigo da sua direção não é apenas o celular, a televisão ou as redes sociais. O inimigo mais perigoso é a sensação de que você está fazendo algo quando, na verdade, está apenas se afastando do que importa. Responder mensagens, acompanhar notícias, verificar estatísticas, comparar sua vida com a dos outros: tudo isso cria um véu de produtividade. A mente fica ocupada, mas não direcionada. Uma mente ocupada e sem direção é como um barco sem leme: movimenta-se muito, mas não sai do lugar. A águia não desperdiça energia com o que não contribui para a caçada. Ela guarda cada grama de força para o momento certo.
+
+## Transformar desejo em objetivo é um ato de atenção
+
+Transformar desejos vagos em objetivos concretos é, antes de tudo, um ato de atenção. "Quero mudar de vida" é um grito no escuro. "Quero sair do emprego atual em dezoito meses, com uma reserva equivalente a doze meses de despesas e uma fonte de renda própria em funcionamento" é um alvo desenhado. Percebe a diferença? A primeira frase provoca ansiedade. A segunda gera orientação. Mas para sair da primeira para a segunda, você precisa decidir para onde está olhando. Precisa silenciar o ruído que diz que isso é impossível, que você não é capaz, que é arriscado demais. E precisa permitir que sua mente comece a construir, a partir daquele enquadramento, um caminho possível.
+
+Definir um objetivo é um exercício de atenção que começa com uma pergunta simples: "O que exatamente eu quero?" Anote as respostas que surgirem. Depois, pergunte: "Isso é um desejo ou um objetivo?" Se você não sabe descrever em termos concretos quando esse desejo estará realizado, ele ainda é apenas um desejo. Um objetivo tem cara, tem medida, tem horizonte. Não precisa ser perfeito nem permanente. Os objetivos mudam, e isso faz parte da jornada. Mas enquanto estiver valendo, ele merece ser tratado como um ponto de referência. É para ele que você vai voltar quando tudo ao redor ameaçar desviar seu caminho. Sem essa referência, qualquer vento muda sua rota. Com ela, o vento passa a ser apenas mais um elemento a considerar, não um motivo para desistir.
+
+## A visão de longo prazo nasce do foco no presente
+
+Quando você define um objetivo, algo muda na maneira como percebe o mundo. O que antes passava despercebido começa a aparecer. Uma conversa, um livro, uma oportunidade: tudo parece conectar-se àquilo que você escolheu enxergar. Alguns chamariam isso de coincidência. Não é mágica. É direção de atenção. Sua mente passa a operar com um filtro, e esse filtro determina o que entra e o que fica. A águia não enxerga todos os detalhes do vale o tempo todo. Ela enxerga os detalhes que importam para o momento em que vive. Essa é a verdadeira visão de longo prazo: não é um dom profético, é a capacidade de manter o alvo diante dos olhos tempo suficiente para atravessar o caminho até ele.
+
+Você não precisa planejar os próximos vinte anos
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-vida-que-voce-nunca-questionou-o-preco-da-aprovacao",
     slug: "a-vida-que-voce-nunca-questionou-o-preco-da-aprovacao",
     title: "A Vida que Você Nunca Questionou: O Preço da Aprovação",
