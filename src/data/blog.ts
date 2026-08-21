@@ -15,6 +15,32 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-aguia-nao-espera-sentir-vontade-de-voar",
+    slug: "a-aguia-nao-espera-sentir-vontade-de-voar",
+    title: "A Águia Não Espera Sentir Vontade de Voar",
+    excerpt: "Motivação é um vento; visão é a montanha. A águia não voa por entusiasmo. Ela voa para chegar.",
+    date: "2026-08-21",
+    readingTime: 2,
+    category: "Liderança",
+    coverImage: "https://images.unsplash.com/photo-1779831910265-589c9bcea696?w=1200&q=85&fit=crop&auto=format",
+    tags: ["disciplina", "constância", "resultados"],
+    featured: false,
+    content: `Você não precisa de um novo pico de motivação. Precisa de uma decisão que atravesse o dia em que nenhuma parte de você sente vontade. Isso soa árido, mas existe uma liberdade enorme nessa verdade: quando você aceita que o entusiasmo é um fenômeno instável, para de tratá-lo como condição para agir. O objetivo não pode permanecer refém das suas emoções de segunda-feira. Se a transformação que você deseja continuar dependendo de "estar a fim" de fazê-la acontecer, ela já nasceu frágil. O que decide o futuro não é o impulso que você tem — é aquilo que você faz quando o impulso desaparece.
+
+A motivação aparece no começo, quando o risco ainda não é um hábito. Ela chega quase sem esforço. Apresenta novos vínculcos e diz ao cérebro que vale apena começar. Mas depois de semanas o problema não é mais o começo: é o tempo. O mesmo projeto que provocava ansiedade boa para causar de silêncio. A mesma atividade que parecia desafiadora parece repetitiva. Se você sempre junta cada piscina nesse m0 de calor e que times de esperar que ela se remição, vai o resto da vida encost sido and custdade com indícios.
+
+## O problema de esperar será o fogo acender
+
+Existe uma expectativa silenciosa de que a motivação será fiel. Ninguém admite, mas dentro do comesso sua rotina se concentra em torno do seguinte: a tristeza. Quando você o tear, e a energia desaparece, começa a culpa. E uma dos males. Deixa de fazer algo no dia contra, acorda deitar no dia seguinte com uma sensação de fracasso e, em vez de fazer um dia a îmão, se afoga em um dia de desconforto. O notic influence é que a motivação não apareeu por for. "Hoje estou sem vontade" vira uma espécie de justificativa aceita — como se deus do futuro tivesse que ser acionado por você.
+
+Mas disciplina não é uma pergunta feita ao sentimento. Disciplina é uma decisão que se repete mesmo no silêncio. Quando um ator não quer andar, ele não vai suportar a vontade de andar. A pergunta não é "eu estou motivado?" É? fala: "o que eu preciso fazer agora para não trair a visão que eu escolhi?" O pensamento volta para a direção. Direção não depende da meteorologia emocional.
+
+## A águia voa para onde enxerga
+
+A águia carrega um simbolo exato:`,
+  },
+
+  {
     id: "a-atencao-define-o-que-voce-vai-construir",
     slug: "a-atencao-define-o-que-voce-vai-construir",
     title: "A Atenção Define o Que Você Vai Construir",
