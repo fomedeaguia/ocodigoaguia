@@ -161,11 +161,25 @@ function BlogPostPage() {
                   {children}
                 </blockquote>
               ),
-              code: ({ children }) => (
-                <code className="bg-card/60 text-gold text-sm px-1.5 py-0.5 rounded font-mono">
+              // Bloco de código cercado por ``` — renderiza o texto interno como parágrafo normal
+              // evitando que conteúdo acidentalmente envolvido em backticks apareça desformatado
+              pre: ({ children }) => (
+                <div className="text-base leading-[1.85] text-muted-foreground mb-6">
                   {children}
-                </code>
+                </div>
               ),
+              code: ({ inline, children }: { inline?: boolean; children?: React.ReactNode }) =>
+                inline ? (
+                  <code className="bg-card/60 text-gold text-sm px-1.5 py-0.5 rounded font-mono">
+                    {children}
+                  </code>
+                ) : (
+                  // Bloco de código (triple backtick): exibe o conteúdo como texto normal
+                  // para não quebrar posts de blog que usam backticks por engano
+                  <span className="text-base leading-[1.85] text-muted-foreground whitespace-pre-wrap">
+                    {children}
+                  </span>
+                ),
             }}
           >
             {post.content}
