@@ -53,7 +53,7 @@ jobs:
         run: |
           git config user.name "Codigo Aguia Bot"
           git config user.email "blog-bot@ocodigoaguia.com.br"
-          git add src/data/blog.ts public/sitemap.xml
+          git add src/data/blog.ts public/sitemap.xml public/blog-posts/
           git diff --cached --quiet || git commit -m "blog: novo post automático $(date +'%Y-%m-%d %H:%M UTC')"
           git push
 
