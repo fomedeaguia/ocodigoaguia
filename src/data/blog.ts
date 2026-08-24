@@ -15,6 +15,83 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "o-medo-rouba-seu-foco-a-coragem-devolve",
+    slug: "o-medo-rouba-seu-foco-a-coragem-devolve",
+    title: "O Medo Rouba Seu Foco — A Coragem Devolve",
+    excerpt: "Proteger a atenção é um ato de coragem. Entenda por que o medo dispersa e como recuperar o controle do próprio olhar.",
+    date: "2026-08-24",
+    readingTime: 7,
+    category: "Visão e Propósito",
+    coverImage: "https://images.unsplash.com/photo-1517127766989-c19048cd61e1?w=1200&q=85&fit=crop&auto=format",
+    tags: ["foco", "disciplina", "proteção da atenção"],
+    featured: false,
+    content: `Existe um momento silencioso em que a vida exige uma decisão. Você sabe que precisa agir. Sentiu isso no corpo antes de pensar com clareza — um aperto no estômago, um peso no peito, aquela voz interna listando todos os motivos para recuar. E então você hesita. Não por falta de capacidade. Não por falta de vontade. Mas porque o medo chegou primeiro e ocupou todos os espaços da sua atenção.
+
+O que poucas pessoas compreendem é que o medo não rouba apenas a coragem. Ele rouba o foco. E quem perde o foco perde a capacidade de enxergar com clareza. Fica refém do momento imediato, reage ao que sente, responde ao que aparece. Age como quem está sendo conduzido — por impulsos, opiniões alheias, preocupações distantes e urgências que não são verdadeiramente suas.
+
+Você já percebeu como é difícil pensar com nitidez quando está com medo? O problema não está na situação em si. Está no que aquela emoção faz com a sua mente. Ela estreita o campo de visão. Reduz as possibilidades. Faz você enxergar apenas o que confirma o receio. E é exatamente por isso que a coragem não é uma questão de bravura — é uma questão de direção.
+
+## Quando o medo assume o controle, o mundo encolhe
+
+Há um padrão curioso na forma como a mente humana processa ameaças. Quando algo desperta medo, a atenção se volta instintivamente para aquilo que assusta. O corpo se prepara para reagir. A mente percorre os mesmos caminhos repetidamente, buscando uma saída que não encontra. E nesse processo, tudo o que existe ao redor perde relevância. O que importa é apenas o perigo. O resto desaparece.
+
+Você já viveu isso em alguma área da vida. Talvez no trabalho, adiando uma conversa difícil que poderia mudar sua posição. Talvez nos relacionamentos, evitando um posicionamento necessário por receio da reação do outro. Talvez nos projetos pessoais, começando com entusiasmo e recuando tão logo surgiu a primeira dúvida real. Em todos esses casos, o medo não apenas impediu uma ação. Ele sequestrou a sua capacidade de enxergar o quadro completo — as alternativas, os recursos, as saídas, o longo prazo.
+
+Enquanto você permanece olhando fixamente para o que teme, tudo o mais fica fora do enquadramento. As oportunidades passam despercebidas. Os seus próprios recursos ficam invisíveis. E você se convence de que não existe outra saída. Não porque não exista, mas porque a sua visão foi reduzida àquilo que gera desconforto.
+
+## A águia não ignora a tempestade — ela a observa de cima
+
+A águia não é uma ave que desconhece o perigo. Ela sente a pressão do vento, percebe a mudança no clima, identifica ameaças no horizonte. A diferença é que ela não permanece paralisada diante delas. Ela ganha altitude. E de lá de cima, o que parecia imenso e inescapável se torna apenas parte do cenário — um elemento entre muitos, não o centro de tudo.
+
+Essa é a atitude que falta nos momentos em que o medo domina. Não a ausência de receio, mas a capacidade de se elevar acima dele. Quando você está paralisado, o problema ocupa toda a sua visão. Quando você ganha distância, percebe que ele é apenas uma parte — talvez até uma parte pequena — de um cenário maior. E é essa percepção que devolve a possibilidade de escolha.
+
+Ganhar altitude não significa ignorar o que sente. Significa observar o que sente sem se tornar refém disso. É olhar para o medo como um dado, não como uma sentença. É compreender que a emoção informa, mas não decide. E que você permanece no comando enquanto mantém a capacidade de enxergar além dela.
+
+## Foco é uma forma de coragem silenciosa
+
+Existe uma coragem que não grita. É aquela que se manifesta na decisão silenciosa de não permitir que o medo determine o seu campo de visão. Proteger a própria atenção exige um tipo de firmeza que poucos praticam — porque exige dizer não para aquilo que insiste em ocupar a mente sem trazer valor.
+
+Pense em quantas vezes você perdeu o dia inteiro revivendo uma preocupação que ainda não aconteceu. Pense em quantas noites de sono foram roubadas por pensamentos que não mudariam nada na manhã seguinte. Pense em quantas oportunidades foram desperdiçadas porque você estava mentalmente ocupado demais com aquilo que temia para perceber o que estava disponível.
+
+O excesso de ruído mental não é um acidente. É uma consequência de permitir que o medo escolha o que merece a sua atenção. E proteger a atenção é exatamente o contrário disso: é você quem decide o que merece entrar. É filtrar o que não constrói. É recusar o que não agrega. É entender que a mente é um território — e que você é o único responsável por aquilo que permite habitar nele.
+
+## O momento em que a coragem nasce do foco
+
+Existe uma relação profunda entre coragem e foco que costuma passar despercebida. A coragem não aparece primeiro para depois você conseguir se concentrar. É o contrário. Quando você direciona a atenção para o que realmente importa, o medo perde espaço. Ele encolhe. Porque o medo se alimenta da ausência de direção.
+
+O homem que sabe exatamente onde quer chegar sente menos medo do caminho. Não porque o caminho seja mais seguro, mas porque a direção clara organiza a mente. A dúvida diminui. A hesitação perde força. E o que antes parecia uma montanha intransponível se revela como uma sequência de passos possíveis.
+
+É por isso que pessoas com objetivos definidos atravessam crises com mais estabilidade. Elas não possuem menos problemas. Possuem mais clareza. E clareza é uma forma de coragem silenciosa — porque mantém você em movimento mesmo quando tudo dentro de você pede para parar.
+
+## Você não precisa eliminar o medo para agir
+
+Um dos maiores equívocos sobre coragem é acreditar que ela exige ausência de medo. Não exige. A coragem verdadeira aparece quando o medo está presente e mesmo assim você escolhe seguir. A diferença entre quem avança e quem recua não está na intensidade do receio. Está no que cada um faz com a própria atenção diante dele.
+
+O que você precisa não é deixar de sentir medo. É deixar de olhar exclusivamente para ele. É desviar o olhar do que assusta para o que constrói. É direcionar a atenção para a ação possível, para o próximo passo, para o que depende de você. E quando você faz isso, o medo deixa de ser o centro — e passa a ser apenas um elemento entre outros.
+
+A águia não voa porque não tem medo de cair. Ela voa porque sabe que o céu é o seu lugar. Sua atenção está no destino, não na altura. E é exatamente essa a mudança que transforma a sua relação com o medo: quando você desloca a atenção do que teme para o que deseja construir, o medo perde o poder de te paralisar.
+
+## A vida começa onde termina o território do medo
+
+O que você teme é menor do que a sua capacidade de construir. Mas enquanto a sua atenção permanecer cativa do receio, você não conseguirá enxergar isso. O medo encolhe o mundo. A coragem — aquela coragem silenciosa de proteger o próprio foco — expande. E é nesse espaço expandido que a sua vida realmente começa a acontecer.
+
+Não é preciso esperar o medo desaparecer para agir. É preciso agir para que o medo deixe de ter importância. E isso começa com uma decisão simples, ainda que difícil: decidir onde você vai colocar a sua atenção a partir de agora.
+
+Você pode continuar olhando para o que assusta. Ou pode fazer como a águia — reconhecer a tempestade, sentir o vento, e ainda assim escolher o voo. A diferença entre uma vida de dispersão e uma vida de direção está exatamente nesse ponto. No que você escolhe enxergar. No que você decide proteger. No que você permite guiar os seus passos.
+
+O medo vai continuar existindo. Mas ele não precisa mais ser o seu guia.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "voce-nao-decide-sozinho",
     slug: "voce-nao-decide-sozinho",
     title: "Você não decide sozinho",
