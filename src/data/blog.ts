@@ -15,6 +15,67 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "o-recomeco-comeca-quando-voce-decide-abandonar-quem-voce-era",
+    slug: "o-recomeco-comeca-quando-voce-decide-abandonar-quem-voce-era",
+    title: "O Recomeço Começa Quando Você Decide Abandonar Quem Você Era",
+    excerpt: "Há uma diferença brutal entre recomeçar e repetir. Recomeçar exige que algo em você morra. Repetir é apenas continuar fazendo as mesmas coisas, esperando que o resultado mude por acaso. E é exatamente",
+    date: "2026-08-24",
+    readingTime: 6,
+    category: "Liderança",
+    coverImage: "https://images.unsplash.com/photo-1597952681778-21b365d312ca?w=1200&q=85&fit=crop&auto=format",
+    tags: ["resiliência", "recomeço", "superação"],
+    featured: false,
+    content: `Há uma diferença brutal entre recomeçar e repetir. Recomeçar exige que algo em você morra. Repetir é apenas continuar fazendo as mesmas coisas, esperando que o resultado mude por acaso. E é exatamente aí que a maioria das pessoas trava: elas confundem espera com preparação, e permanência com lealdade a si mesmas. Você não está preso ao fracasso. Você está preso à versão de você que não aprendeu a se despedir.
+
+## O fracasso não é o problema. O problema é o que você faz depois dele.
+
+Quando algo desmorona — um negócio, um relacionamento, um projeto, uma fase da vida — a primeira reação quase sempre é a mesma: tentar consertar as peças do jeito que estavam antes. Você revisita as mesmas estratégias, os mesmos discursos, os mesmos planos, como se o erro estivesse apenas nos detalhes. Mas o erro raramente está nos detalhes. O erro está na estrutura. E estrutura não se conserta com remendo. Estrutura se reconstrói.
+
+O fracasso, quando encarado com honestidade, não é um veredito sobre o seu valor. É um diagnóstico sobre o seu método. E se você não mudar o método, o mesmo resultado vai voltar. O que parece recomeço, muitas vezes, é apenas uma repetição com roupagem nova. Você troca o cenário, troca o horário, troca até as pessoas ao redor, mas mantém a mesma forma de pensar. E é essa forma que continua produzindo exatamente o que você não quer.
+
+## A águia não volta ao ninho antigo
+
+Existe um momento na vida da águia em que ela precisa escolher entre continuar como está ou passar por um processo doloroso de renovação. As penas envelhecidas, o bico desgastado, as garras menos afiadas — tudo aquilo que um dia serviu para caçar e sobreviver agora limita. E ela não tem acesso a um veterinário, a um manual de instruções, a um conselheiro. Ela tem apenas o instinto de que algo precisa mudar. E ela age. Não porque tem certeza do resultado, mas porque tem certeza de que continuar como está é pior.
+
+A águia não espera o momento perfeito. Ela não espera sentir vontade. Ela não espera ter todas as respostas. Ela se retira, passa pelo processo, e volta com uma versão renovada de si mesma. O que ela não faz é permanecer agarrada ao que já não funciona. E é exatamente isso que você tem feito: se agarrado a uma versão de você que já cumpriu o papel dela. Não por falta de coragem — mas por falta de clareza sobre o que significa realmente recomeçar.
+
+## O que você chama de "não conseguir" pode ser "não querer abandonar"
+
+Pense em quantas vezes você já disse que queria mudar. Quantas vezes você planejou, mentalizou, escreveu metas, fez promessas para si mesmo. E depois voltou aos mesmos comportamentos. Não porque você é fraco. Não porque falta disciplina. Mas porque, no fundo, você ainda acredita que a versão antiga pode dar certo. Você ainda está emocionalmente investido em quem você era, nos seus velhos hábitos, nas suas antigas justificativas, nas suas desculpas confortáveis.
+
+Abandonar uma versão de si mesmo é um luto. E luto exige um processo. Você não pode simplesmente decidir "ser outra pessoa" da noite para o dia. Mas você pode — e deve — decidir que a pessoa que falhou não é a pessoa que vai continuar guiando sua vida. O erro não é cair. O erro é continuar deitado no chão olhando para o teto, esperando que algo aconteça. O erro é tratar o fracasso como um destino, e não como um ponto de partida.
+
+## O momento em que você para de esperar
+
+Existe uma sensação específica que antecede qualquer mudança real. É aquela mistura de cansaço e revolta. Cansaço de repetir os mesmos ciclos. Revolta por ter aceitado tão pouco por tanto tempo. É quando o "não aguento mais" finalmente sobe da garganta para a consciência. E é ali que você tem duas escolhas: afundar na reclamação ou transformar a revolta em ação.
+
+A águia não reclama do vento. Ela usa o vento. Ela não espera que as condições sejam perfeitas. Ela se posiciona e aproveita o que existe. Isso não é resignação — é inteligência. É entender que o tempo nunca vai estar completamente a seu favor, e que esperar a vida ficar mais fácil é a forma mais garantida de continuar exatamente onde você está. O momento de agir não é quando você estiver pronto. O momento de agir é quando você decidir que está cansado de esperar.
+
+## Blindar a mente para o recomeço
+
+Recomeçar exige uma blindagem mental que a maioria das pessoas não tem. E não estou falando de isolamento ou arrogância. Estou falando de saber o que merece sua atenção, quais vozes merecem peso, quais opiniões podem ser ignoradas. Quando você decide recomeçar, todo mundo vai ter uma opinião. Alguns vão duvidar. Alguns vão torcer contra. Alguns vão projetar em você os próprios medos. E se você não tiver uma blindagem, você vai absorver tudo isso e transformar em paralisia.
+
+Blindar a mente é entender que a sua vida não é uma assembleia. Você não precisa colocar em votação as suas escolhas mais importantes. Você pode ouvir, refletir, considerar — mas a decisão final é sua. E mais do que isso: a decisão de continuar é sua. Recomeçar não é um evento. É um processo contínuo. Você vai ter dias de clareza e dias de dúvida. E é exatamente nos dias de dúvida que a blindagem faz diferença. Porque é nesses dias que a versão antiga de você vai sussurrar: "volta, era mais fácil."
+
+## O que você precisa abandonar para avançar
+
+Talvez você precise abandonar a necessidade de aprovação. Talvez precise abandonar a ideia de que existe um momento certo. Talvez precise abandonar a versão de você que se contenta com pouco. Talvez precise abandonar a história que você conta sobre si mesmo — aquela em que você é a vítima, o azarado, o que nunca tem chance. Porque enquanto você se enxergar assim, vai continuar agindo assim. E enquanto agir assim, vai continuar colhendo exatamente o que está colhendo.
+
+A águia não se pergunta se merece voar. Ela voa. Ela não pede licença para o vento. Ela não espera a permissão das outras aves. Ela simplesmente abre as asas. E é isso que você precisa fazer. Não precisa saber todos os passos. Não precisa ter todas as respostas. Precisa apenas decidir que a versão que fracassou não vai ditar o seu futuro. Precisa decidir que o recomeço começa agora — não amanhã, não segunda-feira, não no ano que vem. Agora.
+
+A sua história não terminou no fracasso. Ela terminou apenas na versão que você conhecia. E o que vem pela frente não é uma continuação — é uma nova história. Mas você precisa soltar o que ficou para trás para ter as mãos livres para construir o que vem. A águia não olha para trás enquanto voa. Ela olha para o horizonte. E o horizonte, para você, começa no momento em que você decide que a espera acabou.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "o-medo-rouba-seu-foco-a-coragem-devolve",
     slug: "o-medo-rouba-seu-foco-a-coragem-devolve",
     title: "O Medo Rouba Seu Foco — A Coragem Devolve",
