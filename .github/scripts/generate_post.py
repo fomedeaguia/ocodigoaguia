@@ -12,6 +12,9 @@ BLOG_TS_PATH = "src/data/blog.ts"
 SITEMAP_PATH = "public/sitemap.xml"
 BASE_URL = "https://ocodigoaguia.com.br"
 
+MAX_GENERATION_ATTEMPTS = 15   # Loop 1 — falha na geração da API
+MAX_AUDIT_ATTEMPTS      = 15   # Loop 2 — reprovação na auditoria
+
 
 def slugify(text):
     text = unicodedata.normalize("NFD", text)
@@ -95,7 +98,7 @@ def buscar_imagem_unsplash(image_key):
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# TEMAS E ÂNGULOS — Sistema Tema + Ângulo independentes
+# TEMAS E ÂNGULOS
 # ──────────────────────────────────────────────────────────────────────────────
 
 TEMAS_MANHA = [
@@ -153,7 +156,6 @@ ANGULOS = [
     "Águia e crescimento — mostrar que crescimento exige desconforto, mudança de comportamento e expansão de perspectiva.",
 ]
 
-# Seleção por horário
 if hour < 12:
     pool = TEMAS_MANHA
     period = "manha"
@@ -202,23 +204,148 @@ tags_map = {
 }
 tags = tags_map.get(image_key, ["mentalidade de águia", "transformação", "desenvolvimento pessoal"])
 
-# CTA: 50% de chance, inserido externamente após o artigo
 use_cta = random.random() < 0.5
 
+
 # ──────────────────────────────────────────────────────────────────────────────
-# PROMPT MESTRE — Gerador de Artigos | O Código Águia
+# AUDITORIA DE QUALIDADE E SEO
+# Retorna dict com 'aprovado' (bool) e 'erros' (list[str])
 # ──────────────────────────────────────────────────────────────────────────────
 
-prompt = f"""# Prompt Mestre — Gerador de Artigos | O Código Águia
+def auditar_post(title, excerpt, slug, content_md):
+    erros = []
+    avisos = []
+
+    # ── SEO ──────────────────────────────────────────────────────────────────
+
+    if not title or len(title) < 10:
+        erros.append(f"SEO: título ausente ou muito curto ({len(title)} chars; mínimo 10)")
+    elif len(title) > 70:
+        erros.append(f"SEO: título muito longo ({len(title)} chars; máximo 70)")
+
+    if not excerpt or len(excerpt) < 50:
+        erros.append(f"SEO: resumo ausente ou muito curto ({len(excerpt)} chars; mínimo 50)")
+    elif len(excerpt) > 165:
+        erros.append(f"SEO: resumo muito longo ({len(excerpt)} chars; máximo 165)")
+
+    if not slug or not re.match(r'^[a-z0-9-]+$', slug):
+        erros.append(f"SEO: slug inválido '{slug}' (apenas letras minúsculas, números e hífens)")
+
+    h1_count = len(re.findall(r'^# .+', content_md, re.MULTILINE))
+    if h1_count != 0:
+        erros.append(f"SEO: o corpo do artigo não deve conter H1 (encontrado {h1_count}); o título é o H1")
+
+    h2_count = len(re.findall(r'^## .+', content_md, re.MULTILINE))
+    if h2_count < 4:
+        erros.append(f"SEO: poucos subtítulos H2 ({h2_count}; mínimo 4)")
+
+    if re.search(r'^### ', content_md, re.MULTILINE):
+        erros.append("SEO: uso de H3 (###) não permitido neste blog; use somente H2 (##)")
+
+    if re.search(r'^#### ', content_md, re.MULTILINE):
+        erros.append("SEO: uso de H4 (####) não permitido; use somente H2 (##)")
+
+    keyword_lower = title.lower()
+    first_paragraph = " ".join(content_md.split("\n")[:8]).lower()
+    if not any(word in first_paragraph for word in keyword_lower.split()[:3]):
+        avisos.append("SEO: tema principal não detectado nos primeiros parágrafos")
+
+    # ── QUALIDADE DO TEXTO ───────────────────────────────────────────────────
+
+    word_count = len(content_md.split())
+    if word_count < 1000:
+        erros.append(f"QUALIDADE: artigo muito curto ({word_count} palavras; mínimo 1.000)")
+
+    if re.search(r'\[INSERIR\]|\[TODO\]|\[texto aqui\]|\[PLACEHOLDER\]', content_md, re.IGNORECASE):
+        erros.append("QUALIDADE: texto contém placeholders não substituídos")
+
+    if not re.search(r'^## ', content_md, re.MULTILINE):
+        erros.append("QUALIDADE: nenhuma seção com subtítulo H2 encontrada")
+
+    paragraphs = [p.strip() for p in re.split(r'\n{2,}', content_md) if p.strip() and not p.strip().startswith('#')]
+    long_paragraphs = [p[:80] for p in paragraphs if len(p.split()) > 200]
+    if long_paragraphs:
+        erros.append(f"QUALIDADE: {len(long_paragraphs)} parágrafo(s) com mais de 200 palavras — quebre em blocos menores")
+
+    sentences = re.split(r'(?<=[.!?])\s+', content_md)
+    sentence_texts = [s.strip().lower()[:80] for s in sentences if len(s.strip()) > 40]
+    if len(sentence_texts) != len(set(sentence_texts)):
+        erros.append("QUALIDADE: frases duplicadas detectadas no artigo")
+
+    cta_patterns = [
+        r'conheça o código águia', r'acesse o site', r'clique aqui para comprar',
+        r'compre agora', r'<!--CTA_FINAL-->', r'quero acessar'
+    ]
+    for pat in cta_patterns:
+        if re.search(pat, content_md, re.IGNORECASE):
+            erros.append(f"QUALIDADE: CTA comercial no corpo do artigo ('{pat}') — não permitido")
+            break
+
+    # ── FORMATAÇÃO ───────────────────────────────────────────────────────────
+
+    bullet_count = len(re.findall(r'^[\*\-] .+', content_md, re.MULTILINE))
+    if bullet_count > 0:
+        erros.append(f"FORMATAÇÃO: uso de bullet points ({bullet_count} encontrados) — não permitido neste blog")
+
+    empty_heading = re.search(r'^## .+\n+(## |\Z)', content_md, re.MULTILINE)
+    if empty_heading:
+        erros.append("FORMATAÇÃO: subtítulo H2 sem conteúdo logo abaixo")
+
+    lines = content_md.splitlines()
+    for i, line in enumerate(lines):
+        if line.strip().startswith("## ") and i + 1 < len(lines):
+            next_line = lines[i + 1].strip()
+            if next_line == "" and i + 2 < len(lines) and lines[i + 2].strip().startswith("##"):
+                erros.append(f"FORMATAÇÃO: H2 seguido imediatamente de outro H2 sem texto entre eles (linha {i+1})")
+                break
+
+    if re.search(r'\*\*\*|___', content_md):
+        avisos.append("FORMATAÇÃO: uso de negrito+itálico combinado (***) — prefira apenas **negrito**")
+
+    aprovado = len(erros) == 0
+    score = max(0, 100 - len(erros) * 12 - len(avisos) * 3)
+
+    return {
+        "aprovado": aprovado,
+        "score": score,
+        "erros": erros,
+        "avisos": avisos,
+        "palavras": word_count,
+        "h2_count": h2_count,
+    }
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PROMPT MESTRE
+# ──────────────────────────────────────────────────────────────────────────────
+
+def montar_prompt(tema_desc, angulo, sensacao, tentativa_auditoria=1, erros_anteriores=None):
+    correcoes_bloco = ""
+    if erros_anteriores:
+        lista_erros = "\n".join(f"- {e}" for e in erros_anteriores)
+        correcoes_bloco = f"""
+---
+
+## ATENÇÃO — CORREÇÕES OBRIGATÓRIAS (tentativa {tentativa_auditoria}/15)
+
+O texto anterior foi REPROVADO na auditoria automática pelos seguintes motivos:
+
+{lista_erros}
+
+Você DEVE corrigir TODOS esses problemas no novo texto.
+Não repita os erros anteriores. Reescreva o artigo do zero com essas correções.
+
+---
+"""
+
+    return f"""# Prompt Mestre — Gerador de Artigos | O Código Águia
 
 Você é um **redator especializado em desenvolvimento pessoal, mentalidade, comportamento, disciplina, liberdade, propósito e transformação pessoal**, escrevendo EXCLUSIVAMENTE em português do Brasil.
 
 Sua missão é produzir artigos profundos, envolventes, humanos e emocionalmente inteligentes sobre a **Mentalidade de Águia**, utilizando a águia como um arquétipo narrativo para explorar visão, clareza, força mental, independência, disciplina, coragem, liberdade, objetivos e transformação pessoal.
 
-O objetivo é construir uma **filosofia editorial própria e reconhecível**, fazendo com que o leitor passe a enxergar a própria vida de uma perspectiva diferente.
-
 ATENÇÃO: Responda APENAS com o artigo finalizado. Não explique o processo. Não informe o tema ou ângulo escolhido. Não escreva observações antes ou depois. Não escreva CTA. O texto deve estar pronto para publicação diretamente no site.
-
+{correcoes_bloco}
 ---
 
 TEMA DO ARTIGO: {tema_desc}
@@ -233,377 +360,280 @@ SENSAÇÃO QUE O LEITOR DEVE SENTIR AO TERMINAR: "{sensacao}"
 
 A **Mentalidade de Águia** é o conceito central de todo o projeto.
 
-A águia deve ser utilizada como **metáfora, símbolo e arquétipo**, e não como justificativa científica para afirmações sobre comportamento humano.
+A águia deve ser utilizada como **metáfora, símbolo e arquétipo**, e não como justificativa científica.
 
 Os artigos podem explorar: **visão, altitude mental, foco, disciplina, coragem, independência, liberdade, silêncio, estratégia, proteção da mente, seleção de ambientes, objetivos, resiliência, renovação, propósito e responsabilidade pelas próprias escolhas.**
 
-A Mentalidade de Águia representa a capacidade de: **enxergar além do problema imediato, proteger a própria mente, escolher onde colocar atenção, abandonar padrões limitantes, estabelecer objetivos claros, desenvolver disciplina, pensar no longo prazo e construir uma vida com maior autonomia e direção.**
-
-A mensagem central deve ser: **a transformação começa quando a pessoa muda a maneira como enxerga, interpreta e enfrenta a própria vida.**
-
 ---
 
-## 2. PILARES DA FILOSOFIA ÁGUIA
-
-Utilize diferentes combinações destes pilares conforme o tema:
-
-**VISÃO** — Enxergar além do momento presente, compreender consequências e construir uma direção.
-
-**FOCO** — Proteger a atenção e não permitir que distrações, opiniões ou problemas externos determinem o rumo da vida.
-
-**BLINDAGEM MENTAL** — Aprender a filtrar influências, estabelecer limites, selecionar ambientes e proteger pensamentos, objetivos e energia.
-
-**LIBERDADE** — Mostrar que liberdade não significa ausência de responsabilidades. Liberdade significa possuir consciência e autonomia para escolher o próprio caminho.
-
-**OBJETIVOS** — Transformar desejos vagos em direção, prioridades e ações.
-
-**DISCIPLINA** — Mostrar que uma vida diferente exige comportamentos diferentes, inclusive quando não existe motivação.
-
-**CORAGEM** — Explorar a coragem de mudar, começar novamente, dizer não, abandonar padrões e enfrentar o desconhecido.
-
-**ALTITUDE** — Utilizar a ideia de "ganhar altitude" como metáfora para afastar-se emocionalmente do caos e enxergar situações com mais clareza.
-
-**AMBIENTE** — Explorar como pessoas, hábitos, informações e ambientes influenciam decisões e comportamento.
-
-**IDENTIDADE** — Mostrar que transformação não significa apenas alcançar metas, mas tornar-se uma pessoa capaz de sustentar uma nova realidade.
-
-**RENOVAÇÃO** — Abordar momentos em que é necessário abandonar uma versão antiga de si para construir uma nova fase.
-
----
-
-## 3. SISTEMA DE TEMA + ÂNGULO
-
-O sistema selecionou dois elementos independentes antes de escrever:
-
-### TEMA PRINCIPAL
-{tema_desc}
-
-### ÂNGULO NARRATIVO
-{angulo}
-
-### REGRA FUNDAMENTAL
-**Nunca produza automaticamente o mesmo argumento apenas porque o tema se repetiu.** Se o tema for "disciplina" em dois artigos diferentes, os textos precisam apresentar perspectivas substancialmente diferentes.
-
----
-
-## 4. TEMA POR HORÁRIO
-
-A sensação que o leitor deve sentir ao terminar este artigo: **"{sensacao}"**
-
----
-
-## 5. ABERTURA DO ARTIGO
-
-Comece sempre com um **gancho forte**.
-
-Não utilize aberturas genéricas como:
-- "Nos dias de hoje..."
-- "Todos nós sabemos que..."
-- "Vivemos em um mundo cada vez mais..."
-- "Você já parou para pensar..."
-
-Prefira: **uma afirmação provocadora, um paradoxo, uma situação cotidiana, uma pergunta inesperada, uma observação psicológica ou uma cena que provoque identificação.**
-
-A primeira parte deve fazer o leitor querer continuar.
-
----
-
-## 6. ESTRUTURA NARRATIVA
+## 2. ESTRUTURA NARRATIVA
 
 Construa o artigo com progressão lógica:
 
 **GANCHO → PROBLEMA → IDENTIFICAÇÃO → METÁFORA DA ÁGUIA → APROFUNDAMENTO → NOVA PERSPECTIVA → APLICAÇÃO NA VIDA → TRANSFORMAÇÃO → CONCLUSÃO.**
 
-O leitor deve terminar o artigo enxergando o problema inicial de maneira diferente.
+---
+
+## 3. REGRAS OBRIGATÓRIAS DE FORMATAÇÃO
+
+- Mínimo de **1.000 palavras** (ideal: 1.200+)
+- Mínimo de **4 seções principais** com títulos usando `##`
+- **NUNCA use `###`, `####` ou qualquer heading abaixo de `##`**
+- **ZERO bullet points** — use parágrafos corridos
+- **ZERO H1 no corpo** — o título já é o H1; o corpo começa direto com `##`
+- Parágrafos com no máximo 150 palavras cada
+- Uso estratégico de **negrito**
+- Introdução forte no início
+- Conclusão memorável no final
+- Português do Brasil
 
 ---
 
-## 7. A ÁGUIA PRECISA TER FUNÇÃO
-
-Não utilize a águia apenas como decoração textual.
-
-Evite repetir: "A águia voa alto." / "A águia é forte." / "A águia enxerga longe."
-
-Transforme essas características em reflexões humanas:
-
-**Altitude** pode representar distância emocional para analisar um problema.
-**Visão** pode representar pensamento de longo prazo.
-**Silêncio** pode representar afastamento do excesso de ruído.
-**Liberdade** pode representar responsabilidade pelas próprias escolhas.
-**Força** pode representar disciplina diante das dificuldades.
-
----
-
-## 8. BLINDAGEM MENTAL
-
-A blindagem mental deve ser um conceito recorrente quando aplicável.
-
-Explique que blindar a mente significa: **saber o que merece atenção, estabelecer limites, selecionar influências, controlar impulsos, não absorver qualquer opinião, proteger objetivos e aprender a dizer não.**
-
-Uma mente blindada não é uma mente fechada. É uma mente que **sabe o que deixa entrar e sabe o que precisa deixar passar.**
-
-Não incentive paranoia, isolamento extremo ou desprezo pelas outras pessoas.
-
----
-
-## 9. LIBERDADE + DIREÇÃO
-
-Explore constantemente a relação entre liberdade e objetivos.
-
-A ideia central: **liberdade sem direção pode virar dispersão.** E: **objetivos sem disciplina continuam sendo apenas desejos.**
-
-Mostre que uma pessoa livre não é necessariamente aquela que faz tudo o que deseja. É aquela que desenvolveu clareza suficiente para decidir: **o que realmente vale a pena desejar, perseguir e abandonar.**
-
----
-
-## 10. ÁGUIA × GALINHA
-
-Quando fizer sentido, utilize o contraste simbólico:
-
-**Mentalidade de Águia × Mentalidade de Galinha**
-
-Utilize contrastes como: visão × imediatismo, propósito × distração, autonomia × dependência de aprovação, foco × dispersão, coragem × medo, disciplina × impulsividade, liberdade × conformismo, estratégia × reação automática.
-
-Nunca utilize o conceito para humilhar o leitor. A finalidade é provocar reflexão: **"Em quais áreas da minha vida estou agindo com visão e em quais estou apenas reagindo ao ambiente?"**
-
----
-
-## 11. PSICOLOGIA E CIÊNCIA
-
-Quando utilizar psicologia, comportamento ou estudos:
-- não invente pesquisas;
-- não invente estatísticas;
-- não atribua frases sem confirmação;
-- não apresente metáforas como fatos científicos;
-- não faça diagnósticos;
-- não utilize pseudociência.
-
-Quando não houver fonte disponível, apresente a ideia como **reflexão, metáfora ou interpretação**.
-
----
-
-## 12. ESTILO
-
-O texto deve ser: **profundo, humano, elegante, provocador, emocional, claro e natural.**
-
-Evite: clichês, frases motivacionais vazias, exageros, promessas de transformação instantânea, "fórmulas secretas", linguagem corporativa, repetição, excesso de exclamações, frases artificiais, linguagem típica de IA.
-
-Use exemplos cotidianos quando ajudarem o leitor a se identificar. O leitor deve pensar: **"Isso está falando da minha vida."**
-
----
-
-## 13. REGRAS OBRIGATÓRIAS
-
-O artigo deve possuir:
-- mínimo de **1.200 palavras**;
-- mínimo de **6 seções principais**;
-- títulos utilizando `##`;
-- nunca utilizar `###` ou `####`;
-- parágrafos corridos;
-- **zero bullet points no artigo final**;
-- utilização estratégica de **negrito**;
-- introdução forte;
-- desenvolvimento progressivo;
-- conclusão memorável;
-- português do Brasil.
-
-Não aumente artificialmente o tamanho do artigo repetindo ideias. Cada seção deve acrescentar uma nova camada ao argumento.
-
----
-
-## 14. CONCLUSÃO
-
-A conclusão deve recuperar a ideia central e provocar uma mudança de perspectiva.
-
-Não termine com frases genéricas como: "Espero que este artigo tenha ajudado." / "Agora é sua vez." / "Compartilhe este conteúdo."
-
-Termine com uma reflexão original relacionada a: **visão, identidade, liberdade, propósito, escolha, disciplina ou transformação.**
-
-A última parte deve deixar uma ideia na mente do leitor depois que ele terminar a leitura.
-
----
-
-## 15. ORIGINALIDADE
-
-Nunca utilize automaticamente a mesma estrutura emocional.
-
-Mesmo que o tema seja semelhante, alterne: **tipo de abertura, metáfora, perspectiva, ritmo, exemplos, perguntas, argumentos e conclusão.**
-
-Cada artigo deve revelar uma **nova faceta da Mentalidade de Águia**.
-
----
-
-## 16. PRINCÍPIO EDITORIAL
-
-Antes de finalizar, verifique:
-
-**Este texto ensina o leitor a enxergar melhor a própria vida?**
-**Existe uma nova perspectiva?**
-**A metáfora da águia acrescenta significado?**
-**O leitor consegue relacionar o conteúdo à própria realidade?**
-**O texto transmite visão, foco, liberdade, disciplina ou clareza?**
-**O artigo evita clichês e repetição?**
-
-Se alguma resposta for não, revise o artigo antes de entregá-lo.
-
----
-
-## 17. O CÓDIGO ÁGUIA
-
-O conteúdo editorial deve construir naturalmente o universo conceitual de **O Código Águia**.
-
-Entretanto, o artigo deve permanecer útil mesmo para quem nunca ouviu falar do projeto. Não transforme o texto em propaganda.
-
-O leitor deve primeiro receber: **reflexão → conhecimento → identificação → mudança de perspectiva.**
-
-Qualquer referência comercial deverá ser controlada exclusivamente pelo sistema externo responsável pela publicação.
-
----
-
-## 18. REGRA ABSOLUTA SOBRE CTA
+## 4. REGRA ABSOLUTA SOBRE CTA
 
 **NÃO ESCREVA CTA NO ARTIGO.**
-**NÃO ESCREVA `<!--CTA_FINAL-->`.**
 **NÃO ESCREVA CHAMADA PARA COMPRA.**
 **NÃO ESCREVA LINK COMERCIAL.**
 **NÃO ESCREVA "CONHEÇA O CÓDIGO ÁGUIA".**
-**NÃO ESCREVA "ACESSE O SITE".**
-**NÃO ESCREVA NENHUM BLOCO COMERCIAL.**
 
-O gerador deve entregar **somente o conteúdo editorial**.
-
-A inserção de qualquer CTA será feita posteriormente por outro sistema, fora deste prompt.
-
-Portanto, independentemente do tema, horário ou configuração externa: **O TEXTO GERADO DEVE TERMINAR NA CONCLUSÃO EDITORIAL.**
+O texto deve terminar na conclusão editorial. CTA será inserido por sistema externo.
 
 ---
 
-## 19. FORMATO DE SAÍDA
+## 5. ESTILO
 
-Entregue somente o artigo final.
+Texto: **profundo, humano, elegante, provocador, emocional, claro e natural.**
 
-Não explique o processo.
-Não informe o tema sorteado.
-Não informe o ângulo escolhido.
-Não informe regras internas.
-Não escreva observações antes ou depois.
-Não escreva CTA.
-Não escreva bloco comercial.
+Evite: clichês, frases motivacionais vazias, exageros, promessas de transformação instantânea, linguagem corporativa, repetição, excesso de exclamações, linguagem típica de IA.
 
-O resultado deve estar **pronto para publicação diretamente no site**.
-
-Formato de saída (siga exatamente, sem nenhum texto adicional antes ou depois):
-Linha 1: # Título do Artigo
-Linha 2: RESUMO: resumo com até 160 caracteres
-Linha 3 em diante: o artigo completo
+Não comece o texto com aberturas genéricas como:
+- "Nos dias de hoje..."
+- "Todos nós sabemos que..."
+- "Você já parou para pensar..."
 
 ---
 
-## OBJETIVO FINAL
+## 6. FORMATO DE SAÍDA
 
-Construir uma filosofia editorial forte em torno da seguinte ideia:
+Entregue somente o artigo. Sem texto adicional antes ou depois.
 
-**A Mentalidade de Águia é aprender a enxergar mais longe, proteger melhor a própria mente, escolher conscientemente o próprio caminho e desenvolver clareza suficiente para transformar liberdade em direção.**
-
-Cada artigo deve apresentar uma nova perspectiva dessa filosofia.
-
-O leitor não deve simplesmente terminar o texto pensando sobre uma águia. Ele deve terminar pensando: **"O que eu preciso mudar na forma como estou enxergando a minha própria vida?"**
+Linha 1: # Título do Artigo (título com até 70 caracteres)
+Linha 2: RESUMO: resumo com entre 80 e 160 caracteres
+Linha 3 em diante: o artigo completo (corpo sem nenhum H1)
 """
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# FUNÇÃO DE CHAMADA À API (Loop 1 — até 15 tentativas de geração)
+# ──────────────────────────────────────────────────────────────────────────────
+
+def chamar_api(prompt_text, tentativa_geracao):
+    print(f"\n── Loop 1 | Tentativa de geração {tentativa_geracao}/{MAX_GENERATION_ATTEMPTS} ──")
+    payload = json.dumps({
+        "model": "openrouter/auto",
+        "messages": [{"role": "user", "content": prompt_text}],
+        "temperature": 0.8,
+        "max_tokens": 6000
+    }).encode()
+
+    req = urllib.request.Request(
+        "https://openrouter.ai/api/v1/chat/completions",
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://ocodigoaguia.com.br",
+            "X-Title": "O Codigo Aguia Blog"
+        }
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            data = json.loads(resp.read())
+            text = data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
+            model_used = data.get("model", "desconhecido")
+            print(f"Modelo: {model_used} | Chars: {len(text)}")
+            return text
+    except Exception as e:
+        print(f"Erro na API (tentativa {tentativa_geracao}): {e}")
+        return None
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# FUNÇÃO DE PARSING DO TEXTO GERADO
+# ──────────────────────────────────────────────────────────────────────────────
+
+def parsear_artigo(article_text):
+    lines = article_text.strip().splitlines()
+    title = ""
+    excerpt = ""
+    content_lines = []
+
+    for line in lines:
+        stripped = line.strip()
+        if not title and stripped.startswith("# "):
+            title = stripped[2:].strip()
+            continue
+        if not excerpt and stripped.startswith("RESUMO:"):
+            excerpt = stripped[7:].strip()
+            continue
+        content_lines.append(line)
+
+    content_md = "\n".join(content_lines).strip()
+
+    if not title:
+        for line in content_lines:
+            if line.strip().startswith("## "):
+                title = line.strip()[3:].strip()
+                break
+    if not title:
+        title = f"A Mentalidade de Águia — {today}"
+
+    if not excerpt:
+        for line in content_lines:
+            clean = line.strip()
+            if len(clean) > 80 and not clean.startswith("#"):
+                excerpt = re.sub(r"\*\*|\[.*?\]\(.*?\)", "", clean)[:200].strip()
+                break
+
+    return title, excerpt, content_md
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# LOOP DUPLO — Loop 1: geração | Loop 2: auditoria
+# ──────────────────────────────────────────────────────────────────────────────
+
+print(f"\n{'='*60}")
+print(f"INICIANDO GERAÇÃO DE POST | {timestamp}")
+print(f"Tema: {tema_desc} | Período: {period}")
+print(f"{'='*60}")
+
+article_text_final = None
+title_final = ""
+excerpt_final = ""
+content_md_final = ""
+slug_final = ""
+audit_result = None
+
+# ── LOOP 2: auditoria (externo) ───────────────────────────────────────────────
+for tentativa_auditoria in range(1, MAX_AUDIT_ATTEMPTS + 1):
+    print(f"\n{'─'*50}")
+    print(f"LOOP 2 | Ciclo de auditoria {tentativa_auditoria}/{MAX_AUDIT_ATTEMPTS}")
+    print(f"{'─'*50}")
+
+    erros_auditoria_anterior = audit_result["erros"] if audit_result else None
+    prompt_atual = montar_prompt(
+        tema_desc, angulo, sensacao,
+        tentativa_auditoria=tentativa_auditoria,
+        erros_anteriores=erros_auditoria_anterior
+    )
+
+    # ── LOOP 1: geração (interno) ─────────────────────────────────────────────
+    article_text_raw = None
+    for tentativa_geracao in range(1, MAX_GENERATION_ATTEMPTS + 1):
+        raw = chamar_api(prompt_atual, tentativa_geracao)
+
+        if raw and len(raw) >= 500:
+            article_text_raw = raw
+            print(f"✓ Geração bem-sucedida na tentativa {tentativa_geracao}")
+            break
+        else:
+            chars = len(raw) if raw else 0
+            print(f"✗ Tentativa {tentativa_geracao} falhou (resposta: {chars} chars). Retentando...")
+
+    if not article_text_raw:
+        print(f"\n✗ LOOP 1 ESGOTADO: não foi possível gerar texto após {MAX_GENERATION_ATTEMPTS} tentativas.")
+        print("Abortando execução.")
+        sys.exit(1)
+
+    # Parseia o texto gerado
+    title_final, excerpt_final, content_md_final = parsear_artigo(article_text_raw)
+    slug_final = slugify(title_final)
+    if not slug_final:
+        slug_final = f"post-{timestamp}"
+
+    print(f"\nTexto gerado:")
+    print(f"  Título  : {title_final}")
+    print(f"  Slug    : {slug_final}")
+    print(f"  Resumo  : {excerpt_final[:80]}...")
+    print(f"  Palavras: {len(content_md_final.split())}")
+
+    # ── AUDITORIA ─────────────────────────────────────────────────────────────
+    audit_result = auditar_post(title_final, excerpt_final, slug_final, content_md_final)
+
+    print(f"\n{'─'*40}")
+    print(f"RESULTADO DA AUDITORIA — ciclo {tentativa_auditoria}")
+    print(f"  Score   : {audit_result['score']}/100")
+    print(f"  Palavras: {audit_result['palavras']}")
+    print(f"  H2      : {audit_result['h2_count']}")
+    print(f"  Status  : {'✓ APROVADO' if audit_result['aprovado'] else '✗ REPROVADO'}")
+
+    if audit_result["erros"]:
+        print(f"  Erros ({len(audit_result['erros'])}):")
+        for e in audit_result["erros"]:
+            print(f"    ✗ {e}")
+
+    if audit_result["avisos"]:
+        print(f"  Avisos ({len(audit_result['avisos'])}):")
+        for a in audit_result["avisos"]:
+            print(f"    ⚠ {a}")
+
+    if audit_result["aprovado"]:
+        print(f"\n✓ AUDITORIA APROVADA no ciclo {tentativa_auditoria}/{MAX_AUDIT_ATTEMPTS}")
+        article_text_final = article_text_raw
+        break
+    else:
+        if tentativa_auditoria < MAX_AUDIT_ATTEMPTS:
+            print(f"\n✗ Texto reprovado. Descartando e recriando do zero (próximo ciclo: {tentativa_auditoria + 1})...")
+        else:
+            print(f"\n✗ LOOP 2 ESGOTADO: texto reprovado em todos os {MAX_AUDIT_ATTEMPTS} ciclos de auditoria.")
+            print("Abortando execução sem publicar.")
+            sys.exit(1)
+
+# Verificação final de segurança
+if not article_text_final or not audit_result or not audit_result["aprovado"]:
+    print("Erro interno: texto não aprovado chegou à fase de publicação. Abortando.")
+    sys.exit(1)
+
+# ──────────────────────────────────────────────────────────────────────────────
+# INSERÇÃO DO CTA (opcional, 50% de chance) — só após aprovação
+# ──────────────────────────────────────────────────────────────────────────────
+
+if use_cta:
+    content_md_final = content_md_final.rstrip() + "\n" + EBOOK_CTA_FINAL
+    print("CTA final inserido no artigo.")
+
+reading_time = max(1, round(len(content_md_final.split()) / 200))
+
+print(f"\n{'='*60}")
+print(f"POST APROVADO — Publicando...")
+print(f"  Título  : {title_final}")
+print(f"  Slug    : {slug_final}")
+print(f"  Leitura : {reading_time} min")
+print(f"  Score   : {audit_result['score']}/100")
+print(f"{'='*60}")
+
+# ──────────────────────────────────────────────────────────────────────────────
+# IMAGEM DE CAPA
+# ──────────────────────────────────────────────────────────────────────────────
 
 print(f"Buscando imagem Unsplash para: {image_key}")
 cover_image = buscar_imagem_unsplash(image_key)
 
-payload = json.dumps({
-    "model": "openrouter/auto",
-    "messages": [{"role": "user", "content": prompt}],
-    "temperature": 0.8,
-    "max_tokens": 6000
-}).encode()
-
-req = urllib.request.Request(
-    "https://openrouter.ai/api/v1/chat/completions",
-    data=payload,
-    headers={
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
-        "HTTP-Referer": "https://ocodigoaguia.com.br",
-        "X-Title": "O Codigo Aguia Blog"
-    }
-)
-
-article_text = ""
-try:
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        data = json.loads(resp.read())
-        article_text = data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
-        model_used = data.get("model", "desconhecido")
-        print(f"Modelo usado: {model_used} ({len(article_text)} chars)")
-except Exception as e:
-    print(f"Erro na API: {e}")
-    sys.exit(1)
-
-if not article_text or len(article_text) < 500:
-    print(f"Resposta muito curta ou vazia ({len(article_text)} chars)")
-    sys.exit(1)
-
-lines = article_text.strip().splitlines()
-title = ""
-excerpt = ""
-content_lines = []
-
-for i, line in enumerate(lines):
-    stripped = line.strip()
-    if not title and stripped.startswith("# "):
-        title = stripped[2:].strip()
-        continue
-    if not excerpt and stripped.startswith("RESUMO:"):
-        excerpt = stripped[7:].strip()
-        continue
-    content_lines.append(line)
-
-content_md = "\n".join(content_lines).strip()
-
-if not title:
-    for line in content_lines:
-        if line.strip().startswith("## "):
-            title = line.strip()[3:].strip()
-            break
-if not title:
-    title = f"A Mentalidade de Águia — {today}"
-
-if not excerpt:
-    for line in content_lines:
-        clean = line.strip()
-        if len(clean) > 80 and not clean.startswith("#"):
-            excerpt = re.sub(r"\*\*|\[.*?\]\(.*?\)", "", clean)[:200].strip()
-            break
-
-# Inserção de CTA externo (50% de chance)
-if use_cta:
-    content_md = content_md.rstrip() + "\n" + EBOOK_CTA_FINAL
-
-slug = slugify(title)
-if not slug:
-    slug = f"post-{timestamp}"
-
-reading_time = max(1, round(len(content_md.split()) / 200))
-
 # ──────────────────────────────────────────────────────────────────────────────
-# INJETAR O POST DIRETAMENTE EM src/data/blog.ts (fonte de verdade do app)
+# INJETAR O POST EM src/data/blog.ts
 # ──────────────────────────────────────────────────────────────────────────────
+
 def escape_backtick(s):
-    """Escapa backticks e ${} para uso seguro dentro de template literals TS."""
-    s = s.replace("\\", "\\\\")  # barras invertidas primeiro
-    s = s.replace("`", "\\`")    # backtick
-    s = s.replace("${", "\\${") # template expressions
+    s = s.replace("\\", "\\\\")
+    s = s.replace("`", "\\`")
+    s = s.replace("${", "\\${")
     return s
 
 def ts_string(s):
-    """Serializa string como template literal TypeScript multi-linha."""
     return "`" + escape_backtick(s) + "`"
 
 def ts_string_simple(s):
-    """Serializa string curta com aspas duplas (sem quebras de linha)."""
     s = s.replace("\\", "\\\\").replace('"', '\\"')
     return '"' + s + '"'
 
@@ -611,35 +641,27 @@ def ts_array(lst):
     items = ", ".join(ts_string_simple(x) for x in lst)
     return f"[{items}]"
 
-# Monta o bloco TypeScript do novo post
 new_post_block = f"""  {{
-    id: {ts_string_simple(slug)},
-    slug: {ts_string_simple(slug)},
-    title: {ts_string_simple(title)},
-    excerpt: {ts_string_simple(excerpt[:300])},
+    id: {ts_string_simple(slug_final)},
+    slug: {ts_string_simple(slug_final)},
+    title: {ts_string_simple(title_final)},
+    excerpt: {ts_string_simple(excerpt_final[:300])},
     date: {ts_string_simple(today)},
     readingTime: {reading_time},
     category: {ts_string_simple(category)},
     coverImage: {ts_string_simple(cover_image)},
     tags: {ts_array(tags)},
     featured: false,
-    content: {ts_string(content_md)},
+    content: {ts_string(content_md_final)},
   }},"""
 
-# Lê o arquivo blog.ts atual
 with open(BLOG_TS_PATH, "r", encoding="utf-8") as f:
     blog_ts = f.read()
 
-# Verifica se o slug já existe (evita duplicatas)
-if f'slug: "{slug}"' in blog_ts or f"slug: '{slug}'" in blog_ts:
-    print(f"Slug '{slug}' já existe em blog.ts. Abortando para evitar duplicata.")
-    print(f"Título: {title}")
-    print(f"Slug: {slug}")
+if f'slug: "{slug_final}"' in blog_ts or f"slug: '{slug_final}'" in blog_ts:
+    print(f"Slug '{slug_final}' já existe em blog.ts. Abortando para evitar duplicata.")
     sys.exit(0)
 
-# ── INSERÇÃO NO TOPO DO ARRAY ────────────────────────────────────────────────
-# Busca a abertura do array staticPosts e insere o novo post logo depois,
-# garantindo que o post mais recente apareça PRIMEIRO na listagem do site.
 ARRAY_OPEN_MARKER = "const staticPosts: BlogPost[] = ["
 insert_pos = blog_ts.find(ARRAY_OPEN_MARKER)
 
@@ -647,24 +669,21 @@ if insert_pos == -1:
     print("ERRO: Não encontrou 'const staticPosts: BlogPost[] = [' em blog.ts")
     sys.exit(1)
 
-# Posição logo após o "[" de abertura do array
 after_bracket = insert_pos + len(ARRAY_OPEN_MARKER)
-
 updated_ts = blog_ts[:after_bracket] + "\n" + new_post_block + "\n" + blog_ts[after_bracket:]
 
 with open(BLOG_TS_PATH, "w", encoding="utf-8") as f:
     f.write(updated_ts)
 
 print(f"Post injetado NO TOPO de {BLOG_TS_PATH}")
-print(f"Título: {title}")
-print(f"Slug: {slug}")
-print(f"Leitura: {reading_time} min | {len(content_md.split())} palavras")
+print(f"Slug: {slug_final} | Leitura: {reading_time} min | {len(content_md_final.split())} palavras")
 print(f"Imagem: {cover_image[:100]}")
 
 # ──────────────────────────────────────────────────────────────────────────────
-# ATUALIZAR public/sitemap.xml com a nova URL do post
+# ATUALIZAR public/sitemap.xml
 # ──────────────────────────────────────────────────────────────────────────────
-post_url = f"{BASE_URL}/blog/{slug}"
+
+post_url = f"{BASE_URL}/blog/{slug_final}"
 
 new_url_entry = f"""  <url>
     <loc>{post_url}</loc>
@@ -677,16 +696,13 @@ try:
     with open(SITEMAP_PATH, "r", encoding="utf-8") as f:
         sitemap_content = f.read()
 
-    # Verifica se a URL do post já existe no sitemap (evita duplicatas)
     if post_url in sitemap_content:
         print(f"URL '{post_url}' já existe no sitemap. Nenhuma alteração feita.")
     else:
-        # Insere o novo <url> logo após a entrada do /blog
         blog_entry_marker = f"<loc>{BASE_URL}/blog</loc>"
         blog_entry_pos = sitemap_content.find(blog_entry_marker)
 
         if blog_entry_pos != -1:
-            # Acha o fechamento </url> correspondente à entrada /blog e insere depois
             close_tag_pos = sitemap_content.find("</url>", blog_entry_pos)
             if close_tag_pos != -1:
                 insert_after = close_tag_pos + len("</url>")
@@ -697,12 +713,10 @@ try:
                     + sitemap_content[insert_after:]
                 )
             else:
-                # Fallback: insere antes do fechamento </urlset>
                 updated_sitemap = sitemap_content.replace(
                     "</urlset>", new_url_entry + "\n</urlset>"
                 )
         else:
-            # Fallback: insere antes do fechamento </urlset>
             updated_sitemap = sitemap_content.replace(
                 "</urlset>", new_url_entry + "\n</urlset>"
             )
