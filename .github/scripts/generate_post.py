@@ -254,7 +254,7 @@ def auditar_post(title, excerpt, slug, content_md):
 
     word_count = len(content_md.split())
     if word_count < 1000:
-        erros.append(f"QUALIDADE: artigo muito curto ({word_count} palavras; mínimo 1.000)")
+        erros.append(f"QUALIDADE: artigo muito curto ({word_count} palavras; mínimo 1.300)")
 
     if re.search(r'\[INSERIR\]|\[TODO\]|\[texto aqui\]|\[PLACEHOLDER\]', content_md, re.IGNORECASE):
         erros.append("QUALIDADE: texto contém placeholders não substituídos")
@@ -376,7 +376,7 @@ Construa o artigo com progressão lógica:
 
 ## 3. REGRAS OBRIGATÓRIAS DE FORMATAÇÃO
 
-- Mínimo de **1.000 palavras** (ideal: 1.200+)
+- Mínimo de **1.300 palavras** (ideal: 1.400+)
 - Mínimo de **4 seções principais** com títulos usando `##`
 - **NUNCA use `###`, `####` ou qualquer heading abaixo de `##`**
 - **ZERO bullet points** — use parágrafos corridos
