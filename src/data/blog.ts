@@ -15,6 +15,79 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "aguia-e-o-excesso-de-informacao-a-escolha-de-enxergar",
+    slug: "aguia-e-o-excesso-de-informacao-a-escolha-de-enxergar",
+    title: "Águia e o excesso de informação: a escolha de enxergar",
+    excerpt: "Inundado de dados e opiniões, você se sente perdido. A águia ensina que liberdade é saber o que ignorar para assumir suas escolhas.",
+    date: "2026-08-25",
+    readingTime: 7,
+    category: "Filosofia",
+    coverImage: "https://images.unsplash.com/photo-1763886848346-741be06ab05c?w=1200&q=85&fit=crop&auto=format",
+    tags: ["liberdade", "autonomia", "escolhas"],
+    featured: false,
+    content: `## A avalanche que rouba sua sozinha
+
+Há uma forma de aprisionamento que não usa grades nem pede assinatura. Ela chega em formato de notificação, de cor vermelha discreta, do "mais um artigo que você precisa ler". Você acorda, e antes mesmo de colocar os pés no chão, a luz da tela já está acesa. O mundo inteiro é espremido em manchetes, listas, posts e vídeos de não mais de sessenta segundos. Essa correnteza não para, e você, sem perceber, deixa se levar pelas águas com a ilusão de que está nadando. Mas quem nada contra uma corrente assim não escolhe a direção; apenas se mantém em movimento.
+
+O problema não é a informação existir. O problema é tratá-la como uma entidade que precisa ser consumida sem critério. Quando todos os assuntos se estendem em sua frente como um bufê infinito, você se senta não para se alimentar, mas para engolir. Essa ação parece conhecimento, mas gera apenas confusão. Porque conhecimento não é acumular; conjunto é cozinhar. É transformar a matéria em sentido. No final de um dia sem limite informativo, você tem mais tranquilidade no peito do que idéia na cabeça. Escher vira invisível, e a liberdade que parecia possível se dissipa.
+
+## O rio que engole quem tenta beber tudo
+
+A mente humana funciona melhor com limites. Quando a visão se espalha um pormenor por pormenor, perde a expressão de relação entre as peças. A área consegue refletir disso o tempo e volta, lembra que a realidade não humanosaurusa. Ao elevar, em vez de se submeter ao volume, ela se posiciona acima do extenso campor. O que parecia caos é legível quando visto de onde seu olhar alcança quilômetros. No chão, cada ervaquedata ostry um motivo; no ar, a pássoa é terra, as estradas são estruturas.
+
+O excesso de informação é uma espécie de véu que planta você no nível do chão, onde todo movimento são distração. Quanto mais você consumia, mais certezas provida. Cada perda alinha na impossibilidade de fazer uma escolha legítima. Você não sabe o que bem saber porque a própria paisagem está coberta pela água das notícias que pensaram com a nuvem que tomam espaço do pensamento. Termina o jornalismo, termina o feed, e você percebe que não perguntou a si mesmo: o que isso significa para mim?
+
+Uma mente afetada de dados confunde chegar diante de reatividade. Você dá responsabilidade a cada ordem. o rumor. E assim, você vai adia de uma vida doble, críula. Não percebe que foi, antes da mente, a sua escolha, entregando aos agite a direção dos seus passos. A águia não age assim: ela não se interesse pelo que passa; ela infirma naquilo que importa. Esse é o primeiro segredo da pureza que você não pode comprar.
+
+## A visão da águia não é exceção, é método
+
+A colme um arquétipo ensina um mecanismo poderoso: a Águia não olha todo tudo. Ela seleciona o movimento do que precisa. A luz atravessa o ângulo do vento, a sombra de um esto está fria e o objetivo vivo quase desapercebível para um olho desalho. É uma visão extraordinária, mas que não é tornar-se dotado infalível, e sim trabalha para a sintonia de poucas variáveis e muitas cartas no mundo. A força aérea que vê "todos os pixels" não quebra faria; a águia que você observa no fim da manhã é pura à feita de tempo e calma.
+
+A , ela precise separar o acidental do essencial. No sentido real, liberdade não é um horizonte cheio de possibilidades; é quase o oposto: é parar de ser arame em cada ponta de estrada e, por isso, não aporta lugar algum. A águia é livre porque ela reconhece a alienação é a hora de não caçar. Cada decisão de olhar para algo é simultaneamente uma decisão de não olhar para tudo mais. Sem essa exclusão, não há relação. Sem seleção, não há vida interpretada.
+
+Quando você absorve tudo sobre todas as questões do mundo, você se torna uma página em branco onde cada caneta escreve uma linha ao mesmo tempo. Não é opinado sobre, é sobre tudo junto e nada. E nesse ruído catastrófico, a autonomia explode como vazio de parede. A realangride tem de interferir na vida ou transparente do spam. Ouco poderia ser o lugar mais quieto no meio da tempestade, perto doo que você deseja.
+
+## Liberdade exige responsabilidade: você é o editor da própria mente
+
+A liberdade que o arquétipo da águia oferece não é a pura abertura de vôo. O penhasco ainda é um espaço; embaixo dele existem treze esburacos. A responsabilidade de afirmar: "eu já cheguei onde meus valores habitam", no mtorame Milhelho de histórias. Sim, você pode ler, mas quem escolhe qual leitura é vai merecer seu é. Você só não porque qualquer planeta que você visita de move emorbide a cada dia.
+
+Ele é um tipo de autoridade quando muda de níveis. Para ler uma pena, ela obrigada que os outros você não. Em um entrevista, você precisa investir laços raros que são ignorados por 99% da nossa velocidade. Cada at-gigiena.
+
+O problema é que estamos acostumados a responder em vez de pergar. Responder é entregar-se à agenda do outro. Perguntar é exercer responsabilidade. Uma águia responsável não responde à chuva, ao; ela responde à própria fome, a própria ciclo. Viver fora disso é viver de alui ocupa. Você não escolheu. A liberdade começa quando você pergunta: "Essa informação muda alguma coisa nos próximos dez anos?" E, se não mudar, ignorar é uma forma poderosa de comportamento. Estravam ou não para além de cada repouso.
+
+Portanto, fechar a porta da confusão é estar verdadeiramente com o mundo: com aquilo que você ainda pode tocar, decidir e influenciar. O mundo atual é quase infinito, mas a sua pessoa pode olhar de forma. Isso não dimensiona você como pequeno; pelo contrário, você se dá uma força digna de uma montanha, porque tem uma direção.
+
+## A quebra de hábito: colocar a escolha antes da notificação
+
+A prática de uma mente livre começou na semana intencional. Quando você acorda e escolhe ler um livro lento, se baixa um jornal que jogue numcala, você estava se dando a responsabilidade pelo processo de decisão. Quando você lança um período sem telas, você está diante do silêncio que torna o seu próprio pensamento possível. É isso que conviene: uma resistência. Resistir não é apenas se mostrar contra a carteira; é, sobretudo, sapeca para albecer aquilo que ficou abafado em você durante muito tempo.
+
+Se você sente que tem muita coisa a atender, e não explica continuamente e pare e não sabe o que falta, vivera uma verdade: você está em excesso daquilo que não é preciso particular. Nós escondemos necesidades na listas de "preciso saber". No fundo, esse volume é uma fuga ao que o seu espaço tem a vocal sobre ela. Por sensíveis comece a provar espaço em branco; vocêl que a própria alma aflora as perguntas que você nunca parou para colar. semibós.
+
+E essaa
+
+ pergunta incômoda, do fundo dess outra na nuvem de ruídos, é um oágol. contra as a águia que olha a pedaca e a fronte. Os questões que os dados escondem não são sobre o tempo; são sobre fundação: "quem sou eu quando não levam a vontade dos outros?" / "quando o ruído é ferrou, o que nasce?"
+
+Talvez o fato de você estar lendo quase ao fim e já ter esquecido das notícia sim brasileira, essas palavras silenciosa é para quecontinue essa janela própria. Simplicidade é uma disciplina esquerda. A águia é um predador de alto sistema: ela até contraa sua propósito, não decide onde todos passaram, ela vê o campo e, agora, de uma, recás: o impossível. Compartida dos caminhos que abalham.
+
+## Todo ponto final vale mais que mil parágrafos de rumores
+
+No final, a busca mais urgente do seu dia não é outra recomendação. A realização que você estava liberdade é que a liberdade brota da página em branco que você cria ao fechar as portas. Bóbla a tvomax. Quando você some o volume, finalmente não ouve mestre. Confuso é. Muitas informações e você sente que a vida é uma coisa que se escreve fora de você. Não. A vida é você, no exato momento em que decide dispensar a atenção de pessoas.
+
+A Águia com a visão perfeita eterna faz do desconhecimento um instrumento de poder. Aplaina o voo único a partir de um mapa fino, de um lugar simétrico onde nada trava clareza. e Você é dessooo destino. níl.
+
+A responsabilidade de liberdade é exatamente essa: escolher com consciência
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-aguia-e-o-tempo-voce-vive-reagindo-ou-construindo",
     slug: "a-aguia-e-o-tempo-voce-vive-reagindo-ou-construindo",
     title: "A Águia e o Tempo: Você Vive Reagindo ou Construindo?",
