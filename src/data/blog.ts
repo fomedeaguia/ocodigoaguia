@@ -15,6 +15,77 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "o-foco-da-aguia-disciplina-para-proteger-sua-atencao",
+    slug: "o-foco-da-aguia-disciplina-para-proteger-sua-atencao",
+    title: "O Foco da Águia: Disciplina Para Proteger Sua Atenção",
+    excerpt: "A águia não voa olhando para tudo. Ela escolhe um alvo e mergulha. Aprenda a proteger sua atenção com disciplina e construir algo maior.",
+    date: "2026-08-28",
+    readingTime: 8,
+    category: "Mentalidade de Águia",
+    coverImage: "https://images.unsplash.com/photo-1560406144-26255ceaaa0d?w=1200&q=85&fit=crop&auto=format",
+    tags: ["foco", "disciplina", "proteção da atenção"],
+    featured: false,
+    content: `---
+
+## O Peso de Ver Tudo e Não Agir
+
+Existe um momento silencioso em que você percebe que sabe demais e faz de menos. Conhece os caminhos, enxerga as oportunidades, identifica os erros que precisa evitar — e ainda assim permanece imóvel. Essa é a armadilha mais sofisticada da vida moderna: a sensação de que ver é suficiente. Você lê, assiste, estuda, absorve. Acumula informações como quem junta pedras preciosas em um porão escuro. Mas nada muda. Porque informação sem decisão é apenas ruído disfarçado de progresso.
+
+A águia, quando está no alto de uma montanha, não está apenas admirando a paisagem. Ela está procurando. Há uma diferença brutal entre olhar e buscar. Entre observar o mundo e escolher um ponto nele. A maioria das pessoas vive no primeiro estado: os olhos abertos, a mente dispersa, o corpo parado. Elas acreditam que clareza virá antes da ação, que algum dia sentirão o impulso certo, que o momento perfeito vai chegar. Mas a clareza não nasce da contemplação infinita. Ela nasce do compromisso com uma direção.
+
+Quando você tenta ver tudo, acaba não vendo nada com profundidade. A atenção fragmentada é uma forma disfarçada de covardia. Você evita escolher porque escolher significa abrir mão de todas as outras possibilidades. E essa recusa em sacrificar o que é secundário mantém você preso em um estado de paralisia confortável. O problema não é falta de visão. É falta de coragem para transformar visão em movimento.
+
+## A Águia Não Se Distrai Com o Vento
+
+Observe uma águia em voo. Ela não luta contra o vento nem tenta controlar cada corrente de ar. Ela usa o vento a seu favor, mas mantém os olhos fixos no alvo. Milhares de estímulos passam diante dela — pássaros menores, mudanças de temperatura, reflexos de luz na água. Nada disso a desvia. A águia desenvolveu uma capacidade rara: a de filtrar o essencial em meio ao caos. E essa capacidade não é mágica. É disciplina.
+
+Disciplina, no fundo, é a arte de proteger a própria atenção. Vivemos em um ambiente projetado para sequestrar seu foco a cada poucos segundos. Notificações, manchetes, conversas paralelas, preocupações imaginárias. Sua mente é um território disputado por forças que não querem o seu bem. E você, muitas vezes, abre as portas sem perceber. A águia não faz isso. Ela sabe que a atenção é um recurso finito e precioso. Cada segundo gasto olhando para algo irrelevante é um segundo roubado do que realmente importa.
+
+A disciplina da águia não é rígida nem punitiva. É seletiva. Ela não se obriga a prestar atenção em tudo. Pelo contrário: ela escolhe deliberadamente o que merece sua atenção e ignora o resto com uma tranquilidade imensa. Essa tranquilidade é o que falta em você. Você se sente culpado quando não acompanha tudo, quando não responde rápido, quando não está por dentro de todas as novidades. Mas a águia não precisa saber de tudo. Ela precisa saber o que importa. E isso basta.
+
+## Proteger a Atenção É Um Ato de Força
+
+Existe uma ideia falsa de que distração é um problema de organização. Que basta usar a agenda certa, o aplicativo certo, a técnica certa. Mas a raiz da distração é mais profunda. Você se distrai porque algo dentro de você evita o silêncio. O foco exige que você fique a sós com suas decisões, com o peso das suas escolhas, com a responsabilidade de agir. E isso assusta. A distração é um refúgio.
+
+A águia não tem esse luxo. Ela não pode se dar ao luxo de ignorar o próprio propósito. Cada voo é uma questão de sobrevivência. E embora você não esteja lutando pela vida a cada instante, a sua transformação pessoal também depende de uma espécie de sobrevivência — a sobrevivência do que você pode se tornar. Se você não proteger sua atenção, alguém protegerá por você. As empresas de tecnologia, os algoritmos, os produtores de conteúdo. Todos eles disputam o seu olhar. E vencem quando você não decide.
+
+Proteger a atenção é um ato de força porque exige dizer não. Não para o que é urgente, mas não é importante. Não para o que é interessante, mas não é essencial. Não para o que os outros esperam que você veja. A águia não explica para os passarinhos por que não os persegue. Ela simplesmente segue o seu caminho. Você precisa aprender a fazer o mesmo: silenciar o ruído externo e interno, estabelecer fronteiras invisíveis, e responder apenas ao que realmente merece sua presença.
+
+## O Mergulho: Quando a Visão Se Torna Decisão
+
+A águia pode passar horas voando em círculos, observando, avaliando. Mas chega um momento em que ela dobra as asas e mergulha. Esse momento é a diferença entre quem apenas sonha e quem constrói. O mergulho é a ação concreta. É o movimento que transforma uma possibilidade em realidade. Sem o mergulho, a visão da águia seria inútil. Ela veria a presa, conheceria o terreno, calcularia a distância — e ficaria para sempre no alto, esperando.
+
+Na sua vida, o mergulho representa aquela atitude que você adia. A conversa difícil, o projeto engavetado, a decisão que exige coragem. Você já tem a visão. Você já sabe o que precisa ser feito. O que falta é o gesto. E o gesto não pede mais informação. Ele pede direção. A disciplina do foco não termina na proteção da atenção. Ela se completa na execução. Você não pode passar a vida inteira escolhendo o alvo. Em algum momento, precisa atirar a flecha.
+
+O que impede o mergulho é o medo de errar. Mas a águia não calcula o risco como você calcula. Ela não se pergunta se vai falhar. Ela se pergunta se o alvo vale o esforço. E quando a resposta é sim, ela vai. Não existe garantia de sucesso no mergulho. Existe apenas a certeza de que ficar no alto é uma forma lenta de morrer. Você não precisa ter todas as respostas. Precisa ter uma direção. E precisa se mover.
+
+## Disciplina Como Arquitetura da Vida
+
+A disciplina não é um traço de caráter que você nasce tendo. É uma estrutura que você constrói todos os dias. Cada escolha de onde olhar, cada decisão de não abrir o celular, cada momento em que você permanece na tarefa importante — tudo isso forma as paredes da sua vida. A águia não acorda decidida a ser disciplinada. Ela simplesmente segue um padrão que a mantém viva. Você precisa criar um padrão que mantenha viva a sua visão.
+
+Isso significa desenhar o seu ambiente para favorecer o foco. Significa reduzir as tentações que você sabe que vão enfraquecer sua atenção. Significa ter horários, rotinas e limites claros. A pessoa disciplinada não é aquela que resiste heroicamente a todas as tentações. É aquela que organiza a vida para não precisar resistir o tempo todo. Ela cria condições para que o melhor caminho seja também o mais fácil. Isso é arquitetura pessoal. E é muito mais poderoso do que força de vontade.
+
+A águia constrói seu ninho em locais altos e protegidos. Ela não constrói onde qualquer predador pode alcançá-la. Você também precisa escolher os ambientes — físicos, digitais, emocionais — que protegem a sua mente. Se você vive cercado de pessoas que desprezam seus objetivos, se consome conteúdos que alimentam ansiedade, se mantém hábitos que drenam sua energia, nenhuma técnica de foco vai funcionar. A disciplina começa na coragem de reorganizar o mundo ao seu redor.
+
+## A Construção de Algo Maior
+
+Quando você protege a atenção e age com disciplina, algo começa a mudar dentro de você. Não é uma mudança instantânea. É lenta, silenciosa, quase invisível. Mas um dia você olha para trás e percebe que não é mais a mesma pessoa. Você não se perde mais em pensamentos inúteis. Não adia mais o que importa. Não confunde movimento com progresso. Aos poucos, você vai construindo algo maior do que as circunstâncias — uma versão de si mesmo que não depende de aprovação externa.
+
+A águia não constrói um império. Ela constrói uma vida. E essa vida é marcada pela liberdade de não ser arrastada pelas correntes do acaso. Você também pode viver assim. Pode acordar sabendo o que importa. Pode atravessar o dia com os olhos fixos no que escolheu. Pode ignorar o ruído sem culpa. Pode mergulhar quando for a hora. Essa é a verdadeira transformação: não se tornar uma pessoa perfeita, mas se tornar uma pessoa inteira. Alguém que enxerga a própria vida de uma maneira diferente e age de acordo com essa visão.
+
+No fundo, a águia não é um animal distante e inatingível. Ela é um espelho. Mostra que você também pode voar alto sem perder o chão, pode enxergar longe sem se dispersar, pode ser livre sem ser irresponsável. A disciplina do foco não é uma prisão. É a chave que abre a porta para uma vida com direção. E tudo começa com uma escolha simples: decidir onde você vai olhar agora. Porque o que você olha com atenção é o que você se torna. E o que você se torna é o que você constrói.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-aguia-e-a-aprovacao-construindo-abundancia-sem-pedir-licenca",
     slug: "a-aguia-e-a-aprovacao-construindo-abundancia-sem-pedir-licenca",
     title: "A Águia e a Aprovação: Construindo Abundância Sem Pedir Licença",
