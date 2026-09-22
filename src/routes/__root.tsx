@@ -32,6 +32,11 @@ function Root() {
       <head>
         <HeadContent />
         <link rel="stylesheet" href={appStylesHref} />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7747126576454422"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         <Outlet />
