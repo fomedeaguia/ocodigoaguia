@@ -15,16 +15,15 @@ BASE_URL = "https://ocodigoaguia.com.br"
 MAX_GENERATION_ATTEMPTS = 15   # Loop 1 — falha na geração da API
 MAX_AUDIT_ATTEMPTS      = 15   # Loop 2 — reprovação na auditoria
 
-# Lista de modelos em ordem de preferência — modelos gratuitos primeiro
+# openrouter/free rotaciona automaticamente entre todos os modelos gratuitos
+# disponiveis no momento da chamada. IDs com :free confirmados em set/2026.
 MODELS = [
-    "google/gemini-2.0-flash-exp:free",
+    "openrouter/free",
+    "nvidia/llama-3.3-nemotron-super-49b-v1:free",
+    "qwen/qwen3-8b:free",
+    "google/gemma-3-27b-it:free",
     "meta-llama/llama-3.3-70b-instruct:free",
-    "deepseek/deepseek-r1-0528:free",
-    "mistralai/mistral-7b-instruct:free",
-    "google/gemini-2.5-pro",
-    "anthropic/claude-sonnet-4-5",
-    "openai/gpt-4o",
-    "openrouter/auto",
+    "nousresearch/hermes-3-llama-3.1-405b:free",
 ]
 
 
@@ -228,8 +227,6 @@ def auditar_post(title, excerpt, slug, content_md):
     erros = []
     avisos = []
 
-    # ── SEO ──────────────────────────────────────────────────────────────────
-
     if not title or len(title) < 10:
         erros.append(f"SEO: título ausente ou muito curto ({len(title)} chars; mínimo 10)")
     elif len(title) > 70:
@@ -262,8 +259,6 @@ def auditar_post(title, excerpt, slug, content_md):
     if not any(word in first_paragraph for word in keyword_lower.split()[:3]):
         avisos.append("SEO: tema principal não detectado nos primeiros parágrafos")
 
-    # ── QUALIDADE DO TEXTO ───────────────────────────────────────────────────
-
     word_count = len(content_md.split())
     if word_count < 1000:
         erros.append(f"QUALIDADE: artigo muito curto ({word_count} palavras; mínimo 1.300)")
@@ -292,8 +287,6 @@ def auditar_post(title, excerpt, slug, content_md):
         if re.search(pat, content_md, re.IGNORECASE):
             erros.append(f"QUALIDADE: CTA comercial no corpo do artigo ('{pat}') — não permitido")
             break
-
-    # ── FORMATAÇÃO ───────────────────────────────────────────────────────────
 
     bullet_count = len(re.findall(r'^[\*\-] .+', content_md, re.MULTILINE))
     if bullet_count > 0:
@@ -436,14 +429,12 @@ Linha 3 em diante: o artigo completo (corpo sem nenhum H1)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# FUNÇÃO DE CHAMADA À API (Loop 1 — até 15 tentativas de geração)
-# Tenta os modelos em ordem de preferência a cada tentativa
+# FUNÇÃO DE CHAMADA À API
 # ──────────────────────────────────────────────────────────────────────────────
 
 def chamar_api(prompt_text, tentativa_geracao):
     print(f"\n── Loop 1 | Tentativa de geração {tentativa_geracao}/{MAX_GENERATION_ATTEMPTS} ──")
 
-    # Rotaciona o modelo com base na tentativa para maximizar chances
     model = MODELS[(tentativa_geracao - 1) % len(MODELS)]
     print(f"Modelo selecionado: {model}")
 
@@ -468,7 +459,6 @@ def chamar_api(prompt_text, tentativa_geracao):
     try:
         with urllib.request.urlopen(req, timeout=120) as resp:
             data = json.loads(resp.read())
-            # Detecta erro retornado pelo OpenRouter dentro do corpo JSON
             if "error" in data:
                 err_msg = data["error"].get("message", str(data["error"]))
                 print(f"Erro retornado pela API [{model}]: {err_msg}")
@@ -483,7 +473,7 @@ def chamar_api(prompt_text, tentativa_geracao):
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# FUNÇÃO DE PARSING DO TEXTO GERADO
+# FUNÇÃO DE PARSING
 # ──────────────────────────────────────────────────────────────────────────────
 
 def parsear_artigo(article_text):
@@ -523,7 +513,7 @@ def parsear_artigo(article_text):
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# LOOP DUPLO — Loop 1: geração | Loop 2: auditoria
+# LOOP DUPLO
 # ──────────────────────────────────────────────────────────────────────────────
 
 print(f"\n{'='*60}")
@@ -539,7 +529,6 @@ content_md_final = ""
 slug_final = ""
 audit_result = None
 
-# ── LOOP 2: auditoria (externo) ───────────────────────────────────────────────
 for tentativa_auditoria in range(1, MAX_AUDIT_ATTEMPTS + 1):
     print(f"\n{'─'*50}")
     print(f"LOOP 2 | Ciclo de auditoria {tentativa_auditoria}/{MAX_AUDIT_ATTEMPTS}")
@@ -552,7 +541,6 @@ for tentativa_auditoria in range(1, MAX_AUDIT_ATTEMPTS + 1):
         erros_anteriores=erros_auditoria_anterior
     )
 
-    # ── LOOP 1: geração (interno) ─────────────────────────────────────────────
     article_text_raw = None
     for tentativa_geracao in range(1, MAX_GENERATION_ATTEMPTS + 1):
         raw = chamar_api(prompt_atual, tentativa_geracao)
@@ -570,7 +558,6 @@ for tentativa_auditoria in range(1, MAX_AUDIT_ATTEMPTS + 1):
         print("Abortando execução.")
         sys.exit(1)
 
-    # Parseia o texto gerado
     title_final, excerpt_final, content_md_final = parsear_artigo(article_text_raw)
     slug_final = slugify(title_final)
     if not slug_final:
@@ -582,7 +569,6 @@ for tentativa_auditoria in range(1, MAX_AUDIT_ATTEMPTS + 1):
     print(f"  Resumo  : {excerpt_final[:80]}...")
     print(f"  Palavras: {len(content_md_final.split())}")
 
-    # ── AUDITORIA ─────────────────────────────────────────────────────────────
     audit_result = auditar_post(title_final, excerpt_final, slug_final, content_md_final)
 
     print(f"\n{'─'*40}")
@@ -614,15 +600,11 @@ for tentativa_auditoria in range(1, MAX_AUDIT_ATTEMPTS + 1):
             print("Abortando execução sem publicar.")
             sys.exit(1)
 
-# Verificação final de segurança
 if not article_text_final or not audit_result or not audit_result["aprovado"]:
     print("Erro interno: texto não aprovado chegou à fase de publicação. Abortando.")
     sys.exit(1)
 
-# ──────────────────────────────────────────────────────────────────────────────
-# INSERÇÃO DO CTA (opcional, 50% de chance) — só após aprovação
-# ──────────────────────────────────────────────────────────────────────────────
-
+# ── CTA (opcional) ───────────────────────────────────────────────────────────────────
 if use_cta:
     content_md_final = content_md_final.rstrip() + "\n" + EBOOK_CTA_FINAL
     print("CTA final inserido no artigo.")
@@ -637,16 +619,11 @@ print(f"  Leitura : {reading_time} min")
 print(f"  Score   : {audit_result['score']}/100")
 print(f"{'='*60}")
 
-# ──────────────────────────────────────────────────────────────────────────────
-# IMAGEM DE CAPA
-# ──────────────────────────────────────────────────────────────────────────────
-
+# ── IMAGEM ────────────────────────────────────────────────────────────────────────────
 print(f"Buscando imagem Unsplash para: {image_key}")
 cover_image = buscar_imagem_unsplash(image_key)
 
-# ──────────────────────────────────────────────────────────────────────────────
-# INJETAR O POST EM src/data/blog.ts
-# ──────────────────────────────────────────────────────────────────────────────
+# ── INJETAR EM blog.ts ───────────────────────────────────────────────────────────────────────
 
 def escape_backtick(s):
     s = s.replace("\\", "\\\\")
@@ -703,9 +680,7 @@ print(f"Post injetado NO TOPO de {BLOG_TS_PATH}")
 print(f"Slug: {slug_final} | Leitura: {reading_time} min | {len(content_md_final.split())} palavras")
 print(f"Imagem: {cover_image[:100]}")
 
-# ──────────────────────────────────────────────────────────────────────────────
-# ATUALIZAR public/sitemap.xml
-# ──────────────────────────────────────────────────────────────────────────────
+# ── SITEMAP ────────────────────────────────────────────────────────────────────────────
 
 post_url = f"{BASE_URL}/blog/{slug_final}"
 
