@@ -15,8 +15,12 @@ BASE_URL = "https://ocodigoaguia.com.br"
 MAX_GENERATION_ATTEMPTS = 15   # Loop 1 — falha na geração da API
 MAX_AUDIT_ATTEMPTS      = 15   # Loop 2 — reprovação na auditoria
 
-# Lista de modelos em ordem de preferência — se o primeiro falhar, tenta o próximo
+# Lista de modelos em ordem de preferência — modelos gratuitos primeiro
 MODELS = [
+    "google/gemini-2.0-flash-exp:free",
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "deepseek/deepseek-r1-0528:free",
+    "mistralai/mistral-7b-instruct:free",
     "google/gemini-2.5-pro",
     "anthropic/claude-sonnet-4-5",
     "openai/gpt-4o",
