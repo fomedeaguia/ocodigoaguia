@@ -15,6 +15,76 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "como-o-ambiente-e-as-pessoas-moldam-suas-escolhas-a-visao-da-aguia",
+    slug: "como-o-ambiente-e-as-pessoas-moldam-suas-escolhas-a-visao-da-aguia",
+    title: "Como o Ambiente e as Pessoas Moldam suas Escolhas: A Visão da Águia",
+    excerpt: "O ambiente e as pessoas moldam suas decisões. Descubra como viver com a visão de longo prazo da águia para construir um futuro alinhado ao seu propósito.",
+    date: "2026-09-22",
+    readingTime: 5,
+    category: "Autoconhecimento",
+    coverImage: "https://images.unsplash.com/photo-1591385639648-c9f6066d93c6?w=1200&q=85&fit=crop&auto=format",
+    tags: ["ambiente", "influências", "mentalidade"],
+    featured: false,
+    content: `## O Silêncio que Fala Mais Alta  
+
+Você já parou para observar uma águia? Ela não se contenta em voar. O observa, inclina a cabeça, e então age. Não reage a cada brisa, não se deixa levar pelo vento. Ela vê. E vê distante. Enquanto os pássaros se agitam no chão, enquanto os roedores correm desesperados, a águia está ali, imóvel, decidida, já olhando para onde o sol nasce ou se põe. E daquele ponto de vista, tudo muda. Não porque ela está mais alto, mas porque está mais certeira. Da mesma forma, as escolhas que fazemos hoje — mesmo as mais sutis — são guiadas pela visão que cultivamos. E essa visão, por sua vez, nasce do ambiente em que vivemos e das pessoas que nos cercam.  
+
+## O Problema do Ambiente que Nos Esconde  
+
+A maioria das pessoas vive como se estivesse presa em uma sala de noites. Não há janelas, não há luz, apenas o eco constante de conversas, pensamentos e expectativas que não pertencem a elas. O ambiente não é neutro. Ele é um espelho que reflete valores, medos, sonhos e limites. Quando você passa horas em um círculo que fala apenas do que é possível ou seguro, sua mente começa a internalizar essa realidade como verdade. Quando sua rotina é dominada por críticas, desvalorização ou medo, você passa a acreditar que aquilo é o normal. O problema não está em você. Está em tudo o que você absorve ao redor.  
+
+E as pessoas? Elas são fábricas de pensamentos. Cada interação é uma sementeira. Se você se volta para alguém que fala sobre sonhos, você começa a acreditar que eles existem. Se se comunica com alguém que vive no julgamento, você começa a viver no medo. O ambiente é formado por tudo isso: pessoas, fala, silêncio, pausas, gritos, cumprimentos, despedidas. Ele é dinâmico, invisível, mas influenciador. E, muitas vezes, você nem percebe que está sendo moldado por ele.  
+
+## A Águia e a Altitude Mental  
+
+A águia não escolhe voar baixo por comodidade. Não se acomoda no nível do chão, mesmo que todos os outros pássaros estejam ali. Ela sobe porque o horizonte lhe oferece mais. Porque daí, ela consegue enxergar o caminho inteiro. E, daí, tomar as decisões certas.  
+
+Essa altitude mental não é um luxo. É uma necessidade. É o que permite que você não se perca no ruído do dia a dia. É o que permite que você veja além do agora, além do que é imediatamente visível. Quando você tem a mentalidade da águia, não se deixa levar por pressões, expectativas ou padrões. Você olha para trás e entende: aquilo que você deixou para trás foi uma versão de si que ainda não estava viva. E olha para frente e percebe: aquilo que você está construindo agora é a base do seu futuro.  
+
+Mas como subir? Como ganhar essa altitude? A resposta está nas escolhas.  
+
+## Escolhendo o Ambiente Certo  
+
+A águia não voa por todo o céu. Ela escolhe seus caminhos com cuidado. Ela observa o vento, o sol, a temperatura. E então decide. Você também pode fazer isso.  
+
+O primeiro passo é reconhecer que nem todo ambiente é bom para você. Nem toda pessoa é uma fonte de energia. Nem toda rotina é saudável. Há ambientes que te empurram para baixo, mesmo que você acredite que estão te ajudando. Há pessoas que, ao seu redor, fazem você se sentir menor. Há ambientes que valorizam a mediocridade, o medo, a repetição. E há ambientes que te desafiam, que te incentivam a sonhar, a agir, a criar.  
+
+Você merece viver em um ambiente que te inspire a subir. Que te lembre, todos os dias, de quem você é e para onde quer chegar.  
+
+Mas isso exige coragem. Exige que você saia do que é familiar, mesmo que isso signifique dizer adeus a algumas pessoas ou situações. Exige que você reconheça que nem tudo que é amado é bom para você. Nem tudo que é seguro é saudável.  
+
+## A Disciplina de Ver Distante  
+
+A disciplina da águia não está em voar mais rápido. Está em não se desviar do seu objetivo. É em não se deixar levar por o que é imediato, por o que é fácil, por o que é popular. É em escolher o ambiente certo, as pessoas certas, as palavras certas, mesmo quando isso não é óbvio.  
+
+Quando você tem a mentalidade da águia, você aprende a silenciar o barulho. Aprende a escutar a sua visão. Aprende a dizer não quando o sim está comprometendo seu futuro. Aprende a dizer sim quando o não está te levando para longe do seu propósito.  
+
+E, principalmente, aprende a confiar na sua visão. Porque, no fim das contas, a águia não voa por acaso. Ela voa por escolha.  
+
+## Transformando o Hoje para o Amanhã  
+
+Cada decisão que você toma hoje é uma semente. E as sementes, com o tempo, se tornam florestas ou desertos. Se você escolhe cercar-se de pessoas que acreditam no possível, seu futuro será mais leve. Se você se permite ser influenciado por quem julga, desvaloriza ou medita, seu futuro será mais pesado.  
+
+E não estou falando só de grandes decisões, como trocar de cidade ou mudar de carreira. Estou falando de todas as pequenas. De quem você escuta no café da manhã. De quem você decide ouvir no fim do dia. De quem você deixa influenciar seu humor, sua energia, sua forma de pensar.  
+
+Porque o ambiente e as pessoas não são apenas influentes. São criadores. Eles criam o mundo em que você vive. E, se você quiser viver um mundo diferente, precisa criar um ambiente diferente.  
+
+## A Conclusão que Pesa  
+
+Você está vivendo uma vida que nunca parou para questionar?  
+
+Você se perdeu tanto no convidar para o outro que esqueceu de construir o seu próprio caminho?  
+
+A águia não voa por acaso. Ela voa por visão. E a visão nasce das escolhas. Não das circunstâncias. Não do destino. Das escolhas.  
+
+Você pode escolher seu ambiente. Você pode escolher suas pessoas. Você pode escolher sua altitude.  
+
+E, quando fizer isso, talvez descubra que a vida que você vive hoje não é uma coincidência. É o resultado de todas as decisões que tomou — e das que ainda podem tomar.  
+
+A pergunta é: você está pronto para subir?`,
+  },
+
+  {
     id: "a-aguia-e-o-tempo-como-sustentar-uma-nova-realidade",
     slug: "a-aguia-e-o-tempo-como-sustentar-uma-nova-realidade",
     title: "A Águia e o Tempo: Como Sustentar uma Nova Realidade",
