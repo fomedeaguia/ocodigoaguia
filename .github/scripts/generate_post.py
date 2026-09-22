@@ -15,6 +15,14 @@ BASE_URL = "https://ocodigoaguia.com.br"
 MAX_GENERATION_ATTEMPTS = 15   # Loop 1 — falha na geração da API
 MAX_AUDIT_ATTEMPTS      = 15   # Loop 2 — reprovação na auditoria
 
+# Lista de modelos em ordem de preferência — se o primeiro falhar, tenta o próximo
+MODELS = [
+    "google/gemini-2.5-pro",
+    "anthropic/claude-sonnet-4-5",
+    "openai/gpt-4o",
+    "openrouter/auto",
+]
+
 
 def slugify(text):
     text = unicodedata.normalize("NFD", text)
@@ -425,12 +433,18 @@ Linha 3 em diante: o artigo completo (corpo sem nenhum H1)
 
 # ──────────────────────────────────────────────────────────────────────────────
 # FUNÇÃO DE CHAMADA À API (Loop 1 — até 15 tentativas de geração)
+# Tenta os modelos em ordem de preferência a cada tentativa
 # ──────────────────────────────────────────────────────────────────────────────
 
 def chamar_api(prompt_text, tentativa_geracao):
     print(f"\n── Loop 1 | Tentativa de geração {tentativa_geracao}/{MAX_GENERATION_ATTEMPTS} ──")
+
+    # Rotaciona o modelo com base na tentativa para maximizar chances
+    model = MODELS[(tentativa_geracao - 1) % len(MODELS)]
+    print(f"Modelo selecionado: {model}")
+
     payload = json.dumps({
-        "model": "openrouter/auto",
+        "model": model,
         "messages": [{"role": "user", "content": prompt_text}],
         "temperature": 0.8,
         "max_tokens": 6000
@@ -450,12 +464,17 @@ def chamar_api(prompt_text, tentativa_geracao):
     try:
         with urllib.request.urlopen(req, timeout=120) as resp:
             data = json.loads(resp.read())
+            # Detecta erro retornado pelo OpenRouter dentro do corpo JSON
+            if "error" in data:
+                err_msg = data["error"].get("message", str(data["error"]))
+                print(f"Erro retornado pela API [{model}]: {err_msg}")
+                return None
             text = data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
-            model_used = data.get("model", "desconhecido")
-            print(f"Modelo: {model_used} | Chars: {len(text)}")
+            model_used = data.get("model", model)
+            print(f"Modelo respondeu: {model_used} | Chars: {len(text)}")
             return text
     except Exception as e:
-        print(f"Erro na API (tentativa {tentativa_geracao}): {e}")
+        print(f"Erro na API [{model}] (tentativa {tentativa_geracao}): {e}")
         return None
 
 
@@ -506,6 +525,7 @@ def parsear_artigo(article_text):
 print(f"\n{'='*60}")
 print(f"INICIANDO GERAÇÃO DE POST | {timestamp}")
 print(f"Tema: {tema_desc} | Período: {period}")
+print(f"Modelos disponíveis: {', '.join(MODELS)}")
 print(f"{'='*60}")
 
 article_text_final = None
