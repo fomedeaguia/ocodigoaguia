@@ -34,7 +34,7 @@ function Root() {
         <link rel="stylesheet" href={appStylesHref} />
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7747126576454422"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3852156013923150"
           crossOrigin="anonymous"
         />
       </head>
