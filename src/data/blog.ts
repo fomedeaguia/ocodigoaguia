@@ -15,6 +15,75 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-aguia-que-protege-seu-foco",
+    slug: "a-aguia-que-protege-seu-foco",
+    title: "A Águia Que Protege Seu Foco",
+    excerpt: "A águia não caça tudo que vê — escolhe um alvo e ignora o resto. Proteger a atenção é a decisão mais poderosa que você pode tomar hoje.",
+    date: "2026-09-24",
+    readingTime: 6,
+    category: "Mentalidade de Águia",
+    coverImage: "https://images.unsplash.com/photo-1578850355726-ee748b33dcd8?w=1200&q=85&fit=crop&auto=format",
+    tags: ["foco", "disciplina", "proteção da atenção"],
+    featured: false,
+    content: `## A arte de escolher o que ver
+
+Existe um momento na vida de toda águia em que ela precisa decidir para onde vai. Não é uma decisão pequena. É a escolha que define se ela vai sobreviver ou apenas existir. A águia voa alto não por arrogância, mas porque sabe que lá em cima o ar é mais limpo, a visão é mais clara e os perigos aparecem antes. Ela não foge do mundo. Ela simplesmente se recusa a olhar para tudo ao mesmo tempo.
+
+E é exatamente isso que a maioria das pessoas esquece de fazer. Vive olhando para todo lado, reagindo a cada notificação, a cada opinião alheia, a cada urgência que não é sua. O resultado é uma mente cansada, um foco fragmentado e uma vida que parece avançar sem rumo. A águia, ao contrário, entende algo fundamental: **onde você coloca sua atenção é onde sua vida vai crescer.**
+
+Proteger o foco não é um luxo. É a decisão mais estratégica que alguém pode tomar. É o ato de dizer não ao barulho para dizer sim ao que realmente importa. E essa escolha começa com uma pergunta simples, mas incômoda: o que você está realmente perseguindo hoje?
+
+## O preço da distração
+
+A distração moderna não chega como um ladrão. Ela chega como um convidado educado, que se instala aos poucos e depois não quer mais sair. O celular vibra, o feed renova, o email chega, a mensagem pede resposta imediata. Cada interação parece pequena, mas juntas elas devoram horas que nunca voltam.
+
+Estudos mostram que o cérebro humano leva em média vinte e três minutos para recuperar o nível profundo de concentração depois de uma interrupção. Vinte e três minutos. Agora multiplique isso pelo número de vezes que você foi interrompido hoje. O resultado é um dia inteiro trabalhado, mas pouco construído. É a sensação de ter corrido muito e chegado a lugar nenhum.
+
+A águia sabe disso. Por isso ela não caça dez vezes ao dia sem sucesso. Ela observa, espera, calcula e ataca uma única vez com precisão cirúrgica. A natureza não recompensa o movimento por movimento. Recompensa o acerto. E o acerto só acontece quando a atenção está protegida, direcionada e firme.
+
+A distração tem um custo que vai além do tempo. Ela corrói a confiança que você tem em si mesmo. Cada vez que você começa algo e não termina, cada vez que promete e não cumpre, uma pequena camada de desconfiança se instala. Você começa a duvidar da própria capacidade. E essa dúvida é mais perigosa que qualquer obstáculo externo.
+
+## Visão de altitude
+
+A águia enxerga a presa a quilômetros de distância não porque tem olhos maiores, mas porque voa mais alto. A altitude é o segredo. De cima, o ruído do chão some. As árvores, os prédios, as multidões deixam de confundir o olhar. O que importa fica nítido.
+
+Essa é a lógica da visão de longo prazo. Quem vive no nível do chão se perde nos detalhes. Quem sobe alguns degraus mentais enxerga o padrão, a direção, o propósito. Não é arrogância. É estratégia. É entender que **decisões presentes são tijolos do futuro** — e que cada tijolo mal colocado compromete a estrutura inteira.
+
+Pense na sua vida daqui a cinco anos. O que você está fazendo hoje que vai te levar lá? E o que você está fazendo hoje que vai te afastar? A maioria das pessoas nunca faz essa conta. Vive no modo reativo, respondendo ao que o mundo exige em vez do que a vida pede. A águia não responde a tudo. Ela responde ao essencial.
+
+Proteger a atenção é, no fundo, proteger o futuro. É recusar o atalho que parece tentador agora mas destrói o destino. É dizer não a uma noite mal dormida para dizer sim a um dia produtivo. É recusar a falsa urgência que consome energia real. Cada escolha de foco é um voto no tipo de pessoa que você quer se tornar.
+
+## O voo silencioso
+
+A águia não voa em grupo o tempo todo. Ela precisa de solidão para planar, pensar e renovar as asas. O silêncio não é ausência. É espaço. É onde as ideias mais claras nascem e onde a coragem para mudar de direção ganha força.
+
+Vivemos em um mundo que premia o barulho. Mais posts, mais opiniões, mais reações, mais inputs. E no meio desse turbilhão, a atenção vira commodity. Todo mundo quer um pedaço dela. O problema é que quando você dobra a atenção para dezenas de coisas, não sobra nada para nenhuma delas com profundidade.
+
+O voo silencioso da águia é aquele momento em que ela corta os motores e usa as correntes de ar a seu favor. É pausa estratégica. É leitura. É caminhada sem fone. É conversa sincera sem celular na mesa. São pequenos rituais de proteção mental que dizem ao cérebro: aqui dentro, ninguém entra sem permissão.
+
+Quem não protege esse espaço interno se torna refém do externo. Reage às tendências, copia os outros, segue o que "todo mundo está fazendo". A águia não segue bando. Ela cria sua própria rota. E isso exige solidão, coragem e uma convicção incômoda de que o caminho próprio vale mais que o atalho da multidão.
+
+## Quem você se torna amanhã
+
+A águia não nasce pronta. Ela passa por um processo brutal de renovação quando envelhece. Bate o bico nas rochas, arranca as penas velhas, espera crescer novas. É doloroso. É lento. Mas é o que permite outro voo.
+
+Proteger o foco hoje é o mesmo gesto. É arrancar hábitos que já não servem, recusar distrações que alimentam o medo, construir rotinas que alimentam a clareza. Não é sobre perfeição. É sobre direção. Cada dia que você protege sua atenção é um dia em que o futuro se torna um pouco mais seu.
+
+A pergunta que fica não é se você tem foco. É o que você está disposto a abrir mão para manter o olhar no que importa. A resposta define se daqui a um ano você vai olhar para trás com arrependimento ou com orgulho silencioso.
+
+A águia não pede permissão para voar alto. Ela simplesmente sobe. E quando chega lá, o mundo lá embaixo fica pequeno demais para segurá-la. Proteja sua atenção. Escolha seu alvo. O futuro é construído nas decisões que ninguém está vendo agora.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-atencao-e-a-primeira-forma-de-liberdade",
     slug: "a-atencao-e-a-primeira-forma-de-liberdade",
     title: "A atenção é a primeira forma de liberdade",
