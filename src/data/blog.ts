@@ -15,6 +15,67 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-aguia-que-escolhe-onde-olhar",
+    slug: "a-aguia-que-escolhe-onde-olhar",
+    title: "A Águia Que Escolhe Onde Olhar",
+    excerpt: "Descubra como a águia ensina que proteger sua atenção hoje é o único caminho para construir um futuro que realmente importa.",
+    date: "2026-09-25",
+    readingTime: 5,
+    category: "Visão e Propósito",
+    coverImage: "https://images.unsplash.com/photo-1598621538945-7879bc6ffcfb?w=1200&q=85&fit=crop&auto=format",
+    tags: ["foco", "disciplina", "proteção da atenção"],
+    featured: false,
+    content: `## O Voo Que Não Pode Ser Interrompido
+
+Há um momento na vida de qualquer pessoa em que o mundo exige tanto que o olhar se dispersa e a intenção se perde no meio do ruído. Não é a falta de energia que destrói quem deseja construir algo maior. É a falta de clareza sobre onde direcionar a própria atenção. A águia não voa para todos os lados. Ela escolheu, há milhões de anos, que seu olhar pertencia a um único horizonte. E essa escolha silenciosa é o que a separa de criaturas que reagem ao vento sem saber para onde vão.
+
+Quando você entende que sua atenção é o recurso mais finito que possui, tudo muda. Cada segundo gasto sem intenção é uma dívida contra o futuro que você diz querer construir. A águia não perdoa distrações porque, na altitude em que opera, não há espaço para o acaso.
+
+## Quando a Atenção se Dissocia do Propósito
+
+Vivemos na era da hiperconexão, e quase ninguém percebe que estar conectado é, muitas vezes, o mesmo que estar desviado. As notificações constantes, as opiniões alheias, as urgências fabricadas por terceiros — tudo isso ocupa o espaço que deveria pertencer às suas decisões mais profundas. O problema não é a quantidade de informações. O problema é que, ao absorver tudo, você deixa de enxergar nada com peso real.
+
+A mente fragmentada constrói um futuro frágil. Cada escolha feita por impulso, cada compromisso assumido por pressão social, cada projeto abandonado por falta de foco cria uma fissura invisível na estrutura da vida. E quando as circunstâncias apertam, essas fissuras se abrem. É preciso reconhecer que a dispersão não é neutra. Ela é destrutiva. Ela rouba silenciosamente a possibilidade de um amanhã diferente.
+
+## A Águia e a Arte de Escolher o Horizonte
+
+A águia habita lugares onde poucos ousam olhar. Ela voa acima das nuvens não por arrogância, mas porque sabe que, de lá, consegue enxergar o que está escondido para quem está no chão. Essa altitude mental é exatamente o que a proteção da atenção pode proporcionar. Quando você se afasta temporariamente do caos para observar sua vida de cima, descobre padrões que antes eram invisíveis.
+
+A metáfora da águia não é sobre ser superior aos outros. É sobre elevar-se o suficiente para ver com precisão. Na altura que lhe corresponde, a águia percebe presas a quilômetros de distância e descarta as que não valem o esforço. Essa seleção rigorosa é o que mantém seu voo eficiente e seu corpo forte. Aplicar essa lógica à vida significa perguntar, antes de cada ação: isso me aproxima do que eu realmente quero ou me afasta dele?
+
+## Decisões Presentes, Destino de Amanhã
+
+Cada decisão que você toma agora é uma linha traçada no futuro. Não importa quão pequeno pareça o gesto. O que você faz hoje, com sua atenção, com seu tempo, com sua energia, está escrevendo a página de amanhã. A águia não constrói seu ninho no futuro. Ela constrói hoje, com galhos que encontra no presente, sabendo que a tempestade virá e que sua estrutura precisa suportar.
+
+As pessoas que lamentam o próprio caminho geralmente não percebem que o destino foi construído por decisões repetidas ao longo de anos. Não foi um único erro que as levou até ali. Foi a acumulação de pequenas escolhas feitas sem intenção, sem clareza, sem olhar para o horizonte. A proteção da atenção, portanto, não é um exercício de privação. É um ato de responsabilidade. É reconhecer que cada momento de foco consciente é uma aposta no tipo de vida que você estará vivendo daqui a cinco anos.
+
+## Proteger o Olhar é Proteger a Própria Vida
+
+Existe uma coragem que poucos demonstram: a coragem de dizer não ao que é urgente para dizer sim ao que é essencial. A águia não reage a cada som na floresta. Ela mantém o olhar fixo porque sabe que a presa que importa não aparece todos os dias. Da mesma forma, proteger sua atenção é recusar a tentação de responder a tudo e reservar sua energia para o que realmente transforma.
+
+Essa proteção exige estrutura mental. Exige a decisão deliberada de controlar o ambiente em vez de ser controlado por ele. Significa definir limites claros para onde sua mente pode vagar e ter a disciplina de trazê-la de volta quando ela se desvia. Não é um processo confortável no início. A mente resiste. Ela quer pular de ramo em ramo, investigar cada barulho, reagir a cada estímulo. Mas é justamente nessa resistência que mora a transformação.
+
+## A Liberdade de Quem Enxerga Longe
+
+Quando você finalmente domina a arte de proteger sua atenção, algo surpreendente acontece: você se sente livre. Não a liberdade superficial que vem de fazer o que quer a qualquer momento, mas a liberdade profunda que nasce de ter escolhido com clareza onde colocar cada gota do seu tempo. A águia não é livre porque faz o que quer. Ela é livre porque sabe por que voa.
+
+Essa nova perspectiva altera completamente a relação com o tempo, com as pessoas ao redor e com os próprios sonhos. O que antes parecia caos agora tem forma. O que antes parecia impossível agora tem um caminho. A águia não espera que o mundo melhore para voar mais alto. Ela simplesmente sobe, porque sabe que a altitude revela o que o chão esconde. E quando você enxerga sua vida de uma maneira diferente, começa a construir algo que nunca existiu antes.
+
+## Conclusão
+
+A águia não precisa de aplausos para voar. Ela não precisa de permissão para alçar voo. O que ela precisa é de um céu limpo e de um olhar firme. Proteger sua atenção é garantir que esse céu permaneça limpo e que seu olhar não vacile diante do que é temporário. Cada escolha consciente hoje é um galho firme no ninho que você está construindo para o futuro. Não espere o momento perfeito para decidir onde olhar. O momento é agora. E a águia, desde sempre, já sabia disso.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "o-poder-do-silencio-e-o-afastamento-do-ruido",
     slug: "o-poder-do-silencio-e-o-afastamento-do-ruido",
     title: "O Poder do Silêncio e o Afastamento do Ruído",
