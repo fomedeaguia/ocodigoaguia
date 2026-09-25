@@ -15,6 +15,54 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "mentalidade-de-aguia-vs-mentalidade-de-galinha",
+    slug: "mentalidade-de-aguia-vs-mentalidade-de-galinha",
+    title: "Mentalidade de Águia vs Mentalidade de Galinha",
+    excerpt: "Você quer uma vida diferente ou está disposto a se tornar alguém capaz de construí-la? A águia não espera — ela caça.",
+    date: "2026-09-25",
+    readingTime: 7,
+    category: "Liberdade e Identidade",
+    coverImage: "https://images.unsplash.com/photo-1615299518058-2984855caa78?w=1200&q=85&fit=crop&auto=format",
+    tags: ["mentalidade de águia", "alto desempenho", "crescimento pessoal"],
+    featured: false,
+    content: `## O Galinheiro é Confortável, Mas Não é Céu
+
+Existe uma diferença enorme entre reclamar do galinheiro e ter coragem de voar. A maioria das pessoas passa a vida inteira dizendo que merece algo melhor, mas continua pisando nos mesmos grãos todos os dias. Rotina. Mesmo padrão. Mesma resultado. A mentalidade de galinha se alimenta de complainte. A mentalidade de águia se alimenta de ação. Uma galinha come o que lhe dão. Uma águia caça o que precisa. Essa é a primeira distinção que ninguém quer ouvir, porque implica responsabilidade total. Ninguém te colocou no galinheiro contra sua vontade. Você escolheu ficar ali porque era seguro. Porque era familiar. Porque voar dá medo. O problema é que segurança e crescimento quase nunca cabem no mesmo espaço. Ou você expande seus limites ou se contenta com o chão. A águia não julga a galinha. A águia simplesmente voa mais alto.
+
+## Identidade Antes de Resultado
+
+Muitas pessoas confundem querer uma vida diferente com estar pronta para vivê-la. Querem o resultado sem aceitar o preço. Querem a liberdade sem a disciplina. Querem a clareza sem o silêncio. A mentalidade de águia começa com uma pergunta incômoda: quem você precisa se tornar para viver a vida que diz querer? Não o que você precisa comprar, não onde precisa morar, não qual curso precisa fazer. Quem você precisa ser. Essa é a virada que muda tudo. Porque identidade molda ação, e ação molda resultado. Se você ainda não se viu como alguém capaz de construir algo diferente, nenhum plano vai sustentar por muito tempo. A águia não voa porque tem asas. Voa porque reconhece que asas são suas. A galinha tem asas também. Só nunca tentou usar. O que separa essas duas criaturas não é biologia. É crença.
+
+## A Metáfora da Águia como Espelho
+
+A águia não precisa de validação para voar. Não pede permissão ao céu nem consulta outras aves antes de subir. Ela simplesmente se lança, porque confia na sua capacidade de se sustentar. Isso não é arrogância. É autoconhecimento. A mentalidade de águia se traduz em ações concretas: escolher o silêncio em vez do barulho, proteger a mente de influências tóxicas, dizer não ao que não serve, e sim ao que desafia. A águia voa sozinha não por solidão, mas por independência. Ela não precisa de bando para justificar sua existência. A galinha, por outro lado, precisa do grupo para se sentir segura. E é aí que mora o perigo: quando você depende da aprovação alheia para decidir o que é certo ou errado, onde viver ou ficar, o que pensar ou sentir. O bando não vai te salvar. O bando vai te manter no mesmo nível. A águia sabe disso. Por isso voa alto.
+
+## O Preço da Liberdade
+
+Liberdade não é ausência de compromisso. Liberdade é consequência de disciplina. Essa é uma das verdades mais difíceis de engolir. A águia caça todos os dias. Treina seus músculos. Testa seus limites contra o vento. Ela não é livre porque não tem dono. É livre porque tem controle sobre si mesma. A galinha vive alimentada, mas nunca alimenta nada além do próprio conforto. Quando você decide assumir responsabilidade pelas suas escolhas, perde várias coisas ao mesmo tempo: a desculpa fácil, a culpa do outro, a ilusão de que alguém vai resolver sua vida. E ganha algo que nenhuma galinha conhece: a sensação de estar no comando. Não é confortável no início. É desconfortável como toda coisa que cresce. Mas é o único caminho que leva a uma vida que realmente seja sua. Ninguém entrega isso de graça. Ninguém entrega isso para outra pessoa.
+
+## Renovar ou Continar no Mesmo Ninho
+
+Há um momento em toda vida em que o ninho já não serve mais. Os grãos estão velhos. O chão está apertado. O céu chama, mas o medo grita mais alto. A águia sabe que precisa arrancar as penas velhas, enfrentar o desconforto da queda e reconstruir do zero. A galinha prefere manter o ninho assim mesmo, mesmo que já não caiba nela. Renovar dói. Exige humildade para admitir que o que funcionou ontem não vai funcionar amanhã. Exige coragem para deixar ir. A mentalidade de águia entende que transformação não é evento, é processo diário. Não é um clique, uma virada de chave, uma decisão única. É escolha após escolha, dia após dia, especialmente quando ninguém está assistindo. Quando o mundo não sabe. Quando só você sabe que poderia ter feito diferente e escolheu fazer igual. Aí está o verdadeiro teste de caráter.
+
+## Seleção de Ambiente e Proteção Mental
+
+Águias não voam perto de corvos. Não porque sejam arrogantes, mas porque corvos puxam para baixo. O mesmo vale para ambientes, conversas, relacionamentos e hábitos que drenam sua energia. Mentalidade de águia exige seleção rigorosa do que entra na mente e do que fica ao redor. Isso significa cortar ruído, filtrar informação, e proteger o foco como quem protege um tesouro. A galinha absorve tudo. Come qualquer coisa que aparece na frente. Aceita qualquer migalha de atenção. E se surpreende quando não cresce. A águia sabe que o que alimenta a mente determina a altitude. Se você consome lixo, pensa lixo. Se pensa lixo, vive lixo. A mudança começa pela escolha consciente do que você permite entrar pela porta da sua mente. Nada disso é exagero. É lógica simples com consequências diretas.
+
+## Coragem de Olhar para Dentro
+
+Talvez o maior ato de coragem não seja pular de um penhasco, mas sentar em silêncio e olhar para dentro. Sem distração. Sem tela. Sem música. Apenas você e as perguntas que você evita há anos. A mentalidade de águia exige honestidade brutal consigo mesmo. Quem você é de verdade? O que você quer de verdade? Por que ainda não fez nada a respeito? Essas perguntas incomodam. E o que incomoda, a galinha tenta ignorar. A águia enfrenta. Porque sabe que a resposta sempre esteve dentro. O problema é que poucos estão dispostos a ouvir. Preferem a distração, a agitação, o movimento vazio que simula progresso. Mas progresso real exige pausa. Exige reflexão. Exige coragem de encarar verdades que dói. A águia não foge do que vê quando olha para o espelho. Ela usa isso como combustível.
+
+## Propósito como Bússola
+
+Sem propósito, até a águia voa em círculos. Propósito não é slogan bonito. É direção clara. É saber para onde você está indo e por que isso importa. A mentalidade de galinha vive sem bússola. Reage ao dia, segue o fluxo, aceita o que vem. A águia planeja, foca e ajusta o voo conforme o vento, mas nunca perde o norte. Propósito te dá tolerância ao desconforto. Te dá razão para acordar cedo, estudar mais, recusar o que não serve e persistir quando tudo diz para desistir. Ele não precisa ser grandioso. Precisa ser verdadeiro. Pequeno propósito bem vivido vale mais que grande propósito nunca começado. A águia não voa para impressionar. Voa porque é assim que ela foi feita para existir. Descubra o que você foi feito para existir e construa tudo ao redor disso.
+
+## A Escolha é Sua, Sempre
+
+Nenhuma águia nasceu pronta. Cada voo foi treinado, cada queda foi levantada, cada tempestade foi atravessada. A diferença entre quem vive no céu e quem vive no chão não é destino. É decisão repetida até virar identidade. Você pode continuar no galinheiro. Pode aceitar a comida que dão, o espaço apertado, a segurança sem sentido. Ou pode escolher o desconforto do voo, a solididade da altitude, a responsabilidade total pela própria vida. Não existe caminho sem custo. Mas existe caminho que vale cada passo. A mentalidade de águia não é sobre ser melhor que ninguém. É sobre ser melhor que quem você era ontem. E essa é uma batalha que só você pode travar. Então a pergunta que fica não é sobre águia ou galinha. É sobre o que você vai escolher ser a partir deste segundo.`,
+  },
+
+  {
     id: "a-visao-da-aguia-e-a-disciplina-que-transforma-sua-vida",
     slug: "a-visao-da-aguia-e-a-disciplina-que-transforma-sua-vida",
     title: "A Visão da Águia e a Disciplina que Transforma sua Vida",
