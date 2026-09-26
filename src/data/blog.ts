@@ -15,6 +15,51 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "ambiente-pessoas-e-decisoes-a-visao-da-aguia",
+    slug: "ambiente-pessoas-e-decisoes-a-visao-da-aguia",
+    title: "Ambiente, Pessoas e Decisões – A Visão da Águia",
+    excerpt: "Descubra como ambiente e pessoas moldam cada escolha, e como a visão da águia transforma decisões de hoje no futuro que você constrói.",
+    date: "2026-09-26",
+    readingTime: 5,
+    category: "Filosofia",
+    coverImage: "https://images.unsplash.com/photo-1716203727746-2d1538ee0e83?w=1200&q=85&fit=crop&auto=format",
+    tags: ["ambiente", "influências", "mentalidade"],
+    featured: false,
+    content: `## Gancho: O Amanhecer da Visão da Águia
+
+Quando o sol ainda beija as montanhas, uma águia inicia seu voo matinal. Do alto, o mundo se expande: o vale, o rio, a floresta — tudo se torna uma única paisagem. Seus olhos percebem movimentos que estão ocultos para quem caminha pelo chão. Essa altitude não é apenas física; é um estado de clareza onde o presente se dissolve em uma perspectiva maior. A águia não se deixa distrair por ruídos terrestres; ela antecipa correntes de ar, prevê mudanças climáticas, e planeja rotas que podem levar horas, dias, estações inteiras. Ao observar esse arquétipo, percebemos que cada decisão humana pode ser vista como um ponto na vasta trajetória de um voo. As escolhas que fazemos hoje são os ventos que nos impulsionam amanhã. Quando olhamos para a nossa própria vida, muitas vezes estamos tão próximos do solo que não conseguimos distinguir entre o caminho que escolhemos e o que nos foi imposto. O gancho inicial é simples: se quisermos uma visão mais ampla, precisamos aprender a subir acima da névoa do imediato.
+
+## O Problema: A Névoa do Cotidiano
+
+No dia a dia, estamos cercados por um ambiente que constantemente nos oferece atalhos mentais. O **ambiente** onde trabalhamos, a **pessoa** com quem conversamos ao café, as notícias que consumimos, as redes sociais que seguimos — todos são fatores que moldam nosso radar de decisão. A névoa se instala quando permitimos que esses elementos definam os parâmetros do que é possível ou desejável. O problema não é apenas externo; ele nasce da dependência de validações instantâneas e da falta de espaço para reflexão. Quando a mente é bombardeada por estímulos, o pensamento estratégico é substituído pela reação automática. Decisões passam a ser tomadas não com base em um propósito, mas com base no que parece seguro, no que agrada ao grupo, ou no que evita conflitos imediatos. O resultado é uma vida que parece ser vivida por outros, e não por nós mesmos. A sensação de estagnação surge porque o futuro é construído pedra por pedra no presente, e cada tijolo que colocamos com pressa pode comprometer toda a estrutura.
+
+## Identificação: O Espelho do Cotidiano
+
+Se pararmos para observar, veremos que somos reflexos do nosso entorno. A **pessoa** que admiramos pode determinar o vocabulário de ambição que adotamos; o ambiente silencioso de um escritório pode incentivar a conformidade; a correria de uma cidade grande pode normalizar a tomada de decisões aceleradas. Cada um desses elementos cria um espelho no qual nos vemos repetidamente. Quando perguntamos a nós mesmos: “O que eu realmente quero?”, a resposta muitas vezes vem mascarada por expectativas alheias. A identificação surge quando reconhecemos que muitas de nossas escolhas são eco de vozes que absorvemos sem questionar. É um momento de introspecção em que percebemos que o piloto do nosso avião não é apenas o piloto, mas também o tráfego ao redor, as condições meteorológicas, e a qualidade do combustível. Somente quando reconhecemos essa simbiose é que podemos começar a pilotar com intenção, escolhendo deliberately quem e o que nos cerca.
+
+## A Metáfora da Águia: Altitude Mental e Escolha Consciente
+
+A **Mentalidade de Águia** convida-nos a buscar altitude mental. Assim como a ave seleciona as correntes térmicas para elevar seu voo, devemos selecionar os ambientes e as **pessoas** que nos elevam. Isso não significa isolar-se em uma torre de marfim; significa criar uma consciência filtradora. Ao definir limites claros, protegemos a mente de influências tóxicas e cultivamos espaços que estimulam o crescimento. A águia também protege seu ninho; da mesma forma, devemos proteger nosso tempo, nosso espaço mental, e nossa energia. Isso envolve dizer não a compromissos que desviam do propósito, a conversas que minam a confiança, a hábitos que nos mantêm presos ao chão. Quando optamos por um ambiente que estimula a reflexão e cercamo-nos de **pessoas** que desafiam nossos suposições, criamos as condições para uma visão de longo prazo. A disciplina não é apenas uma rotina de exercícios; é a prática diária de examinar por que estamos tomando uma decisão e se ela alinha com o horizonte que queremos atingir.
+
+## Aplicação e Transformação: Construindo o Futuro com as Asas da Águia
+
+Cada decisão presente é uma pena que se adiciona às asas do futuro. Quando escolhemos estudar um novo idioma, investir em uma habilidade, ou até mesmo optar por um silêncio restaurador em vez de um ruído constante, estamos fortalecendo a musculatura necessária para voos mais altos. A aplicação prática começa com a auditoria simples do ambiente: onde você passa a maior parte do tempo? Quem são as três **pessoas** mais influentes na sua vida atualmente? A partir disso, mapeie se esses elementos o puxam para cima ou para baixo. Em seguida, desenvolva um ritual de reflexão semanal, um momento de silêncio onde você pergunta: “Minha última decisão me aproximou do meu objetivo de longo prazo?” Se a resposta for não, é hora de ajustar o curso. A transformação não é um evento; é a soma de escolhas conscientes que, ao longo do tempo, remodelam não apenas os resultados externos, mas a própria identidade interna. Ao assumir a responsabilidade plena por cada escolha, você se torna o piloto do seu próprio céu, pronto para renovar-se como a águia que derruba as penas velhas para dar lugar a outras mais fortes.
+
+## Conclusão: O Chamado Silencioso
+
+Ao terminar estas linhas, você pode sentir um leve desconforto — aAwareness de que pode estar vivendo uma vida que nunca parou para questionar. Esse desconforto é o primeiro sopro de vento que indica que é hora de subir. A águia não grita; ela chama em silêncio, convidando você a erguer os olhos além da névoa e a imaginar horizontes que ainda não foram tocados. O convite é simples: comece a mapear o ambiente e as **pessoas** que moldam suas decisões, escolha elevar-se acima da pressão do imediato, e construa, dia após dia, as asas que o levarão a um futuro autêntico. O silêncio após a reflexão é mais alto do que qualquer ruído externo; nele reside a coragem de ser o autor da sua própria trajetória. Aceite o chamado e comece a voar.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "disciplina-quando-a-motivacao-desaparece",
     slug: "disciplina-quando-a-motivacao-desaparece",
     title: "Disciplina Quando a Motivação Desaparece",
