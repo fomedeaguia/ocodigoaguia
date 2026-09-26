@@ -15,6 +15,81 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "disciplina-quando-a-motivacao-desaparece",
+    slug: "disciplina-quando-a-motivacao-desaparece",
+    title: "Disciplina Quando a Motivação Desaparece",
+    excerpt: "A águia não voa porque está motivada, mas porque escolheu o céu. Aprenda a disciplina que substitui a motivação e reconquiste suas escolhas.",
+    date: "2026-09-26",
+    readingTime: 7,
+    category: "Transformação",
+    coverImage: "https://images.unsplash.com/photo-1776847651589-1a9546d43b98?w=1200&q=85&fit=crop&auto=format",
+    tags: ["disciplina", "constância", "resultados"],
+    featured: false,
+    content: `## O Voo que Não Depende do Clima
+
+Há um momento na vida de quem decide mudar em que tudo parece funcionar. As ideias são claras, o corpo sente energia, o futuro parece um caminho aberto. Você acorda com propósito e adormece com a sensação de que está construindo algo real. Mas então, sem aviso, tudo se apaga. A energia some. O propósito se torna peso. E o que resta é uma pergunta silenciosa que ninguém ensina a responder: o que fazer quando não há mais motivação?
+
+A águia não voa porque o vento está favorável. Ela voa porque **decidiu que o céu é o seu lugar**, independentemente das condições atmosféricas. A tempestade não cancela o voo da águia; ela apenas exige que a águia voe com mais intenção e menos floreio. Quando a motivação desaparece, a única alternativa é a **disciplina** — e disciplina não é um sentimento, é uma decisão repetida.
+
+Viver sem depender do impulso emocional é o que separa quem constrói de quem apenas planeja.
+
+## O Problema de Confundir Fogo com Fogo
+
+A motivação é como uma chuva rápida. Ela molha, ela refresca, ela faz a terra parecer fértil. Mas se você plantar sementes esperando que a chuva volte todo dia, vai morrer de sede. A motivação é um **estímulo externo ou interno que tem data de validade**. Ela não é a base de uma vida estruturada. Ela é a faísca inicial, e depois disso, o que sustenta a chama é o hábito, a rotina, a **escolha consciente de continuar**.
+
+A maioria das pessoas confunde a paixão do início com a estrutura necessária para o meio do caminho. Elas acham que se perderem a vontade, erraram o caminho. Não. O caminho é esse: **é no meio, quando tudo fica cinza e sem sentido, que a verdadeira construção acontece**. A águia não voa com entusiasmo o tempo todo. Ela voa com cálculo, com economia de energia, com precisão. Ela planeja o mergulho, ajusta as penas, observa a presa. E quando finalmente se lança, não é por emoção — é por **preparação**.
+
+A disciplina é essa preparação silenciosa que a motivação nunca pode substituir.
+
+## Cada Escolha é um Voo ou uma Queda
+
+A águia, do alto de um penhasco, tem uma visão que poucos humanos conseguem imaginar. Ela enxerga a presa a quilômetros de distância. Enxerga o terreno inteiro. Enxerga os corredores de vento. Mas o que realmente define se ela capturará a refeição ou voltará com o vazio é a **decisão de mergulhar**. Porque há um instante — breve, decisivo, irreversível — em que a águia deixa de ser observadora e passa a ser executora.
+
+Sua vida funciona assim. Cada manhã em que você decide levantar e fazer o que precisa ser feito, mesmo sem vontade, é um **mergulho**. Cada noite em que você escolhe descansar em vez de avançar é um voo raso, um círculo sem propósito. **As escolhas não se acumulam em palavras; elas se acumulam em resultados**. E os resultados, com o tempo, revelam a verdadeira distância entre quem você é e quem você quer se tornar.
+
+Não existe meio-termo quando se trata de decisão. Você não está "quase" disciplinado. Você está agindo ou não está. A águia não faz meias-voltas no ar antes de mergulhar. Ela confia na altitude, confia no corpo, confia no instinto treinado ao longo de anos de voo solitário. Cada escolha aproxima ou distancia você da vida que diz querer construir. E o preço de cada escolha é sempre pago em tempo, em energia e em oportunidades que não voltam.
+
+## O Silêncio Antes do Mergulho
+
+Há um silêncio que precede o mergulho da águia. Um silêncio que não é medo, não é hesitação — é **concentração absoluta**. É o momento em que todo ruído interno se aquieta e só permanece a intenção clara. Esse silêncio é o que a maioria das pessoas nunca aprende a cultivar. Vivem em um estado de ruído constante: redes sociais, notificações, ansiedade sobre o futuro, arrependimento sobre o passado.
+
+Quando a motivação desaparece, esse ruído aumenta. E é exatamente nesse momento que o **silêncio se torna a ferramenta mais poderosa que você possui**. Não silêncio de ausência, mas silêncio de presença. Sentar-se com a própria mente sem fugir, sem distrair, sem mascarar a insegurança com ação vazia. A águia permanece imóvel por horas no topo de um galho. Não está perdendo tempo. Está **calculando, observando, acumulando energia para o que importa**.
+
+Você precisa desse silêncio. Precisa saber que parar, quando o mundo inteiro diz para continuar correndo, não é fraqueza — é **estratégia**. É a águia no galho antes do voo que muda tudo. E dentro desse silêncio, a resposta que você busca começa a se revelar não como um pensamento, mas como uma certeza silenciosa e inegociável.
+
+## Construa o Habitat da Sua Disciplina
+
+A águia não constrói seu ninho no meio da tempestade. Ela escolhe o lugar certo, o ramo firme, a altura que protege e que permite a visão ampla. Da mesma forma, a disciplina exige um **ambiente interno e externo que a sustente**. Se você quer praticar disciplina, não basta querer. É preciso arrancar do seu dia aquilo que enfraquece, e plantar aquilo que fortalece.
+
+Isso significa selecionar com rigor as pessoas com quem você convive, as informações que consome, os horários que protege, as tarefas que aceita. A águia não aceita qualquer ramo. Ela avalia a resistência, a estabilidade, a direção do vento. **Sua vida também é feita de ramos**. E cada ramo que você escolhe apoiar diz respeito ao tipo de voo que vai ter. Um ambiente desorganizado alimenta uma mente desorganizada. Uma rotina sem estrutura produz resultados sem consistência.
+
+Disciplina não é um ato heroico isolado. É **um ecossistema que você constrói todos os dias**, com pequenas decisões repetidas até que se tornem automáticas. O que parece rigoroso para quem observa de fora é, para quem vive, apenas a coisa mais natural do mundo. Porque foi construído com intenção e mantido com responsabilidade.
+
+## A Liberdade que Vem Depois da Decisão
+
+Existe uma liberdade que só aparece depois que você para de depender de impulso. A águia não precisa que o sol brilhe para voar. Não precisa que as presas apareçam na hora certa. Não precisa que o mundo confirme que ela está certa. Ela simplesmente **voa**. E com cada voo, a confiança cresce, não porque o resultado foi garantido, mas porque a **ação foi executada**.
+
+Quando você age mesmo sem vontade, algo se quebra dentro de você — a corrente que prendia sua autonomia à sua emoção. Você descobre que não precisa se sentir pronto para começar. Que não precisa esperar a dor passar para avançar. Que a força não vem antes da ação, ela vem **depois**, quando o corpo percebe que pode sobreviver ao que já fez.
+
+Essa é a verdadeira liberdade. Não a dos desejos satisfeitos, mas a da **autonomia emocional**. A capacidade de escolher o que fazer independentemente do que sente. A águia não é livre porque gosta de voar. Ela é livre porque **decidiu que o voo é seu estado natural**, e nada mais. Essa liberdade é silenciosa, e por isso poucos a valorizam.
+
+## O Que Resta Quando Tudo Foi Dito
+
+Chega um ponto em que não há mais frases para ler, nem vídeos para assistir, nem conselhos para seguir. Resta apenas a pergunta que ninguém pode responder por você: **você vai agir ou vai esperar mais um dia?** A águia no topo do penhasco não escreve um plano. Ela não faz uma lista de motivos. Ela olha para baixo, abre as asas e se lança. O medo existe, sim. A incerteza também. Mas a **decisão é maior que ambos**.
+
+Você não precisa acreditar em milagres. Não precisa sentir que o mundo vai se alinhar. Não precisa de motivação para continuar. Precisa de uma coisa só: **a decisão de que as suas escolhas atuais são mais importantes que o seu conforto presente**. Cada minuto que você passa esperando é um minuto que a águia estaria voando em seu lugar. E o ar, lá
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "mentalidade-de-aguia-vs-mentalidade-de-galinha",
     slug: "mentalidade-de-aguia-vs-mentalidade-de-galinha",
     title: "Mentalidade de Águia vs Mentalidade de Galinha",
