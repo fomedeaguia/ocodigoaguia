@@ -15,6 +15,54 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "aguia-ou-galinha-disciplina-que-transforma-visao-em-realidade",
+    slug: "aguia-ou-galinha-disciplina-que-transforma-visao-em-realidade",
+    title: "Águia ou Galinha? Disciplina que Transforma Visão em Realidade",
+    excerpt: "Descubra por que ter visão sem disciplina é como uma galinha no chão — a águia voa porque age, não só sonha.",
+    date: "2026-09-27",
+    readingTime: 6,
+    category: "Liberdade e Identidade",
+    coverImage: "https://images.unsplash.com/photo-1683009427513-28e163402d16?w=1200&q=85&fit=crop&auto=format",
+    tags: ["mentalidade de águia", "alto desempenho", "crescimento pessoal"],
+    featured: false,
+    content: `## O Gancho – O Silêncio da Galinha
+
+Imagine-se acordando todas as manhãs com um propósito claro na mente, uma **visão** que parece brilhante no papel, talvez até em um plano de vida meticuloso. A ideia de transformação é tentadora, e você pode até sentir uma faísca de **coragem** acender, prometendo mudanças. No entanto, após algumas semanas, a rotina toma conta: o despertador toca, você verifica o celular, e a inércia se instala. A **visão** permanece intacta, mas a **disciplina** necessária para alimentá-la parece um conceito abstrato, distante da realidade diária. Esse é o silêncio da galinha — o conforto do conhecido, a ausência de ação que mantém você no chão, mesmo quando o mundo lá de cima promete um horizonte mais vasto.
+
+## O Problema – Visão sem Disciplina
+
+Muitas pessoas hoje vivem com uma mentalidade de **galinha**: elas sonham grande, mas a falta de **disciplina** consistente impede a materialização desses sonhos. A **visão** torna-se um mero exercício intelectual, um bom propósito que nunca se materializa em hábitos diários. Sem **disciplina**, a mente cria justificativas — falta de tempo, estresse, prioridades conflitantes — e a **visão** permanece no papel, intocada. Esse padrão cria uma sensação persistente de estagnação, onde a **coragem** está sempre um passo atrás da ação. A **galinha** continua a picar o chão, enquanto a **águia** espera no céu, pronta para mergulhar, mas só quando a **disciplina** a impulsiona para frente.
+
+## Identificação – Quando o Sonho Fica no Chão
+
+Você já se pegou refletindo sobre mudanças que precisa fazer, mas, no final do dia, nada realmente mudou? Talvez você tenha escrito um plano de **propósito**, definido metas ambiciosas, e ainda assim se sentiu preso no mesmo ciclo. Essa é uma característica da mentalidade de **galinha**: a **visão** existe, mas a **disciplina** necessária para elevá-la é frequentemente ignorada. O **silêncio** que segue cada pensamento de transformação pode ser ensurdecedor, e a **coragem** para enfrentar a inércia parece fugaz. Reconhecer esse padrão é o primeiro passo para romper o ciclo. Ao observar como você gasta seu tempo, quais hábitos constroem ou destroem seus objetivos, você começa a ver onde a **visão** espera por **disciplina** e onde a escolha por permanecer no chão se repete.
+
+## A Metáfora da Águia – Disciplina como Voo
+
+A **águia** nos ensina que **visão** sem **disciplina** é apenas um sonho distante. Um ninho de águia não é construído por aspirações solitárias; ele exige **disciplina** — a rotina diária de buscar alimento, praticar o voo, fortalecer as asas. A **disciplina** é o vento que impulsiona a **águia** a alturas onde a **visão** se expande, onde o mundo abaixo parece pequeno. Diferente da **galinha**, que se contenta com sementes no chão, a **águia** busca altitudes mais elevadas, não porque seja mais inteligente, mas porque pratica o **voo** constantemente. Esse **voo** não é um evento único; é uma série de escolhas disciplinadas que, ao longo do tempo, constroem as asas necessárias para a liberdade. A **disciplina** transforma o sonho de voar em realidade.
+
+## Aprofundamento – O Poder do Treino Diário
+
+A **disciplina** funciona como um músculo mental: quanto mais você a exercita, mais forte ela fica. Iniciantes podem achar que **visão** sozinha é suficiente — a emoção inicial de um novo projeto pode impulsionar semanas de energia. No entanto, essa energia inicial é volátil. A **disciplina** verdadeira reside na consistência, no hábito de agir mesmo quando a motivação diminui. Imagine uma **águia** treinando suas asas: ela não sai voando perfeitamente formada. Ela passa dias exercitando batidas, ajustando o ritmo, construindo força. Da mesma forma, a **disciplina** diária — pequenas ações focadas — forja a mentalidade necessária para sustentar **visão** ao longo do tempo. O **silêncio** entre as ações se torna o solo fértil onde a **transformação** cresce.
+
+## Nova Perspectiva – O Solo vs. as Alturas
+
+Quando você adota a mentalidade de **galinha**, a **visão** parece distante, quase inalcançável. A **disciplina** torna-se um fardo, e o **silêncio** da autossabotagem se instala. Por outro lado, a mentalidade de **águia** vê a **disciplina** como libertação, não como restrição. Cada ação disciplinada é um passo em direção ao **voo** — um movimento ativo em direção ao propósito. Essa mudança de perspectiva transforma a **coragem** de um desejo passivo em ação decisiva. Ao escolher a **disciplina**, você passa de espectador a piloto, de sonhador a criador de sua própria **transformação**. O chão perde seu atrativo quando o céu promete crescimento, e a escolha se torna evidente: permanecer na **galinha** ou abraçar a **águia**.
+
+## Aplicação na Vida – Passos para Voar
+
+Para integrar a **disciplina** da **águia**, comece reformulando seu dia com um propósito claro. Identifique uma pequena ação que alinhe diretamente com sua **visão** maior; faça essa ação primeiro, antes que as distrações surjam. Proteja sua mente de interrupções — escolha um ambiente que incentive o foco, assim como a **águia** seleciona seus **ambientes**. Pratique a **resiliência** ao enfrentar contratempos; veja cada erro como um vento que a **águia** utiliza para navegar. Cultive a **silêncio** interior que permite observar padrões de autossabotagem sem julgamentos, transformando-os em combustível para mudanças disciplinadas. Reflita regularmente sobre como cada pequeno ato disciplinado o eleva mais perto de seu **propósito**. Ao tornar esses passos uma rotina, você constrói as asas necessárias para voar além das limitações da mentalidade de **galinha**.
+
+## Transformação – O Renascimento da Águia
+
+Quando a **disciplina** se torna uma segunda natureza, a **transformação** surge naturalmente. A **visão** que antes parecia distante agora brilha no horizonte, não mais um sonho distante, mas um destino alcançável. A **coragem** que antes era vacilante agora impulsiona cada decisão, porque você aprendeu que **disciplina** é a ponte entre intenção e realidade. A **galinha** interior pode ainda surgir, especialmente em dias de dúvida, mas a **águia** agora tem asas fortes o suficiente para superar esses momentos. Essa **transformação** não é apenas sobre alcançar objetivos; é sobre se tornar a pessoa que pode sustentar **visão**, **disciplina**, e **propósito** juntos. A liberdade da **águia** torna-se sua nova normalidade, e cada **voo** é uma afirmação de que você escolheu o **voo** sobre o chão.
+
+## Conclusão – O Caminho que Você Escolhe
+
+No final do dia, a distinção entre **galinha** e **águia** não está na **visão** que você tem, mas na **disciplina** que você pratica. O **silêncio** da autossatisfação pode ser reconfortante, mas a **disciplina** da **águia** oferece um céu mais vasto, cheio de possibilidades. Talvez você esteja vivendo uma vida que nunca parou para questionar — uma vida onde a **visão** permanece intocada porque a **disciplina** nunca foi cultivada. Esse questionamento é o primeiro sopro de **coragem** em direção à mudança. Ao escolher a **disciplina** diária, ao transformar sonhos em ações consistentes, você se torna o piloto de sua própria transformação. O chão pode chamar, mas as asas da **águia** estão prontas para o **voo**. A decisão — o próximo bater de asas — é sua.`,
+  },
+
+  {
     id: "soltar-o-ninho-velho",
     slug: "soltar-o-ninho-velho",
     title: "Soltar o ninho velho",
