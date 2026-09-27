@@ -15,6 +15,54 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "soltar-o-ninho-velho",
+    slug: "soltar-o-ninho-velho",
+    title: "Soltar o ninho velho",
+    excerpt: "A águia não espera o vento mudar. Ela abandona o ninho que já não serve. A renovação começa quando você para de pedir permissão para ser livre.",
+    date: "2026-09-27",
+    readingTime: 5,
+    category: "Transformação",
+    coverImage: "https://images.unsplash.com/photo-1504366722510-361064c5bb23?w=1200&q=85&fit=crop&auto=format",
+    tags: ["renovação", "transformação", "recomeço"],
+    featured: false,
+    content: `## A prisão que você não vê
+
+Existe um tipo de prisão que não tem grades. Você não a vê todos os dias porque ela foi construída aos poucos, com pequenas concessões que pareciam inofensivas na época. É o peso de uma versão sua que já não faz sentido, mas que você mantém por hábito, por medo ou por preguiça de enfrentar o desconhecido. A águia não vive presa por conforto. Ela entende que o ninho, por mais quente que seja, tem data de validade quando as asas já cresceram demais para caber ali.
+
+Você reconhece essa sensação. Acorda, cumpre a rotina, responde mensagens, resolve problemas alheios e, no fim do dia, sente um vazio que não tem nome. Não é tristeza profunda, é algo mais sutil: a certeza de que está vivendo uma história que não é sua. Talvez seja a carreira que escolheram para você. Talvez seja o relacionamento que você mantém por obrigação. Talvez seja a versão tímida, cautelosa, obediente que você nunca teve coragem de deixar para trás.
+
+## A águia que não pede permissão para voar
+
+A águia não consulta o bando antes de subir. Ela não pede licença ao vento, nem espera que outro pássaro valide sua altitude. A liberdade, no sentido mais radical da palavra, é uma decisão solitária. É assumir que ninguém vai segurar você quando decidir mudar de direção, e que ninguém será responsável pela sua queda caso erre o cálculo. Essa é a diferença entre quem sonha com autonomia e quem de fato a exerce.
+
+Autonomia não é ausência de regras. É a capacidade de escolher quais regras valem para a sua vida. A águia voa alto não porque seja superior, mas porque fez uma escolha clara sobre onde quer enxergar. Ela aceita o frio da altitude em troca da clareza que só a distância proporciona. Da mesma forma, abandonar versões antigas de si mesmo exige que você aceite o desconforto inicial de voar sozinho. O silêncio lá em cima incomoda. Mas é lá que você ouve sua própria voz pela primeira vez em anos.
+
+## O peso das versões que você carrega
+
+Seguramos identidades antigas porque elas nos deram segurança em algum momento. A criança que aprendeu a ser invisível para não ser julgada. O adolescente que moldou o caráter para agradar pais exigentes. O adulto que adotou uma postura de força para não parecer fraco. Essas versões cumpriram seu papel, mas agora são casulos apertados demais. Continuar nelas é como tentar caber numa roupa que você usou há dez anos e que o corpo já não veste.
+
+O problema é que soltar essas versões dói. Dói porque parte da sua identidade está amarrada a elas. Você teme que, ao abandonar o velho ninho, perca a noção de quem é. Mas a verdade é outra: você só descobre quem realmente é quando deixa de ser quem os outros esperavam. A responsabilidade pela própria vida começa exatamente aí, no momento em que você para de transferir para terceiros a obrigação de definir o seu valor. A águia não mede sua força pelo que carrega, mas pelo que consegue soltar.
+
+## A coragem de soltar o velho ninho
+
+Abandonar não é traição. É evolução. A águia que decide reconstruir o ninho não o faz por impulso, mas por necessidade biológica e existencial. Ela sabe que o ninho velho já não a protege, apenas a prende. O mesmo vale para você. Aquela zona de conforto que você chama de segurança muitas vezes é apenas medo disfarçado de estabilidade. Soltar exige uma coragem que não é explosiva, é silenciosa. É a coragem de acordar um dia e decidir que não vai mais aceitar a mediocridade como padrão.
+
+Essa decisão não vem com um filme épico ao fundo. Vem com um silêncio incômodo, com uma dúvida assustadora e com a percepção clara de que o caminho será difícil. Mas é exatamente aí que reside a grande virada. Quando você aceita que a dificuldade faz parte do processo, o medo perde a força. A águia não espera o tempestade passar; ela aprende a voar na chuva. Da mesma forma, você não precisa esperar o momento perfeito para começar a ser quem realmente é. O momento perfeito é uma ilusão que o ninho velho usa para te manter preso.
+
+## Liberdade é uma decisão diária
+
+Liberdade não é um estado que se atinge e se guarda para sempre. É uma prática diária, uma série de pequenas escolhas que, somadas, reconstroem quem você é. É dizer não quando todo mundo espera um sim. É escolher o silêncio em vez do barulho que não acrescenta nada. É assumir responsabilidade pelas próprias consequências sem procurar culpados. A águia não faz isso por heroísmo; faz porque entende que a autonomia tem preço, e que esse preço é infinitamente menor do que o custo de permanecer preso.
+
+Na vida real, isso significa revisar os ambientes que você frequenta, as conversas que você alimenta e as histórias que você conta sobre si mesmo. Significa parar de buscar validação externa para decisões que só você precisa tomar. Significa aceitar que algumas pessoas vão estranhar a sua mudança, e que isso é irrelevante diante da necessidade de crescer. A renovação não é um evento único; é um movimento contínuo de abandonar o que não serve e abraçar o que ainda está por ser construído. Cada dia é uma oportunidade de escolher novamente quem você quer ser.
+
+## O momento de mudar de rumo
+
+Você chegou até aqui neste texto porque algo em você já sabe que é hora de mudar. Talvez essa mudança ainda seja pequena, talvez seja enorme. Não importa. O que importa é que você sentiu o peso da versão antiga e reconheceu que ela não te pertence mais. A águia não espera o ninho cair para decidir voar. Ela antecipa a necessidade e age antes que seja tarde. Da mesma forma, você não precisa esperar que a vida force a sua mão para começar a renovação.
+
+A transformação verdadeira não acontece quando você encontra a resposta certa. Acontece quando você para de fazer as mesmas perguntas e começa a viver as respostas. É aí que o verbo ganha vida: agir, escolher, soltar, construir. A sensação que deve ficar com você agora é clara e incômoda: você precisa parar de esperar e começar a agir. Não amanhã. Não quando as condições forem perfeitas. Agora. Porque a águia não adia o voo, e você também não deveria adiar a sua liberdade.`,
+  },
+
+  {
     id: "abundancia-mental-como-a-aguia-enxerga-alem-do-caos-da-informacao",
     slug: "abundancia-mental-como-a-aguia-enxerga-alem-do-caos-da-informacao",
     title: "Abundância Mental: Como a Águia Enxerga Além do Caos da Informação",
