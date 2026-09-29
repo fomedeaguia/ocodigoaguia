@@ -15,6 +15,68 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-coragem-de-construir-uma-realidade-que-ainda-nao-existe",
+    slug: "a-coragem-de-construir-uma-realidade-que-ainda-nao-existe",
+    title: "A coragem de construir uma realidade que ainda não existe",
+    excerpt: "Você não precisa de mais motivação. Pare de esperar o momento perfeito. A águia não escolhe ventos favoráveis — atravessa o vento e domina o céu.",
+    date: "2026-09-29",
+    readingTime: 6,
+    category: "Coragem e Ação",
+    coverImage: "https://images.unsplash.com/photo-1788703972822-48557bb6e1a5?w=1200&q=85&fit=crop&auto=format",
+    tags: ["identidade", "autoconhecimento", "propósito"],
+    featured: false,
+    content: `## O momento em que o medo venceu você
+
+Existe um momento silencioso que acontece dentro de você antes de qualquer decisão importante. Não é o momento da ação. É o momento anterior, aquele em que o corpo já sabe o que precisa ser feito, mas a mente encontra mil razões para adiar. Você já viveu isso. É aquele instante em que a nova realidade está ali, clara, nítida, quase palpável — e mesmo assim você recua.
+
+A diferença entre quem transforma a vida e quem permanece parado não é talento, nem circunstância, nem sorte. É a capacidade de agir enquanto o medo ainda está presente. A coragem não é a ausência de medo. É a decisão de mover-se apesar dele. E essa é uma distinção que muda tudo.
+
+A maioria das pessoas espera que o medo desapareça antes de agir. Acredita que, quando o nervosismo passar, a coragem surgirá naturalmente. Mas o medo não passa. Ele se transforma. Ele se torna parte do movimento. O erro não é sentir medo. O erro é permitir que o medo dite o ritmo da sua vida.
+
+## A águia não espera o vento mudar
+
+A águia não escolhe dias ensolarados para voar. Ela não espera que as tempestades cessem. Na verdade, é justamente nos dias de vento forte que ela mostra do que é capaz. A ave que enfrenta rajadas de cem quilômetros por hora não está lutando contra o céu — está usando a força do vento a seu favor. Ela ajusta as asas, encontra a correnteza certa e sobe.
+
+Você já percebeu como as maiores decisões da sua vida pareceram assustadoras no momento em que você precisou tomá-las? Mudar de área, terminar um relacionamento que já havia acabado, começar um projeto que ninguém acreditava, dizer não quando todo mundo esperava que você dissesse sim. Cada uma dessas decisões carregava o peso do desconhecido. E ainda assim, quem tomou esses passos sabe que o desconhecido era onde a vida realmente acontecia.
+
+A águia não busca condições perfeitas. Ela reconhece que o céu não é um lugar seguro. É um lugar vasto, imprevisível e exponencialmente mais perigoso do que o ninho. Mas é também o único lugar onde a visão alcança centenas de quilômetros. É lá que ela enxerga o que os outros não veem. É lá que ela encontra o alimento que não existe no chão. A altitude exige coragem. Mas recompensa com clareza.
+
+## Sustentar uma nova realidade exige coragem diária
+
+Aqui está o ponto que quase ninguém toca: não é difícil começar algo novo. O difícil é sustentar. Qualquer pessoa pode fazer uma resolução de ano novo, começar uma dieta na segunda-feira, matricular-se numa academia ou abrir um plano de negócios com energia e entusiasmo. O que pouquíssimas pessoas conseguem é manter o ritmo quando a novidade passa, quando o entusiasmo vira rotina e quando os resultados ainda não apareceram.
+
+Sustentar uma nova realidade significa viver de forma incompatível com quem você era ontem. Isso gera atrito. As pessoas ao redor vão notar. Algumas vão questionar. Outras vão tentar te puxar de volta para o padrão antigo, não por malícia, mas porque a mudança deles dói ver. E dentro de você, haverá dias em que a versão antiga vai gritar por conforto. Dias em que vai parecer mais fácil desistir, recuar, voltar para o ninho quente onde tudo é familiar.
+
+A águia sabe disso. Por isso ela deixa o ninho cedo. A transformação não acontece no ninho. O ninho é só transição. O verdadeiro crescimento acontece no voo, com o vento contra o rosto, com as penas molhadas de chuva, com a fome que obriga a caçar e a decisões que ninguém pode tomar por você. Sustentar uma nova realidade é aceitar que o processo é desconfortável e que o desconforto é parte do preço.
+
+## O preço de não agir
+
+Existe um custo silencioso em não agir. Não é um custo financeiro. É um custo existencial. É a sensação crônica de que você está vivendo uma vida que não escolheu. É olhar no espelho e não se reconhecer. É acordar todo dia com uma pergunta que você nunca tem coragem de responder: "Quando eu vou começar a viver de verdade?"
+
+O não-agir não é neutralidade. É uma escolha. E toda escolha tem consequência. Quando você não muda, o mundo muda ao seu redor e você fica para trás. Não de forma dramática. De forma sutil. Um ano passa. Depois dois. Depois cinco. E de repente você percebe que não sabe mais quem era antes de começar a esperar.
+
+A águia que não voa não morre no ninho. Morre devagar. Devagar é a pior das mortes porque ninguém percebe que está acontecendo. Você pode estar morrendo devagar agora. Pode estar adiando uma conversa difícil, um projeto que deveria ter começado há meses, uma decisão que mudaria o curso da sua vida. O prazer temporário de adiar é, na verdade, uma dor disfarçada. É o peso de saber que você está cedendo.
+
+## A coragem não é um estado. É uma prática.
+
+Ninguém acorda corajoso. Coragem não é um traço de personalidade com o qual você nasce ou não nasce. Coragem é um músculo. E como todo músculo, ele se desenvolve pelo uso repetido. Cada vez que você escolhe agir apesar do medo, esse músculo fica um pouco mais forte. Cada vez que você enfrenta o desconforto e não recua, você reescreve a história interna sobre quem você é.
+
+A águia não aprende a voar lendo sobre ventos. Ela aprende saltando. Primeiro do barranco do ninho. Depois de alturas maiores. Cada salto é um fracasso potencial e uma vitória real. Porque o ato de saltar já é diferente de ficar parado. A águia não precisa dominar o céu no primeiro voo. Ela só precisa começar.
+
+Você não precisa ter o plano completo. Não precisa ter certeza absoluta. Não precisa que tudo esteja perfeito. Precisa apenas dar o próximo passo enquanto ainda tem medo. Esse passo pode ser pequeno. Pode ser desconfortável. Mas é esse passo que separa quem sonha de quem constrói.
+
+## A realidade que você sustenta começa hoje
+
+A nova realidade não espera a data perfeita. Não espera o mês certo, o ano novo, a sexta-feira, a segunda-feira, o momento em que você se sentir "pronto". Pronto é uma ilusão. O único momento real é este. O passo que você dá agora. A decisão que você toma hoje. A conversa difícil que você marca. O projeto que você começa. O limite que você impõe.
+
+A águia não escolhe entre voar e não voar. Ela escolhe entre voar com medo e voar sem medo. E a resposta é sempre a mesma: voar com medo. Porque voar sem medo não existe. O que existe é voar e sentir o medo, mas não deixar que ele decida o destino.
+
+Você é capaz de sustentar uma nova realidade. Isso não é otimismo. É verdade. A capacidade já está dentro de você. O que falta é a coragem de parar de esperar e começar a agir. O ninho é quente, mas o céu é seu.
+
+A águia não pede permissão para o vento. Ela simplesmente voa. E quando voa, o mundo lá embaixo finalmente entende o tamanho da sua visão.`,
+  },
+
+  {
     id: "o-voo-da-prosperidade-escolhas-que-moldam-a-vida-financeira",
     slug: "o-voo-da-prosperidade-escolhas-que-moldam-a-vida-financeira",
     title: "O Voo da Prosperidade: Escolhas que Moldam a Vida Financeira",
