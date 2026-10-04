@@ -15,6 +15,54 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "escolhas-de-aguia-tempo-visao-e-o-futuro-que-voce-construi",
+    slug: "escolhas-de-aguia-tempo-visao-e-o-futuro-que-voce-construi",
+    title: "Escolhas de Águia: Tempo, Visão e o Futuro que Você Construi",
+    excerpt: "Cada escolha é um traço de voo; ao observar a águia, aprendemos a decidir com clareza, usando tempo e energia para construir o futuro que desejamos.",
+    date: "2026-10-04",
+    readingTime: 7,
+    category: "Prosperidade",
+    coverImage: "https://images.unsplash.com/photo-1563480407291-c8d2d0882ba8?w=1200&q=85&fit=crop&auto=format",
+    tags: ["tempo", "visão de futuro", "disciplina"],
+    featured: false,
+    content: `## Gancho: o peso de cada decisão
+No instante em que você decide abrir os olhos pela manhã, já está traçando uma linha no mapa do seu dia. Essa linha pode ser fina quase imperceptível, ou pode ser um traço largo que direciona toda a sua energia para um ponto distante. Cada escolha, por menor que pareça, carrega consigo a força de aproximar ou afastar você da vida que realmente quer construir. Não se trata de um grande gesto heroico, mas da soma silenciosa de pequenos atos que, acumulados, desenham o contorno do seu futuro. Quando você percebe que o tempo não é um recurso infinito, mas um vento que pode levar você para cima ou para baixo, a responsabilidade pelas escolhas ganha um novo peso. Esse reconhecimento é o primeiro passo para sair da ilusão de que o amanhã chegará por conta própria e passar a enxergar cada decisão como um ato de navegação consciente.
+
+## Problema: vivendo no piloto automático
+Muitas pessoas passam os dias reagindo a estímulos externos, deixando que o relógio, as notificações e as expectativas alheias ditam o ritmo. Nesse estado, o tempo parece escorrer entre os dedos sem deixar marcas, e a visão de futuro fica embaçada pela neblina da rotina. A sensação de estar ocupado, mas não produtivo, surge quando as ações não estão alinhadas a um propósito claro; a energia é gasta em tarefas que não contribuem para o crescimento desejado. Esse piloto automático rouba a capacidade de enxergar além do imediato, fazendo com que a mente fique presa em ciclos de urgência que não levam a lugar nenhum. A consequência é uma sensação de vazio, mesmo diante de conquistas superficiais, porque a direção falta. Quando a visão de futuro se perde, a escolha deixa de ser um ato de intenção e torna-se apenas uma reação ao caos do momento.
+
+## Identificação: reconhecendo o padrão de escolha
+Para romper esse ciclo, é necessário observar com honestidade quais são os padrões que regem suas decisões. Pergunte-se: quantas vezes você escolhe fazer algo apenas porque é fácil, ou porque alguém espera disso? Quantas vezes adia o que realmente importa sob a desculpa de “falta de tempo”? Esse exercício de autoconhecimento revela que a maior parte do tempo é consumida por atividades que não alimentam sua visão de longo prazo. Ao identificar esses gatilhos, você começa a ver que a escolha não está ausente; ela está sendo feita, mas frequentemente em modo automático. O reconhecimento desse padrão é o momento em que a mente se prepara para assumir o controle, deixando de ser apenas um passageiro e passando a ser o piloto da própria trajetória. Essa consciência cria o espaço necessário para inserir a metáfora da águia como guia de mudança.
+
+## Metáfora da Águia: visão de altitude e escolha do vento
+A águia não bate as asas sem propósito; ela sobe em correntes térmicas, aproveitando o vento que a eleva sem gasto excessivo de energia. Seu voo é marcado por uma visão aguçada que enxerga o terreno a quilômetros de distância, permitindo que ela escolha o momento exato para mergulhar ou planear. Essa capacidade de enxergar de cima, de separar o sinal do ruído, é exatamente o que precisamos aplicar à gestão do tempo e à visão de futuro. Quando adotamos a perspectiva da águia, passamos a valorizar a altitude mental: aquele espaço de clareza onde podemos observar nossas escolhas a partir de um ponto elevado, percebendo quais delas nos impulsionam e quais nos arrastam para baixo. Assim como a águia seleciona o vento favorável, nós devemos selecionar os hábitos, os ambientes e os compromissos que nos sustentam em direção ao nosso destino desejado, descartando o que apenas consome nossa força sem nos levar a lugar algum.
+
+## Aprofundamento: tempo como recurso de vôo
+O tempo, na metáfora da águia, não é apenas um relógio que marca horas; é a corrente que pode nos elevar ou nos puxar para o solo. Cada minuto gasto em distrações é como bater as asas contra o vento contrário, gerando esforço sem ganho de altitude. Já os minutos investidos em planejamento, aprendizado e ações alinhadas ao propósito são as correntes ascensionais que nos sustentam com pouco esforço. Para fazer essa distinção, é preciso tratar o tempo como um recurso finito que deve ser alocado com a mesma precisão com que a águia escolhe seu caminho de voo. Isso implica em criar rituais de revisão, onde se avalia o retorno de cada atividade em termos de progresso rumo à visão de longo prazo. Quando o tempo passa a ser visto como combustível de vôo, a decisão de como gastá-lo deixa de ser arbitrária e passa a ser um ato estratégico de sobrevivência e crescimento.
+
+## Nova Perspectiva: redefinindo prioridades com a mentalidade de águia
+Adotar a mentalidade de águia implica mudar a pergunta central de “o que devo fazer hoje?” para “que voo quero realizar nesta temporada de vida?”. Essa mudança de foco faz com que as prioridades se reorganizem naturalmente: atividades que não contribuem para a altitude desejada são vistas como peso morto, enquanto aquelas que ampliam a visão, aprimoram habilidades ou nutrem relacionamentos significativas ganham destaque. A clareza surge quando você permite que a visão de futuro informe o presente, ao invés de deixar o presente ditar a visão sem rumo. Essa perspectiva traz uma sensação de leveza, pois o esforço passa a ser direcionado, e a ansiedade diminui ao saber que cada escolha está alinhada a um trajecto maior. Não se trata de eliminar todo o lazer ou descanso, mas de escolher consciente mente quais recarregam suas asas e quais apenas as prendem ao solo.
+
+## Aplicação na Vida: hábitos de escolha consciente
+Integrar essa mentalidade ao cotidiano requer a construção de hábitos que reforcem a altitude mental. Comece o dia com alguns minutos de silêncio, visualizando o ponto mais alto que deseja alcançar naquele período – seja um projeto concluído, uma habilidade aprimorada ou um estado de ser interior. Durante o trabalho, pratique a pausa de três segundos antes de atender a qualquer demanda; nesse intervalo, pergunte-se se aquela ação o aproxima ou afasta da sua visão. À noite, faça uma revisão breve: quais escolhas o elevaram? quais o puxaram para baixo? Anote apenas um aprendizado e um ajuste para o dia seguinte. Esse ciclo curto de observação e correção cria um feedback que, como o vento que a águia sente, ajusta continuamente sua trajetória. Com o tempo, esses pequenos ajustes se acumulam, gerando um desvio significativo rumo ao destino desejado.
+
+## Transformação: do sobrevoo ao pouso intencional
+Quando a visão de futuro e a gestão do tempo passam a ser guiadas pela metáfora da águia, a vida deixa de ser uma série de reações caóticas e torna-se um voo intencional. Você começa a perceber que os dias mais produtivos não são aqueles repletos de tarefas, mas aqueles em que cada ação tem um propósito claro que sustenta a altitude mental. Os desafios ainda aparecem, mas são encarados como correntes de vento que podem ser usadas para ganhar altura, ao invés de obstáculos que interrompem o voo. Essa transformação não acontece da noite para o dia; ela é o resultado da prática constante de escolher com consciência, de ajustar a rota conforme o feedback do próprio vôo e de confiar na capacidade de enxergar além do imediato. O resultado é uma sensação de liberdade profunda, pois você não está mais à mercê do caos externo, mas sim comandando seu próprio céu.
+
+## Conclusão: seu céu pessoal começa agora
+Cada escolha que você faz hoje é um traço de tinta no quadro do seu futuro. Ao observar a águia, aprendemos que o voo não depende apenas da força das asas, mas da capacidade de enxergar o terreno a distância e de selecionar as correntes que nos sustentam. Quando você passa a tratar o tempo como recurso precioso e a visão de futuro como guia de altitude, as decisões deixam de ser meras reações e tornam-se atos de navegação consciente. O céu que você deseja não está distante; ele se constrói no presente, a cada escolha deliberada, a cada minuto dedicado ao que realmente eleva. Permita-se voar com clareza, disciplina e coragem, e descubra que o maior poder está em saber que, a cada instante, você pode aproximar-se da vida que realmente quer construir.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "liberdade-de-aguia-a-autonomia-que-exige-responsabilidade",
     slug: "liberdade-de-aguia-a-autonomia-que-exige-responsabilidade",
     title: "Liberdade de Águia: A Autonomia que Exige Responsabilidade",
