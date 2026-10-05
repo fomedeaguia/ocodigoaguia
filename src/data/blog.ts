@@ -15,6 +15,42 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "aguia-ou-galinha-o-preco-do-voo",
+    slug: "aguia-ou-galinha-o-preco-do-voo",
+    title: "Águia ou Galinha: O Preço do Voo",
+    excerpt: "Descubra por que o conforto do chão impede seu voo e como a dor da mudança é o único caminho para a verdadeira liberdade.",
+    date: "2026-10-05",
+    readingTime: 5,
+    category: "Autoconhecimento",
+    coverImage: "https://images.unsplash.com/photo-1415750465391-51ed29b1e610?w=1200&q=85&fit=crop&auto=format",
+    tags: ["mentalidade de águia", "alto desempenho", "crescimento pessoal"],
+    featured: false,
+    content: `A maioria das pessoas não vive no chão por incapacidade de voar, mas por vício na previsibilidade do terreiro. Há uma segurança perversa em saber exatamente onde cairá o próximo grão de milho, em reconhecer cada pedra do caminho, em medir a vida em bicadas rápidas e horizontais. O galinheiro não é uma prisão de grades; é uma prisão de rotinas. As paredes são feitas de "sempre foi assim", o teto é baixo o suficiente para que ninguém precise esticar o pescoço, e a comida, embora escassa e rasteira, chega no horário combinado. Nesse cenário, a águia não é uma inspiração — ela é um incômodo. A sua sombra cruzando o solo lembra a todos que o céu existe, e essa lembrança dói mais do que a fome.
+
+## A Ilusão do Terreiro
+
+O problema não é a galinha em si, mas a **mentalidade de galinheiro** que coloniza mentes humanas brilhantes. Essa mentalidade se alimenta de comparação lateral: olha para o lado, mede o bico do vizinho, disputa a melhor posição no poleiro para dormir. A visão é curta, focada no imediato, no rasteiro, no que pode ser bicado agora. Quem habita esse modelo mental confunde movimento com progresso. Ciscar o dia inteiro gera cansaço, gera a sensação de dia produtivo, mas ao pôr do sol o horizonte continua exatamente no mesmo lugar. A segurança do conhecido anestesia a dor do crescimento, mas cobra um juros altíssimo: a atrofia das asas. Asas que não servem para voar viram apenas enfeite, peso morto, ou pior, ferramenta para abafar quem ousa bater as suas. O terreiro ensina que quem sobe demais cai feio, ignorando que quem nunca sobe jamais sabe o que é cair — porque nunca sai do chão.
+
+## O Incômodo da Altitude
+
+A águia não voa alto para se exibir; ela voa alto porque o ar rarefeito é o único lugar onde a visão se expande. Subir exige um gasto energético brutal, exige enfrentar correntes contrárias, frio cortante, solidão absoluta. Não há plateia no céu. Não há aplausos quando a ave rompe a camada de nuvens. Existe apenas o vento batendo nas penas e a clareza assustadora de enxergar quilômetros à frente. **Crescimento é, por definição, desconforto fisiológico e psicológico.** É a quebra de padrões neurais consolidados, a exposição à crítica de quem ficou no chão, a náusea da incerteza. A mentalidade de águia não busca o sofrimento, mas recusa a anestesia. Ela entende que a dor da expansão é finita e construtiva, enquanto a dor da estagnação é crônica e corrosiva. Quem escolhe a altitude aceita que nem todos subirão junto, e que o preço da clareza é a solidão temporária de não ser compreendido por quem mede o mundo a palmos.
+
+## A Visão que o Chão Não Permite
+
+Lá de cima, o caos do terreiro revela sua geometria oculta. O que parecia um labirinto sem saída vira um mapa claro. A águia enxerga a tempestade se formando no horizonte muito antes da primeira gota molhar as penas das galinhas. Ela identifica a presa — a oportunidade — a quilômetros de distância, enquanto no chão se disputa migalhas já pisadas. Essa **visão estratégica** não é um dom mágico; é consequência direta da altitude. Quem vive rente ao solo só enxerga o obstáculo imediato: a cerca, o galo dominante, a lama. Quem sobe enxerga o caminho, a saída, o rio limpo além da colina. A mudança de perspectiva altera a natureza dos problemas. No chão, um problema é um muro intransponível. No ar, o mesmo problema é apenas uma curva no percurso. A mentalidade de águia não elimina as dificuldades, mas muda a relação com elas: deixa de ser vítima do terreno para se tornar navegadora do espaço.
+
+## A Escolha Diária de Não Bicar Migalhas
+
+A transição não acontece num salto único e heroico. Acontece na microdecisão de recusar a ração podre oferecida no comedouro coletivo. Acontece quando você escolhe o silêncio em vez da fofoca do poleiro, quando protege sua energia de conversas que não levam a lugar nenhum, quando diz "não" para o urgente insignificante para dizer "sim" para o importante invisível. **Disciplina de águia é a arte de filtrar o mundo.** É selecionar rigorosamente o que entra na sua mente: leituras, companhias, ambientes, pensamentos. O terreiro é barulhento, cheio de cacarejos que disfarçam o vazio. O céu exige silêncio interior para ouvir o vento. Quem tenta voar carregando o lixo do galinheiro — ressentimentos, vícios de atenção, necessidade de validação — não decola. O voo exige leveza, e leveza se conquista abrindo as garras e soltando o que não serve mais. Cada dia você decide: bica o chão ou testa as asas. Não há meio termo. A ave que hesita na borda do poleiro, com uma pata no ar e outra no galho, acaba caindo feio justamente por não ter se comprometido com nenhum dos dois mundos.
+
+## A Renovação que Exige Queda
+
+Há um momento na vida da águia — e na de quem adota essa mentalidade — em que o voo se torna impossível. As penas envelhecem, o bico encurva, as garras perdem o fio. A lenda conta que a ave então se isola no topo de uma montanha, bate o bico na pedra até arrancá-lo, arranca as velhas penas uma a uma, espera o novo nascer sangrando e dolorido. É a **metamorfose necessária**. Não há renovação sem violência contra a própria forma antiga. Quem quer a mentalidade de águia deve estar disposto a quebrar o próprio bico: a identidade rígida, as crenças que deram certo ontem mas travam hoje, o ego que se alimenta de títulos de "melhor do terreiro". Esse processo é feio, solitário e assustador. Parece destruição. Mas é a única forma de nascer um bico forte o suficiente para caçar o próprio alimento, penas novas que aguentem a pressão da altitude. A galinha nunca passa por isso; ela apenas envelhece no mesmo poleiro, até virar sopa. A águia morre várias vezes em vida para não morrer de verdade enquanto vive.
+
+A pergunta que fica não é se você tem asas — todos têm. A pergunta é: **qual o tamanho do seu terreiro?** E, mais importante: você ainda consegue ver o céu por cima da cerca, ou já se acostumou tanto com a sombra que esqueceu a cor da luz? O desconforto de subir é agudo, mas passa. O conforto de ficar é crônico, e não perdoa.`,
+  },
+
+  {
     id: "o-silencio-que-a-aguia-escolhe-para-enxergar-o-invisivel",
     slug: "o-silencio-que-a-aguia-escolhe-para-enxergar-o-invisivel",
     title: "O silêncio que a águia escolhe para enxergar o invisível",
