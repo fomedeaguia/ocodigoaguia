@@ -15,6 +15,73 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "disciplina-a-base-da-transformacao-que-eleva-sua-visao",
+    slug: "disciplina-a-base-da-transformacao-que-eleva-sua-visao",
+    title: "Disciplina: A Base da Transformação que Eleva sua Visão",
+    excerpt: "Descubra como a disciplina, como a águia, constrói uma visão clara e transforma a rotina em propósito.",
+    date: "2026-10-13",
+    readingTime: 6,
+    category: "Visão e Propósito",
+    coverImage: "https://images.unsplash.com/photo-1760115244975-3783bdd30f7a?w=1200&q=85&fit=crop&auto=format",
+    tags: ["disciplina", "constância", "resultados"],
+    featured: false,
+    content: `## A Águia e a Disciplina: A Visão que Não Se Apaga  
+
+Imaginem por um momento a águia, solta sobre o horizonte, seu peso corporino quase imperceptível contra o vento, enquanto seus órgãos de visão se ajustam ao raiar do dia. Enquanto outros pássaros se espalham por ontem, procurando migalhas espalhadas pelo chão, ela voa com intenção, sempre acima do ruido do mundo. Não é por acaso que sábios e poetas a veem como um símbolo de liberdade e clareza. A disciplina, nesse contexto, não é uma prisão, mas a força que permite que o ser humano eleve seu voo. Enquanto a cultura atual nos pressiona a buscar recompensas imediatas, a águia escolhe o longo prazo. Cada decisão, cada esforço, cada pausa estratégica, tudo isso está alinhado com um objetivo maior. E é isso que a transforma: não a coragem de agir, mas a coragem de não agir no momento errado.  
+
+Quando falamos de disciplina, muitas vezes a associamos a rigidez, a falta de flexibilidade. Mas a verdadeira disciplina, como a da águia, é flexível. É saber quando voar, quando pousar, quando esperar. É entender que nem toda ação é valiosa, nem todo esforço imediato merece energia. A águia não se esforça por cada grão de areia que sopraria o vento; ela observa, analisa, decide. E é exatamente essa mentalidade que precisamos cultivar para construir algo maior.  
+
+## O Caminho da Altitude Mental: Superando o Imediatismo  
+
+A pressão do imediatismo é uma praga silenciosa que nos envolve. Estudos mostram que a média de atenção humana cai drasticamente em apenas 15 minutos, e a cultura digital exagera nessa dissonância. Cada notificação, cada like, cada clique é um convite para a curta visão. A águia, por sua vez, voa acima dessa névoa. Ela não se perde com o barulho do chão, porque sabe que a maioria dos problemas e oportunidades está longe dali.  
+
+A altitude mental não é um luxo. É uma necessidade. Quando você voa alto, consegue enxergar padrões que ficam invisíveis no nível do chão. Vê roteiros, conexões, oportunidades que outros, presos ao ritmo acelerado do dia a dia, ignoram. A disciplina é a ferramenta que permite essa altitude. É através dela que você construímos os hábitos que sustentam essa visão. Por exemplo: uma reunião matinal para alinhar prioridades, um momento diário de reflexão para revisar progressos, a capacidade de dizer "não" a distrações que não servem ao seu propósito.  
+
+Aqui está a diferença: enquanto o mundo nos incentiva a correr em círculos, a disciplina nos obriga a parar, olhar para trás e para frente, para mapear o caminho. Não é fácil. Exige silêncio, que nem sempre é bem-vindo em uma sociedade que confunde atividade com produtividade. Mas é justamente nesse silêncio que a águia encontra sua força.  
+
+## Disciplina como Força da Transformação  
+
+Transformação não é um evento. É um processo. E processos duram. A águia não muda de plumagem de repente, nem decide voar para outro continente em um dia. Mudanças acontecem ao longo do tempo, com consistência. E é a disciplina que dá forma a esse processo.  
+
+Pense no ninho da águia. Ele não é construído em um dia. Cada ramo escolhido, cada linha de fibras entrelaçada, é um ato de planejamento e paciência. O ninho é a base para a reprodução, a proteção dos filhotes, o marco de um território conquistado. Da mesma forma, sua vida é um ninho construído com decisões conscientes. Cada hábito, cada escolha, cada pausa estratégica é um ramo colocado com cuidado.  
+
+A disciplina, nesse sentido, é a força que transforma ações em sistemas. É o que converte uma meta em um processo, e um processo em um hábito. Quando você se compromete com a disciplina, está criando uma estrutura que sustenta a transformação. Não é um esforço momentâneo, mas um padrão. É a diferença entre tentar resolver um problema e construir um sistema que o evita.  
+
+E, como a águia, você também precisa escolher seus ambientes. Não tudo que é promissor no primeiro olhar é bom para você. Às vezes, é preciso abandonar projetos que parecem bons, mas não estão alinhados com seu propósito. É preciso sair de grupos que amplificam o imediatismo, de ambientes que valorizam a atividade em vez da eficiência. A disciplina é a força que permite essa escolha.  
+
+## Construindo seu Próprio Ninho: A Jornada de Autodescoberta  
+
+A última fase do ciclo da águia é a renovação. Quando os filhotes crescem, os pais deixam de alimentá-los e os incentivam a voar sozinhos. É um momento de separação, de libertação. E é nesse momento que a transformação se torna real.  
+
+Da mesma forma, sua jornada de disciplina culmina em autonomia. Você não pode esperar que a mudança aconteça por conta de um mentor, de um treinamento, ou de uma metodologia. A transformação é sua responsabilidade. É a construção de um ninho onde você se sente seguro, onde suas ações estão alinhadas ao seu propósito.  
+
+Comece com pequenos atos de disciplina. Escolha uma única prática diária que te aproxime da sua visão. Seja ela uma leitura intencional, um exercício físico, um momento de gratidão. Passe um dia sem distrações eletrônicas e observe como sua mente se acalma. Cada passo é uma semente plantada no solo da transformação.  
+
+Lembre-se: a águia não escolhe o inimigo. Ela escolhe o ambiente que a protege e a alimenta. Você também pode escolher. Escolha ambientes que reforcem sua disciplina. Cercar-se de pessoas que acreditam no longo prazo, de livros que expandem sua visão, de práticas que nutrem a mente.  
+
+A transformação não é um destino. É um voo contínuo. E a disciplina é a força que permite que você mantenha a asa levantada, mesmo quando o vento muda.  
+
+## Conclusão: Voando Além do Agora  
+
+Aqui está o que você pode levar dessa reflexão: a vida não é um corrida contra o tempo, mas um voo estratégico. A disciplina não é uma castidade do desejo, mas uma escolha consciente de onde voar. A águia não se compara com outros pássaros; ela voa sua própria trajetória. E você também pode.  
+
+A diferença entre quem se transforma e quem se mantém preso no imediatismo está na capacidade de enxergar o horizonte. De acordo com a disciplina. De acordo com a escolha. De acordo com a força de subir, mesmo quando o céu está cinza.  
+
+A transformação começa não no grito da nova vida, mas no silêncio da decisão de mudar. Ela está no ato de escolher o ninho, mesmo que ele esteja vazio. Mesmo que você tenha que construí-lo sozinho.  
+
+Porque, no fim, a verdadeira liberdade não é voar sem direção. É voar com propósito. Com disciplina. Com a visão de quem entende que o maior voo começa com um único passo bem plantado.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "o-arquetipo-da-aguia-como-a-adversidade-nos-leva-a-altura",
     slug: "o-arquetipo-da-aguia-como-a-adversidade-nos-leva-a-altura",
     title: "O Arquétipo da Águia: Como a Adversidade Nos Leva à Altura",
