@@ -15,6 +15,55 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "prosperidade-e-mentalidade-financeira-o-olhar-da-aguia-sobre-o-tempo",
+    slug: "prosperidade-e-mentalidade-financeira-o-olhar-da-aguia-sobre-o-tempo",
+    title: "Prosperidade e Mentalidade Financeira: O Olhar da Águia sobre o Tempo",
+    excerpt: "Descubra como a mentalidade da águia transforma a relação com o dinheiro, substituindo reações imediatas por construção consciente do futuro.",
+    date: "2026-10-15",
+    readingTime: 6,
+    category: "Mentalidade de Águia",
+    coverImage: "https://images.unsplash.com/photo-1791916800236-a6dfeaf11888?w=1200&q=85&fit=crop&auto=format",
+    tags: ["prosperidade", "abundância", "mentalidade financeira"],
+    featured: false,
+    content: `## O Gancho – O Olhar do Presente
+
+Quando acordamos e immediately verificamos o saldo bancário, as notícias do mercado ou as últimas promoções, estamos, de certa forma, a permitir que o momento atual defina as nossas prioridades. Este reflexo diário cria um ciclo vicioso: a preocupação com as despesas imediatas ocupa espaço na mente, bloqueando a capacidade de visualizar um futuro mais próspero. É como se estivéssemos a olhar fixamente para o chão, incapazes de erguer a cabeça para o céu. A sensação de estar sempre a reagir pode ser confortável, mas limita a expansão que surge quando aprendemos a planejar, em vez de apenas responder. Neste artigo, vamos explorar como a perspectiva da águia — elevada, paciente e estratégica — pode transformar a nossa relação com o dinheiro, permitindo-nos passar da sobrevivência à construção de uma base sólida para a prosperidade duradoura.
+
+## O Problema – Reagir vs. Construir
+
+A maioria de nós vive um dilema silencioso: ou estamos a gerir o presente, resolvendo problemas imediatos, ou estamos a tentar idealizar um futuro distante que parece irrealizável. No primeiro caso, a mente opera no modo reativo, sempre em alerta para ameaças como faturas pendentes, descontos ou a necessidade de dinheiro extra. Este estado de espírito consome energia mental, limitando a clareza necessária para tomar decisões financeiras estratégicas. No segundo caso, muitas vezes idealizamos metas vagas — "quero riqueza" — sem um plano de ação concreto que respeite o tempo e os recursos disponíveis. O desequilíbrio entre reação e construção gera frustração, pois sentimos que estamos sempre a correr atrás do prejuízo, sem conseguir avançar. A águia, pelo contrário, ensina que o poder está em alternar entre observação atenta do presente e planeamento meticuloso do futuro, sem se deixar dominar por nenhum dos extremos.
+
+## A Metáfora da Águia – Altitude e Tempo
+
+A águia não voa baixo; ela sobe para grandes altitudes onde a visão é clara e o horizonte se estende por quilômetros. Este comportamento natural ilustra a importância de adquirir perspectiva antes de agir. Quando estamos financeiramente focados apenas no presente, ficamos presos na névoa do momento — as preocupações diárias obscurecem o panorama geral. Ao desenvolvermos uma "altitude mental", ganhamos clareza sobre os nossos objetivos de longo prazo, tornando mais fácil identificar as escolhas certas hoje. Além disso, a águia planeja os seus movimentos com antecedência, aproveitando as correntes de ar para conservar energia. Da mesma forma, a prosperidade financeira não surge de decisões impulsivas, mas de estratégias bem pensadas que nos permitem aproveitar oportunidades futuras com o mínimo de esforço desnecessário. A altitude também simboliza a disciplina: quanto mais subimos, mais nos distanciamos das tentações de curto prazo, reforçando o compromisso com um propósito maior.
+
+## A Nova Perspectiva – Mentalidade de Construção do Futuro
+
+Adotar a mentalidade de construção do futuro significa transformar o nosso pensamento reativo num processo proativo. Primeiro, é essencial definir uma visão clara e concreta do que se pretende alcançar financeiramente dentro de um período de três a cinco anos. Esta visão deve ser específica — por exemplo, "construir um portfólio de investimentos diversificado no valor de R$ 500 mil até os 45 anos" — em vez de vaga. Em seguida, é crucial dividir essa meta em etapas mensuráveis e realistas, criando um "mapa de voo" que nos guie diariamente. É importante também desenvolver um ritual de reflexão semanal, onde possamos avaliar as nossas ações, identificar padrões de comportamento e ajustar o curso conforme necessário. Ao fazer isso, deixamos de ser meros espectadores da nossa vida financeira e passamos a ser os arquitetos de um futuro próspero, capazes de antecipar desafios e aproveitar oportunidades com confiança.
+
+## Aplicação na Vida – Do Olhar à Ação
+
+Colocar a mentalidade da águia em prática começa com pequenas mudanças na rotina diária. Uma delas é a criação de um "fundo de visão", um espaço dedicado na agenda onde reservamos tempo regularmente para rever os nossos objetivos financeiros, ajustar o orçamento e visualizar os resultados desejados. Outro hábito valioso é o "silêncio financeiro": momentos de tranquilidade onde silenciamos as distrações externas, como notícias sensacionalistas ou pressões sociais, permitindo que a mente processe as informações e encontre soluções originais. Além disso, é fundamental cultivar a paciência com o crescimento: entender que a prosperidade é um processo gradual, não um resultado instantâneo, ajuda a evitar decisões impulsivas movidas pelo medo ou pela ganância. À medida que praticamos estes hábitos, começamos a perceber que cada escolha financeira se torna uma peça de um quebra-cabeça maior, alinhada com o nosso propósito e com a visão de longo prazo que almejamos.
+
+## Transformação – Renovação e Propósito
+
+Quando começamos a ver a nossa vida financeira através do olhar da águia, a transformação vai além dos números no extrato bancário. Desenvolvemos uma confiança interior que vem da consciência de que estamos a construir um futuro sustentável, em vez de apenas sobreviver ao presente. Esta confiança reflete-se na forma como enfrentamos desafios: em vez de reagir com ansiedade, respondemos com estratégia, utilizando a experiência adquirida em cada ciclo como uma oportunidade de renovação. A águia, conhecida por se renovar periodicamente, simboliza a capacidade de nos reinventarmos a cada ano, ajustando os nossos planos, abandonando o que já não serve e abraçando novas possibilidades. Ao alinharmos as nossas escolhas financeiras com um propósito maior, descobrimos que a prosperidade se torna uma expressão natural da nossa identidade, e não um fim em si mesma. Este alinhamento gera uma sensação profunda de realização, alimentando um ciclo virtuoso de motivação, disciplina e crescimento contínuo.
+
+## Conclusão
+
+A jornada da reação à construção é um processo de expansão da consciência, onde a perspectiva elevada da águia nos permite ver além das urgências momentâneas e traçar um rumo em direção a um futuro próspero. Ao adotarmos uma mentalidade financeira que valoriza a altitude, a estratégia e a renovação, passamos a construir sobre bases sólidas, em vez de reagir a cada tempestade que surge. O resultado é uma vida onde o dinheiro deixa de ser uma fonte de preocupação constante e se transforma numa ferramenta que sustenta os nossos sonhos e propósito. Se conseguirmos internalizar este olhar, perceberemos que temos o poder de moldar a nossa própria realidade, abrindo caminho para algo maior do que imaginávamos possível. É deste momento em diante que começamos a construir algo realmente extraordinário.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "mentalities-de-aguia-ambientes-e-pessoas-que-moldam-decisoes",
     slug: "mentalities-de-aguia-ambientes-e-pessoas-que-moldam-decisoes",
     title: "Mentalities de Águia: Ambientes e Pessoas que Moldam Decisões",
