@@ -15,6 +15,67 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-aguia-e-a-armadilha-da-comparacao",
+    slug: "a-aguia-e-a-armadilha-da-comparacao",
+    title: "A Águia e a Armadilha da Comparação",
+    excerpt: "Comparar sua jornada financeira com a dos outros cega a visão. Aprenda a enxergar prosperidade com a clareza da águia.",
+    date: "2026-10-21",
+    readingTime: 6,
+    category: "Mentalidade de Águia",
+    coverImage: "https://images.unsplash.com/photo-1558169528-f88e67b46a93?w=1200&q=85&fit=crop&auto=format",
+    tags: ["prosperidade", "abundância", "mentalidade financeira"],
+    featured: false,
+    content: `## O Preço Silencioso da Comparação
+
+O celular ilumina o rosto no escuro do quarto. Uma foto aparece no feed: um amigo ao lado de um carro novo, um ex-colega em uma praia, um desconhecido exibindo um relógio que custa mais do que seu aluguel anual. O peito aperta antes que você consiga nomear o sentimento. Não é inveja simples, é uma medição silenciosa. Você coloca sua vida inteira na balança contra um recorte alheio e descobre que, de repente, o que construiu parece pouco.
+
+Essa é a armadilha da **comparação** aplicada à **prosperidade**. A mente começa a calcular distâncias em vez de caminhos. Você não olha para sua conta bancária com clareza, olha para a conta do outro como se fosse o espelho oficial do sucesso. A consequência não é motivação, é paralisia. Quando o foco está no desempenho alheio, sua própria estratégia perde cor, perde direção, perde importância. Prosperidade deixa de ser um estado interno e vira competição externa.
+
+Você já sentiu isso? A angústia de ver alguém atingir aos trinta o que você espera aos quarenta. A vergonha de contar seus planos porque eles parecem pequenos ao lado dos planos alheios. A sensação de que está atrasado em uma corrida que ninguém explicou as regras. Essa identificação dói porque é verdadeira: a comparação rouba a paz, mas rouba algo mais valioso ainda — a visão de quem você é e para onde realmente quer ir.
+
+## A Águia Não Olha para as Outras Águias
+
+A águia não decola perguntando a que altura voa a águia vizinha. Ela não compara envergadura, não conta os peixes capturados pelo companheiro de céu, não mede o tamanho do ninho alheio antes de construir o seu. Seu território é o vento, seu mapa é o horizonte, seu único concorrente é a própria limitação. A natureza não lhe deu olhos para espionar, deu olhos para enxergar a presa a quilômetros de distância. Essa é a essência da **Mentalidade de Águia** aplicada à prosperidade: foco na própria caça, silêncio sobre o alheio.
+
+Na vida financeira, essa metáfora se torna urgente. Cada pessoa herda um ponto de partida diferente, carrega dívidas invisíveis, enfrenta oportunidades que não se repetem e escolhe sacrifícios que ninguém vê. Comparar seu salário, seu investimento ou seu ritmo de crescimento com o de outro é ignorar a geografia do próprio voo. A águia que olha para o lado perde a corrente de ar sobe. Você que olha para o feed perde o momento de tomar a decisão que muda seu mês.
+
+Disciplina financeira não nasce da competição. Nasce da clareza. Quando você para de perguntar o que os outros têm e começa a perguntar o que você precisa para viver com liberdade, o dinheiro deixa de ser um símbolo de status e volta a ser uma ferramenta. A águia não caça para impressionar a floresta, caça para sobreviver e prosperar. Seu voo é solitário, intencional e perigoso para quem tenta imitá-lo sem ter as asas próprias.
+
+## Prosperidade É Altitude, Não Espelho
+
+Prosperidade não é o reflexo do vizinho no espelho retrovisor. É a altitude que você alcança com as próprias asas. Um salário alto não significa liberdade se vem acompanhado de dívidas maiores. Um negócio visível não significa sucesso se consome sua saúde, seu tempo e sua alma. A **Mentalidade de Águia** ensina que a verdadeira riqueza financeira está na capacidade de dizer não, de escolher o silêncio sobre o barulho e de proteger o foco contra qualquer distração disfarçada de oportunidade.
+
+Isso exige redefinir métricas. Sua métrica não é o carro do amigo, mas a quantidade de noites que você dorme sem ansiedade pela conta do mês. Não é o restaurante caro, mas a possibilidade de escolher onde morar sem depender de um único cheque. Não é o número de seguidores, mas a quantidade de pessoas que realmente confiam no seu trabalho. Prosperidade é construir uma vida que você não precise escapar dela nos fins de semana.
+
+Proteger a mente significa selecionar o que entra por seus olhos e ouvidos. Se você passa horas consumindo vidas curadas de estranhos, está alimentando um senso de escassez que não existe na sua realidade. A águia escolhe o ninho no alto, longe do barulho do chão. Você também pode escolher ambientes que reforcem sua visão, conversas que elevem seu padrão de pensamento e conteúdos que ensinem em vez de apenas entreter. Essa seleção não é arrogância, é responsabilidade.
+
+## Construir com a Própria Visão
+
+Começar a construir algo maior exige um ato simples e doloroso: parar de olhar para o lado. Desligue notificações que só geram comparação. Cancele inscrições que fazem você se sentir menor. Defina, com caneta e papel, o que prosperidade significa para você nos próximos doze meses. Pode ser quitar uma dívida específica, criar um fundo de emergência, investir em um curso ou simplesmente ter controle sobre para onde cada real vai. O tamanho do objetivo importa menos do que a honestidade com que você o define.
+
+Em seguida, trace a estratégia como uma águia traça o pouso. Observe o vento, calcule a distância, ajuste as asas. Pequenos hábitos financeiros repetidos com disciplina constroem mais do que grandes golpes de sorte. Poupar uma porcentagem fixa, evitar compras por impulso, negociar contas, estudar investimentos — essas são as asas que sustentam o voo longo. Não espere o momento perfeito. A águia não espera o céu sem nuvens para caçar, ela aprende a voar com o tempo que tem.
+
+A mudança começa quando você aceita que sua trajetória não precisa ser compreendida por ninguém. Pode ser mais lenta, mais silenciosa, mais diferente. Isso não a torna inferior. A águia não explica ao pardaro por que voa tão alto, ela simplesmente voa. Quando você para de pedir permissão invisível através da comparação, recupera a energia necessária para agir. Cada decisão tomada com clareza própria é um passo em direção à **liberdade financeira** que só você pode definir.
+
+## A Visão Que Só Você Pode Ter
+
+Ao terminar este texto, convido você a fazer um exercício. Feche os olhos e imagine sua vida não como uma comparação com os outros, mas como um território inteiramente seu. Enxergue as montanhas que só você pode sobrevoar, os rios que só você pode navegar, o ninho que só você pode construir. A visão de águia não está em ver mais longe do que ninguém, está em ver com clareza o que importa para você.
+
+Esse é o ponto onde a **prosperidade** deixa de ser uma promessa distante e se torna uma prática diária. Você pode olhar para sua conta, para seus sonhos e para seus medos sem o filtro do outro. Pode reconhecer que atraso é uma invenção da comparação e que o único cronômetro que importa é o seu próprio ritmo. A liberdade financeira começa na mente, muito antes de chegar ao bolso.
+
+Quando você finalmente para de comparar, o mundo não fica menor. Ele fica maior, porque passa a ser visto pelos seus próprios olhos. E aí, sim, você pode enxergar sua vida de uma maneira diferente e começar a construir algo maior. Não amanhã. Não quando tiver o que o outro tem. Agora, com o que você é, com o que tem e com a coragem de voar na sua própria altitude.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "o-poder-do-silencio-e-a-renovacao-da-aguia",
     slug: "o-poder-do-silencio-e-a-renovacao-da-aguia",
     title: "O Poder do Silêncio e a Renovação da Águia",
