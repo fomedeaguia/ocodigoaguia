@@ -15,6 +15,67 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "recomecar-a-voar-quando-a-aguia-precisa-deixar-o-ninho",
+    slug: "recomecar-a-voar-quando-a-aguia-precisa-deixar-o-ninho",
+    title: "Recomeçar a Voar: Quando a Águia Precisa Deixar o Ninho",
+    excerpt: "A mentalidade de águia é a força que transforma o recomeço em uma decisão ousada de deixar o velho para trás e assumir a nova realidade que carrega dentro de si.",
+    date: "2026-10-21",
+    readingTime: 6,
+    category: "Liderança",
+    coverImage: "https://images.unsplash.com/photo-1663885183189-1142d456bcfd?w=1200&q=85&fit=crop&auto=format",
+    tags: ["identidade", "autoconhecimento", "propósito"],
+    featured: false,
+    content: `## O Voo que Exige Recomeço
+
+A águia não escolhe onde pousar. Ela decide voar. E, quando decide, não volta atrás. Se você está aqui, é porque sente falta de voo. Sente falta da liberdade de olhar o mundo de cima, de ver além do horizonte da sua rotina, da rotina que se tornou prisão. O problema não está na falta de desejo. O problema está no medo de deixar o ninho. Medo de abandonar a versão que você mesmo construiu, mesmo que ela tenha se tornado pesada. A mentalidade de águia não é sobre voar alto por voar alto. É sobre saber que, para voar, é preciso primeiro soltar as pernas que te prendem ao chão.
+
+## A Queda que Ensina a Levitar
+
+Antes de qualquer águia, houve uma queda. Não uma queda do céu, mas uma do próprio corpo, um choque que a fez entender que o mundo não se move ao seu ritmo. Você já passou por isso? Não é um choque físico. É um choque interno. É a sensação de que tudo o que você construiu, por muito tempo celebrado, está errado. É a dor de perceber que suas escolhas, mesmo bem-intencionadas, o levaram a um ponto morto. É a vergonha de reconhecer que você se automasculou, se automasculou tanto que esqueceu quem é. Isso é o primeiro passo da mentalidade de águia: a aceitação de que o velho ninho, por mais acolhedor que pareça, não serve mais. Não serve para sustentar a nova versão de você.
+
+## A Pena que Não Serve Mais
+
+As águias trocam suas penas a cada cerca de um ano. Não por fraqueza, mas por renovação. Cada pena que cai é uma lição, cada pluma que se despede do corpo é um pedaço do velho eu que não serve mais. Você também pode trocar. Troque as crenças que te prendem. Troque os hábitos que te esmagam. Troque as relações que te devolvem ao chão. Troque a versão de você que alimenta a fraqueza por uma que alimenta a força. Mas não faça isso por pressão. Faça isso por escolha. Porque sua nova realidade merece um corpo novo, alinhado ao seu propósito. A mentalidade de águia exige que você seja severo com o que não serve, mas generoso consigo mesmo na hora de começar.
+
+## A Visão que Muda Tudo
+
+A águia vê o mundo de cima. E, ao ver, não se contenta com o que vê. Ela age. Você também pode ver. Mas, para ver, é preciso subir. Subir não é um destino. É um processo. É levantar-se todos os dias, mesmo quando o corpo fala que não. É escolher o caminho mais exigente, mesmo que pareça mais árido. É dizer não ao que te mantém no chão, mesmo que isso gerifique. A visão da águia não é visão de lugar. É visão de rumo. É saber que, para chegar onde quer, você precisa olhar para fora, para além do imediato. Para enxergar o que pode ser, não apenas o que é.
+
+## A Coragem de Viver a Nova Realidade
+
+Assumir uma nova realidade não é um ato de esperança cega. É um ato de coragem. É dizer: “Eu não sei exatamente como será, mas vou. De qualquer jeito.” A coragem da águia está em voar sozinha, sem garantias, sem mapas, sem segurança. É confiar no seu próprio voo. É acreditar que suas asas, forjadas nas lutas, são forças o suficiente para sustentar você no ar. Você também pode ter essa coragem. Basta decidir que o medo de errar é pior que o risco de voar. Basta acreditar que, mesmo que você caia, o ato de tentar já é uma vitória. A mentalidade de águia não teme a queda. Aprende com ela e volta a voar.
+
+## O Silêncio que Gera Força
+
+A águia não precisa gritar para ser respeitada. Seu voo é sua demonstração. Seu poder está no silêncio, na capacidade de se mover sem ser notada, sem exigir atenção. Você também pode aprender isso. Aprenda a se mover em silêncio. Aprenda a não precisar explicar sua jornada para ninguém. Aprenda a ser forte sem gritar. Aprenda a construir sua nova realidade sem pedir permissão. O silêncio da águia é sua maior arma. É o espaço entre as mentiras que o mundo insiste em colocar em você. É o lugar onde a verdade da sua força pode nascer.
+
+## A Disciplina que Sustenta o Voo
+
+Voar alto não é sorte. É disciplina. É acordar cedo, mesmo quando a noite foi difícil. É treinar as asas, mesmo quando o corpo fala que não. É resistir ao cansaço, à dúvida, à tentação de voltar ao ninho. A disciplina da águia é a que não se vê. É a que faz acontecer. É a que transforma o desejo em ação. É a que, dia após dia, mantém você no caminho, mesmo quando o céu está encoberto. Você pode adquirir essa disciplina. Basta escolher um passo pequeno, mas constante. Um hábito que te leva mais perto do seu objetivo. Um dia de cada vez.
+
+## A Liberdade que Exige Autonomia
+
+A águia não vive de ninguém. Vive de si. Sua liberdade é autônoma. E, para ter autonomia, é preciso dizer não ao que te limita. Dizer não ao pecado mortal do “talvez”. Dizer não ao medo de perder algo que, na verdade, nunca foi seu. A mentalidade de águia exige autonomia. Exige que você pare de pedir permissão para viver. Exige que você pare de esperar por alguém para te acreditar antes de acreditar em si. A autonomia é a coragem de viver seu próprio sonho, mesmo que ninguém entenda. É a força de construir sua vida sem pedir autorização.
+
+## A Transformação que Exige Ação
+
+Transformação não é mudança de perspectiva. É mudança de ação. É sair do ninho e, mesmo que tudo mude, continuar voando. É reconhecer que o velho você, mesmo que gentil e bom, não pode mais acompanhar o novo. É ter o direito de ser outro. A mentalidade de águia não é sobre se iludir de que tudo vai melhorar sozinho. É sobre saber que, se você subir, o céu muda. É sobre acreditar que, ao deixar o ninho, você não perde nada. Você ganha o céu.
+
+## A Nova Realidade que Você Pode Sustentar
+
+Você não precisa esperar por permissão. Você não precisa esperar por oportunidade. Você só precisa decidir: vou voar. Hoje. Agora. Mesmo que as asas ainda estejam quebradas. Mesmo que o coração ainda tenha medo. Porque a mentalidade de águia não nasce da perfeição. Nasce da coragem de tentar. Da força de reconhecer que o velho você chegou ao fim. E que, como qualquer águia, é hora de deixar as penas caírem e assumir o voo. Sua nova realidade não é um sonho distante. É uma escolha que você pode fazer agora. Basta decidir que o recomeço não é uma promessa vazia. É um ato de amor-próprio. É um voo. É a sua vida, finalmente, solta.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-aguia-e-a-armadilha-da-comparacao",
     slug: "a-aguia-e-a-armadilha-da-comparacao",
     title: "A Águia e a Armadilha da Comparação",
