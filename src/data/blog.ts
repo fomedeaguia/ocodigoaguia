@@ -15,6 +15,83 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-aguia-e-o-tempo-construindo-prosperidade-com-mente-estrategica",
+    slug: "a-aguia-e-o-tempo-construindo-prosperidade-com-mente-estrategica",
+    title: "A Águia e o Tempo: Construindo Prosperidade com Mente Estratégica",
+    excerpt: "Descubra como a mentalidade de águia transforma sua relação com o tempo e a prosperidade, construindo futuro com visão e ação estratégica.",
+    date: "2026-10-30",
+    readingTime: 7,
+    category: "Mentalidade de Águia",
+    coverImage: "https://images.unsplash.com/photo-1648037008377-2299f9a3e637?w=1200&q=85&fit=crop&auto=format",
+    tags: ["prosperidade", "abundância", "mentalidade financeira"],
+    featured: false,
+    content: `## A Reconquista do Tempo
+
+Imagine uma águia em pleno voo, suas asas cortam o ar com precisão cirúrgica enquanto o sol dourado do amanhecer ilumina o horizonte. Enquanto isso, um pássaro pequeno, distante, tenta se mover rápido o suficiente para escapar de um predador, mas seu olhar está fixo apenas no chão. Ele reage ao que está em perigo, enquanto a águia, com seus olhos que enxergam até 400 metros à frente, já planeja seu próximo voo. Essa diferença de visão não é apenas uma característica biological; é um espelho da nossa própria relação com o tempo e com a prosperidade.
+
+A maioria das pessoas vive como esse pássaro pequeno, reagindo ao que está em risco, ao que está faltando, ao que está acontecendo agora. Quando o dinheiro acaba, elas reagem. Quando surge uma dívida, correm. Quando o medo do futuro surge, ficam paralisadas. Mas a águia não reage. Ela voa. E, ao voar, construi.
+
+## O Problema do Reagir
+
+A cultura atual nos inculca uma mentalidade de curto prazo. As promoções de compras que nos convidam a "gastar agora", as redes sociais que nos distorcem a realidade com comparações infinitas, até as notícias que nos mantêm presos no presente — tudo isso alimenta uma cultura de reação. E no que diz respeito à finanças, essa mentalidade é letal.
+
+Quando você vive reagindo ao seu extrato bancário, está perdendo horas preciosas que poderiam ser investidas em planejamento. Cada vez que você paga uma dívida por impulso, está sacrificando um futuro que poderia ser melhor estruturado. Cada vez que você evita falar sobre dinheiro por vergonha, está deixando que o problema se agravante. Você está vivendo no modo de reação, e o tempo — esse bens que não podemos recuperar — está sendo desperdiçado.
+
+A verdade é que a maioria das pessoas não falha por falta de talento ou oportunidade. Falha por estarem presas em um ciclo de reação. Elas gastam antes de planejar, investem em expectativas irrealistas, e depois se perdem na culpa e no desespero. É como tentar construir um castelo de areia enquanto o mar invade a base: a estrutura desmoronará, e você será puxado para baixo com ela.
+
+## A Águia e a Estratégia do Tempo
+
+A águia não escolhe seu ninho por acaso. Ela o constrói em locais elevados, protegidos, onde pode observar o terreno por toda a sua extensão. Ela não pára de voar por aqui. Voa. Avalia. Escolhe. A cada mudança sazonal, sua posição muda. Nem por imprevisibilidade, mas por cálculo.
+
+No que diz respeito à prosperidade, essa é a lição mais poderosa que podemos absorver. A águia não reage às mudanças; ela as antecipa. Quando o inverno chega, ela já está em um novo local, onde a caça é mais abundante. Quando a primavera surge, ela retorna ao seu ninho com o ninho já bem estabelecido, pronto para acolher os filhotes.
+
+A mentalidade de águia em finanças implica entender que o tempo não é algo que você tem, mas algo que você usa. Cada dólar que você poupa hoje é uma semente plantada para o amanhã. Cada investimento estratégico é um voo que permite chegar a destinos que, de outra forma, seriam impossíveis. A diferença entre a águia e o pássaro é que a águia vê o futuro como um mapa, enquanto o pássaro vê apenas o próximo galho à pé.
+
+## A Altitude Mental da Prosperidade
+
+A altura em que a águia voa não é aleatória. É uma combinação de força, equilíbrio e visão. Quando falamos em mentalidade de águia, estamos falando em elevar nosso pensamento sobre a realidade. Não é negar os desafios; é enxergá-los com clareza para escolher como enfrentá-los.
+
+Pense no seguinte: quantas vezes você evitou falar sobre dinheiro por medo? Quantas vezes você gastou impulsivamente por tentação? Quantas vezes você deixou de investir por insegurança? Cada um desses momentos é uma queda da altitude mental. A águia não cai; ela ajusta suas asas e continua voando.
+
+A prosperidade não é um destino onde você chega e fica parado. É um processo contínuo de elevação. É como a águia que, mesmo voando em alta altitude, mantém seus olhos fixos no horizonte, sempre olhando para frente. É a pessoa que, em vez de se preocupar com o que faltar no mês atual, planeja com antecedência como aumentar as receitas e reduzir os custos. É a disciplina de olhar para longe e agir com paciência.
+
+Quando você adota a mentalidade de águia, começa a ver o dinheiro como um instrumento, não como um fim. Você entende que a fome de recursos não é solucionada com gasto, mas com produção e acumulação estratégica. Você para de viver no modo de sobrevivência e começa a viver no modo de construção.
+
+## A Força da Disciplina Silenciosa
+
+A águia não grita enquanto voa. Ela move-se com graça, silêncio e propósito. Da mesma forma, a mentalidade de águia na prosperidade exige silêncio. É o silêncio que permite ouvir os próprios pensamentos, sem a pressa da sensação imediata. É o silêncio que permite analisar o extrato bancário com calma, sem julgamento, para entender os padrões.
+
+A disciplina da águia está em sua capacidade de manter a direção, mesmo diante do vento. Na vida financeira, isso se traduz em não desistir de metas simples, como poupar 10% do salário, mesmo quando o mês parece difícil. É continuar investindo, mesmo quando os mercados estão voláteis. É resistir à tentação de gastar o dinheiro que você pouco, em vez de usá-lo para construir algo maior.
+
+A verdadeira prosperidade não é sobre riqueza a qualquer custo. É sobre construir uma vida com liberdade financeira. E essa liberdade só é alcançada através da disciplina silenciosa: poupar antes de gastar, planejar antes de agir, acumular antes de consumir. É como a águia que põe ovos com cuidado, sabendo que não todos darão certo, mas que todos merecem ser colocados com amor.
+
+## Transformação Pessoal e Financeira
+
+A mentalidade de águia não é um artifício motivacional. É uma mudança de postura radical sobre o tempo e sobre o valor. Quando você se transforma nessa mentalidade, percebe que o tempo não é um inimigo, mas um aliado. Cada hora que você dedica à educação financeira é uma hora que se move em direção à liberdade. Cada mês que você mantém o orçamento está limpo é um mês que se afasta da escravidão da dívida.
+
+Essa transformação não acontece da noite para o dia. É um processo de ajustes constantes, como a águia que corrige sua trajetória a cada baterida das asas. Você começa pequeno: talvez economizando R$ 100 por mês. Depois, R$ 200. Aos poucos, você percebe que aquele pequeno valor, acumulado com consistência, cresce exponencialmente. É como o ninho da águia: cada ramo colocado com cuidado se torna parte de uma estrutura que abriga gerações.
+
+A verdadeira prosperidade é verdadeira quando está conectada ao propósito. A águia não voa por voo; voa para criar, para proteger, para perpetuar. Da mesma forma, sua relação com dinheiro deve ser guiada por um propósito maior. Não é sobre acumular riquezas por acumulação, mas sobre construir algo que traga valor à sua vida e à dos outros.
+
+## Conclusão: O Voo da Vida
+
+No fim das contas, a mentalidade de águia é sobre tempo. É sobre entender que cada momento é uma oportunidade de escolher entre reagir ou construir. É sobre enxergar que a prosperidade não é um sorteio, mas uma construção lenta, estratégica e paciente.
+
+Quando você se vira para o horizonte, em vez de olhar para os pés, percebe que o futuro não é um lugar distante. Ele é um caminho que você constrói com cada passo consciente. E, assim como a águia que escolhe seu ninho com cuidado, você tem o poder de escolher seus investimentos, seus hábitos, suas metas com a mesma precisão.
+
+A pergunta que você deve se fazer hoje não é: "Como consigo mais dinheiro agora?" A pergunta certa é: "Como posso construir uma vida onde o tempo trabalha a meu favor?" Porque, no fim, a águia não voa por pressa. Ela voa por propósito. E você também pode.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-identidade-da-aguia-alem-da-aprovacao-alheia",
     slug: "a-identidade-da-aguia-alem-da-aprovacao-alheia",
     title: "A Identidade da Águia: Além da Aprovação Alheia",
