@@ -15,6 +15,93 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-aguia-nao-olha-tudo-ela-escolhe-onde-olhar",
+    slug: "a-aguia-nao-olha-tudo-ela-escolhe-onde-olhar",
+    title: "A águia não olha tudo: ela escolhe onde olhar",
+    excerpt: "A atenção é o recurso mais raro da sua vida. Liderar significa parar de reagir e começar a escolher, com consciência, onde pousar os olhos.",
+    date: "2026-11-14",
+    readingTime: 6,
+    category: "Coragem e Ação",
+    coverImage: "https://images.unsplash.com/photo-1559353290-5b4b6650b4bf?w=1200&q=85&fit=crop&auto=format",
+    tags: ["liderança", "responsabilidade", "visão estratégica"],
+    featured: false,
+    content: `## O preço invisível da sua atenção
+
+Uma manhã qualquer começa com um gesto que quase ninguém lembra de ter feito. O dedo desliza, a tela acende, e em poucos segundos você já está dentro de uma vida que não é a sua: a crise de um estranho, a opinião de quem não te conhece, a oferta que você não pediu. Quando levanta os olhos, quarenta minutos se foram. O dia não começou — você apenas assistiu a ele passar.
+
+Isso não é falta de força de vontade. É uma disputa silenciosa pelo recurso mais escasso que você possui. O tempo até se recupera de certas formas. A atenção, não. Cada minuto entregue a algo é um minuto que deixou de ser entregue a alguém — especialmente a você mesmo.
+
+**A maior parte das pessoas não perde a vida por grandes tragédias. Perde por mil pequenos desvios que ninguém registrou.**
+
+## Onde a culpa costuma morar
+
+É fácil apontar o celular, o chefe, a família, a economia, o cansaço. E não é mentira: o ambiente foi construído para capturar olhares. Cada notificação foi desenhada por pessoas inteligentes, com dinheiro e intenção. Você não é ingênuo por ser distraído.
+
+Mas há um ponto em que a explicação para de ser útil. Porque, no fim do dia, ninguém mais pode devolver a você aquilo que você entregou. A responsabilidade não é culpa — é fronteira. É o lugar exato onde o seu poder começa e onde a espera termina.
+
+Enquanto você procura a causa perfeita para o seu atraso, a vida segue sem pedir licença. E o pior não é perder tempo. É perder a si mesmo de vista e chamar isso de rotina.
+
+## O que a águia ensina sobre olhar
+
+A águia não olha tudo. Essa é a parte que quase ninguém entende. Ela está no alto, cercada de movimento — o vento, a folhagem, o rio, outros animais — e ignora a maior parte daquilo que está ao alcance da vista. Ela não caça por impulso. Antes de qualquer coisa, ela **escolhe onde pousar o olhar**, e só então move o corpo.
+
+Há uma lição dura aí: altitude não é ficar acima dos outros. É ficar acima do próprio reflexo. Quem reage a tudo não tem visão; tem sobressalto. E sobressalto gasta, enquanto visão constrói.
+
+A águia também sabe recusar. Ela deixa passar o que não alimenta, o que não leva a lugar nenhum, o que só serve para movimentar a cabeça. **Recusar atenção é uma forma de liderança que quase ninguém exerce.**
+
+## Liderança começa longe dos outros
+
+Falamos muito de liderança como se ela começasse no discurso, na equipe, no cargo. Mas ninguém conduz bem aquilo que não consegue conduzir primeiro dentro de si. O primeiro ato de liderança é interno e silencioso: decidir, antes do mundo pedir, onde a sua mente vai morar hoje.
+
+Quem não governa a própria atenção acaba governado por quem grita mais alto, por quem publica mais rápido, por quem pressiona com mais urgência. E depois se queixa de viver a vida dos outros.
+
+Liderança é recusar a urgência alheia para honrar a importância própria. É atender depois de cuidar. É responder, e não reagir. É perceber que **a sua presença mental vale mais do que a sua disponibilidade constante**.
+
+## A responsabilidade que ninguém pode carregar
+
+A atenção tem uma lei simples e implacável: aquilo que você olha cresce. Não é magia, é nutrição. O que você alimenta com olhar se fortalece; o que você ignora enfraquece, mesmo que continue ali.
+
+Por isso a responsabilidade é tão séria. Cada vez que você gasta uma hora reclamando de algo que não muda, você está financiando aquilo que reclama. Cada vez que você olha para a pessoa errada, você está escolhendo, em voz baixa, onde quer viver.
+
+E existe uma parte desconfortável nisso: **você também escolhe pelo que deixa de ver**. O projeto adiado, o pai que envelhece, o corpo que pede cuidado, o talento que espera uma chance. A omissão também é escolha, só é mais difícil de assinar.
+
+## A espera disfarçada de preparo
+
+Muita gente acredita que está pensando quando, na verdade, está adiando. Fica esperando o ânimo chegar, o dinheiro sobrar, o mês começar, alguém dar permissão, o cenário melhorar. A atenção fica presa num futuro hipotético, e o presente inteiro é consumido por essa espera.
+
+Esse é o truque mais elegante da inércia: ela se veste de prudência. Parece sensato. Soa maduro. Mas a diferença entre quem espera e quem começa não é coragem. É direção do olhar. Quem começa olhou para o primeiro passo antes de olhar para o tamanho da escada.
+
+**A ação não exige clareza total. Ela exige que você pare de alugar a sua atenção para o medo.**
+
+## Como colocar isso no chão
+
+Comece pelo primeiro terço da manhã. Não é ritual, é fronteira: antes de responder a qualquer pessoa, decida o que aquele dia precisa ser. Dez minutos de silêncio já bastam para você recuperar o comando dos próprios olhos.
+
+Depois, corte uma entrada. Um canal, um grupo, um hábito de checagem compulsiva. Não precisa ser radical; precisa ser definitivo. Cada ruído a menos é espaço a mais para o que realmente importa.
+
+Nomeie o que você está evitando. Escreva em uma frase: o que eu não quero olhar? Essa honestidade simples move mais do que qualquer planejamento longo. E, por fim, revise a semana não pelas tarefas, mas pelo destino da sua atenção. A resposta vai doer — e vai ser verdadeira.
+
+## O voo começa antes do vento
+
+Ninguém se torna autor da própria vida por um insight. Isso acontece por repetição: mil vezes devolver o olhar ao que importa, mil vezes recomeçar depois de perder a linha. A disciplina é só atenção com memória.
+
+E há uma liberdade nisso que pouca gente experimenta. Quando você deixa de ser refém do que aparece na tela, do que o outro espera, do que a urgência alheia exige, sobra energia para construir. Sobra vida. Sobra você.
+
+A águia não espera o vento ficar perfeito para abrir as asas. Ela ajusta a direção com o vento que tem, porque sabe que o voo não é recompensa do preparo — **é consequência da decisão de olhar para cima e se mover**.
+
+Você já tem o que precisa para começar. Falta só parar de emprestar os seus olhos.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "disciplina-o-voo-que-cada-escolha-define",
     slug: "disciplina-o-voo-que-cada-escolha-define",
     title: "Disciplina: O Voo que Cada Escolha Define",
