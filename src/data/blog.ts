@@ -15,6 +15,75 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "disciplina-o-voo-que-cada-escolha-define",
+    slug: "disciplina-o-voo-que-cada-escolha-define",
+    title: "Disciplina: O Voo que Cada Escolha Define",
+    excerpt: "RESUMO: Disciplina não é prisão, mas a asa que cada escolha constrói. Veja como pequenas decisões, vistas pela águia, guiam sua transformação.",
+    date: "2026-11-14",
+    readingTime: 7,
+    category: "Prosperidade",
+    coverImage: "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?w=1200&q=85&fit=crop&auto=format",
+    tags: ["disciplina", "constância", "resultados"],
+    featured: false,
+    content: `**RESUMO:** Disciplina não é prisão, mas a asa que cada escolha constrói. Veja como pequenas decisões, vistas pela águia, guiam sua transformação.
+
+## O Cruzeiro que Ninguém Escolhe
+
+Cada manhã, você se encontra no mesmo ponto de partida. A mesma casa, o mesmo trabalho, a mesma pele que carrega as marcas de promessas não cumpridas. Não é um acidente. É um cruzeiro. Uma trajetória estabilizada por hábitos que, um dia, foram escolhas conscientes. E agora, são o caminho mais fácil. O mais comum. O mais quieto.
+
+Aqui reside o primeiro engano: acreditar que a vida que se tem é o destino inescapável. Mas a vida não é um rio de só um sentido. É um campo de forças, um mapa de bifurcações. Cada interação, cada sim, cada não, cada projeto adiado ou iniciado, é um vento. E você é uma criatura que voa. O problema é que muitos se acostumam a não voar, a aceitar a altitude de quem está ao lado, a definir seus limites pelo horizonte dos outros.
+
+É nesse ponto de estagnação que a necessidade de uma nova perspectiva se torna urgente. Não é uma fórmula mágica que se busca, mas uma change de paradigma. E é aí que a águia entra, não como um símbolo decorativo, mas como um arquétipo funcional.
+
+## A Águia como Arquétipo de Consciência
+
+A águia não é apenas um pássaro grande. É uma maneira de estar no mundo. Ela sobe em correntes de ar quente, que são gratuitas, mas que exigem um custo: a coragem de deixar o chão. Deixar a segurança do conhecido, onde o alimento é garantido e o perigo é abstrato. O voo alto é um ato de fé em forças invisíveis.
+
+O que a águia ensina é sobre a **altitude mental**. A pessoa de mentalidade de águia não se contenta com a visão do solo, do bairro, da cidade. Ela treina o olhar para o horizonte, para os padrões meteorológicos, para as rotas migratórias. Ela entende que para ver o todo, é preciso se distanciar das partes. Isso se aplica diretamente à mente humana. A ansiedade, a irritação, o ego ferido? São fenômenos de altitude baixa. São tempestades locais. A águia aprende a voar acima delas, a observá-las sem se afogar.
+
+Ela também representa a **seleção**. A águia não caça everything. Ela tem olhar de falcão, foco absoluto. Ela identifica o alimento, a ameaça, a oportunidade de abrigo a quilômetros de distância. Da mesma forma, a mente que cultiva essa mentalidade torna-se seletiva. Ela não consome qualquer informação, não se envolve em qualquer conversa, não aceita qualquer meta. Tudo passa pelo crivo do propósito. É uma economia de energia mental colossal. A disciplina, portanto, não surge do nada; ela é a manifestação prática dessa seletividade. É a prática de dizer "não" ao que não é essencial, para poder dizer "sim" ao que é vital.
+
+## Disciplina: A Asa Construída Escolha por Escolha
+
+A disciplina é o tema central que sustenta toda a transformação. Muitos a veem como uma force imposta, um castigo. Mas a verdade é oposta. A disciplina é a liberdade de construir asas fortes o suficiente para escolher para onde ir.
+
+Pense em cada pequena ação do dia como uma escolha de engrenagem. Um treino de 20 minutos, ou um episódio de série? Um treino de 20 minutos é uma escolha a favor da saúde, da energia, da autoestima. É um tijolo na asa. Um episódio de série, por outro lado, é um voo curto, sem destino, impulsionado pela inércia. Não é um erro em si, é apenas uma escolha que não agrega altitude.
+
+A **disciplina é a ponte entre a intenção e a realidade**. Ela é o mecanismo que transforma um desejo abstrato ("quero ser mais saudável", "quero aprender um idioma") em uma realidade concreta. Cada ação disciplinada, por menor que pareça, é um voo curto, mas consistente. É a diferença entre ficar no poleiro, esperando um vento mágico, e dar os primeiros bateios de asa, criando seu próprio vento com o movimento.
+
+O mito da transformação instantânea nos faz acreditar que existe um momento único, um clímax dramático, onde tudo muda. A realidade é mais silenciosa e mais poderosa. A transformação é um processo de **acumulação**. É a soma de mil pequenas escolhas que, isoladas, parecem insignificantes, mas juntas, formam um hábito. E os hábitos formam a identidade. Quem treina todos os dias, não está apenas construindo um corpo; está construindo a identidade de "alguém que treina". Quem lê 10 páginas por noite está construindo a identidade de "alguém que se educa". A disciplina, portanto, é o ato de alinhar suas escolhas diárias com a pessoa que você deseja se tornar.
+
+## O Voo Alto: Aplicando a Perspectiva da Águia na Vida Prática
+
+Como traduzir esse conceito para a vida real? Comece pela **avaliação de sua altitude atual**. Olhe para as áreas da sua vida: saúde, relacionamentos, carreira, finanças, crescimento pessoal. Em qual delas você está voando baixo, preso a correntes de ar negativas? Em qual delas você já sente aquele vento favorável?
+
+A águia não voa contra o vento; ela o utiliza. Ela procura por correntes quentes para ganhar altura. Na sua vida, as correntes quentes são as atividades que te dão energia, que te desafiam de forma positiva, que te conectam com um propósito maior. Identifique-as. Dedique mais tempo a elas. Elas são seu combustível para o voo alto.
+
+Além disso, a águia é um **estrategista**. Ela não voa sem um plano, mesmo que este seja flexível. Ela tem um destino em mente. Qual é o seu? Defina um objetivo claro, não vago como "ser feliz", mas específico como "concluir um curso", "correr 5 quilômetros", "ter uma conversa difícil que precisa ter". A disciplina fornece a rota. Cada dia é um passo nessa direção. Quando o vento muda, a águia ajusta a rota, mas não abandona o destino.
+
+A prática da disciplina também exige **silêncio**. A águia voa sozinha, em silêncio, longe do barulho do rebanho. A disciplina exige um espaço interno de quietude. É no silêncio que se ouve a própria voz interior, longe dos ruídos externos de opinião, de pressão social, de desânimo. É onde se reabastece a coragem para continuar.
+
+## O Ponto de Virada: Sua Próxima Escolha
+
+A grande revelação não é que a disciplina existe. É que você tem o poder de escolhê-la, no exato momento em que parece mais difícil. O ponto de virada não é um evento externo; é uma decisão interna. É o instante em que você escolhe a ação curta, desagradável, mas necessária, em vez da procrastinação de longo prazo, mas agradável no momento.
+
+A vida que você deseja construir não está em outro lugar. Ela está sendo construída, pedaço a pedaço, com cada escolha que você faz agora. Cada "sim" à disciplina é um voo para mais alto. Cada "não" à desculpa é um fortalecimento de asa.
+
+A águia não nasce voando alto. Ela nasce, learned a voar, e treina todos os dias, caindo e levantando, até que o voo se torne natural. Sua transformação é o mesmo processo. Não é sobre se tornar uma águia, mas sobre revelar a águia que já está em você, esperando asas fortes.
+
+Você tem a capacidade de escolher o vento. Tem a capacidade de construir asas. E tem a capacidade de, um dia, olhar para trás e ver que cada escolha, cada pequena ação disciplinada, foi o voo que o levou a onde está agora. E para onde você quer ir.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "o-ambiente-molda-suas-decisoes-antes-de-voce-perceber",
     slug: "o-ambiente-molda-suas-decisoes-antes-de-voce-perceber",
     title: "O Ambiente Molda Suas Decisões Antes de Você Perceber",
