@@ -15,6 +15,75 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-aguia-e-o-tempo-voce-reage-ou-constroi",
+    slug: "a-aguia-e-o-tempo-voce-reage-ou-constroi",
+    title: "A Águia e o Tempo: você reage ou constrói?",
+    excerpt: "Entre viver apagando incêndios e erguer algo que dure, existe uma escolha silenciosa. A águia revela o que o tempo faz com quem nunca decide.",
+    date: "2026-11-14",
+    readingTime: 7,
+    category: "Filosofia",
+    coverImage: "https://images.unsplash.com/photo-1575104867603-ef1d95cfc70f?w=1200&q=85&fit=crop&auto=format",
+    tags: ["arquétipo da águia", "liberdade", "simbolismo"],
+    featured: false,
+    content: `## A vida que acontece enquanto você reage
+
+Existe um cansaço que não nasce do corpo. Nasce da sensação de estar sempre correndo atrás de algo que começou sem você. O telefone toca, a mensagem chega, a conta vence, o prazo aperta — e o dia inteiro se organiza em torno de responder, resolver, apagar incêndios. Quando a noite chega, você está exausto, mas não consegue apontar uma única coisa que de fato construiu. Você apenas sobreviveu.
+
+Esse é o ritmo da maior parte das vidas, e ele tem um nome que quase ninguém pronuncia: **reação**. Você não conduz o dia; o dia conduz você. E o mais inquietante é que essa dinâmica parece produtiva. Você está sempre ocupado, sempre disponível, sempre fazendo alguma coisa. Só que ocupação não é direção. Movimento não é progresso. E o tempo, que deveria ser seu aliado mais leal, vira algo que escorre pelos dedos sem deixar marca.
+
+O problema raramente é a falta de esforço. É a ausência de um lugar de onde olhar. Quando você vive colado ao presente, cada urgência parece a coisa mais importante do mundo, porque não há nada maior contra o qual compará-la. Você gasta a energia de anos inteiros respondendo ao que grita mais alto, e não ao que realmente importa. E o que importa quase nunca grita. Ele espera, paciente, enquanto você se ocupa com o resto.
+
+## O relógio que você nunca parou para questionar
+
+Há uma diferença silenciosa entre **viver o tempo** e **usar o tempo**. Viver o tempo é ser levado por ele: as estações mudam, os anos passam, e você vai reagindo ao que cada fase coloca na sua frente. Usar o tempo é escolher, antes que a fase chegue, quem você quer ser quando ela chegar.
+
+A maioria das pessoas nunca faz essa escolha. Não por preguiça, mas por inércia. A vida em modo reação é confortável justamente porque não exige decisão. Você não precisa pensar em quem está se tornando; basta atravessar o dia. E assim os anos se acumulam, um sobre o outro, idênticos, até que um dia você se olha no espelho e percebe que virou alguém que nunca escolheu ser. Não houve um grande erro. Houve apenas a ausência de uma pergunta.
+
+Essa pergunta é desconfortável porque ela devolve o peso das escolhas para você. É mais fácil culpar o mercado, a família, o governo, o trânsito, o algoritmo. É mais fácil dizer que a vida aconteceu do que admitir que você deixou acontecer. E é exatamente aqui que a figura da águia começa a fazer sentido — não como enfeite, mas como um modo diferente de habitar o próprio tempo.
+
+## A águia não toma decisões a partir do chão
+
+Imagine um animal que vive no solo. Ele enxerga o metro à sua frente, o obstáculo imediato, a ameaça próxima. Sua atenção é tomada por aquilo que está ao alcance dos olhos. Ele reage ao que aparece. Agora imagine a águia. Ela sobe. E, ao subir, o mundo que parecia imenso e assustador lá embaixo se revela um mapa. Os rios ganham desenho. As distâncias encolhem. O que era urgente no chão se torna apenas um detalhe na paisagem.
+
+A águia não enxerga melhor porque tem olhos melhores. Ela enxerga melhor porque **escolheu a altitude**. E altitude, no fundo, é uma questão de tempo. Quem voa alto não pensa apenas no próximo passo; pensa na próxima estação, no próximo ano, na próxima década. A presa que se move no chão vive presa ao instante. A águia que plana no alto lê o tempo em uma escala completamente diferente.
+
+É por isso que a águia nunca caça no calor da pressa. Ela observa, espera, calcula o vento. Passa longos períodos aparentemente parada, quando na verdade está fazendo a coisa mais importante que existe: **pensando antes de agir**. Enquanto o animal do chão gasta energia reagindo a cada estímulo, a águia economiza a sua para o momento em que o movimento realmente importa. Não é passividade. É estratégia. É a diferença entre quem reage ao presente e quem constrói a partir do futuro.
+
+## Por que certos símbolos atravessam milhares de anos
+
+A psicologia dos arquétipos nos lembra de algo simples e profundo: existem imagens que a humanidade carrega há milênios porque elas capturam verdades que as palavras sozinhas não alcançam. A águia aparece em mitologias, bandeiras, sonhos e rituais de povos que nunca se encontraram, e isso não é coincidência. Ela representa uma faculdade que todo ser humano possui, mas poucos exercem: a capacidade de se elevar acima da própria circunstância e enxergar o todo.
+
+O arquétipo funciona como um espelho. Quando você pensa na águia, você não está pensando em uma ave; está pensando na versão de si mesmo que consegue distância, clareza e visão de longo prazo. Essa imagem ativa algo latente. Ela pergunta, sem dizer uma palavra: e se você parasse de viver no nível do chão? E se as suas decisões de hoje fossem tomadas por alguém que consegue ver dez anos à frente?
+
+O poder desse símbolo está justamente em tirar você do automático. A mente em modo reação opera por reflexo. A mente em modo águia opera por intenção. E a diferença entre as duas não está na inteligência nem no talento — está na **distância temporal** que você é capaz de sustentar antes de agir. Quanto mais longe no futuro você consegue enxergar, menos refém você se torna do presente.
+
+## Construir é um ato de coragem contra a pressa
+
+Pensar no futuro é desconfortável porque os resultados não chegam no tempo do desejo. Quem vive reagindo recebe recompensas imediatas: a mensagem respondida, a tarefa concluída, o incêndio apagado. Cada uma dessas pequenas vitórias dá a sensação de progresso. Construir algo que dure, por outro lado, exige suportar longos períodos sem aplauso, sem prova, sem retorno visível.
+
+É mais fácil reagir a vida inteira do que assumir a solidão de construir. Construir significa plantar uma árvore cuja sombra você talvez não aproveite. Significa abrir mão de parte do conforto presente em favor de uma pessoa que você ainda está se tornando. E essa é uma escolha que a maioria adia, não porque seja incapaz, mas porque nunca foi convidada a fazê-la de forma consciente.
+
+A águia nos ensina que a força verdadeira não está na velocidade da reação, mas na **calma de quem já sabe para onde vai**. Ela não tem pressa porque não está perdida. E talvez seja isso que a torna tão poderosa aos nossos olhos: ela representa a paz de quem não precisa correr, porque escolheu, com antecedência, o lugar de onde observa a própria vida.
+
+## A pergunta que muda a direção do voo
+
+Talvez você esteja vivendo uma vida que nunca parou para questionar. Não porque ela seja ruim, mas porque ela foi montada no automático, um dia de cada vez, uma reação de cada vez. As escolhas que trouxeram você até aqui podem ter sido feitas por um você que estava apenas reagindo — e não por um você que enxergava de longe.
+
+A boa notícia é que a altitude nunca é definitiva. A qualquer momento você pode parar de olhar o metro à sua frente e levantar os olhos para o horizonte. Não é preciso mudar tudo de uma vez. Basta começar a fazer uma pergunta diferente diante de cada decisão: isto me aproxima ou me afasta de quem eu quero me tornar daqui a dez anos? Essa única pergunta reorganiza o dia inteiro. Ela transforma tarefas em tijolos e transforma o tempo em construção.
+
+O tempo vai passar de qualquer forma. A única escolha que realmente importa é quem você será quando ele passar. A águia não decide isso no chão, no calor da urgência. Ela decide no alto, no silêncio, antes de bater as asas. E enquanto você continuar reagindo, o futuro continuará sendo algo que acontece com você, e não algo que você constrói. A pergunta que fica não é se você é capaz de voar alto. É se você está disposto a subir antes de saber o que vai encontrar lá em cima.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-aguia-nao-olha-tudo-ela-escolhe-onde-olhar",
     slug: "a-aguia-nao-olha-tudo-ela-escolhe-onde-olhar",
     title: "A águia não olha tudo: ela escolhe onde olhar",
