@@ -15,6 +15,84 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "pare-de-consumir-comece-a-mirar-a-visao-da-aguia",
+    slug: "pare-de-consumir-comece-a-mirar-a-visao-da-aguia",
+    title: "Pare de consumir, comece a mirar: a visão da águia",
+    excerpt: "A informação em excesso turva a visão. A águia ensina a reduzir o ruído, escolher um único alvo e transformar desejos vagos em objetivos concretos.",
+    date: "2026-11-15",
+    readingTime: 6,
+    category: "Visão e Propósito",
+    coverImage: "https://images.unsplash.com/photo-1770415552038-1fa3b94e1947?w=1200&q=85&fit=crop&auto=format",
+    tags: ["mentalidade de águia", "transformação", "desenvolvimento pessoal"],
+    featured: false,
+    content: `## O peso de saber demais
+
+Existe um cansaço que não vem do esforço. Vem do acúmulo. Você lê um texto sobre hábitos, assiste a uma palestra sobre propósito, salva um vídeo sobre disciplina, escuta um podcast sobre produtividade — e termina o dia com a cabeça cheia e a vida exatamente no mesmo lugar.
+
+Nenhum desses conteúdos era ruim. O problema está na quantidade. Cada um trazia uma promessa diferente, um método diferente, uma urgência diferente. E o que sobra, no fim, não é conhecimento: é **ruído**. Ruído é tudo aquilo que entra, ocupa espaço e nunca vira decisão.
+
+No meio disso, o desejo continua vago. "Quero mais liberdade." "Quero uma vida melhor." "Quero finalmente dar certo." Frases verdadeiras, mas que não indicam um passo. Um desejo sem direção serve de conforto, não de bússola: ele acalma a culpa de querer mudar sem obrigar ninguém a mudar.
+
+O sintoma costuma ser confundido com preguiça. É mais profundo. É a paralisia de quem tem mil referências e nenhuma rota, mil opiniões e nenhuma própria, mil abas abertas e nenhuma página escrita.
+
+## Conhecimento pede decisão, informação pede clique
+
+A diferença entre consumir e aprender é simples e dura: o conhecimento exige uma decisão. Informação se espalha sozinha; conhecimento só avança quando você escolhe o que fazer com ele.
+
+Quem lê dez livros sobre foco e não escolhe um único projeto não está estudando. Está se treinando para a espera. Aprende a linguagem da mudança sem jamais cruzar a porta. E a sensação de progresso, nesse caso, é uma armadilha elegante: imita o movimento sem produzir chegada.
+
+Uma pergunta separa o que é aprendizado do que é passatempo: o que mudou nas suas ações nesta semana? Se a resposta for nada, o conteúdo era entretenimento disfarçado de desenvolvimento.
+
+A águia não observa todos os animais que se movem no chão. Se o fizesse, passaria o voo inteiro em tensão, sem caçar nada. Ela escolhe um ponto, ajusta a visão e desce. A clareza nasce da exclusão, nunca da coleção.
+
+## A altitude muda o que você enxerga
+
+Do chão, o mundo parece uma multidão de possibilidades iguais. De cima, aparece o caminho. Altitude não é arrogância; é distância do barulho. É o espaço entre o que acontece com você e o que você decide fazer com isso.
+
+Quem vive na velocidade das notificações reage. Quem sobe um pouco enxerga padrão. Percebe que repete os mesmos erros com roupas diferentes, que confunde movimento com progresso, que ocupa a agenda inteira para não precisar olhar para a pergunta que dói.
+
+E há outro prejuízo da altitude baixa: você confunde a vida dos outros com a sua. Vê o que aparece, não o que custou. Compara o seu interior com a fachada alheia e chama essa comparação de fracasso.
+
+A águia tem uma lição silenciosa aqui também: ela não bate as asas contra o vento o tempo todo. Ela o lê, encontra a corrente certa e deixa o ar participar do voo. Construir uma vida pede o mesmo — saber onde empurrar e onde descansar, em vez de vencer cada rajada com força bruta.
+
+## Do desejo difuso ao alvo escrito
+
+Um desejo vago cabe em uma frase. Um objetivo concreto cabe em um papel, com número e data. "Quero ter mais dinheiro" é um sentimento. "Quero guardar R$ 300 por mês durante doze meses para abrir margena no meu trabalho" é um plano.
+
+A mudança de formato parece pequena e muda tudo. Com medida, você sabe se avançou. Com prazo, você sabe o que fazer hoje. E, escrito, o alvo sai do território do sonho e entra no da **responsabilidade** — o único lugar onde algo efetivamente acontece.
+
+Antes de escrever, however, vale uma conferência: esse objetivo é meu ou foi emprestado da voz de quem eu sigo? Muita meta alheia mora na cabeça de gente que nunca se perguntou o que quer para si.
+
+Comece com um. Um objetivo, não cinco. Um hábito, não uma rotina inteira. Um livro, não uma lista. A abundância de metas é o mesmo vício da abundância de informação: dispersa a energia e entrega um resultado que é a média de nada.
+
+## O mapa que ninguém desenha por você
+
+Ninguém vai entregar o alvo pronto. O mercado se sustenta vendendo distração, não clareza. Ele ganha quando você continua procurando o método perfeito e perde quando você simplesmente começa.
+
+Por isso a águia caça sozinha. Não porque rejeita os outros, mas porque o voo exige julgamento próprio. Você pode ouvir quem já voou, mas não pode delegar a leitura do seu próprio vento.
+
+Reserve um tempo de silêncio por semana — uma hora serve — e faça três perguntas: o que eu escolhi? o que eu evitei? o que precisa ser riscado? Riscar é parte do processo. Clareza se constrói mais pelo que se retira do que pelo que se acrescenta.
+
+## A clareza tem um preço: recusar
+
+Escolher significa perder. Toda meta aceita implica outras portas fechadas, e é por isso que tanta gente prefere não escolher. Manter todas as opções em aberto parece liberdade, mas costuma ser o oposto: a prisão de quem não se compromete com nada além do próprio desconforto.
+
+A visão da águia é estreita quando precisa ser. Ela ignora o que não é presa. Ignorar é habilidade. Dizer não a uma oportunidade boa para proteger uma escolha essencial é o tipo de disciplina que ninguém aplaude, porque não aparece em foto.
+
+A altitude também se escolhe pela companhia. Ambiente que só alimenta urgência não ensina a voar; ensina a reagir. Águia nenhuma constrói ninho no meio de um formigueiro, porque nem o silêncio é seu.
+
+E há o trabalho invisível: repetir o mesmo gesto nas semanas em que ninguém vê resultado. A águia não reconstrói o ninho porque alguém elogiou. Reconstrói porque o inverno voltou, e o que serviu antes não serve para a tempestade de agora.
+
+## A visão que nasce do passo
+
+Você não precisa enxergar a estrada inteira. Ninguém enxerga. Quem voa alto não é quem conhece cada curva do caminho, mas quem sabe para onde apontar o bico nesta manhã.
+
+Reduza o que entra. Escolha o que fica. Escreva o alvo com número e prazo. Faça hoje o movimento pequeno que amanhã você vai repetir. Desejo vago pede admiração; objetivo concreto pede coragem — a coragem de errar com direção, em vez de acertar no vazio.
+
+Quando o ruído diminui, sobra o essencial: a sua vida, a sua escolha, a sua altitude. E é ali, no silêncio que vem depois da decisão, que se enxerga longe o suficiente para construir algo que já não caiba mais dentro da dúvida.`,
+  },
+
+  {
     id: "a-aguia-e-o-tempo-voce-reage-ou-constroi",
     slug: "a-aguia-e-o-tempo-voce-reage-ou-constroi",
     title: "A Águia e o Tempo: você reage ou constrói?",
