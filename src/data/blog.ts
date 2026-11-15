@@ -15,6 +15,87 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "aguia-e-coragem-quando-o-voo-exige-mais-que-asas",
+    slug: "aguia-e-coragem-quando-o-voo-exige-mais-que-asas",
+    title: "Águia e Coragem: Quando o Voo Exige Mais que Asas",
+    excerpt: "Uma reflexão sobre como o arquétipo da águia nos ensina que a coragem não é a ausência de medo, mas a decisão de agir com ele presente.",
+    date: "2026-11-15",
+    readingTime: 6,
+    category: "Autoconhecimento",
+    coverImage: "https://images.unsplash.com/photo-1771339787511-d284121fd0dc?w=1200&q=85&fit=crop&auto=format",
+    tags: ["arquétipo da águia", "liberdade", "simbolismo"],
+    featured: false,
+    content: `---
+
+## O Silêncio Antes do Voo
+
+Há um momento, imprevisível e silente, em que uma águia se prepara para o voo. Ela não canta. Não anuncia. Não faz cerimônia. Apenas se coloca na beira do penhasco, senta o frio das pedras contra as garras, e olha para o abismo. É aí que o medo chega — não como um inimigo, mas como um convidado silencioso que traz a informação mais valiosa: o que está em jogo.
+
+Nós, humanos, temos uma relação estranha com esse sentimento. O tratamos como um defeito de fábrica, algo que deve ser extirpado pela força da vontade ou pela poção mágica da autoajuda. Mas a psicologia dos arquétipos nos lembra que o medo é um mensageiro. Ele não é o problema; ele é o sinal de que a fronteira entre o conhecido e o desconhecido está prestes a ser cruzada.
+
+Pense em um momento da sua vida em que você precisou dar um passo que parecia impossible. Talvez tenha sido pedir demissão, confessar um amor, mudar de cidade, ou simplesmente dizer "não" a algo que você sempre aceitou. Lembre-se daquele nó no estômago, do frio nas mãos, da voz interna que dizia que era melhor recuar. Esse sensation não é uma falha. É o sistema de alerta de uma criatura que entende que o voo, qualquer voo, exige um custo real.
+
+---
+
+## A Águia como Arquétipo da Decisão Consciente
+
+A águia, em todas as tradições, não é um símbolo de coragem tola. Ela é o arquétipo da visão clara diante do abismo. Enquanto outros pássaros evitam as alturas, a águia escolhe o vento forte, o espaço deserto, o campo de visão expandido. Ela não voa alto por acaso; voa alto para enxergar melhor. E é essa visão ampliada que a permite distinguir o perigo real da oportunidade oculta.
+
+A coragem, portanto, não é a ausência de medo. É a capacidade de manter os olhos abertos enquanto o medo bate nas portas. É o que a águia faz: ela não date o medo de altura; ela o transforma em combustível para uma thermalling mais preciso. Da mesma forma, a coragem humana não é um estado constante — é um ato repetido, um músculo que se exercita no momento exato em que o instinto grita para parar.
+
+A psicologia Jungiana nos ensina que os arquétipos não são apenas imagens; são forças que habitam o inconsciente coletivo. A águia representa a consciência que se eleva acima dos instintos primitivos. Mas ela não os nega — ela os transcende. Assim, a coragem verdadeira não é rejeitar o medo, mas integrá-lo à decisão. É dizer: "Eu sinto esse medo, e mesmo assim, o voo é o caminho que escolho."
+
+---
+
+## O Momento de Escolha: Entre o Penhasco e o Ninho
+
+Aqui está a poética do arquétipo: a águia não é forçada a voar. Ela nasce com o dom, mas precisa exercitá-lo. E o primeiro voo, como todo bebê, é um salto no vazio. Não há garantias. Apenas o instinto e o vento. E é nesse exato ponto — entre o penhasco seguro e o ninho known — que a humanidade repete sua própria história.
+
+Nós construímos ninhos de comforto: rotinas que nos anestesiam, crenças que nos limitam, relacionamentos que nos prendem. E quando a vida nos chama para um voo maior — um novo propósito, uma verdade incômoda, uma responsabilidade que nos超重 — oura o medo surge não como um lembrete de que podemos cair, mas como um lembrete de que podemos ascender.
+
+A coragem, então, é o ato de sair do ninho não porque o penhasco seja seguro, mas porque o ninho já não é suficiente. É a compreensão de que a estagnação também tem um preço: o preço de nunca ver a terra de cima, de nunca sentir a liberdade do espaço aberto. A águia entende isso instintivamente. Nós, precisamos lembrar.
+
+---
+
+## A Disciplina de Manter os Olhos Abertos
+
+Mas coragem não é apenas o primeiro passo. É a disciplina de continuar voando quando o vento muda, quando as témporas ameaçam, quando o cansaço pede para descer. A águia não voa com emoção passageira; ela voa com estratégia. Ela ajusta asas, utiliza correntes de ar, escolhe o momento certo para planar e o momento certo para picar.
+
+Essa disciplina é o que separa a coragem da bravura tola. A coragem é inteligente. Ela estuda o terreno, calcula riscos, mas não permite que o cálculo vire paralisia. É o equilíbrio entre o coração que sente o medo e a mente que analisa o cenário.
+
+E como treinar essa disciplina? Não com frases de efeito, mas com pequenos exercícios diários de saída da zona de conforto. Dizer "sim" a uma conversa difícil. Assumir um erro em público. Escolher o caminho mais longo porque sabe que é o certo. Cada um desses atos é um voo curto, uma asa esticada que fortalece o músculo da coragem.
+
+---
+
+## A Liberdade de Escolher o Seu Voo
+
+Aqui está o ponto crucial: a águia não voa porque tem que voar. Ela voa porque é sua natureza. E a nossa coragem também deve ser uma expressão da nossa natureza mais profunda, não uma reação a uma ordem externa. A liberdade está em perceber que o medo não é um sinal de que não devemos agir, mas um sinal de que estamos prestes a agir em algo significativo.
+
+Quando paramos para questionar a vida que vivemos — quando sentimos aquele descontento silencioso, aquela sensação de que poderíamos ser mais — estamos sentindo o instinto da águia nos chamando. Não é um chamado para voar longe de tudo, mas para voar mais alto que a rotina que nos aprisiona.
+
+A coragem, portanto, é o ato de alinhar a nossa ação com a nossa essência. É dizer: "Eu sinto medo, mas esse medo está me falando que este voo importa. E como importa, eu o faço." E assim, no ato de voar apesar do medo, descobrimos que a liberdade não é a ausência de obstáculos, mas a capacidade de escolher como os enfrentamos.
+
+---
+
+## Conclusão: O Voo que é Seu
+
+No final das contas, a águia não nos ensina a ser destemida. Ela nos ensina a ser corajosa — com o medo, com a duvida, com a incerteza. Nos ensina que a vida não é sobre evitar a queda, mas sobre aprender a voar com inteligência e heart.
+
+E talvez, um dia, ao pararmos para olhar para trás, percebamos que a vida que vivemos não é a que nos foi dada, mas a que construímos um voo de cada vez. Cada decisão corajosa, cada instante em que escolhemos agir com o medo presente, foi um passo em direção a essa visão mais ampla.
+
+Agora, pergunta-se: qual é o penhasco que você tem evitado? E qual é o voo que, mesmo com medo, você sabe que é seu? A águia não responde por você. Ela apenas lembra que asas são para usar.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-coragem-de-mudar-de-nivel-antes-que-a-vida-exija",
     slug: "a-coragem-de-mudar-de-nivel-antes-que-a-vida-exija",
     title: "A coragem de mudar de nível antes que a vida exija",
