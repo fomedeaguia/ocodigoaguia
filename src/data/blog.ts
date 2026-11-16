@@ -15,6 +15,91 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-aguia-e-a-arte-de-guardar-a-propria-atencao",
+    slug: "a-aguia-e-a-arte-de-guardar-a-propria-atencao",
+    title: "A Águia e a Arte de Guardar a Própria Atenção",
+    excerpt: "Descubra como a atenção é o recurso mais valioso da sua vida e aprenda, com a sabedoria da águia, a recuperar o foco e reconstruir o seu propósito.",
+    date: "2026-11-16",
+    readingTime: 7,
+    category: "Mentalidade de Águia",
+    coverImage: "https://images.unsplash.com/photo-1779778915732-dfac0a0e23fa?w=1200&q=85&fit=crop&auto=format",
+    tags: ["propósito", "direção de vida", "clareza"],
+    featured: false,
+    content: `## O que foi roubado de você sem que percebesse
+
+Existe um ladrão silencioso que entra na sua vida todos os dias e sai sem deixar rastros. Ele não arromba portas, não faz barulho, não deixa marcas. Mesmo assim, leva embora aquilo que você tem de mais precioso: a sua atenção. E, com ela, sem que você note, vai também o rumo da sua existência.
+
+Você acorda, e antes de colocar os pés no chão já entregou os primeiros minutos do dia a uma tela. Ao longo das horas, se fragmenta entre notificações, mensagens, vídeos, opiniões alheias e urgências que nem são suas. Quando a noite chega, você está exausto, mas com a estranha sensação de não ter vivido de verdade o próprio dia.
+
+Esse esvaziamento não vem de falta de tempo. Vem de **falta de direção da atenção**. Você esteve presente em toda parte, exceto na própria vida. Esteve disponível para o mundo inteiro e ausente de si mesmo.
+
+## Você conhece essa sensação
+
+Talvez você já tenha sentido que corre muito e chega a pouco. Que trabalha, se distrai, recomeça, se perde, e no fim do mês olha para trás sem reconhecer o caminho percorrido. Não é preguiça. Não é incapacidade. É a sua atenção sendo sequestrada aos poucos, um instante de cada vez.
+
+Repare em como é difícil permanecer com um único pensamento por mais de alguns segundos. A mente, treinada para saltar de estímulo em estímulo, resiste ao silêncio, ao tédio, à profundidade. E é justamente na profundidade que mora tudo aquilo que importa: os projetos que você sonha, os relacionamentos que quer cultivar, o propósito que insiste em ficar em segundo plano.
+
+Sem atenção sustentada, não existe propósito. Existe apenas intenção dispersa, desejo que se dissolve antes de virar ação. **Você não perde seus sonhos de uma vez. Você os perde um instante desatento de cada vez.**
+
+## A águia não olha para tudo
+
+A águia enxerga um pequeno animal do outro lado de um campo, a centenas de metros de altura. Sua visão é uma das mais agudas do reino animal. Mas o que a torna uma caçadora excepcional não é apenas enxergar longe — é **saber para onde olhar**.
+
+Milhares de estímulos passam diante dos seus olhos a cada instante: o vento, o movimento das árvores, o reflexo do sol, outras aves ao longe. A águia registra tudo isso, mas não se prende a nada. Ela filtra. Seleciona. E, no momento certo, concentra toda a sua força sobre um único alvo.
+
+Enquanto os animais menores reagem a cada sombra e a cada ruído, gastando energia em mil direções, a águia permanece estável, planando com economia de esforço, guardando sua potência para o instante que importa. Ela entende, por instinto, uma verdade que nós esquecemos: **quem reage a tudo não tem energia para nada.**
+
+## Sua atenção é o solo onde a vida cresce
+
+Nós costumamos pensar que a vida é feita de grandes decisões. Escolhas raras, dramáticas, que definem tudo de uma só vez. Mas a verdade é mais silenciosa e mais exigente. A vida é feita daquilo para onde você dirige sua atenção, repetidamente, ao longo dos dias.
+
+A atenção é o solo onde a sua existência cresce. O que você rega com presença, floresce. O que você abandona na escuridão da desatenção, seca — mesmo que seja um sonho, uma pessoa, um talento raro. Você não constrói uma vida à parte daquilo que observa com cuidado. Você a constrói a partir disso.
+
+Por isso, dizer onde está a sua atenção é quase o mesmo que dizer quem você é. Se os seus dias são consumidos por ruídos que você não escolheu, você se torna o reflexo desses ruídos. Se aprende a selecionar o que merece seu olhar, começa a se tornar o autor da própria história.
+
+Aqui está o ponto que quase ninguém percebe: **a atenção não é apenas um recurso. É a matéria-prima do sentido.** Aquilo a que você dá atenção ganha realidade na sua vida. O resto permanece como possibilidade que nunca chegou a ser vivida.
+
+## Aprender a olhar como quem voa alto
+
+Mudar de vida, no fundo, é mudar de olhar. Antes de mudar o que você faz, é preciso mudar aquilo que você observa — e, mais ainda, aquilo que você decide não observar.
+
+O primeiro movimento é ganhar altitude. Quando estamos presos ao nível do chão, cada problema parece uma montanha, cada urgência parece uma emergência, cada distração parece irresistível. A águia nos ensina outra postura: subir. Olhar de mais alto é perceber que a maioria das coisas que roubam nossa atenção não merece o peso que damos a elas.
+
+O segundo movimento é escolher o alvo. Assim como a águia fixa os olhos em uma presa e ignora o resto, você precisa decidir, com clareza, o que merece a sua energia. Não dá para valorizar tudo. **Quem tenta dar atenção a tudo acaba não dando atenção a nada.** O foco não é uma questão de esforço; é uma questão de escolha.
+
+O terceiro movimento é proteger o olhar. A águia não permite que nada interrompa seu voo até o momento do mergulho. Você também precisa criar espaço — reduzir o ruído, afastar o que fragmenta, construir momentos de silêncio onde a profundidade se torna possível. Proteger a atenção é proteger o território onde a sua vida vai acontecer.
+
+## O retorno do que é seu
+
+Recuperar a atenção não exige uma vida nova. Exige uma decisão simples e desconfortável: a de estar presente no que importa, mesmo quando mil coisas puxam você para longe.
+
+Comece pequeno, mas comece de verdade. Reserve um período do dia em que nada além daquilo que você escolheu terá acesso a você. Um momento de leitura sem o celular ao lado. Uma conversa em que você escuta de verdade, sem preparar a resposta enquanto o outro fala. Um projeto ao qual você se dedica inteiro, sem abas abertas, sem a mão correndo para o telefone a cada vibração.
+
+No início, será difícil. A sua mente, viciada em dispersão, vai protestar. Vai inventar urgências, vontades súbitas de verificar algo, uma inquietação sem nome. Esse desconforto é o sinal de que algo está mudando. É a águia reaprendendo, aos poucos, a sustentar o olhar.
+
+Com o tempo, você vai perceber uma diferença sutil e poderosa: o tempo volta a ter peso. As horas deixam de escorrer entre os dedos e passam a se acumular em algo. Um livro avança. Um corpo se fortalece. Uma relação se aprofunda. Um sonho que vivia apenas no papel começa a tomar forma no mundo. Nada disso veio de mais tempo. Veio de **mais presença**.
+
+## Construir algo maior começa no olhar
+
+Há uma liberdade silenciosa em entender que a sua vida pertence àquilo a que você escolhe dar atenção. Ninguém pode roubar aquilo que você decide proteger. Ninguém pode construir por você aquilo que só floresce sob o seu olhar atento.
+
+Você não precisa enxergar o caminho inteiro agora. A águia também não vê o voo completo antes de levantar. Ela confia na altitude, no alvo e na força que carrega. Basta que você decida para onde olhar — e o resto começa a se organizar a partir dessa direção.
+
+Talvez você tenha passado tempo demais olhando para baixo, preso ao chão das urgências, dos ruídos, das distrações que prometiam preencher e só esvaziavam. Ainda é tempo de subir. De respirar um ar mais alto. De recuperar o único recurso que, bem direcionado, transforma intenção em realidade.
+
+A vida que você quer construir não começa com uma grande virada. Começa no instante exato em que você retoma o comando da sua atenção e a aponta, com firmeza, para aquilo que merece existir. **O seu futuro é, literalmente, aquilo para onde você decidir olhar.** E, a partir de hoje, esse olhar pode ser inteiramente seu.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "aguia-e-coragem-quando-o-voo-exige-mais-que-asas",
     slug: "aguia-e-coragem-quando-o-voo-exige-mais-que-asas",
     title: "Águia e Coragem: Quando o Voo Exige Mais que Asas",
