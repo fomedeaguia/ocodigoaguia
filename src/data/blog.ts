@@ -15,6 +15,86 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-aguia-nao-vive-o-agora-ela-constroi-o-amanha",
+    slug: "a-aguia-nao-vive-o-agora-ela-constroi-o-amanha",
+    title: "A Águia Não Vive o Agora: Ela Constrói o Amanhã",
+    excerpt: "Enquanto você reage ao que aparece na tela, alguém está construindo em silêncio o que vai durar. A atenção é o único tempo que você realmente possui.",
+    date: "2026-11-18",
+    readingTime: 7,
+    category: "Liberdade e Identidade",
+    coverImage: "https://images.unsplash.com/photo-1720435307665-d09ffd348304?w=1200&q=85&fit=crop&auto=format",
+    tags: ["atenção", "foco", "presença"],
+    featured: false,
+    content: `## O cansaço que não vem do trabalho
+
+Existe um cansaço que não nasce do esforço. Você não carregou peso, não resolveu nada decisivo, não enfrentou nenhuma batalha que merecesse ser lembrada. Ainda assim, chega ao fim do dia atravessado por algo que não sabe nomear. O corpo está inteiro. A mente, não. E se alguém perguntar o que você fez nas últimas doze horas, a resposta sai em fragmentos: uma reunião, quarenta mensagens, um vídeo que começou bobo e terminou com você irritado, uma notícia que você não pediu para saber, uma discussão que nem era sua.
+
+Esse cansaço tem uma origem específica. Ele é o resultado de uma vida em que a atenção foi sendo entregue, pedaço por pedaço, a tudo o que fez mais barulho primeiro. Não houve escolha. Houve reação. E reagir, quando se transforma no modo padrão de existir, gasta mais energia do que qualquer trabalho pesado — porque no fim não sobra nada construído, apenas a impressão de que o dia escorreu entre os dedos.
+
+O problema não é a falta de tempo. É que o tempo, sozinho, não produz nada. O que produz algo é a atenção que você coloca dentro dele.
+
+## A cultura que confunde presença com distração
+
+Vivemos um tempo que transformou o presente em armadilha. Repetimos que é preciso viver o agora, que o passado já foi, que o futuro não existe. A frase é bonita e, em parte, verdadeira. Mas ela foi sequestrada por uma indústria que lucra exatamente com a sua incapacidade de olhar adiante.
+
+Quando alguém diz que você deve viver intensamente o presente, vale perguntar o que esse presente está pedindo de você. Porque existe um presente que é presença — atenção plena no que importa, no filho que fala com você, no trabalho que exige sua melhor cabeça, no silêncio de uma manhã sem pressa. E existe outro presente, disfarçado de intensidade, que na prática é apenas estímulo: o feed que nunca acaba, a notificação que promete algo urgente, a novidade que dura três segundos e cobra mais três.
+
+O primeiro tipo de presente constrói. O segundo apenas preenche. E o mais perigoso é que os dois se parecem por dentro. Ambos exigem sua atenção total. Ambos parecem importantes no momento em que acontecem. A diferença é que um deixa marcas no futuro e o outro desaparece assim que a tela escurece.
+
+Quem vive apenas reagindo ao que aparece não está vivendo o presente. Está vivendo o presente de outra pessoa — o presente que alguém desenhou para capturar seu olhar.
+
+## A águia escolhe o céu antes de escolher a presa
+
+A águia não caça por impulso. Ela passa longos períodos em voo circular, subindo em correntes de ar quente, observando. Não é passividade: é cálculo. Antes do mergulho, existe um trabalho invisível de leitura — do terreno, do vento, do movimento abaixo. Ela não persegue tudo o que se mexe. Ela escolhe onde pousar o olhar, e só depois escolhe onde pousar o corpo.
+
+Existe uma lição silenciosa nesse comportamento. A águia não confunde movimento com direção. Voar em círculos não é perda de tempo — é o tempo necessário para ver o que ninguém no chão consegue ver. A maioria de nós faz o contrário: decola sem plano, persegue o primeiro movimento que aparece, gasta a manhã inteira batendo asas atrás de coisas que não valem o esforço de um único mergulho.
+
+A águia também não defende território por vaidade. Ela protege o que é dela porque sabe o custo de dividir atenção com o que não importa. Existe uma disciplina no silêncio dela. Existe uma recusa. E talvez seja justamente isso que nos falta: a coragem de não olhar.
+
+Viver reagindo é voar baixo. Construir pensando no futuro é ganhar altitude — e altitude, na vida humana, tem outro nome. Chama-se tempo bem usado.
+
+## Atenção é o único material de que a vida é feita
+
+Podemos perder dinheiro e recuperar. Podemos perder oportunidades e criar outras. Podemos perder anos e ainda assim recomeçar. Mas existe um recurso que não volta, não se acumula e não se empresta: a atenção que você decide dar a cada coisa.
+
+Repare na diferença entre duas pessoas com o mesmo número de horas. A primeira acorda, abre o celular antes de abrir os olhos por completo, e passa o dia respondendo ao que chega. À noite, sente que trabalhou muito e avançou pouco. A segunda acorda, escolhe três coisas que importam, e defende essas três coisas de tudo o que tenta invadi-las. Ao fim do dia, também está cansada — mas o cansaço tem lastro, tem obra, tem algo que continua existindo no dia seguinte.
+
+A diferença entre elas não é disciplina no sentido duro da palavra, nem talento, nem sorte. É direção. Uma vive o presente que os outros criaram para ela. A outra vive o presente que ela mesma escolheu construir.
+
+Atenção é o que transforma tempo em vida. Sem ela, os anos passam e viram apenas datas. Com ela, até um mês pode mudar a trajetória inteira.
+
+## O presente que consome e o presente que constrói
+
+Existe uma pergunta que quase ninguém faz em voz alta: o que você está construindo agora que vai existir daqui a cinco anos?
+
+Não é uma pergunta sobre metas. É uma pergunta sobre direção. Porque a maior parte das pessoas não está construindo nada de propósito — está apenas administrando urgências. E urgências, por definição, nunca terminam. Sempre haverá uma mensagem para responder, uma novidade para conferir, um problema alheio para resolver. Quem organiza a vida em torno do que é urgente nunca chega ao que é importante, porque o urgente tem a habilidade de se multiplicar.
+
+A águia não vive assim. Ela não reage ao primeiro ruído do mato. Ela espera o momento certo, e essa espera é uma forma de decisão. Ela aceita o custo de não agir imediatamente para poder agir com precisão depois.
+
+Há uma diferença sutil entre estar ocupado e estar em movimento na direção certa. Ocupação preenche o dia. Direção preenche a vida. E o teste é simples: se amanhã tudo o que você fez hoje fosse apagado, o que sobraria? Se a resposta for "nada", talvez você tenha passado o dia inteiro reagindo a um presente que não era seu.
+
+## A vida que você nunca parou para questionar
+
+Talvez essa seja a parte mais incômoda. Não se trata de culpa, nem de preguiça, nem de falta de ambição. Trata-se de velocidade. Você foi tão rápido, por tanto tempo, que nunca parou para perguntar se o caminho era seu. Aceitou a rotina, aceitou as expectativas, aceitou as conversas, aceitou as telas. E cada aceitação pareceu pequena demais para ser questionada. Somadas, elas formaram uma vida inteira.
+
+A águia não voa para agradar o céu. Ela voa porque o céu é o lugar de onde ela enxerga. Existe uma diferença entre existir no alto e ser levado pelo vento. A primeira é escolha. A segunda é destino alheio.
+
+Recuperar a atenção não exige uma revolução. Exige uma decisão silenciosa: começar a escolher o que entra. O que você lê, o que você responde, o que você assiste, o que você discute, o que você permite ocupar sua cabeça antes de dormir. Cada uma dessas escolhas parece pequena. Nenhuma delas é.
+
+O silêncio é o primeiro território a ser reconquistado. Sem ele, você nunca ouve o próprio pensamento — só o eco do que os outros colocaram ali. A águia não grita. Ela observa. E é na observação que ela encontra a presa, o vento e o caminho de volta.
+
+## O voo que começa quando você para de reagir
+
+Existe um momento em que a vida deixa de ser uma sequência de respostas e se torna uma sequência de escolhas. Não é um momento dramático. Não vem com música, nem com virada de página. Vem num instante comum, talvez numa terça-feira qualquer, quando você percebe que o dia passou e você não decidiu nada — apenas reagiu.
+
+Nesse instante, algo se move. Não é motivação. É lucidez. É a percepção de que o recurso mais escasso da sua vida não é dinheiro, nem tempo, nem energia. É a atenção. E ela está sendo gasta, todos os dias, em coisas que você não escolheu.
+
+A águia não pede permissão ao vento. Ela lê o vento e escolhe a altitude. Você também pode. Pode escolher o que merece seu olhar, o que merece seu silêncio, o que merece os próximos cinco anos da sua vida. Pode parar de viver o presente que te entregaram e começar a construir o presente que vai gerar o seu futuro.
+
+Mas fica uma pergunta, e ela não vai embora sozinha: se ninguém estivesse olhando, se nada fosse urgente, se você pudesse escolher com calma — a vida que você está vivendo hoje ainda seria a que você escolheria?`,
+  },
+
+  {
     id: "a-visao-da-aguia-proteger-a-atencao-para-construir-o-futuro",
     slug: "a-visao-da-aguia-proteger-a-atencao-para-construir-o-futuro",
     title: "A Visão da Águia: Proteger a Atenção para Construir o Futuro",
