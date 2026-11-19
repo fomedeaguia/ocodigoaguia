@@ -15,6 +15,71 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "enquanto-voce-se-compara-a-aguia-ganha-altitude",
+    slug: "enquanto-voce-se-compara-a-aguia-ganha-altitude",
+    title: "Enquanto Você se Compara, a Águia Ganha Altitude",
+    excerpt: "Comparar sua trajetória com a dos outros rouba seu foco. A águia ensina a enxergar de longe e construir algo maior.",
+    date: "2026-11-19",
+    readingTime: 7,
+    category: "Visão e Propósito",
+    coverImage: "https://images.unsplash.com/photo-1785999346040-5e6efda9fa32?w=1200&q=85&fit=crop&auto=format",
+    tags: ["visão", "estratégia", "longo prazo"],
+    featured: false,
+    content: `## O ladrão silencioso do seu futuro
+
+Existe um ladrão que não arromba portas, não faz barulho e não deixa rastros. Ele entra pela fresta de uma tela iluminada, se instala no seu peito quando você vê o carro do vizinho, a viagem do colega, a casa reformada de alguém que estudou com você. Esse ladrão se chama comparação, e ele tem um método cruel: convence você de que a sua vida está atrasada enquanto a dos outros segue adiantada. O resultado é uma sensação permanente de corrida sem linha de chegada, um cansaço que não vem do esforço, mas da direção errada.
+
+A comparação não é um vício raro. Ela é o ar que respiramos. Crescemos medidos por notas, rankings, curtidas e conquistas alheias. Aprendemos cedo a olhar para o lado antes de olhar para dentro. E, sem perceber, transformamos a jornada única que é a nossa existência em uma planilha onde só importa estar à frente de alguém. O problema é que sempre haverá alguém à frente. Sempre. E é exatamente aí que o foco se desfaz, gota a gota, até você não lembrar mais o que realmente queria construir.
+
+## Quando a régua dos outros vira sua medida
+
+Para entender o tamanho do dano, basta observar como a comparação distorce a percepção do tempo. Quando você mede sua trajetória pela de outra pessoa, ignora tudo o que ela não mostra: os anos de tentativa nos bastidores, os fracassos silenciosos, a herança de oportunidades que você nunca teve. Você compara o seu capítulo três com o capítulo vinte de alguém e conclui, injustamente, que falhou. A régua está quebrada, mas você continua se cortando nela todos os dias.
+
+Há algo ainda mais sutil acontecendo. A comparação constante fragmenta sua atenção. Cada vez que você desvia o olhar para a vida alheia, tira energia do único lugar onde algo real pode nascer: o seu próprio trabalho. É como tentar encher um balde furado. Você se esforça, se dedica, se cobra, mas o conteúdo escorre pelos buracos que a inveja e a autodepreciação abriram. Você não perde por falta de capacidade. Você perde porque está construindo a casa de outra pessoa enquanto a sua permanece no rascunho.
+
+E existe um custo emocional que raramente aparece nas conversas honestas. Quem vive comparando vive ansioso, porque transformou a própria paz em refém de um placar imaginário. Não importa o quanto conquiste; se a régua é externa, o alvo se move para sempre. Você corre, mas o horizonte recua. Essa é a prisão mais silenciosa que existe: uma cela sem grades, feita inteiramente de olhos voltados para fora.
+
+## O que a águia enxerga que você ainda não viu
+
+Agora imagine a águia. Não a águia dos símbolos fáceis, mas a águia real, que passa horas planando a grandes altitudes, quase imóvel, sustentada por correntes de ar que os outros pássaros nem percebem. Ela não vive no meio do bando. Não disputa migalhas no chão com os corvos. E, sobretudo, não perde tempo olhando para os ninhos vizinhos para medir o tamanho da própria sombra. A águia olha para baixo, sim, mas de um lugar onde ninguém mais consegue enxergar tão longe.
+
+Essa é a diferença fundamental. O pássaro que vive no nível do chão só consegue comparar o que está ao lado dele, porque é tudo o que sua vista alcança. A águia ganhou outra coisa: **altitude**. E altitude não é só uma questão de altura física. É uma qualidade de percepção. Quem sobe o suficiente deixa de enxergar os concorrentes e passa a enxergar o território inteiro. As correntes de vento, as fontes de alimento, os caminhos possíveis. A visão de longo prazo nasce exatamente aqui, no instante em que você para de olhar para o lado e começa a olhar para a frente, para longe, para o que ainda vai construir.
+
+A águia não é indiferente ao mundo. Ela é seletiva. Escolhe onde pousar, quando caçar, o que ignorar. Sua força não está em ser maior que os outros pássaros, mas em operar numa dimensão onde a comparação simplesmente não faz sentido. Quando você voa alto o bastante, os que ficaram embaixo deixam de ser referência. Tornam-se parte da paisagem.
+
+## A altitude que muda tudo
+
+Aqui está a virada que poucos percebem: a comparação não é um problema de disciplina, é um problema de altitude. Você não vai vencê-la com força de vontade, apertando os dentes e prometendo não olhar mais para as redes sociais. Você vence mudando o ponto de observação. Quando sua visão se eleva, o objeto da comparação encolhe até virar irrelevante. Não porque você se tornou indiferente, mas porque passou a enxergar um campo maior onde disputas mesquinhas perdem o sentido.
+
+Pense no que muda quando você troca a pergunta. Em vez de "por que ele chegou antes de mim?", a mente em altitude pergunta "o que eu estou construindo e para onde isso me leva?". A primeira pergunta te prende ao passado e à vida dos outros. A segunda te devolve ao seu próprio caminho. É uma diferença de poucos graus na inclinação do olhar, mas ela redefine tudo. Você deixa de correr atrás de um placar e começa a construir uma direção.
+
+A visão de longo prazo é isso: a capacidade de sustentar no olhar aquilo que ainda não existe. O agricultor não colhe no dia em que planta, e mesmo assim planta. Ele confia num tempo que os apressados não conseguem enxergar. Quem vive comparando quer a colheita imediata, o reconhecimento instantâneo, a prova de que está na frente. Quem desenvolve a mentalidade da águia aceita o intervalo entre a semente e a árvore. E é nesse intervalo, invisível e paciente, que as grandes coisas realmente se formam.
+
+## Construindo sua própria linha do horizonte
+
+Mudar de altitude não é um salto. É uma prática diária de reeducar o olhar. Começa quando você decide, conscientemente, de quem aceita receber referência. Se você passa o dia imerso em vitrines de sucesso fabricado, sua régua vai continuar torta, por mais que jure determinação. Proteja o ambiente da sua mente como a águia protege seu território: com critério, com seletividade, sem culpa por deixar de acompanhar o que não te constrói.
+
+Depois, vem o trabalho mais difícil: aprender a olhar para a própria trajetória com honestidade e sem crueldade. Você tem um ponto de partida que é só seu, com recursos, feridas e possibilidades que ninguém mais tem. Comparar esse ponto com o de outra pessoa é como cobrar de uma árvore que ela dê o fruto de outra espécie. O único parâmetro justo para medir sua vida é você mesmo, um tempo atrás. Você avançou? Aprendeu? Construiu algo que antes não existia? Essa é a régua que não mente e que não te destrói.
+
+E então algo se acomoda por dentro. A inveja que antes queimava começa a perder combustível, porque ela dependia da escassez do seu olhar. Quando você enxerga longe, percebe que o território é vasto, que existe espaço para muitas jornadas, que a conquista de um não diminui a sua. A águia não disputa o céu com os outros pássaros; ela simplesmente ocupa uma parte dele que ninguém mais alcança. Você pode fazer o mesmo com a sua vida.
+
+## O céu é largo o bastante
+
+Chega um momento em que você precisa decidir de onde vai olhar o resto da sua vida. Do chão, cercado de réguas alheias, medindo cada passo pelo avanço dos outros e sentindo que sempre falta alguma coisa. Ou de mais alto, onde o horizonte se abre e a sua própria trajetória, com seu ritmo e seu tempo, finalmente faz sentido. A comparação vai continuar existindo no mundo. O que muda é o lugar de onde você a observa.
+
+A águia não venceu porque voou mais rápido que os outros. Ela venceu porque escolheu uma altitude onde a corrida alheia deixou de importar. Você pode escolher o mesmo. Pode parar de medir sua vida pela régua quebrada da comparação e começar a construir algo que é inteiramente seu, no seu tempo, na sua direção. O céu é largo o bastante para todos. Mas a visão que muda tudo é aquela que, enfim, se volta para o seu próprio horizonte e enxerga, pela primeira vez com clareza, tudo o que você ainda pode construir.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-coragem-de-ser-quem-voce-e",
     slug: "a-coragem-de-ser-quem-voce-e",
     title: "A Coragem de Ser Quem Você É",
