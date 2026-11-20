@@ -15,6 +15,99 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "consciencia-de-abundancia-proteja-a-mente-como-a-aguia",
+    slug: "consciencia-de-abundancia-proteja-a-mente-como-a-aguia",
+    title: "Consciência de Abundância: Proteja a Mente Como a Águia",
+    excerpt: "A abundância não começa no dinheiro, mas na mente protegida. Aprenda a blindar sua atenção e enxergar possibilidades onde outros veem escassez.",
+    date: "2026-11-20",
+    readingTime: 7,
+    category: "Visão e Propósito",
+    coverImage: "https://images.unsplash.com/photo-1780580434387-0d0d35f82a40?w=1200&q=85&fit=crop&auto=format",
+    tags: ["abundância", "consciência financeira", "prosperidade"],
+    featured: false,
+    content: `## A conta que ninguém vê
+
+Existe uma conta que você esquece de acompanhar todos os dias. Não é a do banco. É a da sua atenção. Cada hora entregue a discussões, notícias e opiniões alheias é um saque silencioso que ninguém registra, mas que empobrece a vida inteira.
+
+A maioria das pessoas acredita que a escassez é uma questão de dinheiro. Acham que falta recurso, que falta sorte, que o mundo distribuiu tudo de forma injusta antes mesmo de elas chegarem. É uma explicação confortável, porque transfere a culpa para fora.
+
+Mas há uma escassez mais profunda, e ela não aparece no extrato. É a escassez de pensamento próprio. Quem vive com a mente aberta a toda influência acaba acreditando no que os outros precisam que ele acredite, e não no que a própria vida lhe mostra.
+
+Você já sentiu que sua cabeça anda lotada e, ao mesmo tempo, estranhamente vazia? Cheia de ruído, mas sem uma única ideia que seja realmente sua. Essa sensação não é cansaço comum. É o resultado de uma mente que não aprendeu a se proteger.
+
+## Onde a abundância realmente mora
+
+A abundância raramente começa com o que entra. Ela começa com o que você decide deixar entrar. Antes de qualquer número na conta, existe uma paisagem interna que precisa ser cultivada, protegida e defendida como um território.
+
+Quem pensa em abundância costuma imaginar acúmulo. Mais dinheiro, mais posses, mais reconhecimento. Mas a abundância verdadeira tem outro formato. Ela é a sensação de que existe espaço, de que há caminho, de que o futuro não é uma parede, e sim uma porta.
+
+Esse espaço não nasce do que você conquista, e sim do que você protege. Uma mente livre de ruído enxerga oportunidades que uma mente saturada jamais perceberia. A diferença entre duas pessoas nas mesmas condições quase nunca está no cenário. Está no que cada uma permitiu ocupar seus pensamentos.
+
+A escassez, no fundo, é uma mente invadida. Quando tudo entra sem filtro, nada de valioso encontra lugar para crescer. A abundância é o oposto disso. É uma mente soberana, que escolhe o que merece sua energia e fecha a porta para o resto.
+
+## A águia e o território do pensamento
+
+A águia não voa baixo por acaso. Ela sobe justamente para escapar do caos que acontece perto do chão, onde os ruídos se misturam e as ameaças se escondem. A altitude não é vaidade. É estratégia de sobrevivência.
+
+Do alto, ela enxerga o que nenhuma ave presa ao solo consegue ver. Percebe movimentos distantes, antecipa tempestades, localiza o que precisa sem se distrair com o que não importa. Sua visão não é apenas afiada. É seletiva, treinada para filtrar o essencial em meio ao infinito.
+
+Essa é a primeira lição da águia para a sua mente. Proteger o pensamento não é se isolar do mundo. É ganhar altitude suficiente para não ser arrastado por tudo que passa perto do chão. Quem vive no meio do barulho não escolhe o que ouve. Quem sobe, escolhe.
+
+A águia também é conhecida por defender seu território com uma firmeza que não conhece hesitação. Ela não negocia o espaço onde constrói seu ninho. Não divide esse chão com qualquer presença que ameace o que ali será gerado. Há uma decisão silenciosa em cada movimento seu.
+
+Sua mente pede exatamente esse tipo de defesa. Um território onde as ideias possam amadurecer sem serem pisoteadas pela primeira opinião que passa. Um ninho protegido, alto o bastante para que o caos lá embaixo não alcance o que você está tentando construir.
+
+## O que acontece quando você não protege
+
+Quem não protege a mente vive refém de um vento que nunca cessa. Cada conversa negativa deixa um resíduo. Cada comparação nas redes planta uma semente de insuficiência. Cada mancheira alarmista encolhe um pouco mais o horizonte de quem lê.
+
+O problema é que esses ataques não chegam como ameaças óbvias. Eles chegam disfarçados de informação, de entretenimento, de conversa casual. Você não percebe que está sendo esvaziado, porque cada dose é pequena demais para alarmar. Mas o acúmulo conta uma história que você sente no fim do dia.
+
+Aos poucos, a pessoa passa a enxergar o mundo pela lente da falta. Onde havia possibilidade, agora enxerga obstáculo. Onde havia convite, enxerga ameaça. Não porque a realidade mudou, mas porque a mente foi ocupada por vozes que só sabem falar de escassez.
+
+Essa é a armadilha mais silenciosa de todas. A pessoa não perde a abundância de uma vez. Ela a perde aos pedaços, entregando um pouco da sua atenção aqui, um pouco da sua paz ali, até não sobrar espaço para nenhuma ideia grande florescer.
+
+## Blindar sem endurecer
+
+Proteger a mente não significa fechar os olhos para o mundo. A águia enxerga tudo de cima, mas não se envolve com tudo. Ela observa sem se deixar consumir. Essa é a diferença entre estar informado e estar intoxicado.
+
+Você pode assistir ao noticiário sem permitir que ele defina seu humor do dia inteiro. Pode ouvir uma crítica sem transformá-la em veredito sobre o seu valor. Pode estar presente no mundo sem deixar que o mundo ocupe todos os seus cômodos internos.
+
+Blindar é escolher a distância certa. É desenvolver a capacidade de ver o problema sem se afogar nele, de reconhecer a ameaça sem viver em estado de alarme. A mente protegida não é a mente ingênua. É a mente experiente o bastante para saber o que merece sua energia.
+
+Há uma força tranquila nesse tipo de defesa. Ela não grita, não reage a tudo, não se esgota em cada provocação. Ela simplesmente decide, com clareza, o que entra e o que fica do lado de fora. E essa decisão, repetida todos os dias, constrói uma vida inteira.
+
+## A abundância começa no que você escolhe
+
+Quando você entende que a abundância é uma questão de território interno, tudo muda de lugar. A pergunta deixa de ser quanto você tem e passa a ser o que você permite que ocupe a sua mente. O foco se desloca do acúmulo para a soberania.
+
+Comece observando o que entra sem pedir licença. As conversas que drenam, os conteúdos que diminuem, as companhias que só enxergam limites. Não é sobre cortar tudo com raiva. É sobre escolher, com a serenidade da águia, o que merece espaço no seu ninho.
+
+Depois, ganhe altitude. Afaste-se o suficiente para enxergar sua vida de cima, sem o desespero de quem está preso ao chão. De lá, os problemas ganham proporção real, as oportunidades ficam visíveis, e o ruído perde o poder que tinha quando estava colado no seu ouvido.
+
+Proteger a mente é um ato diário, quase invisível, feito de pequenas escolhas que ninguém aplaude. Mas é justamente esse trabalho silencioso que separa quem vive à mercê de tudo de quem constrói algo com as próprias mãos. A abundância nasce nesse cuidado.
+
+## Você pode enxergar de outro jeito
+
+Talvez você tenha passado anos acreditando que a sua vida era pequena porque o mundo era pequeno. Que faltava sorte, que faltava gente, que faltava qualquer coisa fora do seu alcance. A águia sugere outra leitura. Talvez faltasse apenas altitude e proteção.
+
+Nada disso exige que você se torne outra pessoa. Exige apenas que você assuma o comando de um território que sempre foi seu, mas que você entregou ao primeiro ruído que apareceu. A mente é o único chão que ninguém pode tomar sem a sua permissão.
+
+Existe uma sensação nova esperando por quem faz essa virada. É a percepção de que o horizonte sempre foi mais largo do que parecia, e de que sempre houve espaço para construir algo maior. Não porque o mundo mudou, mas porque os seus olhos finalmente subiram.
+
+A partir de hoje, você pode escolher o que entra, o que fica, o que merece sua energia. Pode subir, observar de cima e defender com calma aquilo que está tentando florescer dentro de você. A vida que você procura não está mais longe. Ela começa exatamente no momento em que você decide proteger a própria mente.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-aguia-que-voce-admira-e-a-pessoa-que-voce-ainda-nao-e",
     slug: "a-aguia-que-voce-admira-e-a-pessoa-que-voce-ainda-nao-e",
     title: "A águia que você admira é a pessoa que você ainda não é",
