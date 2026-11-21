@@ -15,6 +15,79 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-liberdade-de-nao-voar-no-ritmo-dos-outros",
+    slug: "a-liberdade-de-nao-voar-no-ritmo-dos-outros",
+    title: "A liberdade de não voar no ritmo dos outros",
+    excerpt: "Comparar a própria trajetória com a dos outros rouba altitude. A liberdade começa quando você assume o rumo das próprias asas.",
+    date: "2026-11-21",
+    readingTime: 5,
+    category: "Filosofia",
+    coverImage: "https://images.unsplash.com/photo-1762873470403-cb2669af3e4b?w=1200&q=85&fit=crop&auto=format",
+    tags: ["liberdade", "autonomia", "escolhas"],
+    featured: false,
+    content: `## A régua que nunca foi sua
+
+Existe um desconforto que não aparece em nenhum exame, não dá febre nem impede o sono. Ele chega no meio de uma tarde comum, depois de mais uma vitória de outra pessoa celebrada na tela do celular: uma sensação difusa de que você está atrasado, sem saber atrasado em relação a quê. A vida parece correta nos números e errada no peito.
+
+A comparação funciona assim: começa como curiosidade e termina como veredito. Você vê a promoção do colega, a casa do primo, o negócio do amigo, o corpo do conhecido da infância. Nada disso seria problema se permanecesse informação. O problema é que ela vira régua. E régua alheia nunca mede certo, porque foi feita para outro corpo.
+
+O pior é que quase ninguém percebe que está medindo. A pessoa acha que está apenas se atualizando, acompanhando o mercado, entendendo o mundo. Na verdade, está entregando a definição do próprio sucesso para quem fala mais alto.
+
+## O silêncio da águia
+
+Quando uma águia ganha altura, ela não olha de lado para conferir se o falcão ao largo subiu mais rápido. Não é arrogância nem indiferença. É que o voo dela obedece a outra lógica: ela lê o vento, escolhe a corrente térmica, enxerga o campo longe antes de qualquer um e ajusta a rota pelo que precisa caçar, não pelo que o outro está fazendo.
+
+Altitude não é status. É campo de visão. Quem voa alto não enxerga rivais; enxerga terreno, distância, a nuvem que se acumula no horizonte, o lugar onde vale pousar e o lugar onde vale insistir. A comparação, por outro lado, é atividade de chão. Do chão, tudo parece perto e tudo parece maior.
+
+Por isso o silêncio da águia não é mistério. É economia de atenção. Ela gasta energia com o vento, não com o vizinho.
+
+## A prisão confortável da comparação
+
+Comparar dá a ilusão de informação, mas cobra em foco. E foco é finito. Cada minuto gasto calculando o ritmo alheio é um minuto que não foi usado para ajustar a própria rota. Você não perde só tempo: perde clareza, que é o único recurso que não se recupera com café.
+
+E a comparação nunca termina, porque a referência muda. Sempre haverá alguém à frente em alguma coisa, sempre haverá uma nova categoria de sucesso inventada enquanto você respirava. O placar criado por você mesmo vira uma dívida permanente, com juros e sem data de quitação.
+
+A violência mais sutil acontece depois, quando a pessoa começa a escolher por visibilidade e não por adequação. Carreira, cidade, relacionamento, corpo, hábitos — tudo selecionado pelo que será visto, não pelo peso que carrega nos dias reais da sua vida. Você pode construir uma carreira inteira para uma plateia que nem sabe o seu nome.
+
+## Liberdade tem um preço que ninguém avisa
+
+Liberdade não é ausência de amarras. É presença de autoria. Escolher o próprio caminho significa perder o direito de culpar o caminho alheio, o governo, a infância, o mercado, a sorte. Muita gente prefere a rota pronta justamente porque, se der errado, a culpa já vem endereçada.
+
+Responsabilidade é o preço da autonomia, e esse preço se paga em silêncio. A águia não reclama do vento; ela o lê e ajusta as asas. Na vida é igual: você não controla a intempérie, mas responde pela direção. Quem aceita isso para de pedir permissão para existir no próprio ritmo.
+
+Aceitar também significa assumir que alguns erros serão só seus, que algumas escolhas não serão entendidas por ninguém da sua família, que algumas decisões corretas vão parecer covardia para quem olha de fora. A liberdade é solitária não por arrogância, mas porque a envergadura de cada um exige correntes de ar diferentes.
+
+## Como recuperar a própria rota
+
+O primeiro movimento é uma auditoria sem drama. Não se trata de apagar nada por puritanismo, mas de notar o efeito: depois de consumir aquele conteúdo, aquela conversa, aquele perfil, você ficou mais dono da sua vida ou mais devedor dela? Se a resposta for devedor, o problema não é o outro estar bem. É que você está usando a vida dele como termômetro da sua.
+
+O segundo é escrever seus próprios critérios, em voz alta se possível. Antes de aceitar um projeto, uma meta, uma cobrança, pergunte: isso é meu ou é o aplauso? Se ninguém visse, eu ainda quereria? Esse prazo foi escolhido por mim ou herdado de um calendário que nunca me perguntei nada? Perguntas simples assim devolvem o volante.
+
+O terceiro é disciplina entendida como proteção da atenção, não como castigo. Compromissos pequenos cumpridos em privado, quando ninguém está vendo, constroem a altitude que nenhuma comparação alcança. Quem tem um critério próprio não se abala com o barulho, porque o barulho não fala a língua dele.
+
+Por fim, escolha o vento. Ambiente, pessoas, horários, hábitos. Comparação diminui quando a vida fica ocupada demais para ser observada de fora. Não é retirada do mundo; é recusa a viver o mundo dos outros.
+
+## A vida que nunca foi questionada
+
+A pergunta decisiva nunca foi "estou indo bem?". Muita gente vai bem por vinte anos e só percebe tarde que "bem" era a resposta de outra pessoa. A vida mais perigosa não é a que falhou; é a que deu certo nos critérios errados, com uma sensação de aluguel que nenhum patrimônio paga.
+
+É nesse ponto que a águia ensina o que nenhuma frase de efeito ensina: ela não voa alto para ser admirada. Voa alto porque foi assim que encontrou o caminho. A altitude é consequência de uma escolha antiga, feita sem plateia.
+
+Talvez o incômodo que você sente não seja falta de conquista. Pode ser a suspeita, finalmente nomeada, de que essa rotina, essa meta, essa pressa e esse orgulho nunca foram escolhidos por você — apenas herdados, repetidos e defendidos com firmeidade suficiente para parecerem seus.
+
+A liberdade começa no dia em que você para de perguntar se está à frente ou atrás, e passa a perguntar de quem é essa rota. A águia não responde ao vento. Ela o escolhe.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-aguia-e-o-tempo-pare-de-reagir-e-comece-a-decidir",
     slug: "a-aguia-e-o-tempo-pare-de-reagir-e-comece-a-decidir",
     title: "A Águia e o Tempo: Pare de Reagir e Comece a Decidir",
