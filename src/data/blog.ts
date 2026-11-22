@@ -15,6 +15,83 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "resiliencia-e-recomeco-a-aguia-nao-espera-o-vento",
+    slug: "resiliencia-e-recomeco-a-aguia-nao-espera-o-vento",
+    title: "Resiliência e Recomeço: A Águia Não Espera o Vento",
+    excerpt: "O fracasso não é o fim da linha. É o instante em que você escolhe entre reagir ao presente ou construir o futuro.",
+    date: "2026-11-22",
+    readingTime: 8,
+    category: "Liderança",
+    coverImage: "https://images.unsplash.com/photo-1566202992207-f2557c1636b7?w=1200&q=85&fit=crop&auto=format",
+    tags: ["resiliência", "recomeço", "superação"],
+    featured: false,
+    content: `## O peso de viver apagando incêndios
+
+Existe um tipo de cansaço que não vem do trabalho pesado, mas da repetição. É o cansaço de quem acorda todos os dias para resolver o que já deu errado, de quem passa a vida correndo atrás de consequências sem nunca tocar nas causas. Você conhece essa sensação. Ela aparece quando o mês termina e você percebe que apenas sobreviveu a ele. Quando olha para trás e não consegue identificar uma única decisão que tenha sido tomada com calma, com intenção, com visão de longo prazo.
+
+Esse é o estado de quem vive reagindo. O presente chega como uma onda e a pessoa faz o que pode para não afundar. O problema é que a onda nunca para de chegar. Um imprevisto, uma dívida, um conflito, uma oportunidade perdida, um fracasso que ainda dói. Cada um desses eventos exige uma resposta imediata, e a vida inteira se transforma numa sequência infinita de respostas de emergência. Não sobra espaço para o que realmente importa: a construção.
+
+E é exatamente aqui que o fracasso costuma se tornar ainda mais cruel. Quando algo dá errado, a reação natural é se fechar, se proteger, esperar que a poeira baixe. Mas esperar é justamente o que mantém a pessoa no mesmo lugar. O tempo passa, o mundo se move, e quem apenas aguarda descobre, tarde demais, que o intervalo entre o fracasso e o recomeço foi preenchido por uma vida que não voltou mais.
+
+## A diferença entre quem reage e quem constrói
+
+Há duas maneiras de habitar o tempo. A primeira é a do **presente reativo**: você vive em função do que acontece com você. A segunda é a do **futuro construído**: você vive em função do que decidiu construir, independentemente do que acontece. A diferença parece pequena, mas ela separa dois tipos de existência completamente distintos.
+
+Quem vive no presente reativo precisa de estímulo constante. Se nada acontece, ele se sente perdido. Se algo ruim acontece, ele se sente vítima. Se algo bom acontece, ele se anima por alguns dias e depois volta ao mesmo ponto. Sua energia é sempre uma resposta ao ambiente, nunca uma escolha própria. E o ambiente, como se sabe, é instável.
+
+Já quem vive em função do futuro construído não depende do clima emocional do momento. Ele tem uma direção. Pode até tropeçar, pode até cair, mas sabe para onde está voltando. O fracasso não o paralisa porque ele não está esperando o momento perfeito para agir. Ele está agindo mesmo quando o momento é imperfeito, porque entendeu que o tempo não é um recurso que se recupera.
+
+O fracasso, nesse contexto, deixa de ser uma sentença e passa a ser apenas informação. Ele informa o que não funcionou, onde estava a falha, o que precisa ser ajustado. Quem reage transforma o fracasso em identidade — "eu sou alguém que falhou". Quem constrói transforma o fracasso em dado — "isso não funcionou, e agora eu sei mais do que antes".
+
+## A águia e o tempo
+
+A águia não espera o vento perfeito para voar. Ela usa o vento que existe. E mais do que isso: ela escolhe a corrente térmica certa, planeja o voo, observa o território antes de se lançar. A águia não vive no improviso permanente. Ela tem visão de altitude, e visão de altitude é exatamente isso: ver além do instante, enxergar o que ainda não aconteceu.
+
+Quando a águia perde uma presa, ela não se recolhe ao ninho para lamentar. Ela ajusta a estratégia. O fracasso faz parte do voo, mas nunca é o fim do voo. O que a mantém no alto não é a ausência de erros, é a capacidade de continuar mirando com precisão, de manter o foco no que está adiante mesmo quando o que ficou para trás foi doloroso.
+
+Há uma diferença crucial entre a águia e o pássaro que apenas voa em círculos. O pássaro em círculos cobre distância, mas não chega a lugar nenhum. Ele se move o tempo todo, mas não avança. Muita gente vive assim: em movimento constante, ocupada, cansada, e ainda assim parada. A águia, ao contrário, voa com destino. Cada movimento tem propósito, cada decisão tem direção.
+
+E a águia também conhece o momento de renovação. Ela não tem medo de atravessar o período difícil em que precisa se recolher, se transformar e voltar mais forte. Mas esse recolhimento não é fuga. É preparação. É a diferença entre quem se esconde do mundo e quem se prepara para ele. O tempo da águia não é o tempo da espera passiva. É o tempo da estratégia silenciosa.
+
+## O fracasso como ponto de virada, não como ponto final
+
+Todo fracasso carrega uma escolha embutida, e essa escolha é sempre a mesma: continuar olhando para trás ou começar a olhar para frente. A maioria das pessoas acredita que precisa de um tempo para se recuperar. E precisa, de fato. Mas existe uma diferença enorme entre o luto necessário e a estagnação disfarçada de cura.
+
+O luto é honesto. Ele reconhece a dor, processa a perda, aceita o que aconteceu. A estagnação, porém, se veste de luto e não vai embora nunca. Ela encontra justificativas, adia decisões, espera o momento certo. E o momento certo, para ela, nunca chega — porque o momento certo é uma invenção de quem tem medo de começar.
+
+Recomeçar não significa ignorar o que doeu. Significa usar o que doeu como material de construção. O fracasso não é um buraco no chão da sua vida. É um tijolo. Duro, pesado, desconfortável, mas ainda assim um tijolo. A pergunta é o que você vai fazer com ele: vai carregá-lo nas costas para sempre ou vai colocá-lo na fundação do que vem depois?
+
+Quem constrói pensando no futuro entende que o fracasso não define o valor de ninguém. Ele apenas revela onde a estratégia estava fraca. E estratégia fraca se corrige. O que não se corrige é o tempo perdido esperando que a dor passe sozinha. A dor passa, mas o tempo não volta. E é essa consciência que separa quem recomeça de quem apenas envelhece.
+
+## O tempo não espera, mas a águia também não
+
+Existe uma frase que costuma ser mal interpretada: o tempo cura tudo. O tempo não cura nada. Ele apenas passa. Quem cura é a decisão, a ação, o movimento consciente em direção a algo novo. O tempo é neutro. Ele oferece a mesma quantidade de horas para quem se reconstrói e para quem se acomoda. A diferença está no que cada um faz com essas horas.
+
+A águia sabe disso. Ela não espera a tempestade passar para caçar. Ela aprende a voar na tempestade. Não porque é invulnerável, mas porque entendeu que a tempestade é parte do território. Do mesmo modo, quem quer recomeçar depois de um fracasso precisa entender que a dor não vai embora antes do primeiro passo. Ela vai junto. E tudo bem. O primeiro passo não precisa ser perfeito. Precisa ser dado.
+
+Talvez você esteja esperando se sentir pronto. Talvez esteja esperando o momento em que a confiança voltar, em que a ferida fechar, em que o medo diminuir. Mas a confiança não volta antes da ação. Ela nasce depois. O medo não diminui antes do movimento. Ele diminui durante. A ferida não fecha antes de você voltar a viver. Ela fecha porque você voltou a viver.
+
+É por isso que a mentalidade de águia é, antes de tudo, uma mentalidade de tempo. Não o tempo que passa, mas o tempo que se usa. Não o tempo que se espera, mas o tempo que se constrói. Quem entende isso para de perguntar quando vai ser o momento certo e começa a perguntar o que pode ser feito agora. E essa pergunta, feita com honestidade, quase sempre tem resposta.
+
+## A escolha que só você pode fazer
+
+Ninguém vai recomeçar por você. Ninguém vai carregar o peso da sua decisão, nem sentir o alívio que vem depois dela. O fracasso é solitário, e o recomeço também é. Mas há uma diferença fundamental entre essas duas solidões: a do fracasso é a solidão de quem caiu, a do recomeço é a solidão de quem se levanta. A primeira paralisa. A segunda liberta.
+
+Você pode continuar vivendo no ritmo do que acontece, apagando incêndios, respondendo ao presente, esperando que algo mude. Ou pode decidir, hoje, que o seu tempo será usado para construir, não apenas para reagir. Não é uma decisão fácil. Mas é a única decisão que realmente muda o rumo de uma vida.
+
+A águia não espera o vento. Ela usa o vento. E o vento que você tem agora, mesmo que seja o vento frio do fracasso, pode ser exatamente o que faltava para te levar mais alto. Não porque a dor é boa, mas porque a dor, quando bem usada, se transforma em direção. O que você fará com o tempo que ainda tem? A resposta não está no futuro. Está na próxima decisão que você tomar. E ela pode ser tomada agora.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-liberdade-de-nao-voar-no-ritmo-dos-outros",
     slug: "a-liberdade-de-nao-voar-no-ritmo-dos-outros",
     title: "A liberdade de não voar no ritmo dos outros",
