@@ -15,6 +15,62 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-aguia-nao-olha-para-as-outras-aves",
+    slug: "a-aguia-nao-olha-para-as-outras-aves",
+    title: "A Águia Não Olha para as Outras Aves",
+    excerpt: "Como o ambiente e as pessoas moldam suas decisões em silêncio, e por que comparar trajetórias afasta você do próprio propósito.",
+    date: "2026-11-23",
+    readingTime: 6,
+    category: "Filosofia",
+    coverImage: "https://images.unsplash.com/photo-1661736384124-5051573c3227?w=1200&q=85&fit=crop&auto=format",
+    tags: ["ambiente", "influências", "mentalidade"],
+    featured: false,
+    content: `## O Barulho que Você Chamou de Próprio
+
+Você acorda, pega o telefone e, antes de lembrar para quem pertence aquele dia, já está olhando para a vida de outra pessoa. Uma viagem, um corpo, um escritório, uma frase de efeito. O celular ilumina o rosto no escuro do quarto e entrega, em tempo real, a prova de que alguém está mais adiante, mais leve, mais realizado. Você fecha o aplicativo com um peso no peito que não sabe nomear, mas reconhece bem: é a sensação de que está atrasado em uma corrida que nunca concordou em correr.
+
+Esse é o problema silencioso do ambiente. Não são apenas as pessoas físicas ao seu redor, mas o ecossistema que você habita. As conversas de mesa de bar, as expectativas da família, as comparações disfarçadas de preocupação, as redes sociais que transformam o alheio em parâmetro. Tudo isso molda suas decisões antes que você perceba que está decidindo. Você escolhe a carreira, o parceiro, a cidade, o padrão de consumo, não porque esses caminhos ressoem com algo dentro de você, mas porque preenchem o vazio deixado pela ausência de uma direção própria.
+
+**O ambiente não grita. Ele sussurra.** Diz que você deveria ter mais, ser mais, parecer mais. E você, acostumado a ouvir vozes alheias como se fossem sua própria intuição, começa a construir uma vida que nunca parou para questionar.
+
+## A Águia Voa Acima da Manada
+
+A águia não voa em bandos apertados. Ela sobe sozinha, em círculos largos, usando correntes de ar que outras aves nem conseguem enxergar de baixo. Sua visão é feita para distâncias longas, não para o detalhe imediato do chão. Enquanto os pássaros menores se agitam nos galhos, discutindo território e migalhas, a águia mantém a cabeça erguida, os olhos no horizonte, o corpo suspenso entre a terra e o céu.
+
+Esse é o arquétipo da Mentalidade de Águia: a capacidade de se elevar acima do ruído para enxergar com clareza. A águia não compara sua envergadura com a do gavião, nem sua altitude com a da andorinha. Ela não pergunta à manada se o rumo está certo. Ela simplesmente voa, porque sabe que sua natureza exige espaço, silêncio e uma perspectiva que só existe longe do chão.
+
+Quando você passa a vida comparando sua trajetória com a dos outros, está fazendo o oposto do que a águia faria. Está baixando o voo. Está pousando no galho lotado para verificar se alguém voou mais alto, mais rápido, com mais graça. E nesse instante, perde de vista o próprio céu.
+
+## O Espelho Que Não Devolve o Seu Rosto
+
+**Comparar-se constantemente com os outros é um ato de autossabotagem disfarçado de autoconhecimento.** Você olha para o sucesso alheio e, em vez de se inspirar, se mede. E a medição nunca é justa, porque você está comparando o seu dia a dia, com todas as inseguranças e falhas, com o resumo editado da vida de alguém. O resultado é sempre a mesma conclusão: você está atrás.
+
+Esse espelho distorcido vem reforçado pelas pessoas que você permite perto de si. Há quem celebre suas vitórias apenas para compará-las com as próprias. Há quem ofereça conselhos que são, na verdade, projeções de arrependimentos alheios. Há ambientes onde a ambição é medida em termos de status, dinheiro e aparência, e não em termos de alinhamento com o propósito. Se você vive nesses espaços, sua bússola interna começa a apontar para o norte de outra pessoa.
+
+A identidade se dilui nesse processo. Você começa a querer o que o outro quer, não porque deseja, mas porque o desejo foi instalado por repetição. Escolhe o emprego porque é prestigiado, termina o relacionamento porque parece o certo para a idade, adia o sonho porque ninguém ao redor o entende. A cada decisão tomada por comparação, um pedaço de você fica para trás.
+
+## Recuperando a Altitude Própria
+
+A saída não é cortar todas as relações ou viver em isolamento. A saída é recuperar o critério de seleção do ambiente e das pessoas. A águia escolhe o ninho com cuidado. Ela não constrói em qualquer galho. Da mesma forma, você precisa perguntar: quem está ao meu redor quando eu tomo decisões? Quais vozes ocupam mais espaço na minha cabeça? Essas pessoas refletem quem eu sou, ou quem eu acho que deveria ser?
+
+Comece por observar como você se sente após determinadas conversas. Se você sai de um encontro mais ansioso, mais insatisfeito com a própria vida, mais convencido de que está fazendo algo errado, esse ambiente está drenando sua clareza. Se, ao contrário, você se sente desafiado de forma saudável, visto sem julgamento e lembrado do seu próprio valor, aquele espaço merece sua presença.
+
+**A saída é recuperar o critério de seleção do ambiente e das pessoas.** Isso exige disciplina mental. Toda vez que surgir o impulso de comparar, pare e pergunte: esta pessoa tem o mesmo contexto que eu? Enfrenta os mesmos obstáculos? Tem os mesmos valores? A resposta será quase sempre não. Então retorne o olhar para o seu próprio voo. O que você quer construir? Que tipo de liberdade importa para você? Que legado você deseja deixar, independente de aplausos?
+
+Isso não significa ignorar o mundo. Significa não permitir que o mundo defina o seu centro. A águia vê a floresta inteira, mas não tenta ser a floresta. Ela é a águia.
+
+## A Vida que Você Nunca Questionou
+
+No final, a comparação constante não rouba apenas tempo. Ela rouba a possibilidade de você descobrir quem seria sem o espelho dos outros. Você pode acordar daqui a dez anos e perceber que construiu uma carreira para impressionar pessoas que não gosta, que morou em uma cidade que nunca escolheu realmente, que disse sim a compromissos que esgotam sua alma apenas para encaixar em um roteiro alheio.
+
+**Essa é a sensação que fica: talvez eu esteja vivendo uma vida que nunca parei para questionar.** Não é um diagnóstico definitivo, mas um convite. Um lembrete de que você pode descer do galho da comparação a qualquer momento e recuperar a altitude mental. Não para se tornar melhor do que ninguém, mas para se tornar fiel a si mesmo.
+
+A águia não voa para provar algo. Ela voa porque é sua natureza. E você, quando para de comparar, volta a respirar com os próprios pulmões. As decisões passam a ter seu peso, seu ritmo, sua direção. O ambiente continua existindo, as pessoas continuam falando, mas você já não está mais disposto a abandonar o próprio curso para acompanhar o vento de outra pessoa.
+
+Olhe para cima. O céu é seu. E a única comparação que importa é entre quem você era ontem e quem você escolhe ser hoje, em silêncio, longe do barulho, na companhia da sua própria visão.`,
+  },
+
+  {
     id: "resiliencia-e-recomeco-a-aguia-nao-espera-o-vento",
     slug: "resiliencia-e-recomeco-a-aguia-nao-espera-o-vento",
     title: "Resiliência e Recomeço: A Águia Não Espera o Vento",
