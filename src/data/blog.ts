@@ -15,6 +15,83 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "aguia-ou-galinha-a-disciplina-que-separa-sonho-de-vida",
+    slug: "aguia-ou-galinha-a-disciplina-que-separa-sonho-de-vida",
+    title: "Águia ou Galinha: A Disciplina que Separa Sonho de Vida",
+    excerpt: "Visão sem ação é só fantasia. A mentalidade de águia cobra disciplina diária para transformar altura de voo em vida real.",
+    date: "2026-11-25",
+    readingTime: 8,
+    category: "Filosofia",
+    coverImage: "https://images.unsplash.com/photo-1558883493-8b86ff880fec?w=1200&q=85&fit=crop&auto=format",
+    tags: ["mentalidade de águia", "alto desempenho", "crescimento pessoal"],
+    featured: false,
+    content: `## O galinheiro que cabe em qualquer vida
+
+Existe uma cena que se repete em quase toda existência humana, embora poucos percebam. Um homem olha para o céu, sente uma inquietação, imagina uma vida maior, mais livre, mais sua. E então o dia seguinte chega, com suas contas, suas obrigações, seus hábitos antigos, e a inquietação é empurrada para debaixo do tapete. Ele volta ao galinheiro. Não porque seja incapaz de voar, mas porque nunca precisou. O teto baixo virou conforto.
+
+A galinha cisca o mesmo chão todos os dias e chama isso de vida. Ela não é infeliz de forma gritante. É uma infelicidade mansa, aceita, quase invisível. Bate as asas de vez em quando, arranca um pouco de poeira, e se acomoda de novo. O horror silencioso não está no sofrimento, mas na ausência de pergunta. Ela nunca olhou para cima tempo suficiente para sentir falta do céu.
+
+Talvez você reconheça esse chão. A rotina que funciona, o trabalho que paga as contas, a vida que não está ruim o bastante para mudar nem boa o bastante para celebrar. E no fundo, uma suspeita incômoda de que existe mais. Essa suspeita é o começo de tudo. É a primeira batida de asa de uma águia que ainda não sabe que é águia.
+
+## A diferença não está no sonho, está no dia seguinte
+
+O erro mais comum é acreditar que águias e galinhas se separam pelo tamanho do sonho. Não se separam. A galinha também sonha, à sua maneira. Ela deseja mais milho, um poleiro mais alto, um canto mais quente. O sonho não é o divisor de águas. **O divisor é o que acontece na manhã seguinte ao sonho.**
+
+A águia tem uma relação diferente com o próprio desejo. Quando enxerga algo no horizonte, ela não trata aquilo como um devaneio bonito para acalentar antes de dormir. Trata como uma coordenada. A visão vira direção, e direção cobra movimento. É aqui que quase todo mundo abandona o próprio céu: no espaço estreito entre ver e fazer.
+
+Você provavelmente já sentiu a vertigem desse espaço. A ideia brilhante que veio num domingo à noite e morreu na segunda de manhã. O plano de mudar de vida que sobreviveu ao entusiasmo, mas não ao despertador. A visão era real. O problema é que visão, sozinha, é a mais sedutora das ilusões, porque dá a sensação de progresso sem o custo dele. Sonhar não dói. Por isso é tão fácil confundir sonhar com transformar.
+
+A **disciplina** é justamente o nome que damos à coragem de atravessar esse espaço todos os dias, mesmo sem plateia, mesmo sem vontade. Ela não é rigidez nem punição. É a ponte estreita e pouco glamourosa entre a altitude da visão e a poeira da ação. Sem ela, a águia vira apenas uma galinha com aspirações.
+
+## A altitude é uma construção, não um dom
+
+Há uma mentira confortável que circula por aí: a de que a águia nasce em outro patamar, com uma força mental que o resto de nós não teria. Essa história é sedutora porque nos libera da responsabilidade. Se voar alto é dom, então quem cisca o chão está apenas cumprindo o próprio destino.
+
+A verdade é mais dura e mais libertadora. **A altitude da águia é construída**, repetição por repetição, escolha por escolha. Ela não voa alto porque nasceu diferente. Ela voa alto porque faz, todos os dias, coisas que a galinha evita. Ergue voo no frio. Caça quando não tem vontade. Enfrenta o vento em vez de esperar que ele pare. A diferença não é de natureza, é de prática.
+
+Isso significa que a sua vida atual não é uma sentença, é um acúmulo. Cada dia que você cisca o mesmo chão adiciona uma camada ao teto sobre a sua cabeça. Cada manhã em que você adia o que importa reforça a gravidade que te prende. Ninguém constrói um galinheiro de uma vez. Ele se ergue tijolo por tijolo, no automático, até parecer a única casa possível.
+
+A boa notícia escondida nessa dureza é que o mesmo mecanismo que te prende pode te libertar. Se a mediocridade se constrói por repetição, a altitude também. A disciplina não é um salto heroico que você dá uma vez. É uma série de pequenas fidelidades a si mesmo, tão pequenas que parecem insignificantes no dia, e tão poderosas que redefinem uma vida inteira no espaço de um ano.
+
+## A liberdade tem preço, e o preço é diário
+
+Existe uma fantasia perigosa associada à liberdade da águia: a de que ela é leve, que voar alto é flutuar sem esforço. Quem observa de longe vê apenas o planado majestoso e imagina que não custa nada. Não vê as horas de batida de asa que sustentam aquele instante de glória.
+
+**Toda liberdade real é sustentada por uma disciplina invisível.** O músico livre no palco pagou com milhares de horas de escala. O empreendedor que parece ter sorte pagou com anos de decisões que ninguém aplaudiu. A águia que plana sobre o vale pagou com o esforço de subir até ali. A leveza é sempre o resultado de um peso carregado antes, em silêncio.
+
+A galinha acredita que a liberdade é ausência de esforço. A águia sabe que a liberdade é o fruto do esforço bem dirigido. Por isso a galinha inveja quem voa, mas não imita o que essa pessoa faz às seis da manhã, quando ninguém está vendo. Ela quer o céu sem o vento, o resultado sem a fidelidade, a transformação sem a repetição tediosa que a sustenta.
+
+E aqui mora a pergunta que talvez você venha evitando há anos. Não é sobre o que você sonha. É sobre o que você faz quando o sonho encontra a manhã seguinte. É sobre quantas vezes você trocou a coordenada pelo conforto, o movimento pela desculpa, a asa pela poeira. A resposta a essa pergunta é a sua vida real, muito mais do que qualquer imagem que você acalente antes de dormir.
+
+## O instante em que o teto aparece
+
+A transformação de uma vida raramente começa com um grande gesto. Ela começa no instante desconfortável em que o galinheiro se revela. Aquele momento em que você percebe, com uma clareza quase física, que o teto baixo não foi colocado por ninguém. Foi você quem o ergueu, dia após dia, com a matéria-prima das suas escolhas adiadas.
+
+Esse instante não é agradável. Ele desmonta a narrativa confortável de que a vida simplesmente aconteceu, de que as circunstâncias te colocaram ali, de que não havia alternativa. A águia que desperta dentro de você não oferece consolo. Ela mostra o chão que você ciscou, as asas que você não abriu, o céu que sempre esteve lá, indiferente à sua ausência.
+
+Mas há algo estranhamente libertador nessa lucidez. Se foi você quem construiu o teto, então é você quem pode demoli-lo. A responsabilidade que dói é a mesma que devolve o poder. Você não é vítima de um destino de galinha. Você é autor de uma vida que ainda pode escolher de novo, hoje, agora, antes que o dia termine e mais uma camada se deposite sobre a anterior.
+
+Talvez seja isso que você esteja sentindo ao ler estas linhas. Não uma vontade súbita de voar, que passaria até a noite. Mas uma suspeita mais funda e mais incômoda: a de que talvez você esteja vivendo uma vida que nunca parou para questionar. E que a pergunta, uma vez feita, não pode mais ser desfeita.
+
+## A asa que se abre uma vez e não volta a fechar
+
+O que separa definitivamente a águia da galinha não é o primeiro voo. É a recusa em voltar ao chão depois dele. A galinha também já voou, em algum impulso, num susto, num salto desesperado. A diferença é que ela interpretou o próprio voo como acidente, e não como natureza.
+
+A águia entende que abrir as asas não é um evento, é uma identidade. Depois que você age uma vez a favor da sua visão, algo muda de forma irreversível. Você descobre que o desconforto da disciplina não te mata. Descobre que o vento não te derruba, te sustenta. Descobre que a vida lá de cima, mesmo com frio e esforço, tem uma amplitude que o chão jamais ofereceu.
+
+Não existe transformação sem ação, por mais bela que seja a visão que a antecede. A visão apenas aponta. A disciplina caminha. E a vida que você vive é feita da soma dos seus passos, não da altura dos seus sonhos. O céu sempre esteve disponível. A pergunta que fica não é se você merece voar, mas se você está disposto a pagar, todos os dias, o preço silencioso de subir.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "o-silencio-da-aguia-e-o-dinheiro-que-voce-nao-ve",
     slug: "o-silencio-da-aguia-e-o-dinheiro-que-voce-nao-ve",
     title: "O silêncio da águia e o dinheiro que você não vê",
