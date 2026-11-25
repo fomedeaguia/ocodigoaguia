@@ -15,6 +15,89 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "o-silencio-da-aguia-e-o-dinheiro-que-voce-nao-ve",
+    slug: "o-silencio-da-aguia-e-o-dinheiro-que-voce-nao-ve",
+    title: "O silêncio da águia e o dinheiro que você não vê",
+    excerpt: "O excesso de informação não te deixa rico; te deixa confuso. Aprenda a enxergar seu dinheiro com a precisão fria de uma águia.",
+    date: "2026-11-25",
+    readingTime: 7,
+    category: "Prosperidade",
+    coverImage: "https://images.unsplash.com/photo-1605514449459-5a9cfa0b9955?w=1200&q=85&fit=crop&auto=format",
+    tags: ["prosperidade", "abundância", "mentalidade financeira"],
+    featured: false,
+    content: `## O barulho que nunca paga as contas
+
+Existe um cansaço que não vem do corpo. Ele nasce nos olhos, depois de horas rolando a tela, saltando de um vídeo para outro, de um conselho financeiro para uma promessa de enriquecimento, de um gráfico para uma manchete alarmante. Você fecha o aplicativo e sente uma vaga inquietação, como se tivesse comido demais sem ter se alimentado de nada.
+
+Essa inquietação tem nome. É o efeito de consumir informação em excesso acreditando que isso é conhecimento. Você acumula dados, opiniões, tendências, alertas. Mas acumular não é compreender. E compreender é justamente o que falta quando o assunto é dinheiro.
+
+O paradoxo é cruel. Nunca tivemos tanto acesso a conteúdo sobre finanças. Nunca se falou tanto de investimentos, de liberdade financeira, de mindset de riqueza. E, ao mesmo tempo, poucas gerações pareceram tão perdidas diante do próprio saldo no fim do mês. **A abundância de informação virou uma nova forma de pobreza.**
+
+## Você não está desinformado. Está afogado
+
+Talvez você se reconheça aqui. Você já assistiu a vinte vídeos diferentes sobre como sair das dívidas e continua sem saber qual é o primeiro passo concreto. Já salvou dezenas de posts sobre investir, mas o dinheiro segue parado, com medo de qualquer movimento. Já ouviu que precisa cortar o cafezinho e, no mesmo dia, que o cafezinho não é o problema.
+
+Cada voz parece segura de si. Cada uma contradiz a anterior. E você, no meio, tenta montar um quebra-cabeça com peças de mil caixas diferentes. O resultado não é clareza. É uma névoa mental em que tudo parece importante e nada parece decisivo.
+
+O excesso de informação produz uma ilusão perigosa: a de que você está avançando porque está aprendendo. Mas aprender de verdade exige parar, digerir, testar. Consumir sem parar é o contrário disso. É fugir da ação se escondendo atrás da sensação de preparo. E o dinheiro, que só responde ao movimento, percebe essa fuga e permanece exatamente onde está.
+
+## A águia não olha para tudo
+
+No alto, muito acima do ruído do vale, a águia plana. Ela enxerga longe, mas essa não é a sua maior habilidade. Sua maior habilidade é **saber o que ignorar**. Diante de uma paisagem imensa, cheia de movimento, ela não tenta acompanhar cada detalhe. Ela fixa o olhar em um único ponto e mergulha.
+
+Enquanto os urubus voam em círculos, atraídos por tudo que se move, a águia escolhe a altitude e escolhe o alvo. Essa é a diferença entre quem vive disperso e quem vive com direção. Não é uma questão de ver mais. É uma questão de ver melhor.
+
+Nós vivemos como urubus financeiros, girando em torno de cada estímulo, cada novidade, cada promessa brilhante que cruza o céu da nossa atenção. A mentalidade de águia propõe o oposto: subir, ganhar altitude, e de lá de cima decidir com frieza o que merece o seu mergulho e o que merece ser deixado para trás.
+
+## A altitude muda o que você enxerga
+
+Quando você está no chão, no meio do tumulto, cada problema parece gigantesco e cada solução gritada parece urgente. É assim que o excesso de informação te manipula: mantendo você rente ao solo, onde tudo é barulho e urgência.
+
+A águia ganha altura justamente para escapar dessa distorção. De cima, ela vê padrões que do chão seriam invisíveis. Enxerga o caminho do rio, o movimento das presas, o tempo certo de agir. **A altitude mental é o que separa reagir ao mundo de compreendê-lo.**
+
+No terreno das suas finanças, ganhar altitude significa parar de reagir a cada manchete e começar a enxergar o conjunto. Significa entender de onde vem o seu dinheiro, para onde ele vai, o que ele constrói e o que ele destrói silenciosamente. Essa visão de cima não se compra em nenhum curso. Ela se conquista com silêncio, com distância do ruído, com a coragem de ficar quieto enquanto todos gritam.
+
+O problema é que o silêncio assusta quem foi treinado para o barulho. Ficar sem consumir informação nova parece estagnação. Mas é nesse silêncio que a mente finalmente organiza o que já sabe e transforma dado solto em entendimento real.
+
+## Conhecimento é o que sobra depois do filtro
+
+Aqui está a distinção que muda tudo: informação é entrada, conhecimento é o que permanece depois que você filtra. A águia não engole tudo que vê. Ela seleciona. E essa seleção é o verdadeiro trabalho da mente que prospera.
+
+Uma pessoa com mentalidade de águia financeira não sabe mais coisas que as outras. Ela sabe **menos coisas, e as sabe profundamente**. Ela conhece os próprios números, entende o próprio risco, tem uma estratégia simples que consegue explicar em uma frase. Enquanto isso, o afogado em informação coleciona opiniões que nunca viram ação.
+
+O filtro é a habilidade mais valiosa da nossa época. Diante do infinito, escolher o pouco que importa é um ato de força, não de limitação. É dizer não a noventa e nove estímulos para mergulhar com precisão sobre aquele um que transforma a sua realidade.
+
+Prosperar, nesse sentido, começa muito antes do primeiro investimento. Começa no momento em que você decide **proteger a sua mente do excesso** com o mesmo rigor com que protegeria o seu dinheiro de um ladrão. Porque uma mente confusa toma decisões confusas, e decisões confusas empobrecem de forma consistente.
+
+## Construa a partir da clareza, não da coleta
+
+Tudo isso não é teoria distante. É uma mudança prática no modo como você lida com informação e com dinheiro a partir de hoje. O primeiro passo é reduzir. Escolha uma ou duas fontes em que você confia e abandone o resto do ruído. O silêncio vai parecer desconfortável nos primeiros dias. Depois, vai parecer lucidez.
+
+O segundo passo é aprofundar em vez de acumular. Em vez de consumir vinte visões superficiais sobre orçamento, entenda de verdade uma única. Aplique. Observe o resultado. Só então avance. **A profundidade rende mais que a quantidade, tanto no conhecimento quanto no dinheiro.**
+
+O terceiro passo é ganhar altitude com regularidade. Reserve momentos de silêncio para olhar a sua vida financeira de cima, sem a interferência de alertas e notificações. Nesse espaço, você enxerga o que a correria esconde: os pequenos vazamentos, os padrões repetidos, as oportunidades que sempre estiveram ali, invisíveis no meio do barulho.
+
+E então vem o mergulho. Com o alvo definido e a mente limpa, a ação deixa de ser ansiosa e passa a ser precisa. Você age uma vez, com intenção, em vez de reagir mil vezes no escuro.
+
+## Você pode enxergar de outro jeito
+
+O dinheiro que você procura não está escondido em mais uma informação que você ainda não consumiu. Ele está do outro lado do silêncio, esperando que você pare de girar e escolha para onde olhar. A abundância nunca esteve no excesso. Esteve sempre na clareza.
+
+Você não precisa saber tudo. Precisa enxergar melhor aquilo que importa e ter a coragem de ignorar o resto. Essa é a liberdade que a águia carrega nas asas: **a liberdade de escolher o próprio alvo em vez de ser arrastado por todos eles.**
+
+A partir de agora, você pode olhar a sua vida de uma maneira diferente. Pode trocar a coleta ansiosa pela visão tranquila, o ruído pela direção, a dispersão pelo mergulho certeiro. E do alto dessa nova altitude, o que antes parecia um caos imenso começa a revelar um caminho. Um caminho que é seu, simples, possível, e que sempre esteve ali, esperando apenas que você abrisse os olhos e começasse a construir algo maior.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "querer-uma-vida-diferente-nao-basta-torne-se-quem-a-constroi",
     slug: "querer-uma-vida-diferente-nao-basta-torne-se-quem-a-constroi",
     title: "Querer uma vida diferente não basta: torne-se quem a constrói",
