@@ -15,6 +15,83 @@ export type BlogPost = {
 
 const staticPosts: BlogPost[] = [
   {
+    id: "a-aguia-e-a-atencao-onde-nasce-o-seu-proposito",
+    slug: "a-aguia-e-a-atencao-onde-nasce-o-seu-proposito",
+    title: "A Águia e a Atenção: Onde Nasce o Seu Propósito",
+    excerpt: "Propósito não é apenas um destino: é a direção que sua atenção constrói todos os dias.",
+    date: "2026-11-26",
+    readingTime: 10,
+    category: "Visão e Propósito",
+    coverImage: "https://images.unsplash.com/photo-1779778915732-dfac0a0e23fa?w=1200&q=85&fit=crop&auto=format",
+    tags: ["propósito", "direção de vida", "clareza"],
+    featured: false,
+    content: `## A pergunta que quase ninguém faz
+
+Há uma pergunta que costuma ficar escondida atrás de tantas outras: para onde a sua atenção está indo quando você não está prestando atenção nela? Parece um jogo de palavras, mas não é. A forma como você distribui o olhar ao longo do dia revela, com uma honestidade que às vezes assusta, qual é a direção real da sua vida. Não a direção que você declara em conversas, nem a que aparece em planos de ano novo. A direção que se confirma no repetido, no automático, naquilo que ocupa a sua mente antes de dormir e no primeiro pensamento quando você acorda.
+
+Muita gente procura o propósito como quem procura um objeto perdido em uma casa escura. Acende a luz por um instante, olha alguns cantos, desiste e conclui que ele não existe. Mas o propósito raramente se entrega como uma revelação estrondosa. Ele se insinua naquilo que você escolhe observar com constância. Se a sua atenção vive presa ao que os outros pensam, à comparação, à urgência alheia e ao medo de ficar para trás, a vida que se constrói a partir disso também será feita de ruído. Não porque você não tenha valor, mas porque o material com que você está construindo sua rota é frágil.
+
+A águia entra aqui não como promessa de poder, mas como imagem de uma atenção que não se dissolve. Ela nos lembra que ver não é o mesmo que olhar. E que olhar não é o mesmo que escolher para onde direcionar a própria vida.
+
+## O que a águia enxerga antes de voar
+
+A águia não voa para provar que tem asas. Ela observa. Antes do movimento, existe uma pausa; antes do ataque, existe uma seleção. No alto, seu olhar não é capturado por cada movimento pequeno, por cada sombra, por cada ruído do chão. Ela precisa distinguir o que é essencial do que é apenas agitação. Essa é a primeira lição que a metáfora oferece: **a atenção não é apenas aquilo que você percebe; é aquilo que você escolhe não perceber**.
+
+Vivemos em um tempo que trata a atenção como se ela fosse infinita. Notificações, opiniões, notícias, urgências fabricadas, vidas editadas, discussões que não mudam nada. Tudo disputa um lugar no centro do seu olhar. E o preço dessa disputa não é apenas cansaço. O preço é uma vida que perde direção sem perceber. Você pode até ter sonhos, metas e intenções bonitas, mas se a sua atenção for capturada todos os dias pelos mesmos estímulos, esses sonhos permanecem como paisagem distante. A águia não sobrevive no ar se ficar reagindo a cada corrente de vento. Ela usa o vento, mas mantém o alvo.
+
+Propósito e direção de vida começam a se organizar quando você recupera a soberania sobre o que merece o seu olhar. Não se trata de ignorar o mundo, mas de parar de entregar a ele o comando da sua mente. **Quem não escolhe onde presta atenção acaba vivendo a direção escolhida por outra pessoa.** Essa é uma constatação dura, mas necessária. A boa notícia é que ela também é o começo da liberdade.
+
+## A distração disfarçada de vida
+
+A distração raramente se apresenta como inimiga. Ela chega com roupas de produtividade, de informação, de conexão, de preocupação legítima. Você abre o celular para resolver uma coisa e, vinte minutos depois, está olhando a vida de alguém que nem conhece. Começa a trabalhar e é levado por uma mensagem que exigia resposta imediata. Entra em uma conversa mental sobre o futuro e termina revivendo uma discussão antiga. Nada disso parece grave isoladamente. O problema é o acúmulo. A vida vai sendo escrita em pequenos desvios.
+
+Quando a atenção se fragmenta, o propósito não desaparece de uma vez. Ele apenas fica esperando. Espera um dia mais calmo, uma semana sem tanta demanda, um momento em que tudo esteja sob controle. Só que esse momento não chega sozinho. A direção de vida não é resultado de um intervalo perfeito; ela é resultado de escolhas feitas dentro do barulho. A águia não espera o céu ficar sem vento para voar. Ela aprende a usar a altitude para enxergar além do que está imediatamente à frente.
+
+Talvez o maior sintoma de uma atenção mal administrada seja a sensação de estar sempre ocupado e, ao mesmo tempo, sentir que nada de essencial avança. Você faz muito, responde a muitos, acompanha muitos, mas não sabe dizer com clareza o que está construindo. É como bater asas sem direção: há esforço, há movimento, mas não há voo. O propósito exige menos pressa e mais presença. Exige a coragem de olhar para a própria rotina e perguntar: **o que aqui merece o meu melhor olhar, e o que apenas aprendeu a fazer barulho?**
+
+## Propósito não é um raio, é uma direção
+
+Existe uma fantasia perigosa de que o propósito chegará como um raio, acompanhado de certeza absoluta e de um caminho sem dúvidas. Essa fantasia paralisa. Enquanto ele não chega, a pessoa adia escolhas, não se compromete, espera uma segurança que não existe. Mas o propósito, na prática, tem mais a ver com direção do que com destino. Ele é a soma de atenções repetidas. É aquilo que você começa a fortalecer quando escolhe olhar para determinados valores, pessoas, projetos e responsabilidades com constância.
+
+Uma vida com direção não é uma vida sem distrações. É uma vida em que as distrações não governam o centro. A águia não deixa de ver o que se move ao redor, mas não confunde movimento com importância. Da mesma forma, você não precisa se isolar do mundo para ter propósito. Precisa construir um critério. Precisa saber o que, no seu caso, merece tempo, energia e presença. Esse critério não nasce pronto. Ele se revela quando você observa o que faz com atenção e o que faz apenas por inércia.
+
+Talvez o seu propósito ainda não esteja claro em forma de frase. Isso não significa que ele não exista. Ele pode estar aparecendo como uma inquietação que retorna, como um tema que sempre desperta o seu interesse, como um problema que você não consegue ignorar, como uma pessoa ou uma causa que pede a sua presença. **O propósito costuma começar como uma atenção insistente.** Algo que continua voltando, mesmo quando você tenta se distrair. A questão é se você vai tratar esse retorno como acaso ou como sinal de direção.
+
+## O silêncio que reposiciona a rota
+
+A águia não é uma criatura de excesso de ruído. Sua força também está no silêncio que antecede o movimento. Para nós, esse silêncio não precisa ser literal. Pode ser a pausa antes de responder, o dia sem redes sociais, a caminhada sem fone, a decisão de não opinar sobre tudo, o intervalo entre o estímulo e a reação. O silêncio é um reposicionador de rota. Ele devolve à atenção a chance de escolher em vez de apenas reagir.
+
+Quando você se afasta do barulho por alguns minutos, não está perdendo tempo. Está permitindo que a mente veja o mapa inteiro, e não apenas o próximo obstáculo. É nesse espaço que a pergunta sobre propósito deixa de ser abstrata e começa a apontar para escolhas concretas. O que você quer construir? Que tipo de pessoa está se tornando com aquilo que consome? Quais conversas, hábitos e ambientes estão alimentando a sua direção, e quais estão dissolvendo a sua clareza?
+
+Essas perguntas não exigem respostas imediatas. Exigem presença. A pressa costuma ser uma forma de fugir do que o silêncio revelaria. Mas a águia não tem medo de ver o terreno como ele é. Ela usa a visão para corrigir a rota, não para se punir pelo desvio. **A atenção madura não é a que nunca se perde; é a que percebe o desvio e retorna.** Esse retorno, repetido, é o que transforma intenção em direção e direção em vida construída.
+
+## A disciplina de olhar para o que importa
+
+Falar de atenção é falar de disciplina, mas não de uma disciplina rígida que transforma a vida em quartel. É a disciplina de quem protege o essencial. Você decide, por exemplo, que a primeira hora do dia não será entregue ao caos das notificações. Decide que certos assuntos não merecem discussão. Decide que um projeto importante terá um espaço real na agenda, e não apenas um lugar bonito na intenção. Decide que não vai confundir preocupação com planejamento. São escolhas pequenas, mas elas compõem a arquitetura de uma vida com propósito.
+
+A águia não caça todos os dias o mesmo tipo de presa por acaso. Ela conhece o seu território, suas necessidades e seu tempo. Na vida humana, esse território é a sua mente. Protegê-la não é egoísmo; é responsabilidade. Se você entrega sua atenção a qualquer coisa que aparece, depois se queixa de não ter clareza, está cobrando de si mesmo um resultado que nunca permitiu que fosse construído. **Direção de vida é consequência de atenção protegida.**
+
+Isso não significa fechar os olhos para o sofrimento do mundo. Significa escolher de que forma você vai se relacionar com ele sem se dissolver nele. Você pode se importar sem ser consumido. Pode estar informado sem viver em alerta. Pode ajudar sem se abandonar. A atenção madura tem limites, e os limites não diminuem o amor; eles o tornam sustentável. Uma pessoa sem limites de atenção não consegue construir nada duradouro, porque está sempre sendo puxada para fora de si.
+
+## Construir algo maior começa pequeno
+
+A transformação que a águia simboliza não acontece em um único gesto grandioso. Ela acontece na repetição de um olhar mais lúcido. Você começa a perceber quanto tempo entrega a conversas que não constroem, quanto espaço dá ao medo disfarçado de prudência, quantas decisões toma apenas para corresponder a expectativas que nem são suas. Perceber já é um ato de liberdade. A partir daí, você pode escolher diferente.
+
+Talvez você ainda não saiba dizer qual é o seu propósito em uma frase. Mas pode começar a agir como quem tem direção. Pode reservar atenção para o que deseja cultivar. Pode diminuir o tempo dedicado ao que só alimenta ansiedade. Pode fazer uma pergunta mais honesta antes de dizer sim. Pode criar um espaço de silêncio para ouvir a própria vida. Pode olhar para o horizonte sem exigir que ele se explique imediatamente. **Construir algo maior não começa quando você tem todas as respostas; começa quando você para de entregar sua atenção ao que não tem importância.**
+
+A águia não voa porque enxerga tudo. Ela voa porque escolhe onde pousar o olhar. E talvez seja isso que o propósito pede de você agora: não uma certeza absoluta, mas uma escolha mais consciente do que merece o seu olhar. A vida que você quer construir não está em outro lugar, esperando ser encontrada. Ela está sendo desenhada, todos os dias, pela direção que você dá à sua atenção. Quando você recupera esse poder, a vida deixa de parecer um conjunto de acasos e começa a revelar uma rota possível. E é dessa rota que nasce a coragem de construir algo maior.
+
+
+---
+
+## O Ponto de Partida Está Aqui
+
+Tudo que você leu é apenas o começo. **O Código Águia** aprofunda cada um desses princípios com clareza, exemplos reais e um roteiro prático para quem quer mudar de nível de verdade — não amanhã, mas agora. Se a águia está dentro de você, está na hora de libertá-la. [Acesse O Código Águia e comece hoje](https://ocodigoaguia.com.br).
+
+---`,
+  },
+
+  {
     id: "a-visao-que-nao-pousa-por-que-sonhar-alto-exige-voar-baixo",
     slug: "a-visao-que-nao-pousa-por-que-sonhar-alto-exige-voar-baixo",
     title: "A Visão Que Não Pousa: Por Que Sonhar Alto Exige Voar Baixo",
